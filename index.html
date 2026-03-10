@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MapMaster</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- START SCREEN - scope selection only -->
+    <div id="startScreen">
+
+      <div class="hero-block">
+        <h1>Map<span>Master</span></h1>
+        <p class="hero-subtitle">Test your geography knowledge</p>
+        <div class="hero-divider"></div>
+      </div>
+
+      <section id="scopeSection">
+        <h3>Select Region</h3>
+        <button id="countryScopeBtn">&#127758; Country</button>
+        <button id="continentScopeBtn">&#128506; Continent</button>
+        <button id="worldScopeBtn">&#127757; World</button>
+      </section>
+
+    </div>
+
+    <!-- COUNTRY SELECT SCREEN -->
+    <div id="countrySelectScreen" class="hidden">
+
+      <div class="hero-block">
+        <h1>Select<span> Country</span></h1>
+        <div class="hero-divider"></div>
+      </div>
+
+      <section id="countrySection">
+        <h3>Choose a country</h3>
+        <button data-country="india" class="country-btn">&#127470;&#127475; India</button>
+        <button data-country="usa"   class="country-btn">&#127482;&#127480; USA</button>
+      </section>
+
+      <div id="countryContinueWrapper">
+        <button id="countryBackBtn" class="back-btn">&#8592; Back</button>
+        <button id="countryContinueBtn" disabled>Continue &#8594;</button>
+      </div>
+
+    </div>
+
+    <!-- CONTINENT SELECT SCREEN -->
+    <div id="continentSelectScreen" class="hidden">
+
+      <div class="hero-block">
+        <h1>Select<span> Continent</span></h1>
+        <div class="hero-divider"></div>
+      </div>
+
+      <section id="continentSection">
+        <h3>Choose a continent</h3>
+        <button data-continent="europe" class="continent-btn">&#127757; Europe</button>
+        <button data-continent="northAmerica" class="continent-btn">&#127758; North America</button>
+        <button data-continent="southAmerica" class="continent-btn">&#127758; South America</button>
+        <button data-continent="africa" class="continent-btn">&#127758; Africa</button>
+        <button data-continent="asia" class="continent-btn">&#127759; Asia</button>
+        <button data-continent="oceania" class="continent-btn">&#127758; Oceania</button>
+      </section>
+
+      <div id="continentBackWrapper">
+        <button id="continentBackBtn" class="back-btn">&#8592; Back</button>
+      </div>
+
+    </div>
+
+    <!-- SETUP SCREEN - game type + mode -->
+    <div id="setupScreen" class="hidden">
+
+      <div class="hero-block">
+        <h1>Game<span> Setup</span></h1>
+        <p class="hero-subtitle" id="setupSubtitle"></p>
+        <div class="hero-divider"></div>
+      </div>
+
+      <div class="setup-group">
+        <h3>Select Game Type</h3>
+        <div id="gameModeSection">
+          <button id="typingModeBtn">
+            <span class="btn-icon">✍️</span>
+            <span class="btn-title">Type the Name</span>
+            <span class="btn-desc">Name every region from memory</span>
+          </button>
+          <button id="locateModeBtn">
+            <span class="btn-icon">🎯</span>
+            <span class="btn-title">Locate on Map</span>
+            <span class="btn-desc">Click the right region on the map</span>
+          </button>
+          <button id="flagModeBtn">
+            <span class="btn-icon">🚩</span>
+            <span class="btn-title">Flags</span>
+            <span class="btn-desc">Identify countries by their flag</span>
+          </button>
+          <button id="capitalModeBtn">
+            <span class="btn-icon">🏛️</span>
+            <span class="btn-title">Capitals</span>
+            <span class="btn-desc">Name the capital of each region</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="setup-group">
+        <h3>Select Mode</h3>
+        <div id="difficultySection">
+          <button id="practiceModeBtn">🌱 Practice</button>
+          <button id="challengeModeBtn">⚡ Challenge</button>
+        </div>
+      </div>
+
+      <div id="homeStartWrapper">
+        <button id="setupBackBtn" class="back-btn">&#8592; Back</button>
+        <button id="homeStartBtn" disabled>Start Game &#8594;</button>
+      </div>
+
+    </div>
+
+    <!-- CHALLENGE SETTINGS SCREEN -->
+    <div id="challengeSettings" class="hidden">
+      <div class="settings-card">
+
+        <h2>Challenge Settings</h2>
+
+        <section id="timerSection">
+          <h3>Timer Duration</h3>
+          <button data-time="120">2 Minutes</button>
+          <button data-time="180">3 Minutes</button>
+          <button data-time="300">5 Minutes</button>
+        </section>
+
+        <section id="livesSection">
+          <h3>Number of Lives</h3>
+          <button data-lives="3">3 Lives</button>
+          <button data-lives="5">5 Lives</button>
+          <button data-lives="10">10 Lives</button>
+        </section>
+
+        <div id="challengeBackWrapper">
+          <button id="challengeBackBtn" class="back-btn">&#8592; Back</button>
+          <button id="startGameBtn">Start Game</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="gameScreen" class="hidden">
+
+      <header id="appHeader">
+        <div id="headerBrand">
+          <span id="headerLogo">MapMaster</span>
+          <span id="headerSub">India Edition</span>
+        </div>
+        <div id="headerActions">
+          <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound">&#128266;</button>
+          <button class="icon-btn" id="themeToggleBtn" title="Toggle Theme">&#127769;</button>
+          <button class="icon-btn" id="headerRestartBtn" title="Restart">&#8634;</button>
+        </div>
+      </header>
+
+      <div id="topBar">
+        <div id="scoreWrapper">
+          Score
+          <span id="scoreDisplay">0</span>
+        </div>
+        <div id="timerWrapper">
+          Time
+          <span id="timerDisplay">--</span>
+        </div>
+        <div id="livesWrapper">
+          Lives
+          <span id="livesDisplay">--</span>
+        </div>
+        <div id="streakWrapper">
+          Streak
+          <span id="streakDisplay">0</span>
+        </div>
+      </div>
+
+      <div id="progressBarWrapper">
+        <div id="progressBarTrack">
+          <div id="progressBarFill"></div>
+        </div>
+        <span id="progressLabel">0 / 28 States</span>
+      </div>
+
+      <div id="flagContainer" class="hidden">
+        <div class="flag-prompt-label">Which country is this flag?</div>
+        <img id="flagImage" src="" alt="Flag" />
+      </div>
+
+      <div id="capitalPrompt" class="hidden">
+        <span class="capital-label">Capital of</span>
+        <span class="capital-region"></span>
+        <span class="locate-underline"></span>
+      </div>
+
+      <div id="mapContainer">
+        <div id="locatePrompt" class="hidden">
+          <span class="locate-label">Target</span>
+          <span class="locate-name"></span>
+          <span class="locate-underline"></span>
+        </div>
+        <div id="mapZoomWrapper">
+          <object type="image/svg+xml" data="svg/india.svg" id="indiaMap"></object>
+        </div>
+      </div>
+
+      <div id="inputSection">
+        <input type="text" id="stateInput" placeholder="Type a state name..." autocomplete="off" />
+        <div id="inputActions">
+          <button id="submitAnswerBtn">Submit</button>
+          <button id="hintBtn" class="hint-btn" title="Use a hint">💡 Hint</button>
+        </div>
+        <div id="feedbackMessage"></div>
+      </div>
+
+    </div>
+
+    <!-- WIN SCREEN -->
+    <div id="winScreen" class="hidden">
+      <h2>&#127881; You did it!</h2>
+      <div id="statsSection">
+        <p>Time Taken <span id="finalTime">--</span></p>
+        <p>Accuracy <span id="finalAccuracy">--</span>%</p>
+        <p>Best Streak <span id="finalStreak">--</span></p>
+        <p id="utBonusStat" class="hidden">UT Bonus <span id="finalUTBonus">--</span></p>
+      </div>
+      <button id="restartBtn">Play Again</button>
+    </div>
+
+    <!-- LOSE SCREEN -->
+    <div id="loseScreen" class="hidden">
+      <h2>Game Over</h2>
+      <p id="loseReason"></p>
+      <div id="missedSection">
+        <p class="missed-heading">You missed:</p>
+        <div id="missedList"></div>
+      </div>
+      <div id="loseActions">
+        <button id="retryBtn">Try Again</button>
+        <button id="reviewBtn" class="hidden">📖 Review Missed</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <canvas id="confettiCanvas" class="confetti-canvas hidden"></canvas>
+  </body>
+</html>

@@ -1,0 +1,1701 @@
+/* ============================================================
+   MapMaster – India Edition | style.css
+   Coral Premium Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================================================
+   ROOT VARIABLES
+   ============================================================ */
+:root {
+  /* Coral Palette */
+  --coral:          #E8604A;
+  --coral-dark:     #C94A34;
+  --coral-soft:     #F0826D;
+  --coral-muted:    rgba(232, 96, 74, 0.12);
+  --coral-glow:     rgba(232, 96, 74, 0.28);
+
+  /* Neutrals */
+  --bg:             #FAF8F6;
+  --bg-alt:         #F2EDE9;
+  --surface:        #FFFFFF;
+  --border:         rgba(0, 0, 0, 0.08);
+  --border-med:     rgba(0, 0, 0, 0.13);
+
+  /* Text */
+  --text-heading:   #1A1410;
+  --text-body:      #3D342E;
+  --text-muted:     #9E8E85;
+  --text-faint:     #C5B8B1;
+
+  /* States */
+  --green:          #2D9E6B;
+  --green-light:    rgba(45, 158, 107, 0.12);
+  --red:            #C94A5A;
+  --red-light:      rgba(201, 74, 90, 0.12);
+
+  /* Shadows */
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:      0 6px 24px rgba(0,0,0,0.09);
+  --shadow-lg:      0 16px 48px rgba(0,0,0,0.12);
+  --shadow-coral:   0 8px 28px var(--coral-glow);
+
+  /* Radius */
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   18px;
+  --r-xl:   24px;
+  --r-full: 999px;
+}
+
+/* ============================================================
+   LAYOUT & RESET
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 20%, rgba(232,96,74,0.08), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(232,96,74,0.05), transparent),
+    radial-gradient(ellipse 50% 40% at 60% 10%, rgba(240,130,109,0.04), transparent);
+  background-size: 200% 200%;
+  animation: bgDrift 18s ease infinite;
+  color: var(--text-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes bgDrift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   HIDDEN UTILITY
+   ============================================================ */
+.hidden {
+  display: none !important;
+}
+
+/* ============================================================
+   SCREEN BASE — shared full-width layout
+   ============================================================ */
+#startScreen,
+#countrySelectScreen,
+#continentSelectScreen,
+#setupScreen,
+#challengeSettings,
+#winScreen,
+#loseScreen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  animation: screenFade 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#gameScreen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  animation: screenFade 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes screenFade {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.4px;
+}
+
+h3 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   START SCREEN — HERO LAYOUT
+   ============================================================ */
+#startScreen {
+  gap: 0;
+  justify-content: center;
+}
+
+.hero-block {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.hero-block h1 {
+  margin-bottom: 14px;
+}
+
+.hero-block h1 span {
+  color: var(--coral);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.hero-divider {
+  width: 40px;
+  height: 3px;
+  background: var(--coral);
+  border-radius: var(--r-full);
+  margin: 20px auto 0;
+}
+
+/* Selection sections */
+#startScreen section {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 36px;
+}
+
+#startScreen h3 {
+  margin-bottom: 14px;
+}
+
+#gameModeSection,
+#difficultySection,
+#countrySection {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Home Start Button */
+#homeStartWrapper {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 8px;
+}
+
+#homeStartBtn {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+#homeStartBtn:hover:not(:disabled) {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--coral-glow);
+}
+
+#homeStartBtn:active:not(:disabled) { transform: scale(0.97); }
+
+/* Lives section hidden when typing mode */
+#livesSection.lives-hidden {
+  display: none !important;
+}
+
+
+/* ============================================================
+   SCOPE SECTION — start screen
+   ============================================================ */
+#scopeSection {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#scopeSection h3 {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+#countryScopeBtn,
+#continentScopeBtn,
+#worldScopeBtn {
+  flex: 1;
+  min-width: 0;
+}
+
+#countryScopeBtn:hover,
+#continentScopeBtn:hover,
+#worldScopeBtn:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-coral);
+}
+
+/* ============================================================
+   COUNTRY SELECT SCREEN
+   ============================================================ */
+#countrySelectScreen {
+  gap: 0;
+}
+
+#countrySection {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#countrySection h3 {
+  margin-bottom: 14px;
+}
+
+#countrySection .country-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: var(--r-md);
+}
+
+#countryContinueWrapper {
+  width: 100%;
+  max-width: 560px;
+}
+
+#countryContinueBtn {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+#countryContinueBtn:hover:not(:disabled) {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--coral-glow);
+}
+
+#countryContinueBtn:active:not(:disabled) { transform: scale(0.97); }
+
+
+/* ============================================================
+   CONTINENT SELECT SCREEN
+   ============================================================ */
+#continentSelectScreen {
+  gap: 0;
+}
+
+#continentSection {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#continentSection h3 {
+  margin-bottom: 14px;
+}
+
+#continentSection .continent-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  border-radius: var(--r-md);
+}
+
+#continentBackWrapper {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* ============================================================
+   SETUP SCREEN — redesigned
+   ============================================================ */
+#setupScreen {
+  gap: 0;
+  justify-content: center;
+}
+
+#setupScreen .hero-block {
+  margin-bottom: 48px;
+}
+
+.setup-group {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.setup-group h3 {
+  margin-bottom: 14px;
+}
+
+/* Game type — strict 2x2 card grid */
+#gameModeSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+#gameModeSection button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 20px 22px;
+  border-radius: var(--r-lg);
+  text-align: left;
+  width: 100%;
+  min-width: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--surface);
+  border: 1.5px solid var(--border-med);
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+#gameModeSection button .btn-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+#gameModeSection button .btn-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+}
+
+#gameModeSection button .btn-desc {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+#gameModeSection button:hover {
+  border-color: var(--coral);
+  background: var(--coral-muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#gameModeSection button:hover .btn-title { color: var(--coral); }
+
+#gameModeSection button.selected {
+  background: var(--coral);
+  border-color: var(--coral);
+  box-shadow: var(--shadow-coral);
+  transform: translateY(-2px);
+}
+
+#gameModeSection button.selected .btn-title,
+#gameModeSection button.selected .btn-desc {
+  color: rgba(255,255,255,0.92);
+}
+
+#gameModeSection button:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: var(--shadow-sm) !important;
+  pointer-events: none;
+  display: flex; /* keep in grid */
+}
+
+/* Difficulty — segmented pill toggle */
+#difficultySection {
+  display: flex;
+  gap: 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-med);
+  border-radius: var(--r-lg);
+  padding: 5px;
+  width: 100%;
+}
+
+#difficultySection button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  border-radius: calc(var(--r-lg) - 3px);
+  padding: 13px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  box-shadow: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  letter-spacing: 0;
+}
+
+#difficultySection button:hover {
+  color: var(--text-body);
+  background: var(--surface);
+  transform: none;
+  box-shadow: var(--shadow-sm);
+  border-color: transparent;
+}
+
+#difficultySection button.selected {
+  background: var(--surface);
+  color: var(--text-heading);
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+  border-color: transparent;
+}
+
+/* Start wrapper */
+#homeStartWrapper {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+#homeStartBtn {
+  flex: 1;
+}
+
+/* ============================================================
+   CHALLENGE SETTINGS SCREEN
+   ============================================================ */
+#challengeSettings {
+  gap: 0;
+}
+
+.settings-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 44px 48px;
+  width: 100%;
+  max-width: 680px;
+}
+
+#challengeSettings h2 {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#challengeSettings section {
+  margin-bottom: 28px;
+}
+
+#challengeSettings h3 {
+  margin-bottom: 14px;
+}
+
+#timerSection,
+#livesSection {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+#timerSection button,
+#livesSection button {
+  min-width: 120px;
+  flex: 1;
+}
+
+#startGameBtn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 15px 24px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+#startGameBtn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--coral-glow);
+}
+
+#startGameBtn:active { transform: scale(0.97); }
+
+/* ============================================================
+   BUTTONS — GLOBAL
+   ============================================================ */
+button {
+  padding: 11px 22px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-body);
+  background: var(--surface);
+  border: 1.5px solid var(--border-med);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  background: var(--coral-muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active { transform: scale(0.96); }
+
+button.selected {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+  box-shadow: var(--shadow-coral);
+}
+
+/* Disabled button state */
+button:disabled,
+button[disabled] {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* ============================================================
+   GAME SCREEN
+   ============================================================ */
+#gameScreen {
+  padding: 0 24px 16px;
+}
+
+/* ============================================================
+   APP HEADER
+   ============================================================ */
+#appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 0;
+  height: 56px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+#headerBrand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+#headerLogo {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--coral);
+  letter-spacing: -0.5px;
+}
+
+#headerSub {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+#headerActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  min-width: unset;
+  flex: unset;
+}
+
+.icon-btn:hover {
+  background: var(--coral-muted);
+  border-color: var(--border-med);
+  color: var(--coral);
+  transform: none;
+  box-shadow: none;
+}
+
+.icon-btn:active {
+  transform: scale(0.9);
+}
+
+/* ============================================================
+   PROGRESS BAR
+   ============================================================ */
+#progressBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  flex-shrink: 0;
+}
+
+#progressBarTrack {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-alt);
+  border-radius: var(--r-full);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+#progressBarFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--coral-soft), var(--coral));
+  border-radius: var(--r-full);
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#progressLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ============================================================
+   LOCATE PROMPT — UPGRADED
+   ============================================================ */
+#locatePrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 4px 20px 16px;
+  order: -1;
+  animation: locateFadeIn 0.3s ease both;
+}
+
+@keyframes locateFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.locate-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.locate-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.locate-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--coral);
+  border-radius: var(--r-full);
+  margin-top: 4px;
+}
+
+/* ============================================================
+   SCREEN TRANSITIONS
+   ============================================================ */
+.screen-exit {
+  animation: screenExit 0.25s ease forwards;
+}
+
+.screen-enter {
+  animation: screenEnter 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes screenExit {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-10px); }
+}
+
+@keyframes screenEnter {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   CORRECT STATE PULSE ANIMATION (applied via JS to SVG path wrapper)
+   ============================================================ */
+@keyframes stateCorrectPulse {
+  0%   { filter: brightness(1); }
+  40%  { filter: brightness(1.35) drop-shadow(0 0 6px rgba(45,158,107,0.6)); }
+  100% { filter: brightness(1); }
+}
+
+.state-correct-flash {
+  animation: stateCorrectPulse 0.4s ease forwards;
+}
+
+/* ============================================================
+   TOP BAR */
+#topBar {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+#topBar > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+#topBar span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+/* Streak card accent — slightly warm gold tint on the value */
+#streakWrapper span {
+  color: #D4813A;
+}
+
+/* Locate Mode Target Prompt — sits above the SVG inside mapContainer */
+#locatePrompt {
+  width: 100%;
+  text-align: center;
+  padding: 4px 20px 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--coral);
+  letter-spacing: -0.2px;
+  animation: feedbackIn 0.25s ease both;
+  order: -1; /* always first child visually */
+}
+
+#mapContainer {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, #ffffff, #faf6f3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow:
+    0 24px 64px rgba(0,0,0,0.09),
+    0 4px 16px rgba(0,0,0,0.05),
+    0 0 0 1px rgba(232,96,74,0.06);
+  padding: 16px 24px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  transition: box-shadow 0.3s ease;
+}
+
+#mapContainer::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--r-xl);
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232,96,74,0.06), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle glow behind map */
+#mapContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(232,96,74,0.04), transparent);
+  pointer-events: none;
+}
+
+/* Make the SVG inside the <object> fill & centre regardless of map shape */
+#indiaMap svg,
+#indiaMap > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* INPUT SECTION */
+#inputSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+#inputActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#stateInput {
+  width: 100%;
+  max-width: 460px;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(--surface);
+  border: 1.5px solid var(--border-med);
+  border-radius: var(--r-md);
+  color: var(--text-heading);
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  caret-color: var(--coral);
+}
+
+#stateInput::placeholder { color: var(--text-faint); }
+
+#stateInput:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 4px var(--coral-muted);
+}
+
+#submitAnswerBtn {
+  padding: 13px 40px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+#submitAnswerBtn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px var(--coral-glow);
+}
+
+#submitAnswerBtn:active { transform: scale(0.97); }
+
+/* ============================================================
+   FEEDBACK MESSAGE
+   ============================================================ */
+#feedbackMessage {
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-height: 22px;
+  text-align: center;
+  color: var(--text-muted);
+  animation: feedbackIn 0.2s ease both;
+}
+
+/* Progress Bar Glow on increment */
+#progressBarFill.progress-glow {
+  box-shadow: 0 0 10px var(--coral-glow), 0 0 20px rgba(232,96,74,0.2);
+}
+
+@keyframes feedbackIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#feedbackMessage.correct {
+  color: var(--green);
+  font-weight: 600;
+}
+
+#feedbackMessage.wrong {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ============================================================
+   WIN SCREEN
+   ============================================================ */
+#winScreen {
+  background: linear-gradient(160deg, #faf8f6 0%, #fff5f2 100%);
+  text-align: center;
+  gap: 0;
+}
+
+#winScreen h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+#statsSection {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 36px 0;
+  animation: fadeSlideIn 0.4s 0.15s ease both;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+#statsSection p {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 20px 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 140px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+#statsSection span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+#restartBtn {
+  padding: 14px 44px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  animation: fadeSlideIn 0.4s 0.25s ease both;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+#restartBtn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--coral-glow);
+}
+
+#restartBtn:active { transform: scale(0.97); }
+
+/* ============================================================
+   LOSE SCREEN
+   ============================================================ */
+#loseScreen {
+  background: linear-gradient(160deg, #faf8f6 0%, #fff5f5 100%);
+  text-align: center;
+  gap: 0;
+}
+
+#loseScreen h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--red);
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+  animation: popIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#loseReason {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+
+#retryBtn {
+  padding: 14px 44px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--coral);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-coral);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  animation: fadeSlideIn 0.4s 0.15s ease both;
+}
+
+#retryBtn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px var(--coral-glow);
+}
+
+#retryBtn:active { transform: scale(0.97); }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--text-faint); border-radius: 99px; }
+
+/* ============================================================
+   DARK THEME VARIABLES
+   ============================================================ */
+body.dark-theme {
+  --bg:             #0f172a;
+  --bg-alt:         #1e293b;
+  --surface:        #1e293b;
+  --border:         rgba(255,255,255,0.08);
+  --border-med:     rgba(255,255,255,0.15);
+  --text-heading:   #f8fafc;
+  --text-body:      #e2e8f0;
+  --text-muted:     #94a3b8;
+  --text-faint:     #64748b;
+  --coral-muted:    rgba(232, 96, 74, 0.25);
+  --coral-glow:     rgba(232, 96, 74, 0.5);
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:      0 6px 24px rgba(0,0,0,0.4);
+  --shadow-lg:      0 16px 48px rgba(0,0,0,0.5);
+}
+
+body.dark-theme #mapContainer {
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, #1e293b, #0f172a);
+}
+
+body.dark-theme .settings-card {
+  background: var(--surface);
+}
+
+body.dark-theme #progressBarTrack {
+  background: #1e293b;
+  border-color: rgba(255,255,255,0.08);
+}
+
+body.dark-theme #stateInput {
+  background: #1e293b;
+  color: var(--text-heading);
+}
+
+body.dark-theme #stateInput::placeholder {
+  color: var(--text-faint);
+}
+
+body.dark-theme #winScreen {
+  background: linear-gradient(160deg, #0f172a 0%, #1a1f2e 100%);
+}
+
+body.dark-theme #loseScreen {
+  background: linear-gradient(160deg, #0f172a 0%, #1f1a1e 100%);
+}
+
+/* ============================================================
+   FLAG CONTAINER
+   ============================================================ */
+#flagContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 12px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  animation: locateFadeIn 0.35s ease both;
+}
+
+.flag-prompt-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.flag-emoji {
+  font-size: 7rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
+  animation: flagPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes flagPop {
+  from { opacity: 0; transform: scale(0.7) rotate(-4deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+#flagImage { display: none; } /* hide img, using emoji div instead */
+
+/* ============================================================
+   CAPITAL PROMPT
+   ============================================================ */
+#capitalPrompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 8px;
+  padding: 4px 20px 16px;
+  animation: locateFadeIn 0.3s ease both;
+}
+
+.capital-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.capital-region {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* ============================================================
+   HINT BUTTON
+   ============================================================ */
+#inputActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hint-btn {
+  padding: 13px 20px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border-med);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.hint-btn:hover {
+  border-color: #F0C040;
+  color: #A07020;
+  background: rgba(240, 192, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+.hint-btn:active { transform: scale(0.96); }
+
+#feedbackMessage.hint {
+  color: #A07020;
+  font-weight: 600;
+}
+
+/* ============================================================
+   REVIEW MODE — banner inside map
+   ============================================================ */
+#reviewBanner {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: var(--surface);
+  border: 1px solid var(--border-med);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md);
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 240px;
+  text-align: center;
+  animation: locateFadeIn 0.3s ease both;
+}
+
+.review-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.review-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+#reviewExitBtn {
+  margin-top: 8px;
+  padding: 7px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--coral-muted);
+  border: 1.5px solid var(--coral);
+  color: var(--coral);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#reviewExitBtn:hover {
+  background: var(--coral);
+  color: #fff;
+}
+
+/* ============================================================
+   LOSE SCREEN — missed regions
+   ============================================================ */
+#missedSection {
+  margin: 16px 0 24px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.missed-heading {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+#missedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.missed-tag {
+  padding: 4px 10px;
+  background: rgba(201, 74, 90, 0.1);
+  border: 1px solid rgba(201, 74, 90, 0.25);
+  color: var(--red);
+  border-radius: var(--r-full);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.missed-tag.missed-more {
+  background: var(--bg-alt);
+  border-color: var(--border-med);
+  color: var(--text-muted);
+}
+
+#loseActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#reviewBtn {
+  padding: 14px 28px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--surface);
+  color: var(--text-heading);
+  border: 1.5px solid var(--border-med);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  animation: fadeSlideIn 0.4s 0.2s ease both;
+}
+
+#reviewBtn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  background: var(--coral-muted);
+  transform: translateY(-2px);
+}
+
+/* MAP ZOOM CURSOR */
+#mapZoomWrapper {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  min-height: 0;
+  transform-origin: center center;
+  will-change: transform;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#indiaMap {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   ANIMATED MAP HIGHLIGHTS — shake for wrong click
+   ============================================================ */
+@keyframes regionShake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-4px); }
+  40%  { transform: translateX(4px); }
+  60%  { transform: translateX(-3px); }
+  80%  { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+.map-shake {
+  animation: regionShake 0.35s ease;
+}
+
+/* ============================================================
+   UNION TERRITORY EASTER EGG
+   ============================================================ */
+
+/* Feedback colour for UT bonus */
+#feedbackMessage.ut-bonus {
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Achievement toast — slides in from bottom-right */
+#utAchievement {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #4c1d95, #7c3aed);
+  color: #fff;
+  padding: 16px 22px;
+  border-radius: var(--r-lg);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.45);
+  transform: translateY(120px);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+  max-width: 320px;
+}
+
+#utAchievement.ut-achievement-show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ut-achievement-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.ut-achievement-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ut-achievement-text strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ut-achievement-text span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+/* Purple pulse animation when a UT is correctly guessed */
+@keyframes utPulse {
+  0%   { filter: brightness(1); }
+  40%  { filter: brightness(1.4) drop-shadow(0 0 8px rgba(139, 92, 246, 0.7)); }
+  100% { filter: brightness(1); }
+}
+
+.ut-correct-flash {
+  animation: utPulse 0.45s ease forwards;
+}
+
+/* ============================================================
+   CONFETTI CANVAS
+   ============================================================ */
+.confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti-canvas.hidden {
+  display: none;
+}
+
+
+/* ============================================================
+   BACK BUTTON — shared across flow screens
+   ============================================================ */
+.back-btn {
+  background: transparent;
+  border: 1.5px solid var(--border-med);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+  background: var(--coral-muted);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* countryContinueWrapper: back on left, continue fills rest */
+#countryContinueWrapper {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#countryContinueBtn {
+  flex: 1;
+}
+
+/* homeStartWrapper is defined in setup screen section above */
+
+/* challengeSettings back+start row */
+#challengeBackWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+#startGameBtn {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  #startScreen,
+  #challengeSettings,
+  #winScreen,
+  #loseScreen {
+    padding: 40px 16px;
+  }
+
+  #gameScreen {
+    padding: 16px 12px 12px;
+  }
+
+  .hero-block { margin-bottom: 44px; }
+
+  #startScreen section { max-width: 100%; }
+
+  #gameModeSection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #difficultySection {
+    flex-direction: row;
+  }
+
+  #timerSection,
+  #livesSection {
+    flex-wrap: wrap;
+  }
+
+  #timerSection button,
+  #livesSection button {
+    min-width: 80px;
+  }
+
+  button { width: 100%; }
+
+  .settings-card { padding: 32px 20px; }
+
+  #topBar { flex-direction: column; gap: 8px; }
+  #topBar > div { flex-direction: row; justify-content: space-between; }
+
+  #stateInput { max-width: 100%; }
+
+  #statsSection { flex-direction: column; align-items: center; }
+  #statsSection p { width: 100%; max-width: 280px; }
+}
