@@ -57,7 +57,7 @@ Built with **HTML, CSS, and JavaScript**, the game uses **SVG maps** to create a
 Once deployed using GitHub Pages:
 
 ```
-https://yourusername.github.io/mapmaster
+https://anurag290805.github.io/mapmaster
 ```
 
 ---
