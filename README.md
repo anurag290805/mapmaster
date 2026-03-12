@@ -10,38 +10,47 @@ A full-featured geography quiz web app to test your knowledge of states and coun
 ![Start Screen](screenshots/start.png)
 *Clean hero landing with scope selection — Country, Continent, or World.*
 
-### 🌍 Region Selection
-![Region Selection](screenshots/region_select.png)
-*Choose a country (India, USA) or continent (Europe, Asia, Africa, etc.) to focus your quiz on.*
+### 🌍 Select Continent
+![Select Continent](screenshots/continent_select.png)
+*Choose from Europe, North America, South America, Africa, Asia, or Oceania.*
+
+### 🗺️ Select Country
+![Select Country](screenshots/country_select.png)
+*Choose a country (India or USA) to quiz on its states.*
 
 ### ⚙️ Game Setup
 ![Game Setup](screenshots/setup.png)
-*Pick your game type (Typing or Locate) and mode (Practice or Challenge) before starting.*
+*Pick one of four game types and a mode (Practice or Challenge) before starting.*
 
-### ⏱️ Challenge Settings
-![Challenge Settings](screenshots/challenge.png)
-*Configure timer duration (2, 3, or 5 minutes) and number of lives for high-stakes play.*
-
-### 🎮 Game Screen — Typing Mode
-![Typing Mode](screenshots/typing.png)
-*Type state or country names to colour them in on the live SVG map. Score, streak, timer, and progress bar update in real time.*
-
-### 📍 Game Screen — Locate Mode
+### 🎯 Locate on Map — World Edition
 ![Locate Mode](screenshots/locate.png)
-*A target region is shown — click it on the map to score. Wrong clicks cost lives in Challenge mode.*
+*A target country is shown — click it on the interactive SVG map to score. Score, streak, timer, and progress bar update in real time.*
 
-### 🏆 Win Screen
-![Win Screen](screenshots/win.png)
-*Confetti, final time, accuracy percentage, and best streak displayed on completion.*
+### ✍️ Type the Name — India Edition
+![Typing Mode](screenshots/typing.png)
+*Type state names from memory to fill the map green. Half of India's 28 states identified here with a streak of 3.*
+
+### 🏛️ Capitals Mode — India Edition
+![Capitals Mode](screenshots/capitals.png)
+*The highlighted state is shown on the map — type its capital city to score. Here: "Capital of Punjab" with the answer Chandigarh.*
+
+### 🚩 Flags Mode — Africa Edition
+![Flags Mode](screenshots/flags.png)
+*A flag emoji is displayed — identify which country it belongs to. Hint system reveals the first letter of the answer.*
 
 ---
 
 ## ✨ Features
 
-- **Two Game Types** — *Type the Name*: type region names to fill the map. *Locate on Map*: click the highlighted target region on the SVG map.
+- **Four Game Types:**
+  - *Type the Name* — Type every region name from memory to fill the map
+  - *Locate on Map* — A target region is named; click it on the SVG map
+  - *Capitals* — The region is highlighted; type its capital city
+  - *Flags* — A flag is shown; identify which country it belongs to
 - **Two Game Modes** — *Practice*: no timer, no lives, play at your own pace. *Challenge*: countdown timer + limited lives for pressure gameplay.
-- **8 Map Scopes** — India (28 states), USA (50 states), Europe, North America, South America, Africa, Asia, Oceania, and World (195 countries).
+- **8 Map Scopes** — India (28 states), USA (50 states), Europe, North America, South America, Africa, Asia, Oceania, and World (194 countries).
 - **Live SVG Map** — Interactive SVG maps with hover highlights, correct-answer colouring, and wrong-click red flash animations.
+- **Hint System** — Stuck? Request a hint to reveal the first letter of the answer.
 - **Streak Tracking** — Current streak and best streak tracked and displayed in real time throughout each game.
 - **Progress Bar** — Animated fill bar showing how many regions have been correctly identified.
 - **Sound Effects** — Subtle audio feedback on correct and incorrect answers, with a toggle to mute.
@@ -135,7 +144,9 @@ mapmaster/
 
 **Multi-scope map engine** — A single `MAPS` data object drives all 8 map contexts. Switching scope swaps the SVG source, region list, and all UI labels with one `applyMap()` call.
 
-**Locate mode click detection** — SVG path click handlers resolve the clicked region name from multiple possible attribute patterns, then compare it against the current target with immediate visual and audio feedback.
+**Four distinct game modes** — Each mode (Type, Locate, Capitals, Flags) shares the same underlying game state and HUD but swaps in a different input and prompt mechanism, keeping the codebase DRY and extensible.
+
+**Hint system** — A lightweight hint engine reveals the first letter of the target answer on demand without penalising the player, keeping the experience approachable for learners.
 
 **Streak & accuracy tracking** — Current and best streaks are maintained across rounds within a session. Accuracy is computed from total attempts vs. correct answers on the win screen.
 
@@ -150,7 +161,7 @@ mapmaster/
 - Manipulating embedded SVG documents via `contentDocument` across different SVG formats
 - Building a multi-screen single-page app with pure JavaScript state management
 - Computing dynamic SVG `viewBox` values from path bounding boxes for universal map support
-- Implementing game loop logic with timers, lives, streaks, and win/lose conditions
+- Implementing four distinct game mechanics (typing, clicking, capitals, flags) within a single unified game loop
 - Designing a scalable data-driven architecture that extends easily to new maps and regions
 
 ---
@@ -159,3 +170,9 @@ mapmaster/
 
 **Anurag Srivastava**  
 [GitHub](https://github.com/anurag290805)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
