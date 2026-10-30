@@ -331,7 +331,7 @@ indiaMap.addEventListener("load", () => {
     const label = getRegionName(e.target);
     if (!label) return;
     const fill = darkMode ? "#4a7fa8" : "#f0a898";
-    if (!gameState.guessedStates.includes(label)) e.target.style.fill = fill;
+    if (!gameState.guessedStates.includes(label) && !gameState.guessedUTs.includes(label)) e.target.style.fill = fill;
     // Tooltip: show in all modes except locate (don't give away the answer)
     if (tooltip && gameState.gameType !== "locate") {
       tooltip.textContent = label;
@@ -352,7 +352,7 @@ indiaMap.addEventListener("load", () => {
 
   svgDoc.addEventListener("mouseout", (e) => {
     const label = getRegionName(e.target);
-    if (label && !gameState.guessedStates.includes(label)) {
+    if (label && !gameState.guessedStates.includes(label) && !gameState.guessedUTs.includes(label)) {
       e.target.style.fill = darkMode ? "#2d4a6e" : "#e2d9d0";
     }
     if (tooltip) tooltip.style.display = "none";
@@ -391,6 +391,21 @@ indiaMap.addEventListener("load", () => {
     wrapper.style.transform = `scale(${scale}) translate(${tx}px, ${ty}px)`;
     wrapper.style.cursor = scale > 1 ? (dragging ? "grabbing" : "grab") : "default";
   }
+
+  container.addEventListener("wheel", e => {
+    e.preventDefault();
+    const prev   = scale;
+    const factor = e.deltaY < 0 ? 1.12 : 0.9;
+    scale = Math.min(Math.max(1, scale * factor), 6);
+    if (scale > 1) {
+      const rect = wrapper.getBoundingClientRect();
+      const cx = (e.clientX - rect.left  - rect.width  / 2) / prev;
+      const cy = (e.clientY - rect.top   - rect.height / 2) / prev;
+      tx -= cx * (scale - prev);
+      ty -= cy * (scale - prev);
+    } else { tx = 0; ty = 0; }
+    applyTransform();
+  }, { passive: false });
 
   container.addEventListener("mousedown", e => {
     if (scale <= 1) return;

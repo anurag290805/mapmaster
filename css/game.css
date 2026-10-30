@@ -368,6 +368,17 @@ body.dark-theme #mapTooltip {
   animation: flagPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Twemoji image — used instead of emoji text for cross-platform flag rendering */
+.flag-img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
+  animation: flagPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  image-rendering: auto;
+  border-radius: 4px;
+}
+
 #flagImage { display: none; }
 
 

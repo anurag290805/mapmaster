@@ -167,6 +167,17 @@ function handleLocateClick(e) {
 /* ============================================================
    FLAG MODE
    ============================================================ */
+/* ============================================================
+   FLAG EMOJI → TWEMOJI IMAGE URL
+   Converts a flag emoji (two Regional Indicator chars) to a
+   Twemoji CDN PNG URL. This renders correctly on Windows which
+   has no built-in flag emoji font and shows "IN", "AU" etc.
+   ============================================================ */
+function flagEmojiToUrl(emoji) {
+  const codepoints = [...emoji].map(c => c.codePointAt(0).toString(16)).join("-");
+  return `https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/${codepoints}.png`;
+}
+
 function getFlagRegions() {
   return CURRENT_REGIONS.filter(r => FLAGS[r]);
 }
@@ -189,20 +200,22 @@ function pickRandomFlagTarget() {
 
 function showFlagTarget(name) {
   gameState.currentTarget = name;
-  if (!flagContainer || !flagImage) return;
+  if (!flagContainer) return;
   const flagVal = FLAGS[name];
   if (!flagVal) return;
 
-  const emojiEl = flagContainer.querySelector(".flag-emoji");
-  if (emojiEl) {
-    emojiEl.textContent = flagVal;
-  } else {
-    flagImage.style.display = "none";
-    const span = document.createElement("div");
-    span.className = "flag-emoji";
-    span.textContent = flagVal;
-    flagContainer.insertBefore(span, flagImage);
-  }
+  // Remove any existing flag display (img or emoji span)
+  const existing = flagContainer.querySelector(".flag-emoji, .flag-img");
+  if (existing) existing.remove();
+
+  // Render via Twemoji image — works on Windows which has no flag emoji font
+  const img = document.createElement("img");
+  img.className = "flag-img";
+  img.src = flagEmojiToUrl(flagVal);
+  img.alt = name;
+  img.setAttribute("draggable", "false");
+  flagContainer.insertBefore(img, flagContainer.querySelector(".flag-prompt-label").nextSibling);
+
   flagContainer.style.animation = "none";
   void flagContainer.offsetWidth;
   flagContainer.style.animation = "";

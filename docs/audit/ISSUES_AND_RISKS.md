@@ -1,0 +1,40 @@
+# Issues and risks
+
+Severity reflects user impact, not a production incident. Confirmed means source-level or local deterministic evidence, not browser confirmation. All remain open.
+
+## Confirmed from source / local checks
+
+| ID | Severity / subsystem | Evidence and reproduction | Impact / cause | Recommendation / owner | Verification |
+|---|---|---|---|---|---|
+| I-01 | Critical / typing | `modes.js:59–73`: choose world typing; submit `a` repeatedly after 200 ms. `normalize('Afghanistan').includes('a')` is true; duplicate check compares `a` to full guessed names, then pushes same match again. | Partial input scores and duplicates can reach win threshold; first matching name wins. | Normalize exact names and explicit aliases; deduplicate canonical IDs; regression cases incl. partial, accents, repeated inputs. CP04. | Browser reproduced score/streak 2 and duplicate Afghanistan from `a` twice; also isolated Node VM |
+| I-02 | High / maps | `data.js:376,389` requests `svg/north america.svg` and `svg/south america.svg`; actual files use underscores. | Broken continent object; locate unavailable. | Correct paths with same-origin loading/error state; test both. CP04/05. | Filesystem confirmed; browser locate target blank during a switching sequence, request capture inconclusive |
+| I-03 | High / maps | `ui.js:280–426`: single global alias table maps e.g. `CG` to `Republic of Congo`, then the world reverse alias maps that name to `Congo`; `getPathByName` returns first match. Map IDs and data names differ by scope. | Unreachable targets or incomplete multipart coloring are possible; no exhaustive geometry mapping exists. | Scope-specific stable IDs, multiple geometries and playable-coverage test. CP05/07. | Source confirmed; target reachability unverified |
+| I-04 | High / data | `modes.js:181,266`, `data.js`: world 129/194 flags, 84/194 capitals; Africa flags 23/54, Oceania 4/14, Asia capitals 49/50. | Games silently shrink, misleading coverage; incomplete question data. | Label pool coverage and curate/validate sources and aliases. CP07. | Local key inventory; factual correctness unverified |
+| I-05 | Medium / answer entry | `state.js:20`, `modes.js:231,307`: normalize only lowercase and whitespace; capital and flag require exact normalized equality. | Accents, punctuation and legitimate alternate names rejected. | Explicit reviewed aliases and Unicode normalization with ambiguity tests. CP04/07. | Static |
+| I-06 | Medium / assets | `modes.js:178` loads Twemoji from cdnjs; `css/variables.css:6` loads Google Fonts; `Readme.txt` links absent LICENSE. | Offline/network failure; rights and attribution uncertain. | Establish provenance and license evidence for all assets, vendor only where allowed, fallback on errors; CP07/11. | Static; legal status unresolved |
+| I-07 | High / accessibility | `modes.js:102–160` only SVG click; `index.html:253–258` input lacks explicit label/live region; no `prefers-reduced-motion` rule in CSS. | Keyboard and assistive technology access and motion accommodations insufficient or unproven. | Offer equivalent keyboard-selectable list, labels, announcements and reduced motion; audit WCAG 2.2 AA. CP02/04/05/11. | Static; no AT audit |
+| I-08 | Medium / time | `game.js:373–385` clamps hint penalty to zero without ending until next interval tick. | Player may interact briefly after zero; timing may change outcome. | Single atomic deadline check and guarded end transition. CP04. | Static |
+| I-09 | Medium / reliability | `game.js:14` decrements by interval rather than deadline; `ui.js:95–120` transition timeouts and `events.js:571` persistent animation interval. | Background throttling causes timer drift; rapid navigation may race. | Use monotonic deadline and cancellable lifecycle, throttle animations. CP04/11. | Static risk, reproduction pending |
+| I-10 | Medium / save | `ui.js:611` directly reads storage, `events.js:269` directly writes; only theme persists. | Storage denial can interrupt startup/toggle; refresh loses session. | Guard storage and add versioned guest save with non-destructive migration. CP08/11. | Static |
+| I-11 | Medium / UX | `modes.js:211–215` sets flag image `alt` to answer; `index.html:232` leaves separate empty image. | Screen reader may hear answer and redundant image; empty src may request current document in some browsers. | Accessible prompt design, hide answer until appropriate; remove redundant image and test. CP04/11. | Static; browser behavior pending |
+
+## Additional risks / open investigations
+
+- Naming and classification conflict: Africa uses Cape Verde/Swaziland/Republic of Congo whereas world uses Cabo Verde/Eswatini/Congo; Asia includes Palestine and Taiwan, and transcontinental countries overlap. World omits or names entities differently. Establish transparent scope and disputed-name policy without treating a count as a political determination. CP07.
+- User-visible layout, small targets, contrast, focus, text scaling and SVG touch behavior need real viewport and assistive technology tests. CSS breakpoints alone do not prove responsiveness. CP02/11.
+- `getBBox` over every path, forced layout reads, large SVG and animations are performance risks; no timings or browser profiles are available. CP05/11.
+- Network/CDN availability, map load error behavior, simultaneous input/expiry, last life, back/restart, invalid pool, repeated starts, SVG load races, state changes after end and all supported scopes need real integration testing. CP04/11.
+- Asset authorship, source datasets, boundaries, fonts, icons, emoji, sounds and inherited code have no documented chain of rights. Do not infer reuse permission from appearance or README. CP07/12.
+
+**I-12 — High / Asia map:** Preliminary XML label and alias cross-check found no matching labels for Armenia, Azerbaijan, Cyprus, Georgia or Turkey in `svg/asia.svg`, while `data.js` selects all five as possible Asia questions. A locate session can randomly choose one and may become unwinnable. Static reference check, not an interaction test. CP05/07: establish map-specific ID-to-clickable-geometry coverage and remove or provide accessible equivalent for unsupported targets until corrected.
+
+
+**I-13 — High / challenge lives:** Browser reproduction: World → Flags → Challenge → 2 minutes → enter a wrong answer. HUD displays infinite lives, but game ends with “ran out of lives”. `resetGame` initializes lives only for locate, while `handleFlagSubmit` and `handleCapitalSubmit` deduct them on challenge errors. Capital has the same source-level path but was not separately browser-reproduced. CP04: align configuration, HUD and mode rules; test both modes.
+
+**I-14 — High / map matching:** `python3 tools/audit-svg.py` identifies missing resolved path names for Xizang (Tibet), Cape Verde, Republic of Congo, Swaziland, the five I-12 Asia entries, and Federated States of Micronesia. Global aliases resolve some continent labels to world names. Duplicate IDs occur in 16 SVGs, and four Australian entities resolve to multiple paths. Missing path-name evidence is static; ancestor handlers and actual clicks still require investigation. CP05/07: scope aliases and validate interactive coverage and multipart coloring.
+
+**I-15 — Medium / map switching:** During one Brave session, North America and later UAE locate showed a blank target after switching from world, while the screenshot still displayed a world map. The requested object `data` attribute was `svg/uae.svg`; the localhost log recorded world SVG but no subsequent map request. Root cause and whether browser tooling affects this observation remain unresolved. Repeat in an independent browser and inspect load/error events before diagnosing. CP04/05.
+
+## CP01 consolidation
+
+Consolidation: issues remain open. CP04 owns I-01, I-13 and core gameplay characterization; CP05/07 own I-02, I-12 and I-14 map/data coverage; CP02/04/05/11 own I-07 accessibility; CP07/12 own unresolved asset rights. See ROADMAP.md. No production readiness is claimed.

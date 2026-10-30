@@ -43,6 +43,7 @@ function resetGame() {
   gameState.currentTarget  = null;
   gameState.timeLeft       = gameState.selectedTime || 0;
   gameState.currentStreak  = 0;
+  gameState.bestStreak     = 0;
   gameState.reviewMode     = false;
 
   if (gameState.gameMode === "challenge" && gameState.gameType === "locate") {
@@ -136,7 +137,6 @@ function endGame(isWin, reason = "") {
       display.finalAccuracy.textContent = "--";
       if (finalStreak) animateValue(finalStreak, 0, gameState.bestStreak, 600, v => v);
     }
-    if (finalStreak && gameState.gameMode !== "challenge") finalStreak.textContent = gameState.bestStreak;
 
     // UT Easter egg stat
     const utBonusStat  = document.getElementById("utBonusStat");
@@ -157,11 +157,12 @@ function endGame(isWin, reason = "") {
   } else {
     playSound(sfxLose);
 
-    if (gameState.gameType === "typing" || gameState.gameType === "capital") {
-      const allRegions = gameState.gameType === "capital"
-        ? getCapitalRegions()
-        : CURRENT_REGIONS;
-      gameState.missedRegions = allRegions.filter(r => !gameState.guessedStates.includes(r));
+    if (gameState.gameType === "typing") {
+      gameState.missedRegions = CURRENT_REGIONS.filter(r => !gameState.guessedStates.includes(r));
+    } else if (gameState.gameType === "capital") {
+      gameState.missedRegions = getCapitalRegions().filter(r => !gameState.guessedStates.includes(r));
+    } else if (gameState.gameType === "flag") {
+      gameState.missedRegions = getFlagRegions().filter(r => !gameState.guessedStates.includes(r));
     } else if (gameState.gameType === "locate") {
       gameState.missedRegions = CURRENT_REGIONS.filter(r => !gameState.guessedStates.includes(r));
     } else {
@@ -278,6 +279,7 @@ function applyMap(mapKey) {
   gameState.totalAttempts = 0;
   gameState.guessedStates = [];
   gameState.currentStreak = 0;
+  gameState.bestStreak    = 0;
   gameState.currentTarget = null;
 
   if (progressBarFill) progressBarFill.style.width = "0%";
