@@ -266,7 +266,7 @@ if (themeToggleBtn) {
   themeToggleBtn.addEventListener("click", () => {
     darkMode = !darkMode;
     document.body.classList.toggle("dark-theme", darkMode);
-    localStorage.setItem("mapmaster-theme", darkMode ? "dark" : "light");
+    try { localStorage.setItem("mapmaster-theme", darkMode ? "dark" : "light"); } catch (_) { /* Theme remains usable for this session. */ }
     themeToggleBtn.textContent = darkMode ? "☀️" : "🌙";
     applyMapThemeColors(); // live-update SVG colors
   });

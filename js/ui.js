@@ -608,7 +608,8 @@ function launchConfetti() {
    THEME TOGGLE — initialise on load
    ============================================================ */
 let darkMode = false;
-const savedTheme = localStorage.getItem("mapmaster-theme");
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("mapmaster-theme"); } catch (_) { /* Storage may be unavailable; keep the default. */ }
 if (savedTheme === "dark") {
   darkMode = true;
   document.body.classList.add("dark-theme");

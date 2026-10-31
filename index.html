@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MapMaster</title>
 
+    <link rel="icon" href="assets/brand/icon.svg" type="image/svg+xml" />
+
     <!-- Preconnect to Twemoji CDN for faster flag image loading -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
@@ -14,6 +16,9 @@
     <link rel="stylesheet" href="css/screens.css" />
     <link rel="stylesheet" href="css/game.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/integration.css" />
   </head>
   <body>
 
@@ -22,7 +27,7 @@
       <div id="heroMapBg"></div>
 
       <div class="hero-block">
-        <h1>Map<span>Master</span></h1>
+        <h1><img class="mm-brand-mark" src="assets/brand/icon.svg" alt="" />Map<span>Master</span></h1>
         <p class="hero-subtitle">Test your geography knowledge</p>
         <div class="hero-divider"></div>
       </div>
@@ -194,7 +199,7 @@
 
       <header id="appHeader">
         <div id="headerBrand">
-          <span id="headerLogo">MapMaster</span>
+          <span id="headerLogo"><img class="mm-brand-mark" src="assets/brand/icon.svg" alt="" />MapMaster</span>
           <span id="headerSub">India Edition</span>
         </div>
         <div id="headerActions">
@@ -250,12 +255,12 @@
       </div>
 
       <div id="inputSection">
-        <input type="text" id="stateInput" placeholder="Type a state name..." autocomplete="off" />
+        <input type="text" id="stateInput" aria-label="Your answer" placeholder="Type a state name..." autocomplete="off" />
         <div id="inputActions">
           <button id="submitAnswerBtn">Submit</button>
           <button id="hintBtn" class="hint-btn" title="Use a hint">💡 Hint</button>
         </div>
-        <div id="feedbackMessage"></div>
+        <div id="feedbackMessage" role="status" aria-live="polite"></div>
       </div>
 
     </div>

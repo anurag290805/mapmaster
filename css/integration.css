@@ -1,0 +1,10 @@
+/* Incremental bridge from legacy tokens and selectors; game rules stay untouched. */
+body{--bg:var(--mm-canvas);--bg-alt:var(--mm-raised);--surface:var(--mm-surface);--border:var(--mm-line);--border-med:var(--mm-line);--text-heading:var(--mm-text);--text-body:var(--mm-text);--text-muted:var(--mm-secondary);--text-faint:var(--mm-muted);--coral:var(--mm-brand);--coral-dark:var(--mm-brand-hover);--coral-soft:var(--mm-accent);--shadow-sm:var(--mm-shadow);font-family:var(--mm-font);background:var(--mm-canvas);animation:none}
+#heroMapBg svg{animation:none} #heroMapBg{opacity:.08}
+button{min-height:44px} button:focus-visible,input:focus-visible{outline:3px solid var(--mm-focus)!important;outline-offset:3px}
+#gameScreen{min-height:100dvh;height:auto;overflow:visible} #stateInput{font-family:var(--mm-font)}
+.mm-brand-mark{width:2rem;height:2rem;vertical-align:middle;margin-right:.5rem} #headerLogo .mm-brand-mark{width:1.5rem;height:1.5rem}
+#scoreWrapper,#timerWrapper,#livesWrapper,#streakWrapper,.settings-card{border:1px solid var(--mm-line);box-shadow:var(--mm-shadow)}
+@media(max-width:640px){#gameScreen{min-height:100dvh} .mm-brand-mark{width:1.65rem;height:1.65rem}}
+/* Legacy primary buttons use white text; the dark theme's pale brand needs dark ink. */
+body.dark-theme :is(#homeStartBtn,#startGameBtn,#submitAnswerBtn,#restartBtn,#retryBtn):not(:disabled){color:var(--mm-inverse)}

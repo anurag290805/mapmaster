@@ -1,0 +1,24 @@
+/* Shared primitives; .mm- namespace keeps legacy game contracts intact. */
+.mm-button {display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:var(--mm-control);padding:.65rem 1.1rem;border:1px solid transparent;border-radius:var(--mm-radius-sm);font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:background var(--mm-fast),transform var(--mm-fast),border-color var(--mm-fast)}
+.mm-button:active:not(:disabled){transform:translateY(1px)} .mm-button--primary{background:var(--mm-brand);color:var(--mm-inverse)} .mm-button--primary:hover{background:var(--mm-brand-hover)}
+.mm-button--secondary{background:var(--mm-surface);border-color:var(--mm-line);color:var(--mm-text)} .mm-button--secondary:hover,.mm-button--ghost:hover{background:var(--mm-raised)}
+.mm-button--ghost{background:transparent;color:var(--mm-text)} .mm-button--danger{background:var(--mm-error);color:var(--mm-surface)} .mm-button:disabled{opacity:.55;cursor:not-allowed} .mm-button--small{min-height:2.75rem;padding:.45rem .75rem;font-size:.875rem} .mm-button--large{min-height:3.25rem;padding:.8rem 1.5rem}
+.mm-card{background:var(--mm-surface);border:1px solid var(--mm-line);border-radius:var(--mm-radius);padding:var(--mm-space-6);box-shadow:var(--mm-shadow);color:var(--mm-text)} .mm-card--selected{outline:2px solid var(--mm-brand);outline-offset:-2px}.mm-card--featured{border-top:4px solid var(--mm-accent)}.mm-card--compact{padding:var(--mm-space-4)}
+.mm-field{display:grid;gap:.4rem;font-weight:650}.mm-field input,.mm-field select,.mm-field textarea{width:100%;min-height:var(--mm-control);border:1px solid var(--mm-line);border-radius:var(--mm-radius-sm);background:var(--mm-surface);color:var(--mm-text);padding:.7rem;font:inherit}
+.mm-badge{display:inline-flex;align-items:center;min-height:1.75rem;padding:.2rem .65rem;border-radius:99px;background:var(--mm-raised);color:var(--mm-text);font-size:.78rem;font-weight:750}.mm-badge--accent{background:var(--mm-accent-subtle);color:var(--mm-text)}
+.mm-progress{width:100%;height:.6rem;accent-color:var(--mm-brand)} .mm-notice{border-left:4px solid var(--mm-info);padding:.75rem 1rem;background:var(--mm-raised);border-radius:var(--mm-radius-sm)} .mm-notice--error{border-color:var(--mm-error)} .mm-notice--success{border-color:var(--mm-success)}
+.mm-dialog{margin:auto;max-width:min(32rem,calc(100% - 2rem));max-height:calc(100dvh - 2rem);overflow:auto;border:1px solid var(--mm-line);border-radius:var(--mm-radius);background:var(--mm-surface);color:var(--mm-text);padding:1.5rem;box-shadow:var(--mm-shadow)} .mm-dialog::backdrop{background:var(--mm-overlay)}
+.mm-toast{position:fixed;z-index:var(--mm-z-toast);right:1rem;bottom:1rem;max-width:min(24rem,calc(100% - 2rem));background:var(--mm-surface);border:1px solid var(--mm-line);border-radius:var(--mm-radius);padding:1rem;box-shadow:var(--mm-shadow)}
+.mm-tabs{display:flex;gap:.5rem;flex-wrap:wrap}.mm-tabs [aria-selected="true"]{background:var(--mm-brand);color:var(--mm-inverse)}
+:focus-visible{outline:3px solid var(--mm-focus)!important;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* Interactive cards are native buttons: keyboard and disabled semantics are built in. */
+.mm-card--interactive{display:block;width:100%;text-align:left;font:inherit;cursor:pointer;transition:border-color var(--mm-fast),background var(--mm-fast)}
+.mm-card--interactive:hover:not(:disabled){background:var(--mm-raised);border-color:var(--mm-brand)}
+.mm-card--interactive[aria-pressed="true"]{outline:2px solid var(--mm-brand);outline-offset:-2px}
+.mm-card--interactive:disabled{opacity:.55;cursor:not-allowed}
+.mm-notice--warning{border-color:var(--mm-warning)}
+.mm-field [aria-invalid="true"]{border:2px solid var(--mm-error)}
+.mm-field-error{color:var(--mm-error);font-size:.875rem}
+.mm-tooltip{display:block;padding:.65rem .8rem;background:var(--mm-raised);color:var(--mm-text);border:1px solid var(--mm-line);border-radius:var(--mm-radius-sm)}
+.mm-tooltip[hidden],.mm-toast[hidden]{display:none}
