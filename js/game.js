@@ -69,6 +69,8 @@ function resetGame() {
    START GAME
    ============================================================ */
 function startGame() {
+  // Ignore a repeated launch while the active game screen is already visible.
+  if (screens.game && !screens.game.classList.contains("hidden")) return;
   resetGame();
   gameState.startTime = Date.now();
   updateHUD();

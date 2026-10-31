@@ -10,6 +10,10 @@
    ============================================================ */
 const screens = {
   start:           document.getElementById("startScreen"),
+  play:            document.getElementById("playScreen"),
+  scope:           document.getElementById("scopeScreen"),
+  progress:        document.getElementById("progressScreen"),
+  help:            document.getElementById("helpScreen"),
   countrySelect:   document.getElementById("countrySelectScreen"),
   continentSelect: document.getElementById("continentSelectScreen"),
   setup:           document.getElementById("setupScreen"),
@@ -93,31 +97,28 @@ function updateBreadcrumb(screenName) {
    SCREEN TRANSITIONS — directional
    ============================================================ */
 function showScreen(screenName, direction = "forward") {
-  const current    = Object.values(screens).find(s => !s.classList.contains("hidden"));
-  const currentKey = Object.keys(screens).find(k => screens[k] === current);
-  if (currentKey) previousScreen = currentKey;
   const next = screens[screenName];
-
-  const exitClass  = direction === "back" ? "slide-out-right" : "slide-out-left";
-  const enterClass = direction === "back" ? "slide-in-left"   : "slide-in-right";
-
-  updateBreadcrumb(screenName);
-
-  if (current && current !== next) {
-    current.classList.add(exitClass);
-    setTimeout(() => {
-      current.classList.add("hidden");
-      current.classList.remove(exitClass);
-      next.classList.remove("hidden");
-      next.classList.add(enterClass);
-      setTimeout(() => next.classList.remove(enterClass), 350);
-    }, 220);
-  } else {
-    Object.values(screens).forEach(s => s.classList.add("hidden"));
-    next.classList.remove("hidden");
-    next.classList.add(enterClass);
-    setTimeout(() => next.classList.remove(enterClass), 350);
+  if (!next) return;
+  const current = Object.values(screens).find(s => s && !s.classList.contains("hidden"));
+  const currentKey = Object.keys(screens).find(k => screens[k] === current);
+  if (currentKey && currentKey !== screenName) previousScreen = currentKey;
+  if (currentKey === "game" && screenName !== "game") {
+    clearTimer();
+    const mapDocument = getSvgDoc();
+    if (mapDocument) mapDocument.removeEventListener("click", handleLocateClick);
+    gameState.startTime = null;
   }
+  // A synchronous transition prevents stale timeout callbacks revealing old screens.
+  Object.values(screens).filter(Boolean).forEach(s => {
+    s.classList.add("hidden");
+    s.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
+  });
+  next.classList.remove("hidden");
+  updateBreadcrumb(screenName);
+  next.setAttribute("tabindex", "-1");
+  next.focus({ preventScroll: true });
+  window.scrollTo(0, 0);
+  document.dispatchEvent(new CustomEvent("mapmaster:screen", { detail: { screen: screenName, from: currentKey } }));
 }
 
 

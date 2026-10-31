@@ -19,27 +19,23 @@
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/integration.css" />
+    <link rel="stylesheet" href="css/cp03.css" />
   </head>
   <body>
 
-    <!-- START SCREEN - scope selection only -->
-    <div id="startScreen">
-      <div id="heroMapBg"></div>
-
-      <div class="hero-block">
-        <h1><img class="mm-brand-mark" src="assets/brand/icon.svg" alt="" />Map<span>Master</span></h1>
-        <p class="hero-subtitle">Test your geography knowledge</p>
-        <div class="hero-divider"></div>
-      </div>
-
-      <section id="scopeSection">
-        <h3>Select Region</h3>
-        <button id="countryScopeBtn">&#127758; Country</button>
-        <button id="continentScopeBtn">&#128506; Continent</button>
-        <button id="worldScopeBtn">&#127757; World</button>
-      </section>
-
-    </div>
+    <header class="site-header"><div class="site-header-inner"><button class="site-brand" type="button" data-go="start" aria-label="MapMaster home"><img src="assets/brand/icon.svg" alt="" /><span>MapMaster</span></button><button class="menu-toggle" id="menuToggle" aria-controls="primaryNav" aria-expanded="false">Menu</button><nav id="primaryNav" aria-label="Primary navigation"><button data-go="start" aria-current="page">Home</button><button data-go="play">Play</button><button data-go="scope">Explore</button><button data-go="progress">Progress</button><button data-go="help">Help</button></nav><button class="settings-trigger" id="openSettings" type="button">Settings <span aria-hidden="true">↗</span></button></div></header>
+    <main id="startScreen" class="cp-screen" tabindex="-1">
+      <section class="home-hero"><div class="hero-copy"><p class="cp-kicker">A little further, every day <span> / </span> THE WORLD IS WAITING</p><h1>Find your place<br><em>in the world.</em></h1><p class="hero-lede">A geography game for curious minds. Pick a challenge, explore the map, and discover how much you know.</p><div class="hero-actions"><button class="cp-primary" data-go="play">Find a game <span aria-hidden="true">↗</span></button><button class="cp-text-button" data-go="scope">Explore places <span aria-hidden="true">→</span></button></div><div class="hero-foot"><span>✳ &nbsp; PLAY AT YOUR OWN PACE</span><span>✳ &nbsp; NO ACCOUNT NEEDED</span></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="atlas-globe"><span class="globe-cross">✳</span><span class="globe-label">A WORLD<br>OF PLACES</span></div><span class="atlas-coord">23° 26′ N &nbsp; / &nbsp; 0° 00′</span><span class="atlas-index">FIELD NOTES<br><b>01 / 04</b></span></div></section>
+      <section class="home-discover"><div class="section-heading"><div><p class="cp-kicker">YOUR NEXT ADVENTURE</p><h2>How will you explore?</h2></div><button class="cp-text-button" data-go="play">All games <span aria-hidden="true">↗</span></button></div><div class="home-cards"><button class="home-card featured" data-mode="typing"><span class="card-index">01 / RECALL</span><span class="card-symbol" aria-hidden="true">Aa</span><strong>Name the places</strong><span>How many places can you remember?</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="locate"><span class="card-index">02 / DISCOVER</span><span class="card-symbol" aria-hidden="true">⌖</span><strong>Find it on the map</strong><span>Put your sense of direction to the test.</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="flag"><span class="card-index">03 / RECOGNISE</span><span class="card-symbol" aria-hidden="true">⚑</span><strong>Know your flags</strong><span>Match a flag to its country.</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="capital"><span class="card-index">04 / RECALL</span><span class="card-symbol" aria-hidden="true">◎</span><strong>Capital cities</strong><span>Find the city behind the place.</span><span class="card-action">Choose a region ↗</span></button></div></section>
+      <section class="home-regions"><div class="section-heading"><div><p class="cp-kicker">EXPLORE BY REGION</p><h2>Choose a corner of the world.</h2></div><button class="cp-text-button" data-go="scope">All places ↗</button></div><div id="continentQuick" class="region-links" aria-label="Continents"></div><p class="region-note">North and South America maps currently fail to load. Some other map targets and question pools are incomplete.</p></section>
+      <section class="home-bottom"><div><p class="cp-kicker">A WORLD OF POSSIBILITIES</p><h2>Start anywhere.</h2><p>Choose the whole world, a continent, or a country’s regions.</p><button class="cp-text-button" data-go="scope">Explore the atlas →</button></div><div class="guest-note"><span class="cp-kicker">YOUR JOURNEY</span><h3>Every explorer starts somewhere.</h3><p>Play as a guest. Your theme preference stays on this device; game progress is not saved yet.</p><button class="cp-text-button" data-go="progress">About progress →</button></div></section><footer class="site-footer"><span>MAPMASTER / MADE FOR CURIOUS MINDS</span><button data-go="help">How to play ↗</button></footer>
+    </main>
+    <section id="playScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">THE PLAY COLLECTION / 01—04</p><h1>Choose your challenge.</h1><p class="cp-intro">Four ways to see the world. Choose a game, then pick where to play.</p><div class="play-list"><button class="play-card" data-mode="typing"><span>01</span><div><strong>Name the places</strong><p>Recall names from memory. Type as many as you can.</p><small>RECALL · PRACTICE OR CHALLENGE</small></div><b>↗</b></button><button class="play-card" data-mode="locate"><span>02</span><div><strong>Find it on the map</strong><p>Find the named place on the map.</p><small>MAP · PRACTICE OR CHALLENGE</small></div><b>↗</b></button><button class="play-card" data-mode="flag"><span>03</span><div><strong>Know your flags</strong><p>Identify countries from their flags.</p><small>RECOGNITION · WORLD / CONTINENTS</small></div><b>↗</b></button><button class="play-card" data-mode="capital"><span>04</span><div><strong>Capital cities</strong><p>Name the capital of the place shown.</p><small>RECALL · PRACTICE OR CHALLENGE</small></div><b>↗</b></button></div><p class="cp-notice">Some maps and question pools are incomplete. See <button data-go="help" class="inline-link">Help</button> for known limitations.</p></section>
+    <section id="scopeScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">EXPLORE / CHOOSE YOUR SCOPE</p><h1>Where to next?</h1><p class="cp-intro">Start with the world, explore a continent, or choose a country’s regions.</p><div id="scopeSection" class="scope-cards"><button id="worldScopeBtn"><span>01 / GLOBAL</span><strong>The world</strong><small>Countries around the globe</small><b>↗</b></button><button id="continentScopeBtn"><span>02 / REGIONAL</span><strong>Continents</strong><small>Choose from six regions</small><b>↗</b></button><button id="countryScopeBtn"><span>03 / LOCAL</span><strong>Countries</strong><small>Explore states and regions</small><b>↗</b></button></div><p class="cp-notice">North and South America map files currently do not load. Some other map targets are unavailable; typing and question coverage also have known limitations.</p><button class="cp-text-button" data-go="play">← Back to games</button></section>
+    <section id="progressScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">YOUR JOURNEY</p><h1>A place to begin.</h1><p class="cp-intro">Progress and achievements are not saved yet. Your current game results are shown at the end of a session.</p><div class="guest-note"><h2>More to discover</h2><p>Lasting records and achievements are planned for a later update. For now, choose a game and enjoy exploring.</p><button class="cp-primary" data-go="play">Choose a game ↗</button></div></section>
+    <section id="helpScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">FIELD GUIDE / HOW TO PLAY</p><h1>A little help<br><em>goes a long way.</em></h1><p class="cp-intro">Choose a game and a region, then pick practice or a timed challenge.</p><div class="help-list"><details open><summary>Choose your game</summary><p>Type names from memory, locate a named place on the map, identify a flag, or name a capital. Flags are available for world and continent scopes where flag data exists.</p></details><details><summary>Practice &amp; challenge</summary><p>Practice has no countdown. Challenge uses a timer; locate also asks for lives. Known issue: an incorrect flag or capital answer in challenge can end the game unexpectedly.</p></details><details><summary>Scoring, hints &amp; results</summary><p>Correct answers add to the score and streak. Hints reveal a clue; in timed play they can subtract time. Results appear at the end. Typing currently accepts some partial or repeated answers incorrectly.</p></details><details><summary>Maps, keyboard &amp; touch</summary><p>Use the map to locate places; wheel or pinch to zoom. Map selection currently requires pointing and some targets or map files do not work. North and South America maps fail to load; a keyboard map alternative is planned.</p></details><details><summary>Guest preferences</summary><p>Theme preference is stored on this device when storage is available. Sound is kept for this visit. Game history and achievements are not yet saved.</p></details></div><button class="cp-secondary" id="replayGuide">Replay introduction</button></section>
+    <dialog id="settingsDialog" class="cp-dialog" aria-labelledby="settingsTitle"><div class="dialog-head"><div><p class="cp-kicker">PERSONALISE</p><h2 id="settingsTitle">Settings</h2></div><button class="dialog-close" data-close="settingsDialog" aria-label="Close settings">×</button></div><div class="settings-row"><div><strong>Appearance</strong><p>Light or dark on this device.</p></div><button class="cp-secondary" id="settingsTheme">Switch theme</button></div><div class="settings-row"><div><strong>Sound</strong><p>Sound preference lasts for this visit.</p></div><button class="cp-secondary" id="settingsSound">Toggle sound</button></div><p class="settings-foot">Guest preferences stay on this device. Game history is not saved.</p><div class="dialog-actions"><button class="cp-text-button" id="settingsGuide">Replay introduction</button><button class="cp-text-button" id="settingsHelp">How to play →</button></div></dialog>
+    <dialog id="onboardingDialog" class="cp-dialog onboarding" aria-labelledby="onboardTitle"><div class="dialog-head"><p class="cp-kicker">WELCOME TO MAPMASTER</p><button class="dialog-close" id="skipGuide" aria-label="Skip introduction">×</button></div><p class="guide-count" id="guideCount"></p><h2 id="onboardTitle"></h2><p id="guideText"></p><div class="dialog-actions"><button class="cp-text-button" id="guideBack">← Back</button><button class="cp-text-button" id="guideSkip">Skip for now</button><button class="cp-primary" id="guideNext">Continue →</button></div></dialog>
 
     <!-- COUNTRY SELECT SCREEN -->
     <div id="countrySelectScreen" class="hidden">
@@ -51,7 +47,7 @@
       </div>
 
       <section id="countrySection">
-        <h3>Choose a country</h3>
+        <h3>Choose a country</h3><label class="country-search">Search countries<input type="search" id="countrySearch" placeholder="Search by name" autocomplete="off" /></label><p id="countryEmpty" class="hidden" role="status">No countries match that search.</p>
         <div class="country-grid">
           <button data-country="argentina"     class="country-btn"><span class="c-flag">&#127462;&#127479;</span><span class="c-name">Argentina</span></button>
           <button data-country="australia"     class="country-btn"><span class="c-flag">&#127462;&#127482;</span><span class="c-name">Australia</span></button>
@@ -120,13 +116,13 @@
 
       <div class="hero-block">
         <h1>Game<span> Setup</span></h1>
-        <p class="hero-subtitle" id="setupSubtitle"></p>
+        <p class="hero-subtitle" id="setupSubtitle"></p><p id="setupNotice" role="status"></p>
         <div id="breadcrumbSetup"></div>
         <div class="hero-divider"></div>
       </div>
 
       <div class="setup-group">
-        <h3>Select Game Type</h3>
+        <h2>Select Game Type</h2>
         <div id="gameModeSection">
           <button id="typingModeBtn">
             <span class="btn-icon">✍️</span>
@@ -152,7 +148,7 @@
       </div>
 
       <div class="setup-group">
-        <h3>Select Mode</h3>
+        <h2>Select Mode</h2>
         <div id="difficultySection">
           <button id="practiceModeBtn">🌱 Practice</button>
           <button id="challengeModeBtn">⚡ Challenge</button>
@@ -301,6 +297,8 @@
     <script src="js/modes.js"></script>
     <script src="js/game.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/navigation-core.js"></script>
+    <script src="js/navigation.js"></script>
 
   </body>
 </html>

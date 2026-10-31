@@ -1,0 +1,3 @@
+# CP03 implementation plan
+
+Keep classic scripts and accepted CP02 tokens. Add a home and play hub plus a scope screen that preserves the legacy selection IDs. Add Help, Progress and Settings as real, honest interfaces. Game cards carry an intent into the existing setup rather than duplicating game logic. Onboarding uses a native dialog and a versioned flag guarded against storage failure. Replace the asynchronous screen transition with one synchronous, exclusive transition, retain legacy `screens` keys and clear the game interval on explicit exit. Test routing/onboarding policy with Node and verify real flows in a browser; document limitations and preserve known gameplay defects. No dependencies, data changes, game-rule rewrite, commits or deployment.

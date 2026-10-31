@@ -275,7 +275,14 @@
   margin-bottom: 28px;
 }
 
-.setup-group h3 { margin-bottom: 14px; }
+.setup-group h2 {
+  margin-bottom: 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
 
 /* Game type — 2×2 card grid */
 #gameModeSection {

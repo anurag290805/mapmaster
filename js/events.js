@@ -197,7 +197,7 @@ const continentBackBtn = document.getElementById("continentBackBtn");
 if (continentBackBtn) {
   continentBackBtn.addEventListener("click", () => {
     continentButtons.forEach(b => b.classList.remove("selected"));
-    showScreen("start", "back");
+    showScreen("scope", "back");
   });
 }
 
@@ -205,6 +205,10 @@ if (continentBackBtn) {
 /* ============================================================
    BACK BUTTONS
    ============================================================ */
+let setupOrigin = "scope";
+document.addEventListener("mapmaster:screen", e => {
+  if (e.detail.screen === "setup" && ["scope", "countrySelect", "continentSelect"].includes(e.detail.from)) setupOrigin = e.detail.from;
+});
 const countryBackBtn   = document.getElementById("countryBackBtn");
 const setupBackBtn     = document.getElementById("setupBackBtn");
 const challengeBackBtn = document.getElementById("challengeBackBtn");
@@ -214,15 +218,13 @@ if (countryBackBtn) {
     document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("selected"));
     const btn = document.getElementById("countryContinueBtn");
     if (btn) btn.disabled = true;
-    showScreen("start", "back");
+    showScreen("scope", "back");
   });
 }
 
 if (setupBackBtn) {
   setupBackBtn.addEventListener("click", () => {
-    const dest = previousScreen === "countrySelect"   ? "countrySelect"
-               : previousScreen === "continentSelect" ? "continentSelect"
-               : "start";
+    const dest = setupOrigin;
     showScreen(dest, "back");
   });
 }

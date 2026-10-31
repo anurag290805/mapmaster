@@ -40,3 +40,7 @@ Consolidation: architecture describes the audited versions overlaid onto the rem
 ## CP02 design foundation
 
 The existing application adds `css/tokens.css`, `css/components.css` and `css/integration.css` after legacy styles. `design-system.html` loads its own `css/showcase.css` and isolated `js/showcase.js`; it does not load game state. Existing game script order and `mapmaster-theme` storage contract remain unchanged. See `docs/design/DESIGN_SYSTEM.md`.
+
+## CP03 navigation
+
+The synchronous `showScreen` transition and `js/navigation.js` extend the legacy screens with Home, Play, Scope, Progress and Help; dialogs provide Settings and onboarding. `js/navigation-core.js` holds guarded guest-onboarding persistence. See `docs/cp03/NAVIGATION_AND_LIFECYCLE.md` for ownership and caveats.
