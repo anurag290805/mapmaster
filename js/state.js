@@ -37,8 +37,12 @@ const gameState = {
   missedRegions:  [],
   timerInterval:  null,
   startTime:      null,
+  startedAt:      null,
   currentTarget:  null,
   currentStreak:  0,
   bestStreak:     0,
   reviewMode:     false,
+  phase:          "idle",
+  sessionId:      0,
+  deadline:       null,
 };

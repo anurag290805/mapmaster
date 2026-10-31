@@ -104,9 +104,17 @@ function showScreen(screenName, direction = "forward") {
   if (currentKey && currentKey !== screenName) previousScreen = currentKey;
   if (currentKey === "game" && screenName !== "game") {
     clearTimer();
-    const mapDocument = getSvgDoc();
-    if (mapDocument) mapDocument.removeEventListener("click", handleLocateClick);
+    if (typeof detachLocateListener === "function") detachLocateListener();
+    else {
+      const mapDocument = getSvgDoc();
+      if (mapDocument) mapDocument.removeEventListener("click", handleLocateClick);
+    }
     gameState.startTime = null;
+    if (gameState.phase === "active") gameState.phase = "abandoned";
+    if (gameState.reviewMode) {
+      gameState.reviewMode = false;
+      document.getElementById("reviewBanner")?.remove();
+    }
   }
   // A synchronous transition prevents stale timeout callbacks revealing old screens.
   Object.values(screens).filter(Boolean).forEach(s => {
@@ -151,9 +159,9 @@ function updateProgress() {
   const count = gameState.guessedStates.length;
   let total;
   if (gameState.gameType === "flag") {
-    total = getFlagRegions().length || CURRENT_REGIONS.length;
+    total = getFlagRegions().length;
   } else if (gameState.gameType === "capital") {
-    total = getCapitalRegions().length || CURRENT_REGIONS.length;
+    total = getCapitalRegions().length;
   } else {
     total = CURRENT_REGIONS.length;
   }
@@ -176,7 +184,8 @@ function updateProgress() {
     progressBarFill.classList.remove("progress-glow");
     void progressBarFill.offsetWidth;
     progressBarFill.classList.add("progress-glow");
-    setTimeout(() => progressBarFill.classList.remove("progress-glow"), 350);
+    const session = gameState.sessionId;
+    setTimeout(() => { if (session === gameState.sessionId) progressBarFill.classList.remove("progress-glow"); }, 350);
   }
 
   const modeLabel = gameState.gameType === "flag" ? "Flags"
@@ -193,9 +202,11 @@ let _scoreAnimRaf = null;
 
 function animateCounter(el, oldVal, newVal) {
   if (_scoreAnimRaf) cancelAnimationFrame(_scoreAnimRaf);
+  const session = gameState.sessionId;
   const duration = 300;
   const start = performance.now();
   function step(ts) {
+    if (session !== gameState.sessionId) return;
     const t = Math.min((ts - start) / duration, 1);
     const eased = t * (2 - t); // ease-out quad
     el.textContent = Math.round(oldVal + (newVal - oldVal) * eased);
@@ -211,8 +222,10 @@ function animateCounter(el, oldVal, newVal) {
    ============================================================ */
 function animateValue(el, start, end, duration, formatter) {
   if (!el) return;
+  const session = gameState.sessionId;
   let startTime = null;
   function step(ts) {
+    if (session !== gameState.sessionId) return;
     if (!startTime) startTime = ts;
     const t = Math.min((ts - startTime) / duration, 1);
     const eased = t * (2 - t);
@@ -443,7 +456,8 @@ function colorState(name, color, animate = false) {
       svgRoot.classList.remove("state-correct-flash", "ut-correct-flash");
       void svgRoot.offsetWidth;
       svgRoot.classList.add(flashClass);
-      setTimeout(() => svgRoot.classList.remove(flashClass), 450);
+      const session = gameState.sessionId;
+      setTimeout(() => { if (session === gameState.sessionId) svgRoot.classList.remove(flashClass); }, 450);
     }
   }
 }
@@ -458,9 +472,11 @@ function flashRed(name) {
     wrapper.classList.remove("map-shake");
     void wrapper.offsetWidth;
     wrapper.classList.add("map-shake");
-    setTimeout(() => wrapper.classList.remove("map-shake"), 400);
+    const session = gameState.sessionId;
+    setTimeout(() => { if (session === gameState.sessionId) wrapper.classList.remove("map-shake"); }, 400);
   }
-  setTimeout(() => { path.style.fill = original; }, 600);
+  const session = gameState.sessionId;
+  setTimeout(() => { if (session === gameState.sessionId && gameState.phase === "active") path.style.fill = original; }, 600);
 
   // Show floating wrong-region label
   if (name) {
@@ -511,7 +527,7 @@ function formatTime(seconds) {
 }
 
 function getElapsedTime() {
-  return Math.floor((Date.now() - gameState.startTime) / 1000);
+  return Math.max(0, Math.floor((performance.now() - gameState.startedAt) / 1000));
 }
 
 function pickRandomState() {

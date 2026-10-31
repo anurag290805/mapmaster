@@ -8,19 +8,34 @@
 /* ============================================================
    TIMER
    ============================================================ */
+function syncDeadline() {
+  if (gameState.gameMode !== "challenge" || gameState.deadline == null) return true;
+  gameState.timeLeft = MapMasterGameplay.remainingSeconds(gameState.deadline, performance.now());
+  if (gameState.timeLeft === 0) {
+    updateHUD();
+    endGame(false, "time");
+    return false;
+  }
+  return true;
+}
+
+function canPlay() {
+  if (gameState.phase !== "active" || gameState.reviewMode) return false;
+  return syncDeadline();
+}
+
 function startTimer() {
   clearTimer();
   lastTickPlayed = -1;
+  gameState.deadline = performance.now() + gameState.timeLeft * 1000;
+  const session = gameState.sessionId;
   gameState.timerInterval = setInterval(() => {
-    gameState.timeLeft--;
+    if (gameState.sessionId !== session || gameState.phase !== "active") return;
+    if (!syncDeadline()) return;
     updateHUD();
-    if (gameState.timeLeft <= 10 && gameState.timeLeft !== lastTickPlayed && gameState.timeLeft > 0) {
+    if (gameState.timeLeft <= 10 && gameState.timeLeft !== lastTickPlayed) {
       lastTickPlayed = gameState.timeLeft;
       playSound(sfxTick);
-    }
-    if (gameState.timeLeft <= 0) {
-      clearTimer();
-      endGame(false, "time");
     }
   }, 1000);
 }
@@ -31,6 +46,11 @@ function startTimer() {
    ============================================================ */
 function resetGame() {
   clearTimer();
+  gameState.sessionId++;
+  isSubmitting = false;
+  gameState.phase = "idle";
+  gameState.deadline = null;
+  document.getElementById("reviewBanner")?.remove();
   resetMapStyles();
   gameState.score          = 0;
   gameState.bonusPoints    = 0;
@@ -40,6 +60,7 @@ function resetGame() {
   gameState.missedRegions  = [];
   gameState.timerInterval  = null;
   gameState.startTime      = null;
+  gameState.startedAt      = null;
   gameState.currentTarget  = null;
   gameState.timeLeft       = gameState.selectedTime || 0;
   gameState.currentStreak  = 0;
@@ -69,10 +90,15 @@ function resetGame() {
    START GAME
    ============================================================ */
 function startGame() {
+  if (typeof window !== "undefined" && window.document && !window.MapMasterGameplay) { alert("Gameplay is still loading. Please try again."); return; }
+  const pool = gameState.gameType === "flag" ? getFlagRegions() : gameState.gameType === "capital" ? getCapitalRegions() : CURRENT_REGIONS;
+  if (!pool.length) { alert("No questions available for this map and game type."); return; }
   // Ignore a repeated launch while the active game screen is already visible.
   if (screens.game && !screens.game.classList.contains("hidden")) return;
   resetGame();
+  gameState.phase = "active";
   gameState.startTime = Date.now();
+  gameState.startedAt = performance.now();
   updateHUD();
   showScreen("game");
 
@@ -114,6 +140,9 @@ function startGame() {
    END GAME
    ============================================================ */
 function endGame(isWin, reason = "") {
+  if (gameState.phase !== "active") return;
+  gameState.phase = "ended";
+  const session = gameState.sessionId;
   clearTimer();
 
   if (isWin) {
@@ -123,14 +152,14 @@ function endGame(isWin, reason = "") {
 
     if (gameState.gameMode === "challenge") {
       const elapsed  = getElapsedTime();
-      const accuracy = gameState.totalAttempts > 0
-        ? Math.round((gameState.score / gameState.totalAttempts) * 100)
-        : 100;
+      const accuracy = MapMasterGameplay.accuracy(gameState.score + gameState.guessedUTs.length, gameState.totalAttempts);
       // Animate stats counting up after screen transition settles
+      const bestStreak = gameState.bestStreak;
       setTimeout(() => {
+        if (gameState.sessionId !== session || gameState.phase !== "ended") return;
         animateValue(display.finalTime,     0, elapsed,   800, v => formatTime(v));
         animateValue(display.finalAccuracy, 0, accuracy,  800, v => v);
-        if (finalStreak) animateValue(finalStreak, 0, gameState.bestStreak, 600, v => v);
+        if (finalStreak) animateValue(finalStreak, 0, bestStreak, 600, v => v);
       }, 300);
       display.finalTime.textContent     = formatTime(elapsed);
       display.finalAccuracy.textContent = accuracy;
@@ -204,7 +233,7 @@ function checkWin() {
   if (gameState.gameType === "flag")    total = getFlagRegions().length;
   else if (gameState.gameType === "capital") total = getCapitalRegions().length;
   else total = CURRENT_REGIONS.length;
-  if (gameState.guessedStates.length >= total) endGame(true);
+  if (total > 0 && new Set(gameState.guessedStates).size >= total) endGame(true);
 }
 
 
@@ -365,7 +394,8 @@ function generateHint() {
     if (path) {
       const orig = path.style.fill;
       path.style.fill = "#F0C040";
-      setTimeout(() => { path.style.fill = orig; }, 1200);
+      const session = gameState.sessionId;
+      setTimeout(() => { if (session === gameState.sessionId && gameState.phase === "active") path.style.fill = orig; }, 1200);
     }
     return `Highlighted on map for 1 second`;
   }
@@ -373,15 +403,17 @@ function generateHint() {
 }
 
 function useHint() {
-  if (gameState.reviewMode) return;
+  if (!canPlay()) return;
   const hint = generateHint();
   if (!hint) return;
 
   if (gameState.gameMode === "challenge") {
     if (gameState.gameType === "locate") {
       gameState.livesLeft = Math.max(0, gameState.livesLeft - 1);
+      if (gameState.livesLeft === 0) { endGame(false, "lives"); return; }
     } else {
-      gameState.timeLeft = Math.max(0, gameState.timeLeft - 10);
+      gameState.deadline -= 10000;
+      if (!syncDeadline()) return;
     }
     updateHUD();
   }

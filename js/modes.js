@@ -12,9 +12,11 @@
 let isSubmitting = false;
 
 function handleTypingSubmit() {
+  if (typeof canPlay === "function" && !canPlay()) return;
   if (isSubmitting) return;
   isSubmitting = true;
-  setTimeout(() => { isSubmitting = false; }, 200);
+  const session = gameState.sessionId;
+  setTimeout(() => { if (gameState.sessionId === session) isSubmitting = false; }, 200);
 
   const raw   = stateInput.value.trim();
   const input = normalize(raw);
@@ -57,11 +59,13 @@ function handleTypingSubmit() {
     }
   }
 
-  // Fuzzy match: exact > contains > is contained by
-  const match = CURRENT_REGIONS.find(s => {
-    const norm = normalize(s);
-    return norm === input || norm.includes(input) || input.includes(norm);
-  });
+  const resolution = MapMasterGameplay.resolveAnswer(raw, CURRENT_REGIONS);
+  const match = resolution.kind === "match" ? resolution.id : null;
+  if (match && gameState.guessedStates.includes(match)) {
+    gameState.totalAttempts--;
+    showFeedback(`Already guessed: ${match}`, "wrong");
+    return;
+  }
   if (match) {
     gameState.score++;
     gameState.currentStreak++;
@@ -99,6 +103,14 @@ function showLocateTarget(name) {
   locatePrompt.style.animation = "";
 }
 
+let locateBinding = null;
+
+function detachLocateListener() {
+  if (!locateBinding) return;
+  locateBinding.doc.removeEventListener("click", locateBinding.listener);
+  locateBinding = null;
+}
+
 function setupLocateMode() {
   const svgDoc = getSvgDoc();
   if (!svgDoc) return;
@@ -111,8 +123,14 @@ function setupLocateMode() {
 
   // Use event delegation on the SVG document — far more reliable than
   // per-path onclick inside cross-origin <object> elements (esp. Safari/WebKit)
-  svgDoc.removeEventListener("click", handleLocateClick);
-  svgDoc.addEventListener("click", handleLocateClick);
+  detachLocateListener();
+  const session = gameState.sessionId;
+  const listener = e => {
+    if (gameState.sessionId !== session || gameState.gameType !== "locate" || getSvgDoc() !== svgDoc) return;
+    handleLocateClick(e);
+  };
+  locateBinding = { doc: svgDoc, listener };
+  svgDoc.addEventListener("click", listener);
 
   if (!gameState.currentTarget) {
     gameState.currentTarget = pickRandomState();
@@ -121,6 +139,7 @@ function setupLocateMode() {
 }
 
 function handleLocateClick(e) {
+  if (typeof canPlay === "function" && !canPlay()) return;
   // Walk up from the event target to find the nearest named path
   let el = e.target;
   while (el && el.tagName) {
@@ -212,7 +231,7 @@ function showFlagTarget(name) {
   const img = document.createElement("img");
   img.className = "flag-img";
   img.src = flagEmojiToUrl(flagVal);
-  img.alt = name;
+  img.alt = "Flag to identify";
   img.setAttribute("draggable", "false");
   flagContainer.insertBefore(img, flagContainer.querySelector(".flag-prompt-label").nextSibling);
 
@@ -222,11 +241,12 @@ function showFlagTarget(name) {
 }
 
 function handleFlagSubmit(raw, input) {
+  if (typeof canPlay === "function" && !canPlay()) return;
   if (!gameState.currentTarget) return;
   gameState.totalAttempts++;
-  const correct = normalize(gameState.currentTarget);
+  const result = MapMasterGameplay.resolveAnswer(raw, getFlagRegions());
 
-  if (input === correct) {
+  if (result.kind === "match" && result.id === gameState.currentTarget) {
     gameState.score++;
     gameState.currentStreak++;
     if (gameState.currentStreak > gameState.bestStreak) gameState.bestStreak = gameState.currentStreak;
@@ -245,11 +265,6 @@ function handleFlagSubmit(raw, input) {
     showFeedback(`✗ Not correct. Try again!`, "wrong");
     playSound(sfxWrong);
     updateHUD();
-    if (gameState.gameMode === "challenge") {
-      gameState.livesLeft--;
-      updateHUD();
-      if (gameState.livesLeft <= 0) endGame(false, "lives");
-    }
   }
 }
 
@@ -296,15 +311,16 @@ function showCapitalTarget(name) {
 }
 
 function handleCapitalSubmit(raw, input) {
+  if (typeof canPlay === "function" && !canPlay()) return;
   if (!gameState.currentTarget) return;
   const data = getCapitalData();
   if (!data) return;
 
   gameState.totalAttempts++;
   const correctCapital = data[gameState.currentTarget];
-  const correctNorm    = normalize(correctCapital);
+  const correctNorm    = MapMasterGameplay.normalizeAnswer(correctCapital);
 
-  if (input === correctNorm) {
+  if (MapMasterGameplay.normalizeAnswer(raw) === correctNorm) {
     gameState.score++;
     gameState.currentStreak++;
     if (gameState.currentStreak > gameState.bestStreak) gameState.bestStreak = gameState.currentStreak;
@@ -323,10 +339,5 @@ function handleCapitalSubmit(raw, input) {
     showFeedback(`✗ Incorrect. Hint: starts with "${correctCapital[0]}"`, "wrong");
     playSound(sfxWrong);
     updateHUD();
-    if (gameState.gameMode === "challenge") {
-      gameState.livesLeft--;
-      updateHUD();
-      if (gameState.livesLeft <= 0) endGame(false, "lives");
-    }
   }
 }

@@ -97,10 +97,10 @@ test('repeated starts and navigation leave at most one live challenge timer', ()
   const classes = hidden => { const set = new Set(hidden ? ['hidden'] : []); return {
     contains: x => set.has(x), add: x => set.add(x), remove: (...xs) => xs.forEach(x => set.delete(x)), toggle() {} }; };
   const screen = hidden => ({classList: classes(hidden), setAttribute() {}, focus() {}});
-  const active = new Map(); let nextId = 1;
+  const active = new Map(); let nextId = 1, now = 0;
   const screens = {start: screen(false), game: screen(true), play: screen(true)};
   const gameState = {gameType:'typing', gameMode:'challenge', timeLeft:120, startTime:null, timerInterval:null};
-  const ctx = {screens, gameState, previousScreen:'', lastTickPlayed:-1, inputSection:screen(true),
+  const ctx = {screens, gameState, CURRENT_REGIONS:['Japan'], performance:{now:()=>now}, MapMasterGameplay:{remainingSeconds:(deadline,time)=>Math.max(0,Math.ceil((deadline-time)/1000))}, previousScreen:'', lastTickPlayed:-1, inputSection:screen(true),
     locatePrompt:null, flagContainer:null, capitalPrompt:null, stateInput:{},
     resetGame(){ctx.clearTimer();gameState.timeLeft=120;}, updateHUD(){}, regionLabel(){return 'Countries';},
     getSvgDoc(){return null;}, handleLocateClick(){}, updateBreadcrumb(){},
@@ -110,11 +110,11 @@ test('repeated starts and navigation leave at most one live challenge timer', ()
   vm.createContext(ctx);
   vm.runInContext(section(ui,'function clearTimer()', '\n\n\n/* ============================================================\n   CONFETTI'),ctx);
   vm.runInContext(section(ui,'function showScreen(', '\n\n\n/* ============================================================\n   HUD + PROGRESS'),ctx);
-  vm.runInContext(section(game,'function startTimer()', '\n\n\n/* ============================================================\n   RESET'),ctx);
+  vm.runInContext(section(game,'function syncDeadline()', '\n\n\n/* ============================================================\n   RESET'),ctx);
   vm.runInContext(section(game,'function startGame()', '\n\n\n/* ============================================================\n   END GAME'),ctx);
   ctx.startGame(); ctx.startGame();
   assert.equal(active.size,1);
-  [...active.values()][0](); assert.equal(gameState.timeLeft,119);
+  now += 1000; [...active.values()][0](); assert.equal(gameState.timeLeft,119);
   ctx.showScreen('play'); assert.equal(active.size,0); assert.equal(gameState.timerInterval,null);
   ctx.showScreen('start'); ctx.startGame(); ctx.startGame();
   assert.equal(active.size,1); assert.equal(gameState.timeLeft,120);
