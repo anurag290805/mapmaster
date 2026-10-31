@@ -1,0 +1,3 @@
+# TypeScript migration
+
+`src/shared/country-search.ts` implements the pre-existing case-insensitive, trimmed substring filter; `src/ui/country-search.ts` binds it to the existing country controls. The old JS handler was removed so there is one implementation. Vite handles the module in development and compiles it in production. `src/shared/contracts.ts` describes existing game types, modes, map configuration and state values; these declarations do not replace the legacy runtime. `npm run typecheck` checks the new TS and test/config files separately from the build. Legacy JS is intentionally outside strict TypeScript checking; its script order and globals remain until migrated deliberately with characterization tests. No persistence keys or game rules were changed.

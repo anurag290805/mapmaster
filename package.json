@@ -1,0 +1,34 @@
+{
+  "name": "mapmaster",
+  "version": "0.3.5",
+  "private": true,
+  "description": "MapMaster geography game",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "npm run test:legacy && npm run test:unit",
+    "test:legacy": "node --test tests/*.test.cjs",
+    "test:unit": "vitest run",
+    "test:e2e": "npm run build && playwright test",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests/unit tests/e2e vite.config.mts playwright.config.ts eslint.config.mjs",
+    "format:check": "prettier --check src tests/unit tests/e2e vite.config.mts playwright.config.ts eslint.config.mjs",
+    "check": "npm test && npm run typecheck && npm run lint && npm run format:check && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

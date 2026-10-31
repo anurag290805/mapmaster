@@ -82,7 +82,7 @@ A full-featured geography quiz web app to test your knowledge of states and coun
 | Audio | Web Audio API + inline base64 WAV |
 | Animation | CSS keyframes + Canvas API (confetti) |
 
-No frameworks, no build tools, no dependencies. Open `index.html` and it runs.
+No rendering framework. Vite serves and builds the existing classic-script game; Node.js 22.12+ and npm are required for development. See [Development setup](docs/engineering/DEVELOPMENT_SETUP.md).
 
 ---
 
@@ -123,17 +123,16 @@ svg/uae.svg            svg/vietnam.svg
 
 Each SVG should have `<path>` elements with `aria-label`, `id`, `name`, `data-name`, or a child `<title>` tag identifying the region name. The `aria-label` attribute is the primary selector — patch your SVGs to use this for best reliability.
 
-#### 3. Open the app
+#### 3. Run the app
+
+Install dependencies and use Vite:
 ```bash
-open index.html
-# or just double-click index.html in your file explorer
+npm ci
+npm run dev
+# Open the local URL printed by Vite
 ```
 
-No server required for most browsers. For SVG cross-origin loading, serve locally:
-```bash
-python3 -m http.server 8080
-# then visit http://localhost:8080
-```
+Run `npm run check` for the local quality gate, and `npm run test:e2e` after installing a Playwright Chromium browser. Build with `npm run build`; `npm run preview` serves `dist/` locally. See [testing](docs/engineering/TESTING_STRATEGY.md) and [build and release](docs/engineering/BUILD_AND_RELEASE.md). The TypeScript country-search entry requires Vite: opening `index.html` directly is no longer supported.
 
 ---
 

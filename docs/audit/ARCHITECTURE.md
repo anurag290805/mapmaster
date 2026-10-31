@@ -44,3 +44,7 @@ The existing application adds `css/tokens.css`, `css/components.css` and `css/in
 ## CP03 navigation
 
 The synchronous `showScreen` transition and `js/navigation.js` extend the legacy screens with Home, Play, Scope, Progress and Help; dialogs provide Settings and onboarding. `js/navigation-core.js` holds guarded guest-onboarding persistence. See `docs/cp03/NAVIGATION_AND_LIFECYCLE.md` for ownership and caveats.
+
+## CP03.5 incremental migration
+
+Vite serves the existing HTML and preserves ordered classic runtime scripts; the production build copies an explicit script allowlist and SVG/brand assets. Country search is the first TypeScript module, built by Vite. Other state and gameplay code remain coupled through classic globals. See ../engineering/ARCHITECTURE_DECISIONS.md and CP03_5_VERIFICATION.md for the tested boundary and limitations.

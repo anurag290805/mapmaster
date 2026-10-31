@@ -1,0 +1,5 @@
+# CP03.5 implementation and migration risks
+
+Baseline: CP03 `e15976e050e1ed57eefea8e57b5021d9aa9c8d39`; Node 22.23.2 and npm 10.9.8. Existing scripts in `index.html` share global lexical bindings and execute in strict order. Converting them wholesale to modules would break those bindings. Dynamic `<object>` map URLs, relative asset paths, storage keys and the existing app shell must remain intact. Vite must explicitly ship runtime classic JS, CSS, SVGs and brand assets; a successful bundler exit alone cannot prove map loading or gameplay. The developer showcase is excluded from the production build, not deleted. Existing data/map failures are inherited and remain open. External fonts/flags and SVG provenance remain release risks.
+
+Plan: preserve the classic runtime, use an allowlisted build copy, introduce one narrow TS module and independent typecheck, retain Node tests, add unit/browser coverage and scoped quality checks, then inspect both servers and document actual results. No game-rule rewrite, external service, deployment or commit is authorized. Browser automation and dependency installation are subject to local availability and permissions.

@@ -59,12 +59,6 @@
     }
     if (name === 'setup') document.querySelectorAll('#gameModeSection button, #difficultySection button').forEach(b => b.setAttribute('aria-pressed',String(b.classList.contains('selected'))));
   });
-  const search = document.querySelector('#countrySearch');
-  search.addEventListener('input', () => {
-    let count = 0; const term = search.value.trim().toLocaleLowerCase();
-    document.querySelectorAll('.country-btn').forEach(button => { const visible = button.querySelector('.c-name').textContent.toLocaleLowerCase().includes(term); button.hidden = !visible; if (visible) count++; });
-    document.querySelector('#countryEmpty').classList.toggle('hidden', count !== 0);
-  });
   document.querySelectorAll('#gameModeSection button, #difficultySection button, .country-btn, .continent-btn').forEach(button => button.addEventListener('click', () => {
     const group = button.parentElement; group.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed',String(b.classList.contains('selected'))));
   }));

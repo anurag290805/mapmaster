@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+coverage/
+playwright-report/
+test-results/
+.vitest/
+.vite/
+.env
+.env.*
+!.env.example
+*.local
+.vscode/
+.idea/

@@ -7,6 +7,7 @@ These are proposed gates, not permission to implement. Every checkpoint requires
 | 01 — Development-accepted | Audit baseline and define game | Audit, inventory, issues, specification, checks | Available source | Founder reviews evidence; browser, mapping and provenance gaps resolved or explicitly accepted |
 | 02 — Development-accepted | Brand and design system | Tokens, type, accessible components and responsive/motion states | CP01 review | WCAG 2.2 AA target assessed, working existing flows and theme preserved; no new features |
 | 03 — Development-accepted | Home, navigation and onboarding | Usable information architecture and truthful onboarding | CP02 | Existing modes reachable, no dead promises, legacy theme preserved; browser and keyboard tests |
+| 03.5 — In progress, not accepted | Engineering foundation | Vite, TypeScript, local tests and release documentation | CP03 | Reproducible build and compatibility evidence, known defects disclosed |
 | 04 — Not started | Core gameplay overhaul | Correct answer/session engine, results, tests | CP01, CP03 | Reproducible correctness, edge cases, timer and restart integration pass |
 | 05 — Not started | World map upgrade | Accessible map adapter, one-to-many IDs and fallback | CP04 | Validated map coverage, keyboard/touch and load-failure behavior |
 | 06 — Not started | Expanded modes | Curated, fully tested modes | CP04/05 and source data | Each mode has complete pool, clear rules and accessible alternative |
