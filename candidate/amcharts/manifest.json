@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "status": "candidate_not_live",
+  "purpose": "Immutable upstream amCharts SVG source snapshots for CP05 coverage review. They are not production assets and must not alter scoring, canonical identities, or boundary policy.",
+  "retrieved_on": "2026-11-05",
+  "license_evidence": {
+    "source_statement": "Each source page states that the map is free for commercial use when the amCharts credit is kept, under CC BY 4.0.",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution_text": "Map by amCharts",
+    "attribution_url": "https://www.amcharts.com/svg-maps/"
+  },
+  "production_exclusion": "Vite copies only svg/ and assets/; candidate/ is not copied, precached, imported by classic scripts, or eligible for public-beta release.",
+  "scopes": {
+    "china": {
+      "live_approved": false,
+      "question_count": 33,
+      "source_path_count": 34,
+      "source_file": "candidate/amcharts/source/chinaHigh.svg",
+      "source_sha256": "aa6295b9e3ece27158e32da33643ab9d96cd056507f3922e542cdf108ddf4388",
+      "source_url": "https://www.amcharts.com/static/svg-maps/chinaHigh.svg",
+      "source_page": "https://www.amcharts.com/svg-maps/china/",
+      "license": {
+        "spdx": "CC-BY-4.0",
+        "attribution_required": true
+      },
+      "mapping_method": "Exact source path ID and source data-name against the configured question label; no geometry transformed or copied into production.",
+      "mappings": [
+        { "question_key": "china:001", "display_name": "Anhui", "source_id": "CN-AH", "source_name": "Anhui", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:002", "display_name": "Beijing", "source_id": "CN-BJ", "source_name": "Beijing", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:003", "display_name": "Chongqing", "source_id": "CN-CQ", "source_name": "Chongqing", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:004", "display_name": "Fujian", "source_id": "CN-FJ", "source_name": "Fujian", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:005", "display_name": "Gansu", "source_id": "CN-GS", "source_name": "Gansu", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:006", "display_name": "Guangdong", "source_id": "CN-GD", "source_name": "Guangdong", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:007", "display_name": "Guangxi Zhuang", "source_id": "CN-GX", "source_name": "Guangxi Zhuang", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:008", "display_name": "Guizhou", "source_id": "CN-GZ", "source_name": "Guizhou", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:009", "display_name": "Hainan", "source_id": "CN-HI", "source_name": "Hainan", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:010", "display_name": "Hebei", "source_id": "CN-HE", "source_name": "Hebei", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:011", "display_name": "Heilongjiang", "source_id": "CN-HL", "source_name": "Heilongjiang", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:012", "display_name": "Henan", "source_id": "CN-HA", "source_name": "Henan", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:013", "display_name": "Hong Kong", "source_id": "CN-HK", "source_name": "Hong Kong", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:014", "display_name": "Hubei", "source_id": "CN-HB", "source_name": "Hubei", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:015", "display_name": "Hunan", "source_id": "CN-HN", "source_name": "Hunan", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:016", "display_name": "Jiangsu", "source_id": "CN-JS", "source_name": "Jiangsu", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:017", "display_name": "Jiangxi", "source_id": "CN-JX", "source_name": "Jiangxi", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:018", "display_name": "Jilin", "source_id": "CN-JL", "source_name": "Jilin", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:019", "display_name": "Liaoning", "source_id": "CN-LN", "source_name": "Liaoning", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:020", "display_name": "Macau", "source_id": "CN-MO", "source_name": "Macau", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:021", "display_name": "Nei Mongol", "source_id": "CN-NM", "source_name": "Nei Mongol", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:022", "display_name": "Ningxia Hui", "source_id": "CN-NX", "source_name": "Ningxia Hui", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:023", "display_name": "Qinghai", "source_id": "CN-QH", "source_name": "Qinghai", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:024", "display_name": "Shaanxi", "source_id": "CN-SN", "source_name": "Shaanxi", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:025", "display_name": "Shandong", "source_id": "CN-SD", "source_name": "Shandong", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:026", "display_name": "Shanghai", "source_id": "CN-SH", "source_name": "Shanghai", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:027", "display_name": "Shanxi", "source_id": "CN-SX", "source_name": "Shanxi", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:028", "display_name": "Sichuan", "source_id": "CN-SC", "source_name": "Sichuan", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:029", "display_name": "Tianjin", "source_id": "CN-TJ", "source_name": "Tianjin", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:030", "display_name": "Xinjiang Uygur", "source_id": "CN-XJ", "source_name": "Xinjiang Uygur", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:031", "display_name": "Xizang (Tibet)", "source_id": "CN-XZ", "source_name": "Xizang (Tibet)", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:032", "display_name": "Yunnan", "source_id": "CN-YN", "source_name": "Yunnan", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "china:033", "display_name": "Zhejiang", "source_id": "CN-ZJ", "source_name": "Zhejiang", "mapping_status": "source-id-and-name-attested" }
+      ],
+      "noninteractive_context": [
+        { "source_id": "CN-TW", "source_name": "Taiwan", "selection": "noninteractive", "reason": "not a configured China subdivision question; no treatment or sovereignty implication is inferred" }
+      ],
+      "blockers": ["Feature-level boundary, target-size, touch, keyboard, scoring-adapter and product-policy review are still required."]
+    },
+    "spain": {
+      "live_approved": false,
+      "question_count": 17,
+      "source_path_count": 17,
+      "source_file": "candidate/amcharts/source/spainHigh.svg",
+      "source_sha256": "6630bc8132f838b1c7b2cbf17e44a2e3e6a607392ab5f6a6bf8fba25ac3fd129",
+      "source_url": "https://www.amcharts.com/static/svg-maps/spainHigh.svg",
+      "source_page": "https://www.amcharts.com/svg-maps/spain/",
+      "license": { "spdx": "CC-BY-4.0", "attribution_required": true },
+      "mapping_method": "Exact source path ID with the shown source name recorded; Spanish-to-configured English aliases are explicit, not inferred from geometry.",
+      "mappings": [
+        { "question_key": "spain:001", "display_name": "Andalusia", "source_id": "ES-AN", "source_name": "Andalucía", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:002", "display_name": "Aragon", "source_id": "ES-AR", "source_name": "Aragón", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:003", "display_name": "Asturias", "source_id": "ES-AS", "source_name": "Asturias", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:004", "display_name": "Balearic Islands", "source_id": "ES-IB", "source_name": "Islas Baleares", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:005", "display_name": "Basque Country", "source_id": "ES-PV", "source_name": "País Vasco", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:006", "display_name": "Canary Islands", "source_id": "ES-CN", "source_name": "Islas Canarias", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:007", "display_name": "Cantabria", "source_id": "ES-CB", "source_name": "Cantabria", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:008", "display_name": "Castile and Leon", "source_id": "ES-CL", "source_name": "Castilla y León", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:009", "display_name": "Castile-La Mancha", "source_id": "ES-CM", "source_name": "Castilla-La Mancha", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:010", "display_name": "Catalonia", "source_id": "ES-CT", "source_name": "Cataluña", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:011", "display_name": "Extremadura", "source_id": "ES-EX", "source_name": "Extremadura", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:012", "display_name": "Galicia", "source_id": "ES-GA", "source_name": "Galicia", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:013", "display_name": "La Rioja", "source_id": "ES-RI", "source_name": "La Rioja", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:014", "display_name": "Madrid", "source_id": "ES-MD", "source_name": "Madrid", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:015", "display_name": "Murcia", "source_id": "ES-MC", "source_name": "Murcia", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:016", "display_name": "Navarre", "source_id": "ES-NC", "source_name": "Navarra", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "spain:017", "display_name": "Valencia", "source_id": "ES-VC", "source_name": "Valencia", "mapping_status": "source-id-and-name-attested" }
+      ],
+      "noninteractive_context": [],
+      "blockers": ["Feature-level boundary, island reachability, touch, keyboard, scoring-adapter and product-policy review are still required."]
+    },
+    "uae": {
+      "live_approved": false,
+      "question_count": 7,
+      "source_path_count": 10,
+      "source_file": "candidate/amcharts/source/uaeHigh.svg",
+      "source_sha256": "6bd0ee50ee656ccbf16e9797e4c372db82a23407ea6b7fb39a752b1d188c22a3",
+      "source_url": "https://www.amcharts.com/static/svg-maps/uaeHigh.svg",
+      "source_page": "https://www.amcharts.com/svg-maps/uae/",
+      "license": { "spdx": "CC-BY-4.0", "attribution_required": true },
+      "mapping_method": "Exact source path ID with explicit case/spelling aliases only; all non-question paths remain declared noninteractive context.",
+      "mappings": [
+        { "question_key": "uae:001", "display_name": "Abu Dhabi", "source_id": "AE-AZ", "source_name": "Abu Dhabi", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:002", "display_name": "Ajman", "source_id": "AE-AJ", "source_name": "Ajman", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:003", "display_name": "Dubai", "source_id": "AE-DU", "source_name": "Dubai", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:004", "display_name": "Fujairah", "source_id": "AE-FU", "source_name": "Fujayrah", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:005", "display_name": "Ras al-Khaimah", "source_id": "AE-RK", "source_name": "Ras Al Khaimah", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:006", "display_name": "Sharjah", "source_id": "AE-SH", "source_name": "Sharjah", "mapping_status": "source-id-and-name-attested" },
+        { "question_key": "uae:007", "display_name": "Umm al-Quwain", "source_id": "AE-UQ", "source_name": "Umm Al Quwain", "mapping_status": "source-id-and-name-attested" }
+      ],
+      "noninteractive_context": [
+        { "source_id": "OM-MU", "source_name": "Musandam (Omani enclave)", "selection": "noninteractive", "reason": "not a configured UAE emirate question" },
+        { "source_id": "AE-NZ1", "source_name": "Neutral Zone 1", "selection": "noninteractive", "reason": "not a configured UAE emirate question" },
+        { "source_id": "AE-NZ2", "source_name": "Neutral Zone 2", "selection": "noninteractive", "reason": "not a configured UAE emirate question" }
+      ],
+      "blockers": ["The three explicit context paths, feature-level boundary review, touch, keyboard, scoring-adapter and product-policy review must complete before any promotion."]
+    }
+  }
+}

@@ -39,3 +39,41 @@ export function remainingSeconds(deadline: number, now: number): number {
 export function accuracy(correct: number, attempts: number): number {
   return attempts ? Math.round((correct / attempts) * 100) : 100;
 }
+
+export function buildChoiceOptions(
+  correct: string,
+  candidates: readonly string[],
+  count = 4,
+  random: () => number = Math.random,
+): string[] {
+  const shuffle = (items: string[]) => {
+    for (let index = items.length - 1; index > 0; index -= 1) {
+      const pick = Math.floor(random() * (index + 1));
+      [items[index], items[pick]] = [items[pick], items[index]];
+    }
+    return items;
+  };
+  const correctKey = normalizeAnswer(correct);
+  if (!correctKey || count < 2) return [];
+  const seen = new Set([correctKey]);
+  const distractors = candidates.filter((candidate) => {
+    const key = normalizeAnswer(candidate);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  if (distractors.length < count - 1) return [];
+  return shuffle([correct, ...shuffle(distractors).slice(0, count - 1)]);
+}
+
+export function buildLearningRecord(prompt: string, answer: string) {
+  return {
+    prompt,
+    answer,
+    // Candidate facts remain unavailable to gameplay until independently
+    // approved and explicitly promoted. The UI renders only concise answer
+    // feedback in that state, never a technical availability disclaimer.
+    sourceStatus: "not-approved" as const,
+    sourceNote: "",
+  };
+}

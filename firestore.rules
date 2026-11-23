@@ -1,0 +1,81 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedInOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    function exactKeys(value, keys) {
+      return value.keys().hasAll(keys) && value.keys().hasOnly(keys);
+    }
+
+    function boundedInt(value, minimum, maximum) {
+      return value is int && value >= minimum && value <= maximum;
+    }
+
+    function validDay(value) {
+      return value is string &&
+        value.matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$');
+    }
+
+    function validSettings(settings) {
+      return settings is map &&
+        exactKeys(settings, ['displayName', 'theme', 'soundEnabled', 'reducedMotion']) &&
+        settings.displayName is string && settings.displayName.size() <= 48 &&
+        settings.theme in ['light', 'dark', 'system'] &&
+        settings.soundEnabled is bool && settings.reducedMotion is bool;
+    }
+
+    function validStats(stats) {
+      return stats is map &&
+        exactKeys(stats, ['completedSessions', 'wins', 'challengeWins', 'completedGameTypes']) &&
+        boundedInt(stats.completedSessions, 0, 1000000000) &&
+        boundedInt(stats.wins, 0, 1000000000) &&
+        boundedInt(stats.challengeWins, 0, 1000000000) &&
+        stats.completedGameTypes is list && stats.completedGameTypes.size() <= 6 &&
+        stats.completedGameTypes.hasOnly(['typing', 'locate', 'flag', 'capital', 'flagChoice', 'capitalChoice']) &&
+        stats.completedGameTypes.toSet().size() == stats.completedGameTypes.size();
+    }
+
+    function validProgress(progress) {
+      return progress is map &&
+        exactKeys(progress, ['version', 'totalXp', 'processedResultIds', 'achievements', 'records', 'stats']) &&
+        progress.version == 1 &&
+        boundedInt(progress.totalXp, 0, 1000000000) &&
+        progress.processedResultIds is list && progress.processedResultIds.size() <= 100 &&
+        progress.achievements is list && progress.achievements.size() <= 6 &&
+        progress.achievements.hasOnly(['first-finish', 'timed-finisher', 'perfect-recall', 'five-in-a-row', 'sprint-starter', 'explorer']) &&
+        progress.achievements.toSet().size() == progress.achievements.size() &&
+        // Rules cannot iterate dynamic map values; the client sanitizer validates
+        // each record before this bounded document is written.
+        progress.records is map && progress.records.keys().size() <= 200 &&
+        validStats(progress.stats);
+    }
+
+    function validDaily(daily) {
+      return daily is map &&
+        exactKeys(daily, ['version', 'firstSeenDay', 'lastObservedDay', 'lastObservedAt', 'completions']) &&
+        daily.version == 1 &&
+        (daily.firstSeenDay == null || validDay(daily.firstSeenDay)) &&
+        (daily.lastObservedDay == null || validDay(daily.lastObservedDay)) &&
+        boundedInt(daily.lastObservedAt, 0, 9007199254740991) &&
+        // Rules cannot iterate object elements in a dynamic list; the client
+        // sanitizer validates each completion before this bounded document is written.
+        daily.completions is list && daily.completions.size() <= 365;
+    }
+
+    function validSave(data) {
+      return data is map &&
+        exactKeys(data, ['schemaVersion', 'updatedAt', 'progress', 'daily', 'settings']) &&
+        data.schemaVersion == 1 &&
+        boundedInt(data.updatedAt, 0, 9007199254740991) &&
+        validProgress(data.progress) && validDaily(data.daily) && validSettings(data.settings);
+    }
+
+    match /players/{uid} {
+      allow read: if signedInOwner(uid);
+      allow create, update: if signedInOwner(uid) && validSave(request.resource.data);
+      allow delete: if signedInOwner(uid);
+    }
+  }
+}

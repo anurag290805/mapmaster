@@ -110,6 +110,7 @@ test("ordered scripts, CSS, branding, and one onboarding advance", async ({
     "events",
     "navigation-core",
     "navigation",
+    "progress",
   ].map((name) => `js/${name}.js`);
   expect(scripts).toEqual(expected);
   const loads = await page.evaluate(() =>

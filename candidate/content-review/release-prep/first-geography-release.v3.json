@@ -1,0 +1,203 @@
+{
+  "schema_version": 3,
+  "status": "candidate_not_live",
+  "base_manifest": "first-geography-release.v2.json",
+  "base_manifest_sha256": "c0486f41a5c161d78f473bc647b6370a8de2bf23bd9e032be9ed86b6c448a7c6",
+  "purpose": "Editorial-quality overlay for the development-only first geography release. It does not change source snapshots, technical review, founder approval, production eligibility, or gameplay activation.",
+  "editorial_verdict": {
+    "approve_as_written_proposal_ids": [
+      "wikidata:Q79:capital", "wikidata:Q114:capital", "wikidata:Q1028:capital", "wikidata:Q1033:capital",
+      "wikidata:Q414:capital", "wikidata:Q155:capital", "wikidata:Q16:capital", "wikidata:Q96:capital",
+      "wikidata:Q30:capital", "wikidata:Q668:capital", "wikidata:Q233:capital", "wikidata:Q20:capital",
+      "wikidata:Q664:capital", "wikidata:Q258:capital-roles", "wikidata:Q869:capital", "wikidata:Q183:capital",
+      "wikidata:Q45:capital", "wikidata:Q408:capital"
+    ],
+    "recommendation_only": true,
+    "approval_state_remains": "pending_founder_approval"
+  },
+  "record_patches": [
+    {
+      "proposal_id": "wikidata:Q17:capital",
+      "change_type": "revised_v3",
+      "change_reason": "Simplifies the capital wording while retaining the frozen 1943 administrative qualifier and historical evidence.",
+      "player_facing": {
+        "format": "learning_card",
+        "prompt": "Country Explorer: What city is Japan's capital today?",
+        "answer": "Tokyo",
+        "display": "Tokyo is Japan's capital today. The retained 1943 source qualifier refers to the Tokyo Metropolis administrative system, not to Tokyo becoming the capital."
+      },
+      "editorial_evidence": [
+        {"role": "1943 Tokyo Metropolis system", "url": "https://www.archives.go.jp/exhibition/digital/henbou/contents/17.html"},
+        {"role": "Tokyo capital-transition context", "url": "https://www.mlit.go.jp/kokudokeikaku/iten/onlinelecture/lec16.html"}
+      ]
+    },
+    {
+      "proposal_id": "wikidata:Q252:capital",
+      "change_type": "revised_v3",
+      "change_reason": "Retains a dated, educational status explanation and documents a same-day legal-status check; it remains ineligible for competitive capital questions.",
+      "competitive_eligible": false,
+      "latest_status_checked_at": "2026-11-10",
+      "publication_recheck_required": true,
+      "player_facing": {
+        "format": "learning_card",
+        "prompt": "Country Explorer: As of 2026-11-10, which city remains Indonesia's national capital while a relocation decree is pending?",
+        "answer": "Jakarta",
+        "display": "As of 2026-11-10, Jakarta remains Indonesia's national capital pending a Presidential Decree for relocation to Nusantara. This dated learning card is not a competitive capital question."
+      },
+      "editorial_evidence": [
+        {"role": "current legal position checked 2026-11-10", "url": "https://inp.polri.go.id/artikel/jakarta-remains-national-capital-pending-presidential-decree-constitutional-court"},
+        {"role": "statutory transition", "url": "https://setkab.go.id/en/president-jokowi-signs-law-on-special-regional-province-of-jakarta/"}
+      ]
+    },
+    {
+      "proposal_id": "geonames:360630:city", "change_type": "revised_v3", "clue_type": "capital-river-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Cairo, on the eastern bank of the Nile, is the capital of which country?", "answer": "Egypt", "choices": ["Egypt", "Kenya", "Nigeria", "Mexico"], "optional_easy_format": "Cairo is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:EG"}, {"role": "independent city-country evidence", "url": "https://cairo.gov.eg/en/about-governorate/cairo-in-lines/", "supports": "Cairo is Egypt's capital on the eastern bank of the Nile."}]
+    },
+    {
+      "proposal_id": "geonames:184745:city", "change_type": "revised_v3", "clue_type": "capital-region-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Nairobi sits in the south-central region of which country?", "answer": "Kenya", "choices": ["Kenya", "Egypt", "Thailand", "Portugal"], "optional_easy_format": "Nairobi is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:KE"}, {"role": "independent city-country evidence", "url": "https://mfa.go.ke/kenya", "supports": "Kenya's Ministry of Foreign Affairs places Nairobi in south-central Kenya."}]
+    },
+    {
+      "proposal_id": "geonames:2332459:city", "change_type": "revised_v3", "clue_type": "economic-city-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Lagos is described as an economic powerhouse of which country?", "answer": "Nigeria", "choices": ["Nigeria", "Brazil", "Japan", "Canada"], "optional_easy_format": "Lagos is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:NG"}, {"role": "independent city-country evidence", "url": "https://nipc.gov.ng/nigeria/lagos", "supports": "Nigeria's investment agency describes Lagos as an economic powerhouse."}]
+    },
+    {
+      "proposal_id": "geonames:6094817:city", "change_type": "revised_v3", "clue_type": "capital-river-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Ottawa lies on the Ottawa River and is the national capital of which country?", "answer": "Canada", "choices": ["Canada", "Argentina", "Germany", "India"], "optional_easy_format": "Ottawa is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:CA"}, {"role": "independent city-country evidence", "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/land-climate.html", "supports": "Government of Canada identifies Ottawa as the capital city on the Ottawa River."}]
+    },
+    {
+      "proposal_id": "geonames:3530597:city", "change_type": "revised_v3", "clue_type": "historical-city-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Mexico City began as Tenochtitlan in 1325. It is the capital of which country?", "answer": "Mexico", "choices": ["Mexico", "Egypt", "Australia", "Portugal"], "optional_easy_format": "Mexico City is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:MX"}, {"role": "independent city-country evidence", "url": "https://mexicocity.cdmx.gob.mx/e/about/about-mexico-city/?lang=en", "supports": "Mexico City's official tourism site identifies the city as Mexico's capital and dates Tenochtitlan to 1325."}]
+    },
+    {
+      "proposal_id": "geonames:3435910:city", "change_type": "revised_v3", "clue_type": "estuary-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Buenos Aires stands on the Río de la Plata and is the federal capital of which country?", "answer": "Argentina", "choices": ["Argentina", "Brazil", "Canada", "Thailand"], "optional_easy_format": "Buenos Aires is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:AR"}, {"role": "independent city-country evidence", "url": "https://buenosaires.gob.ar/gcaba_historico/laciudad/ciudad", "supports": "Buenos Aires City identifies itself as Argentina's capital on the Río de la Plata."}]
+    },
+    {
+      "proposal_id": "geonames:3469058:city", "change_type": "revised_v3", "clue_type": "planned-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Brasília was inaugurated in 1960 as a planned capital of which country?", "answer": "Brazil", "choices": ["Brazil", "Argentina", "Mexico", "Germany"], "optional_easy_format": "Brasília is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:BR"}, {"role": "independent city-country evidence", "url": "https://www.gov.br/g20/en/about-the-g20/host-cities/brasilia-df", "supports": "Brazil's government identifies Brasília as Brazil's capital, inaugurated in 1960."}]
+    },
+    {
+      "proposal_id": "geonames:1261481:city", "change_type": "revised_v3", "clue_type": "capital-identification",
+      "player_facing": {"format": "multiple_choice", "prompt": "New Delhi is listed as the capital in an Indian government business guide. Which country is it in?", "answer": "India", "choices": ["India", "Japan", "Kenya", "Nigeria"], "optional_easy_format": "New Delhi is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:IN"}, {"role": "independent city-country evidence", "url": "https://mea.gov.in/Uploads/PublicationDocs/22931_22899_India_in_Business.pdf", "supports": "India's Ministry of External Affairs publication lists New Delhi as India's capital."}]
+    },
+    {
+      "proposal_id": "geonames:1850147:city", "change_type": "revised_v3", "clue_type": "capital-largest-city-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Tokyo is both the capital and largest city of which country?", "answer": "Japan", "choices": ["Japan", "India", "Thailand", "Germany"], "optional_easy_format": "Tokyo is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:JP"}, {"role": "independent city-country evidence", "url": "https://www.english.metro.tokyo.lg.jp/documents/d/english/tokyo-city-profile-and-government_fy2025-edition", "supports": "Tokyo Metropolitan Government identifies Tokyo as Japan's capital and largest city."}]
+    },
+    {
+      "proposal_id": "geonames:1609350:city", "change_type": "revised_v3", "clue_type": "river-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "The Chao Phraya River runs through Bangkok, the capital of which country?", "answer": "Thailand", "choices": ["Thailand", "Japan", "Portugal", "Australia"], "optional_easy_format": "Bangkok is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:TH"}, {"role": "independent city-country evidence", "url": "https://thailand.go.th/page/capital-city", "supports": "Thailand's government identifies Bangkok as Thailand's capital and places the Chao Phraya through the city."}]
+    },
+    {
+      "proposal_id": "geonames:1642911:city", "change_type": "revised_v3", "clue_type": "coastal-city-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Jakarta's northern coast includes the mouths of 13 rivers. Which country is Jakarta in?", "answer": "Indonesia", "choices": ["Indonesia", "India", "Mexico", "New Zealand"], "optional_easy_format": "Jakarta is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:ID"}, {"role": "independent city-country evidence", "url": "https://www.jakarta.go.id/index.php/tentang-jakarta", "supports": "Jakarta's official site identifies Jakarta as Indonesia's capital and describes its 13 river mouths."}]
+    },
+    {
+      "proposal_id": "geonames:2950159:city", "change_type": "revised_v3", "clue_type": "city-state-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Berlin is both a federal state and the capital of which country?", "answer": "Germany", "choices": ["Germany", "Austria", "Canada", "Norway"], "optional_easy_format": "Berlin is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:DE"}, {"role": "independent city-country evidence", "url": "https://www.berlin.de/rbmskzl/en/the-governing-mayor/the-constitution-of-berlin/", "supports": "Berlin's constitution identifies Berlin as the capital of united Germany."}]
+    },
+    {
+      "proposal_id": "geonames:2267057:city", "change_type": "revised_v3", "clue_type": "estuary-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Lisbon sits on the Tagus estuary along the Atlantic coast. It is the capital of which country?", "answer": "Portugal", "choices": ["Portugal", "Spain", "Brazil", "Malta"], "optional_easy_format": "Lisbon is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:PT"}, {"role": "independent city-country evidence", "url": "https://www.visitlisboa.com/en/traveller-information", "supports": "Visit Lisboa identifies Lisbon as Portugal's capital on the Tagus estuary."}]
+    },
+    {
+      "proposal_id": "geonames:2172517:city", "change_type": "revised_v3", "clue_type": "purpose-built-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Canberra was selected as a compromise site for a new national capital in 1908. Which country is it in?", "answer": "Australia", "choices": ["Australia", "New Zealand", "Canada", "South Africa"], "optional_easy_format": "Canberra is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:AU"}, {"role": "independent city-country evidence", "url": "https://www.parliament.act.gov.au/visit-and-learn/learn/resources/fs/establishing-the-nations-capital", "supports": "ACT Legislative Assembly documents the 1908 selection of the Canberra region for Australia's capital."}]
+    },
+    {
+      "proposal_id": "geonames:2179537:city", "change_type": "revised_v3", "clue_type": "dated-capital-context",
+      "player_facing": {"format": "multiple_choice", "prompt": "Wellington has been New Zealand's capital since 1865. Which country is it in?", "answer": "New Zealand", "choices": ["New Zealand", "Australia", "Norway", "Japan"], "optional_easy_format": "Wellington is in which country?"},
+      "editorial_evidence": [{"role": "country-code mapping", "url": "https://www.iso.org/obp/ui/#iso:code:3166:NZ"}, {"role": "independent city-country evidence", "url": "https://wellington.govt.nz/-/media/your-council/plans-policies-and-bylaws/plans-and-policies/a-to-z/economicwellbeing/economicwellbeingstrategy-pdf-version-j014844.pdf", "supports": "Wellington City Council identifies Wellington as New Zealand's capital since 1865."}]
+    },
+    {
+      "proposal_id": "geonames:1283416:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Mount Everest", "answer": "Mountain", "display": "GeoNames classifies Mount Everest as a mountain (T/MT).", "learning_fact": "UNESCO describes Mount Everest, at 8,848 metres, as the world's highest mountain.", "explanation": "This is a classification and learning card, not a country, border, ownership, or scoring claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://whc.unesco.org/en/list/120/", "supports": "UNESCO describes Mount Everest at 8,848 metres as the world's highest mountain."}]
+    },
+    {
+      "proposal_id": "geonames:157452:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Mount Kilimanjaro", "answer": "Mountain", "display": "GeoNames classifies Mount Kilimanjaro as a mountain (T/MT).", "learning_fact": "UNESCO identifies Kilimanjaro as one of the world's largest volcanoes.", "explanation": "GeoNames supplies the retained class; this card makes no country inference."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://whc.unesco.org/pg.cfm?cid=31&id_site=403", "supports": "UNESCO describes Mount Kilimanjaro as one of the world's largest volcanoes."}]
+    },
+    {
+      "proposal_id": "geonames:1864094:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Mount Fuji", "answer": "Volcano", "display": "GeoNames classifies Mount Fuji as a volcano (T/VLC).", "learning_fact": "UNESCO describes Fujisan as a solitary stratovolcano, often snow-capped.", "explanation": "The card reports the retained class and an independent learning fact without a unique-identification claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://whc.unesco.org/en/list/1418", "supports": "UNESCO describes Fujisan as a solitary stratovolcano that is often snow-capped."}]
+    },
+    {
+      "proposal_id": "geonames:3181986:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Mont Blanc", "answer": "Mountain", "display": "GeoNames classifies Mont Blanc as a mountain (T/MT).", "learning_fact": "The Mont Blanc massif lies between Chamonix and Courmayeur; the local official source describes Mont Blanc as the Alps' highest point.", "explanation": "The transboundary context is retained; this card makes no single-country summit-ownership conclusion."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://en.chamonix.com/la-vallee/patrimoine-culture/patrimoine-naturel-de-la-vallee-de-chamonix-mont-blanc/mont-blanc", "supports": "Chamonix's official source locates the massif between Chamonix and Courmayeur and describes Mont Blanc as the Alps' highest point."}]
+    },
+    {
+      "proposal_id": "geonames:3866949:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Aconcagua", "answer": "Mountain", "display": "GeoNames classifies Aconcagua as a mountain (T/MT).", "learning_fact": "Argentina's National Geographic Institute lists Aconcagua at 6,961 metres.", "explanation": "GeoNames provides the retained class; the learning fact is independently sourced and does not make a sovereignty claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.ign.gob.ar/NuestrasActividades/Geografia/DatosArgentina/MaximasAlturas", "supports": "Argentina's National Geographic Institute lists Aconcagua at 6,961 metres."}]
+    },
+    {
+      "proposal_id": "geonames:2212709:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Sahara", "answer": "Desert", "display": "GeoNames classifies the Sahara as a desert (T/DSRT).", "learning_fact": "NASA describes the Sahara as a near-uninterrupted band of sand and scrub across northern Africa.", "explanation": "The card deliberately makes no territorial-scope claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://assets.science.nasa.gov/content/dam/science/esd/earth-observer/2015/Mar_Apr_2015_color_508.pdf", "supports": "NASA Earth Observatory describes the Sahara's broad band across northern Africa."}]
+    },
+    {
+      "proposal_id": "geonames:3407729:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Amazon River", "answer": "Stream", "display": "GeoNames classifies this record as a stream (H/STM).", "learning_fact": "USGS explains that measured river length depends on choices about the source and mouth; its reference list gives the Amazon as 4,000 miles.", "explanation": "The frozen raw source name “Amazone River” remains attached to this reviewed English label; no single definitive length is asserted."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.usgs.gov/water-science-school/science/rivers-world-worlds-longest-rivers", "supports": "USGS explains the measurement choices behind river length and lists the Amazon at 4,000 miles."}]
+    },
+    {
+      "proposal_id": "geonames:2031269:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Gobi Desert", "answer": "Desert", "display": "GeoNames classifies the Gobi Desert as a desert (T/DSRT).", "learning_fact": "UNEP notes that much of the Gobi is rocky, compact terrain rather than shifting sand dunes.", "explanation": "The card reports a retained class and a physical-geography fact, not a territorial or unique-identification claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.unep.org/interactive/explore-ecosystems/desert/en/index.php", "supports": "UNEP explains that the Gobi is largely rocky and packed terrain."}]
+    },
+    {
+      "proposal_id": "geonames:791630:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Danube River", "answer": "Stream", "display": "GeoNames classifies the Danube River record as a stream (H/STM).", "learning_fact": "The Danube basin is the world's most international river basin, extending through the territory of 19 countries.", "explanation": "This neutral basin fact does not frame borders or sovereignty as a game answer."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.icpdr.org/danube-basin/danube-river-basin", "supports": "The ICPDR describes the Danube basin as the world's most international river basin, flowing through 19 countries."}]
+    },
+    {
+      "proposal_id": "geonames:2164628:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Great Barrier Reef", "answer": "Reef", "display": "GeoNames classifies the Great Barrier Reef record as a reef (H/RF).", "learning_fact": "The Great Barrier Reef Marine Park Authority describes the ecosystem as containing more than 2,900 individual reefs.", "explanation": "The card reports the retained reef classification and a sourced ecosystem fact."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.gbrmpa.gov.au/learn/biodiversity", "supports": "The Great Barrier Reef Marine Park Authority reports more than 2,900 individual reefs."}]
+    },
+    {
+      "proposal_id": "geonames:7645281:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Uluru", "answer": "Rock", "display": "GeoNames classifies Uluru as a rock (T/RK).", "learning_fact": "Parks Australia describes Uluru as arkose sandstone rising about 340 metres above the surrounding plain.", "explanation": "Alternative names remain in the frozen source; this geological fact does not erase them."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://parksaustralia.gov.au/uluru/pub/uluru-kata-tjuta-media-handbook.pdf", "supports": "Parks Australia describes Uluru as arkose sandstone rising about 340 metres above the surrounding plain."}]
+    },
+    {
+      "proposal_id": "geonames:879432:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Victoria Falls", "answer": "Falls", "display": "GeoNames classifies Victoria Falls as falls (H/FLLS).", "learning_fact": "UNESCO describes eight steep-sided gorges associated with Mosi-oa-Tunya / Victoria Falls.", "explanation": "This transboundary feature is not framed as belonging to one country."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://whc.unesco.org/en/list/509", "supports": "UNESCO describes eight steep-sided gorges at Mosi-oa-Tunya / Victoria Falls."}]
+    },
+    {
+      "proposal_id": "geonames:148996:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Lake Victoria", "answer": "Lake", "display": "GeoNames classifies this record as a lake (H/LK).", "learning_fact": "The Lake Victoria Basin Commission identifies Lake Victoria as Africa's largest freshwater lake.", "explanation": "The frozen raw source name “Victoria” remains paired with the conventional English label; no national-ownership claim is made."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.lvbcom.org/about-us/", "supports": "The Lake Victoria Basin Commission identifies Lake Victoria as Africa's largest freshwater lake."}]
+    },
+    {
+      "proposal_id": "geonames:5296392:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Grand Canyon", "answer": "Valley", "display": "GeoNames classifies the Grand Canyon record as a valley (T/VAL).", "learning_fact": "The National Park Service says the Colorado River began carving the Grand Canyon about five to six million years ago.", "explanation": "The card reports a source-backed geology fact without an ownership claim."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://www.nps.gov/grca/learn/nature/grca-geology.htm", "supports": "The U.S. National Park Service dates the Colorado River's carving of the canyon to roughly five to six million years."}]
+    },
+    {
+      "proposal_id": "geonames:351036:feature", "change_type": "revised_v3",
+      "player_facing": {"format": "learning_card", "prompt": "Feature learning: Nile", "answer": "Stream", "display": "GeoNames classifies the Nile record as a stream (H/STM).", "learning_fact": "The Nile Basin Initiative describes the Nile as flowing northward and draining into the Mediterranean Sea.", "explanation": "This basin description avoids a country-ownership or contested-length question."},
+      "editorial_evidence": [{"role": "independent learning fact", "url": "https://nilebasin.org/en/media-center/maps/major-subbasins", "supports": "The Nile Basin Initiative describes the Nile flowing northward to the Mediterranean Sea."}]
+    }
+  ]
+}

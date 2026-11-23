@@ -14,7 +14,7 @@
     ['Welcome, explorer.', 'MapMaster is a geography game for curious minds. Play as a guest and explore at your own pace.'],
     ['Choose a game.', 'Recall names, identify flags or capitals, or find a place on the map. Then choose the world, a continent, or a country.'],
     ['Make it your journey.', 'Practice has no countdown. Challenge adds a timer; locate also uses lives. Hints can cost time in challenge.'],
-    ['Ready to explore?', 'Correct answers earn points and a streak. Your theme can be saved on this device; game progress is not saved yet. Some maps and questions have known limitations.']
+    ['Ready to explore?', 'Correct answers earn points and a streak. Your theme preference and progress can be saved on this device. Some maps and questions have known limitations.']
   ];
   function closeMenu() { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded','false'); }
   menu.addEventListener('click', () => { const open = nav.classList.toggle('is-open'); menu.setAttribute('aria-expanded', String(open)); });
@@ -28,7 +28,13 @@
   document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => {
     const target = button.dataset.go;
     if (!leaveGame()) return;
-    pendingMode = null; closeMenu(); showScreen(target);
+    pendingMode = null;
+    closeMenu();
+    if (target === "daily-easy") {
+      showScreen("daily");
+      const easy = document.querySelector("[data-daily-difficulty='easy']");
+      easy?.focus({ preventScroll: true });
+    } else showScreen(target);
   }));
   document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => {
     pendingMode = button.dataset.mode; closeMenu(); showScreen('scope');
@@ -41,17 +47,17 @@
     button.addEventListener('click', () => { pendingMode = null; applyMap(key); resetSetupSelections(); showScreen('setup'); });
     quick.appendChild(button);
   });
-  const modeButtons = { typing: buttons.typingMode, locate: buttons.locateMode, flag: buttons.flagMode, capital: buttons.capitalMode };
+  const modeButtons = { typing: buttons.typingMode, locate: buttons.locateMode, flag: buttons.flagMode, capital: buttons.capitalMode, capitalChoice: buttons.capitalChoiceMode, flagChoice: buttons.flagChoiceMode };
   document.addEventListener('mapmaster:screen', e => {
     const name = e.detail.screen;
-    const active = ['play','scope','progress','help'].includes(name) ? name : (['countrySelect','continentSelect'].includes(name) ? 'scope' : (['setup','challenge','game','win','lose'].includes(name) ? 'play' : 'start'));
+    const active = ['play','scope','progress','daily','help'].includes(name) ? name : (['countrySelect','continentSelect'].includes(name) ? 'scope' : (['setup','challenge','game','win','lose'].includes(name) ? 'play' : 'start'));
     nav.querySelectorAll('[data-go]').forEach(b => { if (b.dataset.go === active) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current'); });
     if (name === 'setup') {
       document.querySelector('#setupNotice').textContent = '';
       document.querySelectorAll('#gameModeSection button, #difficultySection button').forEach(b => b.setAttribute('aria-pressed', String(b.classList.contains('selected'))));
     }
     if (name === 'setup') document.querySelector('#setupNotice').textContent = '';
-    if (name === 'setup') document.querySelector('#setupNotice').textContent = ['northAmerica','southAmerica'].includes(currentMapKey) ? 'This region’s map currently fails to load; locate play is not available reliably.' : '';
+    if (name === 'setup') document.querySelector('#setupNotice').textContent = ['northAmerica','southAmerica'].includes(currentMapKey) ? 'Map targeting and small-country selection have not yet been verified for this region.' : '';
     if (name === 'setup' && pendingMode) {
       const selected = modeButtons[pendingMode]; pendingMode = null;
       if (selected && !selected.disabled) selected.click();

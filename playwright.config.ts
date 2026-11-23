@@ -25,12 +25,14 @@ export default defineConfig({
       reuseExistingServer: false,
     },
     {
-      command: "npm run preview -- --port 4175 --strictPort",
+      command:
+        "npm run preview -- --port 4175 --strictPort --outDir dist-e2e-root",
       url: "http://127.0.0.1:4175",
       reuseExistingServer: false,
     },
     {
-      command: "npm run preview -- --port 4176 --strictPort --base /mapmaster/",
+      command:
+        "npm run preview -- --port 4176 --strictPort --base /mapmaster/ --outDir dist-e2e-subpath",
       url: "http://127.0.0.1:4176/mapmaster/",
       reuseExistingServer: false,
     },

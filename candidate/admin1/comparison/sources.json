@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "purpose": "CP05 validation-only source provenance; no authority geometry is distributed here.",
+  "sources": {
+    "australia": {
+      "version": "ABS ASGS State/Territory 2021",
+      "license": "CC BY 4.0",
+      "sha256": "c4ba682502849c56c3c14f4246dfa1f95fb5db3f1f8ba27dc478839be1b751b9"
+    },
+    "brazil": {
+      "version": "IBGE UF 2024",
+      "license": "validation-only; authoritative source terms retained",
+      "url_template": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/{UF}/{UF}_UF_2024.zip",
+      "sha256_by_uf": {
+        "AC": "c9478b6bf81bd68af4c56a162a58ca211ae90e16bbb7d429dac465ca7af05e17",
+        "AL": "183c8118060c1f5aae5f61e15bacc62c5ece43c6199779f65f19cd4842ecceba",
+        "AM": "d40e50602ab455e787e04a23942cea2949042af058fcf68698e0b6c10b2fc628",
+        "AP": "ff2d0518e91b4ef3f5741b58cf63f3ac107f155849984b6aeaeb4d37ec965939",
+        "BA": "7c8937d75e367ff5688e6286ae34502b1c57cb24c65c1b77af653d9753f22093",
+        "CE": "7c49b158ccfe001f507b00fd03a518fb4819e5c1203f75bee7b87943db012213",
+        "DF": "f022b21f7f3e19cc7869843e694f21f59cf93d2d11081692f1c3e96878a4ba16",
+        "ES": "d224b32d771ef0d0294e4ed81539af2e0238383498a6c23e096ff59df3fec20d",
+        "GO": "32556057bbbbe00fbe8555a9241544de7e776239ef2c3a4caa47bb6f5286bca6",
+        "MA": "c7e9d2f52c2e9e5bdd028d553fefa554098086ac168ea62a873e13331c66bcf1",
+        "MG": "2662acbdd9523a33dfaa4c7ac973174fb9af5dcb75d4b2356520b71fa9d7e863",
+        "MS": "03538e45b35bfe0b3adf425b323b2172426b93dd201c7227bb3e93bf1dd58a35",
+        "MT": "032802e4b8180fbaab1a6aeef8059b418bf9b63ef7ccb361c4b29ea5ad6c96de",
+        "PA": "fb708d1d4b926dd3ddd7019bf1a15c93956215a8771b55207073b41977508415",
+        "PB": "759ed707db1b283075760dcf99dd606711fab01f9fd157efb5b4ac35be8a39e4",
+        "PE": "21d296d976a8f8439d3ea1812a4b5664ac52902b5512e534f36907cf2da01c92",
+        "PI": "7241c7bf6bb2457231e6ec4a39248ff25752bb2c838fd2e6009252db46ac41d3",
+        "PR": "17873becc2afece9f591ad4ef1298957e8779f77447b7394a8eff0525b28d4f9",
+        "RJ": "1a99a986b49c04b2325e6eb4c86ee00f466be8afb701daf07ab89106b326b31c",
+        "RN": "370e28fc47f8cb690f5e3286c7d0dc3dab98a55ac9d871e07df59b00e1ca33cf",
+        "RO": "37d11882bb1f94d1e5ef14178e3bc261aa062cfdeefdc9b22959fa28d282d8f9",
+        "RR": "d73d9be9b8bbbd85c464f5da37a595ccf7bc632e1e4d50a3e647254badd8ffc3",
+        "RS": "f29375ffd2899be9613ef4238575e625a4fd15f6c8892858c222dba1480b2184",
+        "SC": "9004a4499cb09e002602e45a7c7cfa939fa0862042e8d51f3a1e2d1159d9bcb1",
+        "SE": "6899632232d2b8a72c219a552a9ff0bed41ec7fff83709127d791f3b3e2cdd5f",
+        "SP": "bd3a62fac9dce08e7d2d29af51d7f0f6755de526965a2fc2cbb793ea2864979e",
+        "TO": "d8d6643d846bdb10bd5eed1931d48792c2b76428f9b8e488c806f2a3202f3209"
+      }
+    },
+    "canada": {
+      "version": "Statistics Canada 2021 Digital Province/Territory",
+      "license": "Open Government Licence–Canada",
+      "sha256": "0c853d8d1e5bbae86babe5bd706cae86a12f84551308a92a4d4740e483b3e270"
+    },
+    "germany": {
+      "version": "BKG VG250 01.01.2026",
+      "license": "dl-de/by-2-0; validation only",
+      "url": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/aktuell/vg250_01-01.utm32s.shape.ebenen.zip",
+      "published_md5": "19abb1eda644eea121ac037ca3c12e46",
+      "status": "blocked_unverified_partial_archive"
+    },
+    "japan": {
+      "version": "MLIT N03 2024",
+      "license": "validation-only; publisher attribution/terms retained",
+      "sha256": "a03111be0fe726ff270cbc1dd16f38bc926cf814e67c8cd2e52157629d138b98",
+      "candidate_component_reassignment": {
+        "status": "applied to quarantined candidate only",
+        "algorithm": "exact Natural Earth polygon WKB SHA-256 reassignment; no authority geometry is copied",
+        "from": "Okinawa / JPN-3502 / japan:032",
+        "to": "Kagoshima / JPN-3501 / japan:018",
+        "authority_owner": "MLIT N03_001 鹿児島県; N03_007 46000",
+        "authority_excluded_owner": "MLIT N03_001 沖縄県; N03_007 47000",
+        "component_attestation": "candidate/admin1/manifest.json#scopes.japan.component_reallocation"
+      }
+    },
+    "usa": {
+      "version": "U.S. Census 2024 1:500,000 Cartographic Boundary",
+      "license": "federal source; validation only",
+      "sha256": "3e81cbb6cf5f60d9b01ef3e730afa14d61ce5f784252a0b33a696135e71447bc"
+    }
+  }
+}

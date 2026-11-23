@@ -1,0 +1,436 @@
+<!doctype html>
+<!--
+  CP05 review-only artefact.  It is deliberately outside svg/, js/, and dist.
+  Serve the repository locally (rather than opening via file:) so fetch() can
+  read the pinned manifest and candidate SVGs.  It never changes the registry.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MapMaster CP05 Admin-1 candidate review</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font:
+          15px/1.45 system-ui,
+          sans-serif;
+        color: #17212b;
+        background: #f4f7f8;
+      }
+      body {
+        margin: 0;
+        padding: 1.25rem;
+        max-width: 1120px;
+        margin-inline: auto;
+      }
+      h1 {
+        margin-block: 0 0.25rem;
+        font-size: 1.55rem;
+      }
+      .notice {
+        border-left: 0.3rem solid #b34b22;
+        background: #fff5ee;
+        padding: 0.7rem 0.85rem;
+      }
+      .controls {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        margin-block: 1rem;
+      }
+      label {
+        display: grid;
+        gap: 0.25rem;
+        font-weight: 600;
+      }
+      select {
+        min-height: 2.5rem;
+        font: inherit;
+      }
+      .maps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      figure {
+        margin: 0;
+        border: 1px solid #cbd5dc;
+        background: white;
+        border-radius: 0.4rem;
+        padding: 0.65rem;
+      }
+      figcaption {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 240px;
+        background: #edf3f6;
+      }
+      .metadata {
+        margin-top: 1rem;
+        background: white;
+        border: 1px solid #cbd5dc;
+        border-radius: 0.4rem;
+        padding: 0.75rem;
+      }
+      .overlay {
+        margin-top: 1rem;
+        background: white;
+        border: 1px solid #cbd5dc;
+        border-radius: 0.4rem;
+        padding: 0.75rem;
+      }
+      .overlay-controls {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+      .overlay-key {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .candidate-key::before,
+      .reference-key::before {
+        content: "";
+        display: inline-block;
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-right: 0.3rem;
+        vertical-align: -0.1rem;
+      }
+      .candidate-key::before {
+        background: #1e6fa8;
+        opacity: 0.35;
+      }
+      .reference-key::before {
+        border: 2px solid #c43e2f;
+        box-sizing: border-box;
+      }
+      .metadata dt {
+        font-weight: 700;
+      }
+      .metadata dd {
+        margin: 0 0 0.55rem;
+      }
+      code {
+        overflow-wrap: anywhere;
+      }
+      @media (max-width: 720px) {
+        .controls,
+        .maps {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CP05 Admin-1 candidate visual review</h1>
+    <p class="notice">
+      <strong>Not a gameplay surface.</strong> These Natural Earth candidates
+      remain quarantined and <code>live_approved: false</code>. This viewer is
+      only a compact aid for comparing the listed target to the independent
+      authority linked below.
+    </p>
+    <div class="controls">
+      <label
+        >Country
+        <select id="scope" aria-label="Candidate country"></select
+      ></label>
+      <label
+        >Review target
+        <select id="target" aria-label="Candidate review target"></select
+      ></label>
+      <label
+        >Independent reference
+        <a id="reference" target="_blank" rel="noreferrer"
+          >Open source</a
+        ></label
+      >
+    </div>
+    <div class="maps">
+      <figure>
+        <figcaption>Complete candidate</figcaption>
+        <div id="full-map"></div>
+      </figure>
+      <figure>
+        <figcaption>
+          Target zoom — inspect against the independent source
+        </figcaption>
+        <svg id="zoom-map" role="img"></svg>
+      </figure>
+    </div>
+    <dl class="metadata" id="metadata"></dl>
+    <section class="overlay" aria-labelledby="overlay-title">
+      <h2 id="overlay-title">Local authority overlay</h2>
+      <p>
+        Load validation-only GeoJSON files locally; neither file is uploaded,
+        committed, or used by the game. Select a reference name field matching
+        the authority file (for example, <code>state_name_2021</code>,
+        <code>PRENAME</code>, or <code>NAME</code>).
+      </p>
+      <div class="overlay-controls">
+        <label
+          >Candidate GeoJSON
+          <input
+            id="overlay-candidate"
+            type="file"
+            accept="application/geo+json,application/json,.geojson,.json"
+        /></label>
+        <label
+          >Authority GeoJSON
+          <input
+            id="overlay-reference"
+            type="file"
+            accept="application/geo+json,application/json,.geojson,.json"
+        /></label>
+        <label
+          >Authority name field
+          <input id="overlay-reference-field" value="name"
+        /></label>
+      </div>
+      <p class="overlay-key">
+        <span class="candidate-key">Natural Earth candidate</span
+        ><span class="reference-key">Authority reference</span>
+      </p>
+      <svg
+        id="overlay-map"
+        role="img"
+        aria-label="Local candidate and authority geometry comparison"
+      ></svg>
+      <p id="overlay-status">Awaiting local GeoJSON files.</p>
+    </section>
+    <script type="module">
+      const references = {
+        australia: {
+          name: "Australian Bureau of Statistics — ASGS 2021 States and Territories",
+          url: "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-3-july-2021-june-2026/main-structure-and-greater-capital-city-statistical-areas/australia-and-stateterritory",
+          review:
+            "ACT (tiny), NSW/Lord Howe Island, Tasmania/Macquarie Island; verify the retained state-island relationship and excluded Other Territories.",
+        },
+        brazil: {
+          name: "IBGE — Goiás 2024 UF archive",
+          url: "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/UFs/GO/GO_UF_2024.zip",
+          review:
+            "Goiás repair only: compare the repaired Natural Earth target to IBGE 2024 at its own resolution; do not infer exact equality from the 0.974075 IoU.",
+        },
+        canada: {
+          name: "Statistics Canada — 2021 Boundary Files Reference Guide",
+          url: "https://www150.statcan.gc.ca/n1/pub/92-160-g/92-160-g2021001-eng.htm",
+          review:
+            "Nunavut, British Columbia, and Newfoundland and Labrador: inspect islands/multipart coverage and province-territory labels.",
+        },
+        germany: {
+          name: "Destatis — Länder abbreviations",
+          url: "https://www.destatis.de/DE/Methoden/abkuerzung-bundeslaender-DE-EN.html",
+          review:
+            "Bremen and Schleswig-Holstein: inspect small/multipart targets and confirm the 16-Länder scope.",
+        },
+        japan: {
+          name: "Statistics Bureau of Japan — prefectural scope",
+          url: "https://www.stat.go.jp/english/data/nenkan/1431-02.html",
+          review:
+            "Tokyo, Kagoshima, and Okinawa: inspect multipart island extent and the 47-prefecture scope.",
+        },
+        usa: {
+          name: "U.S. Census — 2024 Cartographic Boundary File caveats",
+          url: "https://cdntest.test.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html",
+          review:
+            "Alaska, Hawaii, and Maine: inspect multipart islands and confirm DC/territories stay outside the deliberate 50-state set. Census cartographic files are simplified, so they cannot establish precision equivalence.",
+        },
+      };
+      const complex = {
+        australia: ["australia:001", "australia:002", "australia:006"],
+        brazil: ["brazil:009"],
+        canada: ["canada:002", "canada:005", "canada:008"],
+        germany: ["germany:005", "germany:015"],
+        japan: ["japan:018", "japan:032", "japan:041"],
+        usa: ["usa:002", "usa:011", "usa:019"],
+      };
+      const manifest = await fetch("../manifest.json").then((response) =>
+        response.json(),
+      );
+      const scopeSelect = document.querySelector("#scope");
+      const targetSelect = document.querySelector("#target");
+      const reference = document.querySelector("#reference");
+      const fullMap = document.querySelector("#full-map");
+      const zoomMap = document.querySelector("#zoom-map");
+      const metadata = document.querySelector("#metadata");
+      const overlayCandidate = document.querySelector("#overlay-candidate");
+      const overlayReference = document.querySelector("#overlay-reference");
+      const overlayReferenceField = document.querySelector(
+        "#overlay-reference-field",
+      );
+      const overlayMap = document.querySelector("#overlay-map");
+      const overlayStatus = document.querySelector("#overlay-status");
+      let activeScope;
+      let localCandidate;
+      let localReference;
+
+      function normalise(value) {
+        return value
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/[^a-z0-9]/g, "");
+      }
+      function findFeature(collection, name, field) {
+        return collection?.features?.find(
+          (feature) =>
+            normalise(String(feature.properties?.[field] || "")) ===
+            normalise(name),
+        );
+      }
+      function rings(geometry) {
+        if (!geometry) return [];
+        if (geometry.type === "Polygon") return geometry.coordinates;
+        if (geometry.type === "MultiPolygon")
+          return geometry.coordinates.flat();
+        return [];
+      }
+      function drawLocalOverlay() {
+        const scope = scopeSelect.value;
+        const item = manifest.scopes[scope].mappings.find(
+          (entry) => entry.question_key === targetSelect.value,
+        );
+        const candidate = findFeature(
+          localCandidate,
+          item?.display_name,
+          "name",
+        );
+        const referenceFeature = findFeature(
+          localReference,
+          item?.display_name,
+          overlayReferenceField.value.trim(),
+        );
+        if (!candidate || !referenceFeature) {
+          overlayMap.replaceChildren();
+          overlayStatus.textContent =
+            localCandidate && localReference
+              ? `No exact name match for ${item?.display_name}. Check the reference name field.`
+              : "Awaiting local GeoJSON files.";
+          return;
+        }
+        const candidateRings = rings(candidate.geometry);
+        const referenceRings = rings(referenceFeature.geometry);
+        const points = [...candidateRings, ...referenceRings].flat();
+        const xs = points.map(([x]) => x),
+          ys = points.map(([, y]) => y);
+        const minX = Math.min(...xs),
+          maxX = Math.max(...xs),
+          minY = Math.min(...ys),
+          maxY = Math.max(...ys);
+        const pad = Math.max(maxX - minX, maxY - minY) * 0.06 || 1;
+        const sx = (x) =>
+          500 + ((x - (minX + maxX) / 2) * 880) / (maxX - minX + pad * 2);
+        const sy = (y) =>
+          350 - ((y - (minY + maxY) / 2) * 580) / (maxY - minY + pad * 2);
+        const path = (allRings) =>
+          allRings
+            .map(
+              (ring) =>
+                ring
+                  .map(
+                    ([x, y], index) => `${index ? "L" : "M"}${sx(x)} ${sy(y)}`,
+                  )
+                  .join("") + "Z",
+            )
+            .join("");
+        overlayMap.innerHTML = `<path d="${path(candidateRings)}" fill="#1e6fa8" fill-opacity=".35" stroke="#1e6fa8" stroke-width="1"/><path d="${path(referenceRings)}" fill="none" stroke="#c43e2f" stroke-width="1.5"/>`;
+        overlayMap.setAttribute("viewBox", "0 0 1000 700");
+        overlayStatus.textContent = `${item.display_name}: local overlay shown. Compare it with the recorded metric and source-vintage notes; overlap is not an approval decision.`;
+      }
+      async function loadLocalGeoJson(input, assign) {
+        if (!input.files?.[0]) return;
+        try {
+          assign(JSON.parse(await input.files[0].text()));
+          drawLocalOverlay();
+        } catch {
+          overlayStatus.textContent =
+            "The selected file is not readable GeoJSON.";
+        }
+      }
+
+      for (const scope of Object.keys(manifest.scopes))
+        scopeSelect.add(new Option(scope, scope));
+      async function chooseScope() {
+        const scope = scopeSelect.value;
+        const data = manifest.scopes[scope];
+        activeScope = new DOMParser().parseFromString(
+          await fetch(`../${scope}.svg`).then((response) => response.text()),
+          "image/svg+xml",
+        ).documentElement;
+        fullMap.replaceChildren(activeScope.cloneNode(true));
+        targetSelect.replaceChildren();
+        const complexKeys = new Set(complex[scope]);
+        for (const item of data.mappings) {
+          targetSelect.add(
+            new Option(
+              `${complexKeys.has(item.question_key) ? "★ " : ""}${item.display_name} — ${item.question_key}`,
+              item.question_key,
+            ),
+          );
+        }
+        reference.href = references[scope].url;
+        reference.textContent = references[scope].name;
+        chooseTarget();
+      }
+      function chooseTarget() {
+        const scope = scopeSelect.value;
+        const item = manifest.scopes[scope].mappings.find(
+          (entry) => entry.question_key === targetSelect.value,
+        );
+        const clone = activeScope.cloneNode(true);
+        for (const group of clone.querySelectorAll("g[data-question-key]")) {
+          group.style.opacity =
+            group.dataset.questionKey === item.question_key ? "1" : ".13";
+          if (group.dataset.questionKey === item.question_key)
+            group.style.fill = "#e46d31";
+        }
+        fullMap.replaceChildren(clone);
+        const target = activeScope
+          .querySelector(
+            `[data-question-key="${CSS.escape(item.question_key)}"]`,
+          )
+          .cloneNode(true);
+        zoomMap.replaceChildren(target);
+        requestAnimationFrame(() => {
+          const box = target.getBBox();
+          const pad = Math.max(box.width, box.height) * 0.12 || 1;
+          zoomMap.setAttribute(
+            "viewBox",
+            `${box.x - pad} ${box.y - pad} ${box.width + pad * 2} ${box.height + pad * 2}`,
+          );
+        });
+        const flags = [];
+        if (complex[scope].includes(item.question_key))
+          flags.push("complex-review target");
+        if (item.source_polygon_count > 1)
+          flags.push(`${item.source_polygon_count} source polygons`);
+        if (!item.source_geometry_valid)
+          flags.push("source invalid; rendered repair attested");
+        metadata.innerHTML = `<dt>Question / source</dt><dd><code>${item.question_key}</code> / <code>${item.source_id}</code> (${item.source_iso_3166_2 || "no ISO subdivision code"})</dd><dt>Candidate mapping</dt><dd>${item.display_name}; ${item.source_components.map((part) => `${part.source_name} (${part.source_id})`).join(", ")}</dd><dt>Review focus</dt><dd>${references[scope].review}</dd><dt>Flags</dt><dd>${flags.join("; ") || "standard scope review"}</dd><dt>Boundary status</dt><dd>Authority supports scope/identifier review; coordinate-level equivalence is not asserted here.</dd>`;
+        drawLocalOverlay();
+      }
+      scopeSelect.addEventListener("change", chooseScope);
+      targetSelect.addEventListener("change", chooseTarget);
+      overlayCandidate.addEventListener("change", () =>
+        loadLocalGeoJson(overlayCandidate, (data) => {
+          localCandidate = data;
+        }),
+      );
+      overlayReference.addEventListener("change", () =>
+        loadLocalGeoJson(overlayReference, (data) => {
+          localReference = data;
+        }),
+      );
+      overlayReferenceField.addEventListener("change", drawLocalOverlay);
+      await chooseScope();
+    </script>
+  </body>
+</html>

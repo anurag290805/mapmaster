@@ -1,0 +1,25 @@
+{
+  "schema_version": 5,
+  "ledger_id": "mapmaster-country-facts-final-remediation.v3",
+  "as_of": "2026-11-10",
+  "total_records": 194,
+  "independently_verified": 162,
+  "editorially_recommended": 162,
+  "needs_review": 32,
+  "founder_approved": 0,
+  "gameplay_approved": 0,
+  "production_eligible": 0,
+  "editorial_rewrites": {
+    "v4_general": 142,
+    "v5_rewritten": 9,
+    "v5_preserved_recommendations": 2
+  },
+  "new_explicit_holds": [
+    "mapmaster:country:bangladesh",
+    "mapmaster:country:myanmar",
+    "mapmaster:country:saudi-arabia",
+    "mapmaster:country:zambia"
+  ],
+  "next_batch": "Founder reviews individual claims in CONSOLIDATED_FOUNDER_CHECKLIST.v6.md. Do not promote a claim until a founder decision and separate CP05/release-eligibility decision are recorded. Bangladesh, Myanmar, Saudi Arabia, Zambia, and the 28 pre-existing holds require their documented evidence or policy blockers to be resolved first.",
+  "frozen_v1_v2_sources_preserved": true
+}

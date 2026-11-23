@@ -54,6 +54,7 @@ function fixture(type = "typing", mode = "challenge") {
     guessedStates: [],
     guessedUTs: [],
     missedRegions: [],
+    unreviewableAttempts: 0,
     timerInterval: null,
     startTime: null,
     startedAt: null,
@@ -66,12 +67,13 @@ function fixture(type = "typing", mode = "challenge") {
     deadline: null,
   };
   const docs = [];
+  const progressionResults = [];
   function mapDoc() {
     const handlers = new Set();
     const doc = {
       handlers,
       querySelectorAll() {
-        return [];
+        return ["Japan", "India"].map(name => ({ name, style: {} }));
       },
       querySelector() {
         return {};
@@ -95,6 +97,13 @@ function fixture(type = "typing", mode = "challenge") {
     FLAGS: { Japan: "🇯🇵", India: "🇮🇳" },
     CAPITALS: { world: { Japan: "Tokyo", India: "Delhi" } },
     MapMasterGameplay: rules.exports,
+    window: {
+      MapMasterProgression: {
+        recordTerminalResult(result) {
+          progressionResults.push(result);
+        },
+      },
+    },
     normalize: (s) => s.toLowerCase().replace(/\s+/g, ""),
     performance: { now: () => now },
     Date,
@@ -200,6 +209,7 @@ function fixture(type = "typing", mode = "challenge") {
     timers,
     deferred,
     docs,
+    progressionResults,
     setNow(value) {
       now = value;
     },
@@ -290,6 +300,76 @@ test("duplicate submissions do not change score, attempts or streak", () => {
   const after = snapshot(f.state);
   f.submit("Japan");
   assert.equal(snapshot(f.state), after);
+});
+
+test("a legitimate terminal session emits one immutable progression result", () => {
+  const f = fixture("typing", "practice");
+  f.ctx.startGame();
+  f.submit("Japan");
+  f.release();
+  f.ctx.endGame(false, "time");
+  f.ctx.endGame(false, "time");
+
+  assert.equal(f.progressionResults.length, 1);
+  assert.deepEqual(
+    Object.keys(f.progressionResults[0]).sort(),
+    [
+      "bestStreak",
+      "correctAnswers",
+      "elapsedSeconds",
+      "gameMode",
+      "gameType",
+      "id",
+      "mapKey",
+      "outcome",
+      "score",
+      "selectedLives",
+      "selectedTime",
+      "totalAttempts",
+    ],
+  );
+  assert.equal(f.progressionResults[0].totalAttempts, 1);
+  assert.equal(f.progressionResults[0].outcome, "lost");
+});
+
+test("review retains a repeated incorrect answer and adds unanswered result questions once", () => {
+  const f = fixture("typing", "practice");
+  f.ctx.startGame();
+  f.ctx.trackMiss("Japan");
+  f.ctx.trackMiss("Japan");
+  f.state.guessedStates.push("Japan");
+
+  f.ctx.endGame(false, "time");
+
+  assert.deepEqual(Array.from(f.state.missedRegions), ["Japan", "India"]);
+  f.ctx.resetGame();
+  assert.deepEqual(Array.from(f.state.missedRegions), []);
+});
+
+test("capital sprint review excludes regions rejected for duplicate capital answers", () => {
+  const f = fixture("capitalChoice", "practice");
+  f.ctx.CURRENT_REGIONS = [
+    "Japan",
+    "India",
+    "France",
+    "Germany",
+    "Spain",
+    "Russia",
+  ];
+  f.ctx.CAPITALS.world = {
+    Japan: "Shared capital",
+    India: "Shared capital",
+    France: "Paris",
+    Germany: "Berlin",
+    Spain: "Madrid",
+    Russia: "Moscow",
+  };
+  f.state.guessedStates = ["France", "Germany", "Spain", "Russia"];
+  f.state.phase = "active";
+
+  f.ctx.endGame(false, "time");
+
+  assert.deepEqual(Array.from(f.state.missedRegions), []);
 });
 
 for (const type of ["typing", "flag", "capital", "locate"]) {

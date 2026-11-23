@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "selection_id": "wikidata-countries-v1",
+  "criteria": "Fixed ISO-recognized country QIDs, stratified across UN M49 regions; names are display aids only and QIDs are authoritative.",
+  "properties": ["P36", "P37", "P38", "P30", "P2046", "P610"],
+  "countries": [
+    {"qid": "Q79", "name": "Egypt", "region": "Africa"},
+    {"qid": "Q114", "name": "Kenya", "region": "Africa"},
+    {"qid": "Q1028", "name": "Morocco", "region": "Africa"},
+    {"qid": "Q1033", "name": "Nigeria", "region": "Africa"},
+    {"qid": "Q258", "name": "South Africa", "region": "Africa"},
+    {"qid": "Q414", "name": "Argentina", "region": "Americas"},
+    {"qid": "Q155", "name": "Brazil", "region": "Americas"},
+    {"qid": "Q16", "name": "Canada", "region": "Americas"},
+    {"qid": "Q96", "name": "Mexico", "region": "Americas"},
+    {"qid": "Q30", "name": "United States", "region": "Americas"},
+    {"qid": "Q668", "name": "India", "region": "Asia"},
+    {"qid": "Q252", "name": "Indonesia", "region": "Asia"},
+    {"qid": "Q17", "name": "Japan", "region": "Asia"},
+    {"qid": "Q869", "name": "Thailand", "region": "Asia"},
+    {"qid": "Q183", "name": "Germany", "region": "Europe"},
+    {"qid": "Q233", "name": "Malta", "region": "Europe"},
+    {"qid": "Q20", "name": "Norway", "region": "Europe"},
+    {"qid": "Q45", "name": "Portugal", "region": "Europe"},
+    {"qid": "Q408", "name": "Australia", "region": "Oceania"},
+    {"qid": "Q664", "name": "New Zealand", "region": "Oceania"}
+  ]
+}

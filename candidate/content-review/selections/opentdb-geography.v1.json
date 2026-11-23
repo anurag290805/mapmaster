@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "selection_id": "opentdb-geography-v1",
+  "category": 22,
+  "encoding": "url3986",
+  "batch_count": 5,
+  "questions_per_batch": 10,
+  "minimum_delay_ms": 5000,
+  "request_template": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986"
+}

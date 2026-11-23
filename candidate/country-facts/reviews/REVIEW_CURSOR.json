@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "ledger_id": "mapmaster-country-facts-independent-review.v1",
+  "as_of": "2026-11-10",
+  "total_records": 194,
+  "directly_corroborated_exact_feature": 145,
+  "needs_feature_identity_or_conflict_review": 47,
+  "needs_alternate_authoritative_source": 2,
+  "ready_for_founder_review": 123,
+  "needs_review": 71,
+  "founder_approved": 0,
+  "gameplay_approved": 0,
+  "production_eligible": 0,
+  "next_batch": "Resolve the 47 source-feature identity/conflict records and 2 absent-profile records with a direct national, scientific, or established-reference source; retain all 24 policy-sensitive records outside competitive use pending CP05 clearance.",
+  "source_snapshot_sha256": "sha256:217b6a9e3c4bb8e6b90657cf8a5ce9e18d9db20d5ef2930c1294252bc4f8ba7e"
+}

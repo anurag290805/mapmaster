@@ -1,0 +1,189 @@
+/* MapMaster experience layer: a small, state-first motion and interaction system. */
+
+@keyframes mm-screen-enter {
+  from { opacity: 0; transform: translateY(.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mm-dialog-enter {
+  from { opacity: 0; transform: translateY(.75rem) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes mm-award-enter {
+  from { opacity: 0; transform: translateY(.375rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Screen state changes remain synchronous in JavaScript. This is presentation
+   only, so a new screen is focusable and actionable from the first frame. */
+.mm-screen-enter {
+  animation: mm-screen-enter var(--mm-motion-screen) var(--mm-ease-enter) both;
+}
+
+dialog.cp-dialog[open] {
+  animation: mm-dialog-enter var(--mm-motion-dialog) var(--mm-ease-enter) both;
+}
+
+dialog.cp-dialog[open]::backdrop {
+  animation: mm-screen-enter var(--mm-motion-dialog) var(--mm-ease-enter) both;
+}
+
+/* Native dialogs live in the browser top layer. Isolation and an opaque
+   surface keep decorative home artwork from creating a competing stack inside
+   the composited view. */
+dialog.cp-dialog[open] {
+  isolation: isolate;
+  z-index: var(--mm-z-dialog);
+  background: var(--hm-ink-raised);
+}
+
+/* An active round needs one leader: the prompt or map. The normal site shell
+   returns as soon as the player reaches a result or leaves the session. */
+.mm-in-game .site-header { display: none; }
+
+.mm-in-game #appHeader { height: 3.5rem; margin-bottom: .35rem; }
+.mm-in-game #headerSub { display: none; }
+.mm-in-game #topBar { margin-bottom: .5rem; }
+.mm-in-game #topBar > div { min-height: 3.35rem; padding: .45rem .65rem; }
+.mm-in-game #topBar span { font-size: 1.1rem; }
+
+/* Locate's prompt sits on the light map, unlike the dark play shell. */
+#mapContainer .locate-name { color: var(--hm-ink); }
+
+.locate-keyboard-answer {
+  width: min(100%, 70rem);
+  margin: 0 auto .75rem;
+  padding: .875rem 1rem;
+  border: 1px solid var(--hm-rule);
+  border-radius: var(--hm-radius);
+  background: var(--hm-ink-raised);
+  color: var(--hm-paper);
+}
+
+.locate-keyboard-answer label { display: block; font-weight: 750; }
+.locate-keyboard-answer p { margin: .2rem 0 .65rem; color: var(--hm-paper-deep); font-size: .875rem; }
+.locate-keyboard-controls { display: flex; gap: .5rem; }
+.locate-keyboard-controls select { min-height: var(--hm-control); flex: 1; border: 1px solid var(--hm-rule); border-radius: var(--hm-radius); background: var(--hm-ink-soft); color: var(--hm-paper); padding: 0 .75rem; }
+.locate-keyboard-controls button { flex: 0 0 auto; background: var(--hm-blue); border-color: var(--hm-blue); }
+.locate-keyboard-controls button:hover { background: var(--hm-blue-hover); }
+
+/* Answer cards share the dark session surface; colour never carries state on
+   its own because focus, text and a stable border remain present. */
+#choiceOptions .choice-option { background: var(--hm-ink-soft); color: var(--hm-paper); border-color: var(--hm-rule); }
+#choiceOptions .choice-option:hover,
+#choiceOptions .choice-option:focus-visible { background: #383838; border-color: var(--hm-lime); }
+
+.mm-account-unavailable { padding: .75rem; border-left: .25rem solid var(--hm-lime); background: var(--hm-ink-soft); color: var(--hm-paper-muted) !important; }
+.daily-calendar-orientation { margin: .75rem 0 0; color: var(--hm-paper-muted); font-size: .9rem; }
+.progress-first-route { margin-top: .75rem; color: var(--hm-paper-muted); }
+
+/* Cards advertise that they are choices without making map/gameplay controls
+   jump. Colour, edge, and shadow changes are cheap and interruptible. */
+.home-card,
+.play-card,
+.scope-cards button,
+#countrySection .country-btn,
+#continentSection .continent-btn,
+.daily-difficulties button,
+.daily-day {
+  transition:
+    background-color var(--mm-motion-hover) var(--mm-ease-enter),
+    border-color var(--mm-motion-hover) var(--mm-ease-enter),
+    color var(--mm-motion-hover) var(--mm-ease-enter),
+    box-shadow var(--mm-motion-hover) var(--mm-ease-enter),
+    transform var(--mm-motion-press) var(--mm-ease-move);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-card:hover,
+  .home-card.featured:hover {
+    border-color: var(--hm-rule);
+    background: var(--hm-ink-soft);
+    box-shadow: inset 0 0 0 1px rgb(50 205 50 / 52%);
+    transform: none;
+  }
+
+  .home-card.featured:hover {
+    background: var(--hm-lime);
+    box-shadow: inset 0 0 0 2px var(--hm-blue);
+  }
+
+  .play-card:hover,
+  .scope-cards button:hover {
+    border-color: var(--hm-lime);
+    background: var(--hm-ink-soft);
+    box-shadow: inset .1875rem 0 0 var(--hm-lime);
+    transform: none;
+  }
+}
+
+.home-card:active,
+.play-card:active,
+.scope-cards button:active,
+#countrySection .country-btn:active,
+#continentSection .continent-btn:active,
+.daily-difficulties button:active,
+.daily-day:active {
+  transform: scale(var(--mm-press-scale));
+}
+
+/* Rapid answer selection uses a clear state change, not positional motion. */
+.choice-option {
+  transition:
+    background-color var(--mm-motion-press) var(--mm-ease-enter),
+    border-color var(--mm-motion-press) var(--mm-ease-enter),
+    color var(--mm-motion-press) var(--mm-ease-enter),
+    box-shadow var(--mm-motion-press) var(--mm-ease-enter);
+}
+
+.choice-option:active { transform: none; }
+
+/* A little depth clarifies the HUD grouping without competing with the map. */
+#topBar > div,
+.progress-overview,
+.progress-panel,
+.daily-summary > div,
+.daily-panel,
+.settings-card,
+.mm-sync-status {
+  background-image: linear-gradient(145deg, rgb(255 255 255 / 4%), transparent 45%);
+}
+
+#topBar > div { box-shadow: inset 0 1px 0 rgb(255 255 255 / 7%); }
+
+.progress-meter {
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 24%);
+}
+
+.progress-meter span {
+  will-change: transform;
+}
+
+.progression-award:not(:empty) {
+  animation: mm-award-enter var(--mm-motion-popover) var(--mm-ease-enter) both;
+}
+
+/* Status colour remains paired with a labelled state and a stable edge. */
+.mm-sync-status[data-state="saved"] { box-shadow: inset .25rem 0 0 var(--hm-lime); }
+.mm-sync-status[data-state="error"] { box-shadow: inset .25rem 0 0 var(--hm-red); }
+
+@media (max-width: 640px) {
+  .home-card,
+  .scope-cards button { min-height: 11rem; }
+
+  #topBar > div { min-height: 4.25rem; }
+
+  dialog.cp-dialog { margin: max(1rem, env(safe-area-inset-top)) auto; }
+  .locate-keyboard-controls { align-items: stretch; flex-direction: column; }
+  .locate-keyboard-controls button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-screen-enter,
+  dialog.cp-dialog[open],
+  dialog.cp-dialog[open]::backdrop,
+  .progression-award:not(:empty) { animation: none !important; }
+
+  .progress-meter span { transition: none; }
+}

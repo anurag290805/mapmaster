@@ -1,0 +1,2551 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Isolated diagnostic; identities and geometry are not fully reviewed for gameplay.",
+  "live_approved": false,
+  "boundary_policy": {
+    "status": "provisional_de_facto",
+    "source": "User instruction 2026-11-01",
+    "meaning": "Default Natural Earth de facto control is a development baseline, not a sovereignty claim or approval of disputed identities. Preserve alternative views without changing canonical IDs or scoring. Verify Indian and other applicable mapping/distribution requirements before release."
+  },
+  "source": {
+    "dataset": "Natural Earth 10m Admin-0 countries",
+    "version": "5.1.1",
+    "archive_sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+    "archive_bytes": 4930492,
+    "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_countries.zip",
+    "license": "Public domain; https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "coordinate_precision_decimal_degrees": 8,
+  "svg_sha256": "29964f23e5c27c21821e7ceb049d462e86bcc70aacebff35a0ca2115e6f5ca4e",
+  "svg_bytes": 14024221,
+  "entities": [
+    {
+      "question_key": "world:001",
+      "display_name": "Afghanistan",
+      "canonical_id": "iso3166-1:AF",
+      "source_feature_id": "1159320319",
+      "dom_id": "country-AF",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:002",
+      "display_name": "Albania",
+      "canonical_id": "iso3166-1:AL",
+      "source_feature_id": "1159320325",
+      "dom_id": "country-AL",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:003",
+      "display_name": "Algeria",
+      "canonical_id": "iso3166-1:DZ",
+      "source_feature_id": "1159320565",
+      "dom_id": "country-DZ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:004",
+      "display_name": "Andorra",
+      "canonical_id": "iso3166-1:AD",
+      "source_feature_id": "1159320327",
+      "dom_id": "country-AD",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:005",
+      "display_name": "Angola",
+      "canonical_id": "iso3166-1:AO",
+      "source_feature_id": "1159320323",
+      "dom_id": "country-AO",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:006",
+      "display_name": "Antigua and Barbuda",
+      "canonical_id": "iso3166-1:AG",
+      "source_feature_id": "1159320345",
+      "dom_id": "country-AG",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:007",
+      "display_name": "Argentina",
+      "canonical_id": "iso3166-1:AR",
+      "source_feature_id": "1159320331",
+      "dom_id": "country-AR",
+      "polygon_parts": 8,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:008",
+      "display_name": "Armenia",
+      "canonical_id": "iso3166-1:AM",
+      "source_feature_id": "1159320333",
+      "dom_id": "country-AM",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:009",
+      "display_name": "Australia",
+      "canonical_id": "iso3166-1:AU",
+      "source_feature_id": "1159320355",
+      "dom_id": "country-AU",
+      "polygon_parts": 94,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:010",
+      "display_name": "Austria",
+      "canonical_id": "iso3166-1:AT",
+      "source_feature_id": "1159320379",
+      "dom_id": "country-AT",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:011",
+      "display_name": "Azerbaijan",
+      "canonical_id": "iso3166-1:AZ",
+      "source_feature_id": "1159320381",
+      "dom_id": "country-AZ",
+      "polygon_parts": 6,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:012",
+      "display_name": "Bahamas",
+      "canonical_id": "iso3166-1:BS",
+      "source_feature_id": "1159320415",
+      "dom_id": "country-BS",
+      "polygon_parts": 44,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:013",
+      "display_name": "Bahrain",
+      "canonical_id": "iso3166-1:BH",
+      "source_feature_id": "1159320413",
+      "dom_id": "country-BH",
+      "polygon_parts": 7,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:014",
+      "display_name": "Bangladesh",
+      "canonical_id": "iso3166-1:BD",
+      "source_feature_id": "1159320407",
+      "dom_id": "country-BD",
+      "polygon_parts": 22,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:015",
+      "display_name": "Barbados",
+      "canonical_id": "iso3166-1:BB",
+      "source_feature_id": "1159320449",
+      "dom_id": "country-BB",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:016",
+      "display_name": "Belarus",
+      "canonical_id": "iso3166-1:BY",
+      "source_feature_id": "1159320427",
+      "dom_id": "country-BY",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:017",
+      "display_name": "Belgium",
+      "canonical_id": "iso3166-1:BE",
+      "source_feature_id": "1159320389",
+      "dom_id": "country-BE",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:018",
+      "display_name": "Belize",
+      "canonical_id": "iso3166-1:BZ",
+      "source_feature_id": "1159320431",
+      "dom_id": "country-BZ",
+      "polygon_parts": 10,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:019",
+      "display_name": "Benin",
+      "canonical_id": "iso3166-1:BJ",
+      "source_feature_id": "1159320399",
+      "dom_id": "country-BJ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:020",
+      "display_name": "Bhutan",
+      "canonical_id": "iso3166-1:BT",
+      "source_feature_id": "1159320453",
+      "dom_id": "country-BT",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:021",
+      "display_name": "Bolivia",
+      "canonical_id": "iso3166-1:BO",
+      "source_feature_id": "1159320439",
+      "dom_id": "country-BO",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:022",
+      "display_name": "Bosnia and Herzegovina",
+      "canonical_id": "iso3166-1:BA",
+      "source_feature_id": "1159320417",
+      "dom_id": "country-BA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:023",
+      "display_name": "Botswana",
+      "canonical_id": "iso3166-1:BW",
+      "source_feature_id": "1159320461",
+      "dom_id": "country-BW",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:024",
+      "display_name": "Brazil",
+      "canonical_id": "iso3166-1:BR",
+      "source_feature_id": "1159320441",
+      "dom_id": "country-BR",
+      "polygon_parts": 43,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:025",
+      "display_name": "Brunei",
+      "canonical_id": "iso3166-1:BN",
+      "source_feature_id": "1159320451",
+      "dom_id": "country-BN",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:026",
+      "display_name": "Bulgaria",
+      "canonical_id": "iso3166-1:BG",
+      "source_feature_id": "1159320409",
+      "dom_id": "country-BG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:027",
+      "display_name": "Burkina Faso",
+      "canonical_id": "iso3166-1:BF",
+      "source_feature_id": "1159320405",
+      "dom_id": "country-BF",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:028",
+      "display_name": "Burundi",
+      "canonical_id": "iso3166-1:BI",
+      "source_feature_id": "1159320387",
+      "dom_id": "country-BI",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:029",
+      "display_name": "Cabo Verde",
+      "canonical_id": "iso3166-1:CV",
+      "source_feature_id": "1159320523",
+      "dom_id": "country-CV",
+      "polygon_parts": 11,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:030",
+      "display_name": "Cambodia",
+      "canonical_id": "iso3166-1:KH",
+      "source_feature_id": "1159320979",
+      "dom_id": "country-KH",
+      "polygon_parts": 6,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:031",
+      "display_name": "Cameroon",
+      "canonical_id": "iso3166-1:CM",
+      "source_feature_id": "1159320509",
+      "dom_id": "country-CM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:032",
+      "display_name": "Canada",
+      "canonical_id": "iso3166-1:CA",
+      "source_feature_id": "1159320467",
+      "dom_id": "country-CA",
+      "polygon_parts": 412,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:033",
+      "display_name": "Central African Republic",
+      "canonical_id": "iso3166-1:CF",
+      "source_feature_id": "1159320463",
+      "dom_id": "country-CF",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:034",
+      "display_name": "Chad",
+      "canonical_id": "iso3166-1:TD",
+      "source_feature_id": "1159321301",
+      "dom_id": "country-TD",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:035",
+      "display_name": "Chile",
+      "canonical_id": "iso3166-1:CL",
+      "source_feature_id": "1159320493",
+      "dom_id": "country-CL",
+      "polygon_parts": 163,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:036",
+      "display_name": "China",
+      "canonical_id": "iso3166-1:CN",
+      "source_feature_id": "1159320471",
+      "dom_id": "country-CN",
+      "polygon_parts": 70,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:037",
+      "display_name": "Colombia",
+      "canonical_id": "iso3166-1:CO",
+      "source_feature_id": "1159320517",
+      "dom_id": "country-CO",
+      "polygon_parts": 11,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:038",
+      "display_name": "Comoros",
+      "canonical_id": "iso3166-1:KM",
+      "source_feature_id": "1159320521",
+      "dom_id": "country-KM",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:039",
+      "display_name": "Congo",
+      "canonical_id": "iso3166-1:CG",
+      "source_feature_id": "1159320515",
+      "dom_id": "country-CG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:040",
+      "display_name": "Costa Rica",
+      "canonical_id": "iso3166-1:CR",
+      "source_feature_id": "1159320525",
+      "dom_id": "country-CR",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:041",
+      "display_name": "Croatia",
+      "canonical_id": "iso3166-1:HR",
+      "source_feature_id": "1159320833",
+      "dom_id": "country-HR",
+      "polygon_parts": 25,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:042",
+      "display_name": "Cuba",
+      "canonical_id": "iso3166-1:CU",
+      "source_feature_id": "1159320527",
+      "dom_id": "country-CU",
+      "polygon_parts": 41,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:043",
+      "display_name": "Cyprus",
+      "canonical_id": "iso3166-1:CY",
+      "source_feature_id": "1159320533",
+      "dom_id": "country-CY",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:044",
+      "display_name": "Czech Republic",
+      "canonical_id": "iso3166-1:CZ",
+      "source_feature_id": "1159320535",
+      "dom_id": "country-CZ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:045",
+      "display_name": "Denmark",
+      "canonical_id": "iso3166-1:DK",
+      "source_feature_id": "1159320547",
+      "dom_id": "country-DK",
+      "polygon_parts": 15,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:046",
+      "display_name": "Djibouti",
+      "canonical_id": "iso3166-1:DJ",
+      "source_feature_id": "1159320541",
+      "dom_id": "country-DJ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:047",
+      "display_name": "Dominica",
+      "canonical_id": "iso3166-1:DM",
+      "source_feature_id": "1159320543",
+      "dom_id": "country-DM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:048",
+      "display_name": "Dominican Republic",
+      "canonical_id": "iso3166-1:DO",
+      "source_feature_id": "1159320563",
+      "dom_id": "country-DO",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:049",
+      "display_name": "Ecuador",
+      "canonical_id": "iso3166-1:EC",
+      "source_feature_id": "1159320567",
+      "dom_id": "country-EC",
+      "polygon_parts": 16,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:050",
+      "display_name": "Egypt",
+      "canonical_id": "iso3166-1:EG",
+      "source_feature_id": "1159320575",
+      "dom_id": "country-EG",
+      "polygon_parts": 8,
+      "source_valid": false,
+      "topology_repaired": true,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:051",
+      "display_name": "El Salvador",
+      "canonical_id": "iso3166-1:SV",
+      "source_feature_id": "1159321253",
+      "dom_id": "country-SV",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:052",
+      "display_name": "Equatorial Guinea",
+      "canonical_id": "iso3166-1:GQ",
+      "source_feature_id": "1159320801",
+      "dom_id": "country-GQ",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:053",
+      "display_name": "Eritrea",
+      "canonical_id": "iso3166-1:ER",
+      "source_feature_id": "1159320581",
+      "dom_id": "country-ER",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:054",
+      "display_name": "Estonia",
+      "canonical_id": "iso3166-1:EE",
+      "source_feature_id": "1159320615",
+      "dom_id": "country-EE",
+      "polygon_parts": 8,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:055",
+      "display_name": "Eswatini",
+      "canonical_id": "iso3166-1:SZ",
+      "source_feature_id": "1159321289",
+      "dom_id": "country-SZ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:056",
+      "display_name": "Ethiopia",
+      "canonical_id": "iso3166-1:ET",
+      "source_feature_id": "1159320617",
+      "dom_id": "country-ET",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:057",
+      "display_name": "Fiji",
+      "canonical_id": "iso3166-1:FJ",
+      "source_feature_id": "1159320625",
+      "dom_id": "country-FJ",
+      "polygon_parts": 44,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:058",
+      "display_name": "Finland",
+      "canonical_id": "iso3166-1:FI",
+      "source_feature_id": "1159320623",
+      "dom_id": "country-FI",
+      "polygon_parts": 42,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:059",
+      "display_name": "France",
+      "canonical_id": "iso3166-1:FR",
+      "source_feature_id": "1159320637",
+      "dom_id": "country-FR",
+      "polygon_parts": 21,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:060",
+      "display_name": "Gabon",
+      "canonical_id": "iso3166-1:GA",
+      "source_feature_id": "1159320693",
+      "dom_id": "country-GA",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:061",
+      "display_name": "Gambia",
+      "canonical_id": "iso3166-1:GM",
+      "source_feature_id": "1159320797",
+      "dom_id": "country-GM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:062",
+      "display_name": "Georgia",
+      "canonical_id": "iso3166-1:GE",
+      "source_feature_id": "1159320779",
+      "dom_id": "country-GE",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:063",
+      "display_name": "Germany",
+      "canonical_id": "iso3166-1:DE",
+      "source_feature_id": "1159320539",
+      "dom_id": "country-DE",
+      "polygon_parts": 22,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:064",
+      "display_name": "Ghana",
+      "canonical_id": "iso3166-1:GH",
+      "source_feature_id": "1159320793",
+      "dom_id": "country-GH",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:065",
+      "display_name": "Greece",
+      "canonical_id": "iso3166-1:GR",
+      "source_feature_id": "1159320811",
+      "dom_id": "country-GR",
+      "polygon_parts": 74,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:066",
+      "display_name": "Grenada",
+      "canonical_id": "iso3166-1:GD",
+      "source_feature_id": "1159320813",
+      "dom_id": "country-GD",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:067",
+      "display_name": "Guatemala",
+      "canonical_id": "iso3166-1:GT",
+      "source_feature_id": "1159320815",
+      "dom_id": "country-GT",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:068",
+      "display_name": "Guinea",
+      "canonical_id": "iso3166-1:GN",
+      "source_feature_id": "1159320795",
+      "dom_id": "country-GN",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:069",
+      "display_name": "Guinea-Bissau",
+      "canonical_id": "iso3166-1:GW",
+      "source_feature_id": "1159320799",
+      "dom_id": "country-GW",
+      "polygon_parts": 13,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:070",
+      "display_name": "Guyana",
+      "canonical_id": "iso3166-1:GY",
+      "source_feature_id": "1159320817",
+      "dom_id": "country-GY",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:071",
+      "display_name": "Haiti",
+      "canonical_id": "iso3166-1:HT",
+      "source_feature_id": "1159320839",
+      "dom_id": "country-HT",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:072",
+      "display_name": "Honduras",
+      "canonical_id": "iso3166-1:HN",
+      "source_feature_id": "1159320827",
+      "dom_id": "country-HN",
+      "polygon_parts": 7,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:073",
+      "display_name": "Hungary",
+      "canonical_id": "iso3166-1:HU",
+      "source_feature_id": "1159320841",
+      "dom_id": "country-HU",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:074",
+      "display_name": "Iceland",
+      "canonical_id": "iso3166-1:IS",
+      "source_feature_id": "1159320917",
+      "dom_id": "country-IS",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:075",
+      "display_name": "India",
+      "canonical_id": "iso3166-1:IN",
+      "source_feature_id": "1159320847",
+      "dom_id": "country-IN",
+      "polygon_parts": 35,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:076",
+      "display_name": "Indonesia",
+      "canonical_id": "iso3166-1:ID",
+      "source_feature_id": "1159320845",
+      "dom_id": "country-ID",
+      "polygon_parts": 264,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:077",
+      "display_name": "Iran",
+      "canonical_id": "iso3166-1:IR",
+      "source_feature_id": "1159320881",
+      "dom_id": "country-IR",
+      "polygon_parts": 12,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:078",
+      "display_name": "Iraq",
+      "canonical_id": "iso3166-1:IQ",
+      "source_feature_id": "1159320887",
+      "dom_id": "country-IQ",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:079",
+      "display_name": "Ireland",
+      "canonical_id": "iso3166-1:IE",
+      "source_feature_id": "1159320877",
+      "dom_id": "country-IE",
+      "polygon_parts": 7,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:080",
+      "display_name": "Israel",
+      "canonical_id": "iso3166-1:IL",
+      "source_feature_id": "1159320895",
+      "dom_id": "country-IL",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:081",
+      "display_name": "Italy",
+      "canonical_id": "iso3166-1:IT",
+      "source_feature_id": "1159320919",
+      "dom_id": "country-IT",
+      "polygon_parts": 29,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:082",
+      "display_name": "Jamaica",
+      "canonical_id": "iso3166-1:JM",
+      "source_feature_id": "1159320931",
+      "dom_id": "country-JM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:083",
+      "display_name": "Japan",
+      "canonical_id": "iso3166-1:JP",
+      "source_feature_id": "1159320937",
+      "dom_id": "country-JP",
+      "polygon_parts": 109,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:084",
+      "display_name": "Jordan",
+      "canonical_id": "iso3166-1:JO",
+      "source_feature_id": "1159320935",
+      "dom_id": "country-JO",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:085",
+      "display_name": "Kazakhstan",
+      "canonical_id": "iso3166-1:KZ",
+      "source_feature_id": "1159320967",
+      "dom_id": "country-KZ",
+      "polygon_parts": 6,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:086",
+      "display_name": "Kenya",
+      "canonical_id": "iso3166-1:KE",
+      "source_feature_id": "1159320971",
+      "dom_id": "country-KE",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:087",
+      "display_name": "Kiribati",
+      "canonical_id": "iso3166-1:KI",
+      "source_feature_id": "1159320981",
+      "dom_id": "country-KI",
+      "polygon_parts": 35,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:088",
+      "display_name": "Kuwait",
+      "canonical_id": "iso3166-1:KW",
+      "source_feature_id": "1159321009",
+      "dom_id": "country-KW",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:089",
+      "display_name": "Kyrgyzstan",
+      "canonical_id": "iso3166-1:KG",
+      "source_feature_id": "1159320977",
+      "dom_id": "country-KG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:090",
+      "display_name": "Laos",
+      "canonical_id": "iso3166-1:LA",
+      "source_feature_id": "1159321011",
+      "dom_id": "country-LA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:091",
+      "display_name": "Latvia",
+      "canonical_id": "iso3166-1:LV",
+      "source_feature_id": "1159321033",
+      "dom_id": "country-LV",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:092",
+      "display_name": "Lebanon",
+      "canonical_id": "iso3166-1:LB",
+      "source_feature_id": "1159321013",
+      "dom_id": "country-LB",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:093",
+      "display_name": "Lesotho",
+      "canonical_id": "iso3166-1:LS",
+      "source_feature_id": "1159321027",
+      "dom_id": "country-LS",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:094",
+      "display_name": "Liberia",
+      "canonical_id": "iso3166-1:LR",
+      "source_feature_id": "1159321015",
+      "dom_id": "country-LR",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:095",
+      "display_name": "Libya",
+      "canonical_id": "iso3166-1:LY",
+      "source_feature_id": "1159321017",
+      "dom_id": "country-LY",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:096",
+      "display_name": "Liechtenstein",
+      "canonical_id": "iso3166-1:LI",
+      "source_feature_id": "1159321021",
+      "dom_id": "country-LI",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:097",
+      "display_name": "Lithuania",
+      "canonical_id": "iso3166-1:LT",
+      "source_feature_id": "1159321029",
+      "dom_id": "country-LT",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:098",
+      "display_name": "Luxembourg",
+      "canonical_id": "iso3166-1:LU",
+      "source_feature_id": "1159321031",
+      "dom_id": "country-LU",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:099",
+      "display_name": "Madagascar",
+      "canonical_id": "iso3166-1:MG",
+      "source_feature_id": "1159321051",
+      "dom_id": "country-MG",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:100",
+      "display_name": "Malawi",
+      "canonical_id": "iso3166-1:MW",
+      "source_feature_id": "1159321081",
+      "dom_id": "country-MW",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:101",
+      "display_name": "Malaysia",
+      "canonical_id": "iso3166-1:MY",
+      "source_feature_id": "1159321083",
+      "dom_id": "country-MY",
+      "polygon_parts": 17,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:102",
+      "display_name": "Maldives",
+      "canonical_id": "iso3166-1:MV",
+      "source_feature_id": "1159321053",
+      "dom_id": "country-MV",
+      "polygon_parts": 176,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:103",
+      "display_name": "Mali",
+      "canonical_id": "iso3166-1:ML",
+      "source_feature_id": "1159321063",
+      "dom_id": "country-ML",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:104",
+      "display_name": "Malta",
+      "canonical_id": "iso3166-1:MT",
+      "source_feature_id": "1159321065",
+      "dom_id": "country-MT",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:105",
+      "display_name": "Marshall Islands",
+      "canonical_id": "iso3166-1:MH",
+      "source_feature_id": "1159321057",
+      "dom_id": "country-MH",
+      "polygon_parts": 22,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:106",
+      "display_name": "Mauritania",
+      "canonical_id": "iso3166-1:MR",
+      "source_feature_id": "1159321075",
+      "dom_id": "country-MR",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:107",
+      "display_name": "Mauritius",
+      "canonical_id": "iso3166-1:MU",
+      "source_feature_id": "1159321079",
+      "dom_id": "country-MU",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:108",
+      "display_name": "Mexico",
+      "canonical_id": "iso3166-1:MX",
+      "source_feature_id": "1159321055",
+      "dom_id": "country-MX",
+      "polygon_parts": 51,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:109",
+      "display_name": "Micronesia",
+      "canonical_id": "iso3166-1:FM",
+      "source_feature_id": "1159320691",
+      "dom_id": "country-FM",
+      "polygon_parts": 20,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:110",
+      "display_name": "Moldova",
+      "canonical_id": "iso3166-1:MD",
+      "source_feature_id": "1159321045",
+      "dom_id": "country-MD",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:111",
+      "display_name": "Monaco",
+      "canonical_id": "iso3166-1:MC",
+      "source_feature_id": "1159321043",
+      "dom_id": "country-MC",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:112",
+      "display_name": "Mongolia",
+      "canonical_id": "iso3166-1:MN",
+      "source_feature_id": "1159321071",
+      "dom_id": "country-MN",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:113",
+      "display_name": "Montenegro",
+      "canonical_id": "iso3166-1:ME",
+      "source_feature_id": "1159321069",
+      "dom_id": "country-ME",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:114",
+      "display_name": "Morocco",
+      "canonical_id": "iso3166-1:MA",
+      "source_feature_id": "1159321035",
+      "dom_id": "country-MA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:115",
+      "display_name": "Mozambique",
+      "canonical_id": "iso3166-1:MZ",
+      "source_feature_id": "1159321073",
+      "dom_id": "country-MZ",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:116",
+      "display_name": "Myanmar",
+      "canonical_id": "iso3166-1:MM",
+      "source_feature_id": "1159321067",
+      "dom_id": "country-MM",
+      "polygon_parts": 39,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:117",
+      "display_name": "Namibia",
+      "canonical_id": "iso3166-1:NA",
+      "source_feature_id": "1159321085",
+      "dom_id": "country-NA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:118",
+      "display_name": "Nauru",
+      "canonical_id": "iso3166-1:NR",
+      "source_feature_id": "1159321123",
+      "dom_id": "country-NR",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:119",
+      "display_name": "Nepal",
+      "canonical_id": "iso3166-1:NP",
+      "source_feature_id": "1159321121",
+      "dom_id": "country-NP",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:120",
+      "display_name": "Netherlands",
+      "canonical_id": "iso3166-1:NL",
+      "source_feature_id": "1159321101",
+      "dom_id": "country-NL",
+      "polygon_parts": 12,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:121",
+      "display_name": "New Zealand",
+      "canonical_id": "iso3166-1:NZ",
+      "source_feature_id": "1159321135",
+      "dom_id": "country-NZ",
+      "polygon_parts": 26,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:122",
+      "display_name": "Nicaragua",
+      "canonical_id": "iso3166-1:NI",
+      "source_feature_id": "1159321091",
+      "dom_id": "country-NI",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:123",
+      "display_name": "Niger",
+      "canonical_id": "iso3166-1:NE",
+      "source_feature_id": "1159321087",
+      "dom_id": "country-NE",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:124",
+      "display_name": "Nigeria",
+      "canonical_id": "iso3166-1:NG",
+      "source_feature_id": "1159321089",
+      "dom_id": "country-NG",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:125",
+      "display_name": "North Korea",
+      "canonical_id": "iso3166-1:KP",
+      "source_feature_id": "1159321181",
+      "dom_id": "country-KP",
+      "polygon_parts": 10,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:126",
+      "display_name": "North Macedonia",
+      "canonical_id": "iso3166-1:MK",
+      "source_feature_id": "1159321061",
+      "dom_id": "country-MK",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:127",
+      "display_name": "Norway",
+      "canonical_id": "iso3166-1:NO",
+      "source_feature_id": "1159321109",
+      "dom_id": "country-NO",
+      "polygon_parts": 120,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:128",
+      "display_name": "Oman",
+      "canonical_id": "iso3166-1:OM",
+      "source_feature_id": "1159321151",
+      "dom_id": "country-OM",
+      "polygon_parts": 6,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:129",
+      "display_name": "Pakistan",
+      "canonical_id": "iso3166-1:PK",
+      "source_feature_id": "1159321153",
+      "dom_id": "country-PK",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:130",
+      "display_name": "Palau",
+      "canonical_id": "iso3166-1:PW",
+      "source_feature_id": "1159321171",
+      "dom_id": "country-PW",
+      "polygon_parts": 9,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:131",
+      "display_name": "Palestine",
+      "canonical_id": "iso3166-1:PS",
+      "source_feature_id": "1159320899",
+      "dom_id": "country-PS",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:132",
+      "display_name": "Panama",
+      "canonical_id": "iso3166-1:PA",
+      "source_feature_id": "1159321161",
+      "dom_id": "country-PA",
+      "polygon_parts": 15,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:133",
+      "display_name": "Papua New Guinea",
+      "canonical_id": "iso3166-1:PG",
+      "source_feature_id": "1159321173",
+      "dom_id": "country-PG",
+      "polygon_parts": 58,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:134",
+      "display_name": "Paraguay",
+      "canonical_id": "iso3166-1:PY",
+      "source_feature_id": "1159321195",
+      "dom_id": "country-PY",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:135",
+      "display_name": "Peru",
+      "canonical_id": "iso3166-1:PE",
+      "source_feature_id": "1159321163",
+      "dom_id": "country-PE",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:136",
+      "display_name": "Philippines",
+      "canonical_id": "iso3166-1:PH",
+      "source_feature_id": "1159321169",
+      "dom_id": "country-PH",
+      "polygon_parts": 97,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:137",
+      "display_name": "Poland",
+      "canonical_id": "iso3166-1:PL",
+      "source_feature_id": "1159321179",
+      "dom_id": "country-PL",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:138",
+      "display_name": "Portugal",
+      "canonical_id": "iso3166-1:PT",
+      "source_feature_id": "1159321187",
+      "dom_id": "country-PT",
+      "polygon_parts": 17,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:139",
+      "display_name": "Qatar",
+      "canonical_id": "iso3166-1:QA",
+      "source_feature_id": "1159321197",
+      "dom_id": "country-QA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:140",
+      "display_name": "Romania",
+      "canonical_id": "iso3166-1:RO",
+      "source_feature_id": "1159321199",
+      "dom_id": "country-RO",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:141",
+      "display_name": "Russia",
+      "canonical_id": "iso3166-1:RU",
+      "source_feature_id": "1159321201",
+      "dom_id": "country-RU",
+      "polygon_parts": 214,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:142",
+      "display_name": "Rwanda",
+      "canonical_id": "iso3166-1:RW",
+      "source_feature_id": "1159321219",
+      "dom_id": "country-RW",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:143",
+      "display_name": "Saint Kitts and Nevis",
+      "canonical_id": "iso3166-1:KN",
+      "source_feature_id": "1159320983",
+      "dom_id": "country-KN",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:144",
+      "display_name": "Saint Lucia",
+      "canonical_id": "iso3166-1:LC",
+      "source_feature_id": "1159321019",
+      "dom_id": "country-LC",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:145",
+      "display_name": "Saint Vincent and the Grenadines",
+      "canonical_id": "iso3166-1:VC",
+      "source_feature_id": "1159321409",
+      "dom_id": "country-VC",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:146",
+      "display_name": "Samoa",
+      "canonical_id": "iso3166-1:WS",
+      "source_feature_id": "1159321423",
+      "dom_id": "country-WS",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:147",
+      "display_name": "San Marino",
+      "canonical_id": "iso3166-1:SM",
+      "source_feature_id": "1159321255",
+      "dom_id": "country-SM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:148",
+      "display_name": "Sao Tome and Principe",
+      "canonical_id": "iso3166-1:ST",
+      "source_feature_id": "1159321273",
+      "dom_id": "country-ST",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:149",
+      "display_name": "Saudi Arabia",
+      "canonical_id": "iso3166-1:SA",
+      "source_feature_id": "1159321225",
+      "dom_id": "country-SA",
+      "polygon_parts": 11,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:150",
+      "display_name": "Senegal",
+      "canonical_id": "iso3166-1:SN",
+      "source_feature_id": "1159321243",
+      "dom_id": "country-SN",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:151",
+      "display_name": "Serbia",
+      "canonical_id": "iso3166-1:RS",
+      "source_feature_id": "1159321267",
+      "dom_id": "country-RS",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:152",
+      "display_name": "Seychelles",
+      "canonical_id": "iso3166-1:SC",
+      "source_feature_id": "1159321291",
+      "dom_id": "country-SC",
+      "polygon_parts": 26,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:153",
+      "display_name": "Sierra Leone",
+      "canonical_id": "iso3166-1:SL",
+      "source_feature_id": "1159321251",
+      "dom_id": "country-SL",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:154",
+      "display_name": "Singapore",
+      "canonical_id": "iso3166-1:SG",
+      "source_feature_id": "1159321247",
+      "dom_id": "country-SG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:155",
+      "display_name": "Slovakia",
+      "canonical_id": "iso3166-1:SK",
+      "source_feature_id": "1159321283",
+      "dom_id": "country-SK",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:156",
+      "display_name": "Slovenia",
+      "canonical_id": "iso3166-1:SI",
+      "source_feature_id": "1159321285",
+      "dom_id": "country-SI",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:157",
+      "display_name": "Solomon Islands",
+      "canonical_id": "iso3166-1:SB",
+      "source_feature_id": "1159321249",
+      "dom_id": "country-SB",
+      "polygon_parts": 48,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:158",
+      "display_name": "Somalia",
+      "canonical_id": "iso3166-1:SO",
+      "source_feature_id": "1159321261",
+      "dom_id": "country-SO",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:159",
+      "display_name": "South Africa",
+      "canonical_id": "iso3166-1:ZA",
+      "source_feature_id": "1159321431",
+      "dom_id": "country-ZA",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:160",
+      "display_name": "South Korea",
+      "canonical_id": "iso3166-1:KR",
+      "source_feature_id": "1159320985",
+      "dom_id": "country-KR",
+      "polygon_parts": 53,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:161",
+      "display_name": "South Sudan",
+      "canonical_id": "iso3166-1:SS",
+      "source_feature_id": "1159321235",
+      "dom_id": "country-SS",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:162",
+      "display_name": "Spain",
+      "canonical_id": "iso3166-1:ES",
+      "source_feature_id": "1159320587",
+      "dom_id": "country-ES",
+      "polygon_parts": 23,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:163",
+      "display_name": "Sri Lanka",
+      "canonical_id": "iso3166-1:LK",
+      "source_feature_id": "1159321025",
+      "dom_id": "country-LK",
+      "polygon_parts": 5,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:164",
+      "display_name": "Sudan",
+      "canonical_id": "iso3166-1:SD",
+      "source_feature_id": "1159321229",
+      "dom_id": "country-SD",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:165",
+      "display_name": "Suriname",
+      "canonical_id": "iso3166-1:SR",
+      "source_feature_id": "1159321281",
+      "dom_id": "country-SR",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:166",
+      "display_name": "Sweden",
+      "canonical_id": "iso3166-1:SE",
+      "source_feature_id": "1159321287",
+      "dom_id": "country-SE",
+      "polygon_parts": 41,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:167",
+      "display_name": "Switzerland",
+      "canonical_id": "iso3166-1:CH",
+      "source_feature_id": "1159320491",
+      "dom_id": "country-CH",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:168",
+      "display_name": "Syria",
+      "canonical_id": "iso3166-1:SY",
+      "source_feature_id": "1159321295",
+      "dom_id": "country-SY",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:169",
+      "display_name": "Taiwan",
+      "canonical_id": "iso3166-1:TW",
+      "source_feature_id": "1159321335",
+      "dom_id": "country-TW",
+      "polygon_parts": 8,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:170",
+      "display_name": "Tajikistan",
+      "canonical_id": "iso3166-1:TJ",
+      "source_feature_id": "1159321307",
+      "dom_id": "country-TJ",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:171",
+      "display_name": "Tanzania",
+      "canonical_id": "iso3166-1:TZ",
+      "source_feature_id": "1159321337",
+      "dom_id": "country-TZ",
+      "polygon_parts": 7,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:172",
+      "display_name": "Thailand",
+      "canonical_id": "iso3166-1:TH",
+      "source_feature_id": "1159321305",
+      "dom_id": "country-TH",
+      "polygon_parts": 20,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:173",
+      "display_name": "Timor-Leste",
+      "canonical_id": "iso3166-1:TL",
+      "source_feature_id": "1159321313",
+      "dom_id": "country-TL",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:174",
+      "display_name": "Togo",
+      "canonical_id": "iso3166-1:TG",
+      "source_feature_id": "1159321303",
+      "dom_id": "country-TG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:175",
+      "display_name": "Tonga",
+      "canonical_id": "iso3166-1:TO",
+      "source_feature_id": "1159321319",
+      "dom_id": "country-TO",
+      "polygon_parts": 10,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:176",
+      "display_name": "Trinidad and Tobago",
+      "canonical_id": "iso3166-1:TT",
+      "source_feature_id": "1159321321",
+      "dom_id": "country-TT",
+      "polygon_parts": 2,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:177",
+      "display_name": "Tunisia",
+      "canonical_id": "iso3166-1:TN",
+      "source_feature_id": "1159321327",
+      "dom_id": "country-TN",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:178",
+      "display_name": "Turkey",
+      "canonical_id": "iso3166-1:TR",
+      "source_feature_id": "1159321331",
+      "dom_id": "country-TR",
+      "polygon_parts": 6,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:179",
+      "display_name": "Turkmenistan",
+      "canonical_id": "iso3166-1:TM",
+      "source_feature_id": "1159321309",
+      "dom_id": "country-TM",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:180",
+      "display_name": "Tuvalu",
+      "canonical_id": "iso3166-1:TV",
+      "source_feature_id": "1159321333",
+      "dom_id": "country-TV",
+      "polygon_parts": 9,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:181",
+      "display_name": "Uganda",
+      "canonical_id": "iso3166-1:UG",
+      "source_feature_id": "1159321343",
+      "dom_id": "country-UG",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:182",
+      "display_name": "Ukraine",
+      "canonical_id": "iso3166-1:UA",
+      "source_feature_id": "1159321345",
+      "dom_id": "country-UA",
+      "polygon_parts": 4,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:183",
+      "display_name": "United Arab Emirates",
+      "canonical_id": "iso3166-1:AE",
+      "source_feature_id": "1159320329",
+      "dom_id": "country-AE",
+      "polygon_parts": 10,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:184",
+      "display_name": "United Kingdom",
+      "canonical_id": "iso3166-1:GB",
+      "source_feature_id": "1159320713",
+      "dom_id": "country-GB",
+      "polygon_parts": 57,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:185",
+      "display_name": "United States",
+      "canonical_id": "iso3166-1:US",
+      "source_feature_id": "1159321369",
+      "dom_id": "country-US",
+      "polygon_parts": 344,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:186",
+      "display_name": "Uruguay",
+      "canonical_id": "iso3166-1:UY",
+      "source_feature_id": "1159321353",
+      "dom_id": "country-UY",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:187",
+      "display_name": "Uzbekistan",
+      "canonical_id": "iso3166-1:UZ",
+      "source_feature_id": "1159321405",
+      "dom_id": "country-UZ",
+      "polygon_parts": 3,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:188",
+      "display_name": "Vanuatu",
+      "canonical_id": "iso3166-1:VU",
+      "source_feature_id": "1159321421",
+      "dom_id": "country-VU",
+      "polygon_parts": 27,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:189",
+      "display_name": "Vatican City",
+      "canonical_id": "iso3166-1:VA",
+      "source_feature_id": "1159321407",
+      "dom_id": "country-VA",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:190",
+      "display_name": "Venezuela",
+      "canonical_id": "iso3166-1:VE",
+      "source_feature_id": "1159321411",
+      "dom_id": "country-VE",
+      "polygon_parts": 29,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:191",
+      "display_name": "Vietnam",
+      "canonical_id": "iso3166-1:VN",
+      "source_feature_id": "1159321417",
+      "dom_id": "country-VN",
+      "polygon_parts": 25,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:192",
+      "display_name": "Yemen",
+      "canonical_id": "iso3166-1:YE",
+      "source_feature_id": "1159321425",
+      "dom_id": "country-YE",
+      "polygon_parts": 9,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:193",
+      "display_name": "Zambia",
+      "canonical_id": "iso3166-1:ZM",
+      "source_feature_id": "1159321439",
+      "dom_id": "country-ZM",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    },
+    {
+      "question_key": "world:194",
+      "display_name": "Zimbabwe",
+      "canonical_id": "iso3166-1:ZW",
+      "source_feature_id": "1159321441",
+      "dom_id": "country-ZW",
+      "polygon_parts": 1,
+      "source_valid": true,
+      "topology_repaired": false,
+      "live_eligible": false
+    }
+  ],
+  "noninteractive_source_context": [
+    {
+      "source_feature_id": "1159320335",
+      "source_name": "Antarctica",
+      "polygon_parts": 179,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320353",
+      "source_name": "Ashmore and Cartier Is.",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320359",
+      "source_name": "Coral Sea Is.",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320361",
+      "source_name": "Heard I. and McDonald Is.",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320363",
+      "source_name": "Indian Ocean Ter.",
+      "polygon_parts": 3,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320365",
+      "source_name": "Norfolk Island",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320425",
+      "source_name": "Bajo Nuevo Bank",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320473",
+      "source_name": "Hong Kong",
+      "polygon_parts": 4,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320475",
+      "source_name": "Macao",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320507",
+      "source_name": "Côte d'Ivoire",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320511",
+      "source_name": "Cyprus U.N. Buffer Zone",
+      "polygon_parts": 3,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320513",
+      "source_name": "Dem. Rep. Congo",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320529",
+      "source_name": "USNB Guantanamo Bay",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320531",
+      "source_name": "N. Cyprus",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320549",
+      "source_name": "Faeroe Is.",
+      "polygon_parts": 11,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320551",
+      "source_name": "Greenland",
+      "polygon_parts": 128,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320621",
+      "source_name": "Åland",
+      "polygon_parts": 16,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320631",
+      "source_name": "Fr. S. Antarctic Lands",
+      "polygon_parts": 18,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320633",
+      "source_name": "St-Barthélemy",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320635",
+      "source_name": "Clipperton I.",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320639",
+      "source_name": "St-Martin",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320641",
+      "source_name": "New Caledonia",
+      "polygon_parts": 11,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320643",
+      "source_name": "Fr. Polynesia",
+      "polygon_parts": 88,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320647",
+      "source_name": "St. Pierre and Miquelon",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320649",
+      "source_name": "Wallis and Futuna Is.",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320703",
+      "source_name": "Anguilla",
+      "polygon_parts": 6,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320705",
+      "source_name": "Bermuda",
+      "polygon_parts": 2,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320707",
+      "source_name": "Cayman Is.",
+      "polygon_parts": 3,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320709",
+      "source_name": "Dhekelia",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320711",
+      "source_name": "Falkland Is.",
+      "polygon_parts": 15,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320715",
+      "source_name": "Guernsey",
+      "polygon_parts": 4,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320719",
+      "source_name": "Gibraltar",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320721",
+      "source_name": "Isle of Man",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320723",
+      "source_name": "Br. Indian Ocean Ter.",
+      "polygon_parts": 10,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320725",
+      "source_name": "Jersey",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320727",
+      "source_name": "Montserrat",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320729",
+      "source_name": "Pitcairn Is.",
+      "polygon_parts": 4,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320731",
+      "source_name": "S. Geo. and the Is.",
+      "polygon_parts": 12,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320733",
+      "source_name": "Saint Helena",
+      "polygon_parts": 4,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320737",
+      "source_name": "Turks and Caicos Is.",
+      "polygon_parts": 12,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320739",
+      "source_name": "British Virgin Is.",
+      "polygon_parts": 6,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320741",
+      "source_name": "Akrotiri",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320963",
+      "source_name": "Siachen Glacier",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159320965",
+      "source_name": "Baikonur",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321007",
+      "source_name": "Kosovo",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321097",
+      "source_name": "Aruba",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321099",
+      "source_name": "Curaçao",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321103",
+      "source_name": "Sint Maarten",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321129",
+      "source_name": "Cook Is.",
+      "polygon_parts": 13,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321133",
+      "source_name": "Niue",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321165",
+      "source_name": "Spratly Is.",
+      "polygon_parts": 12,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321223",
+      "source_name": "W. Sahara",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321227",
+      "source_name": "Scarborough Reef",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321245",
+      "source_name": "Serranilla Bank",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321259",
+      "source_name": "Somaliland",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321357",
+      "source_name": "American Samoa",
+      "polygon_parts": 5,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321359",
+      "source_name": "Guam",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321361",
+      "source_name": "N. Mariana Is.",
+      "polygon_parts": 12,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321363",
+      "source_name": "Puerto Rico",
+      "polygon_parts": 4,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321367",
+      "source_name": "U.S. Minor Outlying Is.",
+      "polygon_parts": 13,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1159321371",
+      "source_name": "U.S. Virgin Is.",
+      "polygon_parts": 3,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1729632181",
+      "source_name": "Brazilian I.",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1729635091",
+      "source_name": "Bir Tawil",
+      "polygon_parts": 1,
+      "source_valid": true
+    },
+    {
+      "source_feature_id": "1729635141",
+      "source_name": "Southern Patagonian Ice Field",
+      "polygon_parts": 1,
+      "source_valid": true
+    }
+  ],
+  "positive_area_overlaps": [],
+  "overlap_threshold_square_degrees": 1e-10,
+  "limitations": [
+    "Code corroboration does not establish geographic correctness.",
+    "Egypt was repaired with GEOS make_valid; repair requires geographic review.",
+    "No candidate reachability, hit testing, accessibility, performance, or live scoring approval is implied.",
+    "Context features are noninteractive and have not been assigned to game identities."
+  ]
+}

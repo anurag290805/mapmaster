@@ -1,0 +1,115 @@
+/* Hallmark · extension: development-only review preview · scope: app screen · theme: MapMaster fieldboard · v2.0.0 */
+/* Hallmark · pre-emit critique: preserves the existing charcoal, cobalt, and lime system; candidate evidence is legible rather than gamified. */
+/* answered: preview controls remain one-layer, high-contrast, keyboard-first, and explicitly non-rewarding. */
+
+.external-geo-preview {
+  width: min(var(--hm-max), calc(100% - 2rem));
+  margin: 1.5rem auto;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--hm-blue);
+  border-radius: var(--hm-radius-lg);
+  background: var(--hm-ink-raised);
+  color: var(--hm-paper);
+}
+
+.external-geo-preview h1,
+.external-geo-preview h2,
+.external-geo-preview h3,
+.external-geo-preview h4 {
+  min-width: 0;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  color: var(--hm-paper);
+  font-family: var(--hm-font);
+}
+
+.external-geo-preview h1 { margin: 0; font-size: clamp(2rem, 5vw, 4.25rem); letter-spacing: -0.055em; line-height: .95; }
+.external-geo-preview h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.3rem); letter-spacing: -0.04em; }
+.external-geo-preview h3 { margin: 0; font-size: 1.25rem; }
+.external-geo-preview h4 { margin: 1rem 0 0; color: var(--hm-paper-muted); font-size: .9rem; letter-spacing: .03em; text-transform: uppercase; }
+.external-geo-preview p { max-width: 48rem; color: var(--hm-paper-muted); }
+
+.external-preview-note {
+  margin: 1rem 0 1.25rem;
+  padding: .8rem 1rem;
+  border-left: .25rem solid var(--hm-lime);
+  background: var(--hm-ink);
+}
+
+.external-preview-tabs,
+.external-choice-list {
+  display: grid;
+  gap: .65rem;
+}
+
+.external-preview-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.external-choice-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.external-preview-tabs { margin-bottom: 1rem; }
+.external-preview-tabs button[aria-selected="true"] { border-color: var(--hm-lime); background: var(--hm-blue); color: var(--hm-paper); }
+.external-geo-preview button:active:not(:disabled) { transform: translateY(0); }
+
+.external-preview-panel {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  border: 1px solid var(--hm-rule);
+  border-radius: var(--hm-radius);
+  background: var(--hm-ink);
+}
+
+.external-preview-panel select {
+  width: min(100%, 28rem);
+  min-height: var(--hm-control);
+  padding: .5rem .75rem;
+  border: 1px solid var(--hm-rule);
+  border-radius: var(--hm-radius);
+  background: var(--hm-ink-raised);
+  color: var(--hm-paper);
+  font: inherit;
+}
+
+.external-preview-panel select:focus-visible { outline: .1875rem solid var(--hm-lime); outline-offset: .1875rem; }
+.external-country-detail,
+.external-question { display: grid; gap: .8rem; }
+.external-source-id,
+.external-preview-progress { font-size: .875rem; }
+.external-facts { display: grid; grid-template-columns: minmax(8rem, .3fr) minmax(0, 1fr); gap: .6rem 1rem; margin: 0; }
+.external-facts dt { color: var(--hm-lime); font-weight: 700; }
+.external-facts dd { margin: 0; color: var(--hm-paper-muted); }
+.external-warning { color: var(--hm-paper) !important; }
+.external-correct { color: var(--hm-lime) !important; font-weight: 700; }
+.external-place-prompt { color: var(--hm-paper) !important; font-size: 1.1rem; }
+.external-preview-panel a { color: var(--hm-lime); font-weight: 700; }
+.external-player-content { color: var(--hm-paper) !important; font-weight: 700; }
+.external-editorial-evidence { display: grid; gap: .35rem; margin: .35rem 0 0; padding-left: 1.25rem; }
+.external-place-evidence:empty { display: none; }
+.external-bulk-approval,
+.external-approval-item {
+  display: grid;
+  gap: .75rem;
+  padding: 1rem;
+  border: 1px solid var(--hm-rule);
+  border-radius: var(--hm-radius);
+  background: var(--hm-ink-raised);
+}
+
+.external-bulk-approval { border-left: .25rem solid var(--hm-lime); }
+.external-bulk-approval p,
+.external-approval-item p { margin: 0; }
+.external-approval-list { display: grid; gap: 1rem; margin: 0; padding-left: 1.75rem; }
+.external-approval-item { padding: 1rem; }
+.external-pending { color: var(--hm-lime); font-weight: 700; }
+.external-approval-item button:disabled,
+.external-bulk-approval button:disabled { cursor: not-allowed; opacity: .8; }
+
+@media (max-width: 42rem) {
+  .external-preview-tabs,
+  .external-choice-list { grid-template-columns: minmax(0, 1fr); }
+  .external-facts { grid-template-columns: minmax(0, 1fr); }
+  .external-facts dd { margin-bottom: .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .external-geo-preview,
+  .external-geo-preview * { animation: none !important; transition: none !important; }
+}

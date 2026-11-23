@@ -1,0 +1,3778 @@
+{
+  "schema_version": 1,
+  "status": "candidate_not_live",
+  "generated_on": "2026-11-05",
+  "source": {
+    "dataset": "Natural Earth Admin 1 – States, Provinces",
+    "version": "5.1.1",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip",
+    "sha256": "efc59726337323058f9446210adc96673179cd344e053666ee3d28cb58ba2b05",
+    "license": "Public domain",
+    "terms_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "attribution_required": false,
+    "attribution": "Natural Earth data (public domain); attribution optional"
+  },
+  "independent_reference_policy": "Official country statistical or geographic authority references are recorded in CP05_RELEASE_BLOCKER_TRIAGE.md; their administrative lists validate scope membership only, not Natural Earth boundary equivalence.",
+  "non_production_notice": "These candidates are not registered in js/data.js or svg/. They cannot clear CP05, remove the public-beta guard, or replace quarantined legacy assets without separate visual, reachability, policy, and founder acceptance.",
+  "scopes": {
+    "australia": {
+      "question_count": 8,
+      "selected_source_feature_count": 10,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "australia:001",
+          "display_name": "Australian Capital Territory",
+          "source_name": "Australian Capital Territory",
+          "source_name_en": "Australian Capital Territory",
+          "source_id": "AUS-2653",
+          "source_iso_3166_2": "AU-ACT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2653",
+          "source_components": [
+            {
+              "source_name": "Australian Capital Territory",
+              "source_id": "AUS-2653",
+              "source_iso_3166_2": "AU-ACT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:002",
+          "display_name": "New South Wales",
+          "source_name": "New South Wales",
+          "source_name_en": "New South Wales",
+          "source_id": "AUS-2654",
+          "source_iso_3166_2": "AU-NSW",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2654",
+          "source_components": [
+            {
+              "source_name": "New South Wales",
+              "source_id": "AUS-2654",
+              "source_iso_3166_2": "AU-NSW",
+              "source_geometry_valid": true
+            },
+            {
+              "source_name": "Lord Howe Island",
+              "source_id": "AUS-2659",
+              "source_iso_3166_2": "AU-NSW",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:003",
+          "display_name": "Northern Territory",
+          "source_name": "Northern Territory",
+          "source_name_en": "Northern Territory",
+          "source_id": "AUS-2650",
+          "source_iso_3166_2": "AU-NT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 30,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2650",
+          "source_components": [
+            {
+              "source_name": "Northern Territory",
+              "source_id": "AUS-2650",
+              "source_iso_3166_2": "AU-NT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:004",
+          "display_name": "Queensland",
+          "source_name": "Queensland",
+          "source_name_en": "Queensland",
+          "source_id": "AUS-2657",
+          "source_iso_3166_2": "AU-QLD",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 28,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2657",
+          "source_components": [
+            {
+              "source_name": "Queensland",
+              "source_id": "AUS-2657",
+              "source_iso_3166_2": "AU-QLD",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:005",
+          "display_name": "South Australia",
+          "source_name": "South Australia",
+          "source_name_en": "South Australia",
+          "source_id": "AUS-2655",
+          "source_iso_3166_2": "AU-SA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 7,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2655",
+          "source_components": [
+            {
+              "source_name": "South Australia",
+              "source_id": "AUS-2655",
+              "source_iso_3166_2": "AU-SA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:006",
+          "display_name": "Tasmania",
+          "source_name": "Tasmania",
+          "source_name_en": "Tasmania",
+          "source_id": "AUS-2660",
+          "source_iso_3166_2": "AU-TAS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 13,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2660",
+          "source_components": [
+            {
+              "source_name": "Tasmania",
+              "source_id": "AUS-2660",
+              "source_iso_3166_2": "AU-TAS",
+              "source_geometry_valid": true
+            },
+            {
+              "source_name": "Macquarie Island",
+              "source_id": "AUS+00?",
+              "source_iso_3166_2": "AU-X03~",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:007",
+          "display_name": "Victoria",
+          "source_name": "Victoria",
+          "source_name_en": "Victoria",
+          "source_id": "AUS-2656",
+          "source_iso_3166_2": "AU-VIC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 4,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2656",
+          "source_components": [
+            {
+              "source_name": "Victoria",
+              "source_id": "AUS-2656",
+              "source_iso_3166_2": "AU-VIC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "australia:008",
+          "display_name": "Western Australia",
+          "source_name": "Western Australia",
+          "source_name_en": "Western Australia",
+          "source_id": "AUS-2651",
+          "source_iso_3166_2": "AU-WA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 15,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-australia-aus-2651",
+          "source_components": [
+            {
+              "source_name": "Western Australia",
+              "source_id": "AUS-2651",
+              "source_iso_3166_2": "AU-WA",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [
+        {
+          "source_name": "Jervis Bay Territory",
+          "source_id": "AUS-1932",
+          "reason": "not a configured MapMaster question"
+        },
+        {
+          "source_name": "Ashmore and Cartier Islands",
+          "source_id": "ATC+00?",
+          "reason": "not a configured MapMaster question"
+        }
+      ],
+      "blockers": [],
+      "repair": null,
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/australia.svg",
+      "asset_sha256": "432898fcfbe5e20ac8f9baff4c399e5800e133cb4066de5576f7e0ee0782346f",
+      "rendered_polygon_count": 100,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    },
+    "brazil": {
+      "question_count": 27,
+      "selected_source_feature_count": 27,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "brazil:001",
+          "display_name": "Acre",
+          "source_name": "Acre",
+          "source_name_en": "Acre",
+          "source_id": "BRA-576",
+          "source_iso_3166_2": "BR-AC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-576",
+          "source_components": [
+            {
+              "source_name": "Acre",
+              "source_id": "BRA-576",
+              "source_iso_3166_2": "BR-AC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:002",
+          "display_name": "Alagoas",
+          "source_name": "Alagoas",
+          "source_name_en": "Alagoas",
+          "source_id": "BRA-623",
+          "source_iso_3166_2": "BR-AL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-623",
+          "source_components": [
+            {
+              "source_name": "Alagoas",
+              "source_id": "BRA-623",
+              "source_iso_3166_2": "BR-AL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:003",
+          "display_name": "Amapá",
+          "source_name": "Amapá",
+          "source_name_en": "Amapá",
+          "source_id": "BRA-681",
+          "source_iso_3166_2": "BR-AP",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 5,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-681",
+          "source_components": [
+            {
+              "source_name": "Amapá",
+              "source_id": "BRA-681",
+              "source_iso_3166_2": "BR-AP",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:004",
+          "display_name": "Amazonas",
+          "source_name": "Amazonas",
+          "source_name_en": "Amazonas",
+          "source_id": "BRA-592",
+          "source_iso_3166_2": "BR-AM",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-592",
+          "source_components": [
+            {
+              "source_name": "Amazonas",
+              "source_id": "BRA-592",
+              "source_iso_3166_2": "BR-AM",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:005",
+          "display_name": "Bahia",
+          "source_name": "Bahia",
+          "source_name_en": "Bahia",
+          "source_id": "BRA-624",
+          "source_iso_3166_2": "BR-BA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-624",
+          "source_components": [
+            {
+              "source_name": "Bahia",
+              "source_id": "BRA-624",
+              "source_iso_3166_2": "BR-BA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:006",
+          "display_name": "Ceará",
+          "source_name": "Ceará",
+          "source_name_en": "Ceará",
+          "source_id": "BRA-621",
+          "source_iso_3166_2": "BR-CE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-621",
+          "source_components": [
+            {
+              "source_name": "Ceará",
+              "source_id": "BRA-621",
+              "source_iso_3166_2": "BR-CE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:007",
+          "display_name": "Distrito Federal",
+          "source_name": "Distrito Federal",
+          "source_name_en": "Federal",
+          "source_id": "BRA-599",
+          "source_iso_3166_2": "BR-DF",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-599",
+          "source_components": [
+            {
+              "source_name": "Distrito Federal",
+              "source_id": "BRA-599",
+              "source_iso_3166_2": "BR-DF",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:008",
+          "display_name": "Espírito Santo",
+          "source_name": "Espírito Santo",
+          "source_name_en": "Espírito Santo",
+          "source_id": "BRA-625",
+          "source_iso_3166_2": "BR-ES",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-625",
+          "source_components": [
+            {
+              "source_name": "Espírito Santo",
+              "source_id": "BRA-625",
+              "source_iso_3166_2": "BR-ES",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:009",
+          "display_name": "Goiás",
+          "source_name": "Goiás",
+          "source_name_en": "Goiás",
+          "source_id": "BRA-1294",
+          "source_iso_3166_2": "BR-GO",
+          "source_geometry_valid": false,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-1294",
+          "source_components": [
+            {
+              "source_name": "Goiás",
+              "source_id": "BRA-1294",
+              "source_iso_3166_2": "BR-GO",
+              "source_geometry_valid": false
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:010",
+          "display_name": "Maranhão",
+          "source_name": "Maranhão",
+          "source_name_en": "Maranhão",
+          "source_id": "BRA-593",
+          "source_iso_3166_2": "BR-MA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 8,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-593",
+          "source_components": [
+            {
+              "source_name": "Maranhão",
+              "source_id": "BRA-593",
+              "source_iso_3166_2": "BR-MA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:011",
+          "display_name": "Mato Grosso",
+          "source_name": "Mato Grosso",
+          "source_name_en": "Mato Grosso",
+          "source_id": "BRA-602",
+          "source_iso_3166_2": "BR-MT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-602",
+          "source_components": [
+            {
+              "source_name": "Mato Grosso",
+              "source_id": "BRA-602",
+              "source_iso_3166_2": "BR-MT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:012",
+          "display_name": "Mato Grosso do Sul",
+          "source_name": "Mato Grosso do Sul",
+          "source_name_en": "Mato Grosso do Sul",
+          "source_id": "BRA-600",
+          "source_iso_3166_2": "BR-MS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-600",
+          "source_components": [
+            {
+              "source_name": "Mato Grosso do Sul",
+              "source_id": "BRA-600",
+              "source_iso_3166_2": "BR-MS",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:013",
+          "display_name": "Minas Gerais",
+          "source_name": "Minas Gerais",
+          "source_name_en": "Minas Gerais",
+          "source_id": "BRA-601",
+          "source_iso_3166_2": "BR-MG",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-601",
+          "source_components": [
+            {
+              "source_name": "Minas Gerais",
+              "source_id": "BRA-601",
+              "source_iso_3166_2": "BR-MG",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:014",
+          "display_name": "Pará",
+          "source_name": "Pará",
+          "source_name_en": "Pará",
+          "source_id": "BRA-594",
+          "source_iso_3166_2": "BR-PA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 18,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-594",
+          "source_components": [
+            {
+              "source_name": "Pará",
+              "source_id": "BRA-594",
+              "source_iso_3166_2": "BR-PA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:015",
+          "display_name": "Paraíba",
+          "source_name": "Paraíba",
+          "source_name_en": "Paraíba",
+          "source_id": "BRA-626",
+          "source_iso_3166_2": "BR-PB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-626",
+          "source_components": [
+            {
+              "source_name": "Paraíba",
+              "source_id": "BRA-626",
+              "source_iso_3166_2": "BR-PB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:016",
+          "display_name": "Paraná",
+          "source_name": "Paraná",
+          "source_name_en": "Paraná",
+          "source_id": "BRA-613",
+          "source_iso_3166_2": "BR-PR",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-613",
+          "source_components": [
+            {
+              "source_name": "Paraná",
+              "source_id": "BRA-613",
+              "source_iso_3166_2": "BR-PR",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:017",
+          "display_name": "Pernambuco",
+          "source_name": "Pernambuco",
+          "source_name_en": "Pernambuco",
+          "source_id": "BRA-1313",
+          "source_iso_3166_2": "BR-PE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-1313",
+          "source_components": [
+            {
+              "source_name": "Pernambuco",
+              "source_id": "BRA-1313",
+              "source_iso_3166_2": "BR-PE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:018",
+          "display_name": "Piauí",
+          "source_name": "Piauí",
+          "source_name_en": "Piauí",
+          "source_id": "BRA-622",
+          "source_iso_3166_2": "BR-PI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-622",
+          "source_components": [
+            {
+              "source_name": "Piauí",
+              "source_id": "BRA-622",
+              "source_iso_3166_2": "BR-PI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:019",
+          "display_name": "Rio Grande do Norte",
+          "source_name": "Rio Grande do Norte",
+          "source_name_en": "Rio Grande do Norte",
+          "source_id": "BRA-628",
+          "source_iso_3166_2": "BR-RN",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-628",
+          "source_components": [
+            {
+              "source_name": "Rio Grande do Norte",
+              "source_id": "BRA-628",
+              "source_iso_3166_2": "BR-RN",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:020",
+          "display_name": "Rio Grande do Sul",
+          "source_name": "Rio Grande do Sul",
+          "source_name_en": "Rio Grande do Sul",
+          "source_id": "BRA-612",
+          "source_iso_3166_2": "BR-RS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-612",
+          "source_components": [
+            {
+              "source_name": "Rio Grande do Sul",
+              "source_id": "BRA-612",
+              "source_iso_3166_2": "BR-RS",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:021",
+          "display_name": "Rio de Janeiro",
+          "source_name": "Rio de Janeiro",
+          "source_name_en": "Rio de Janeiro",
+          "source_id": "BRA-627",
+          "source_iso_3166_2": "BR-RJ",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-627",
+          "source_components": [
+            {
+              "source_name": "Rio de Janeiro",
+              "source_id": "BRA-627",
+              "source_iso_3166_2": "BR-RJ",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:022",
+          "display_name": "Rondônia",
+          "source_name": "Rondônia",
+          "source_name_en": "Rondônia",
+          "source_id": "BRA-595",
+          "source_iso_3166_2": "BR-RO",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-595",
+          "source_components": [
+            {
+              "source_name": "Rondônia",
+              "source_id": "BRA-595",
+              "source_iso_3166_2": "BR-RO",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:023",
+          "display_name": "Roraima",
+          "source_name": "Roraima",
+          "source_name_en": "Roraima",
+          "source_id": "BRA-670",
+          "source_iso_3166_2": "BR-RR",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-670",
+          "source_components": [
+            {
+              "source_name": "Roraima",
+              "source_id": "BRA-670",
+              "source_iso_3166_2": "BR-RR",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:024",
+          "display_name": "Santa Catarina",
+          "source_name": "Santa Catarina",
+          "source_name_en": "Santa Catarina",
+          "source_id": "BRA-614",
+          "source_iso_3166_2": "BR-SC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-614",
+          "source_components": [
+            {
+              "source_name": "Santa Catarina",
+              "source_id": "BRA-614",
+              "source_iso_3166_2": "BR-SC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:025",
+          "display_name": "Sergipe",
+          "source_name": "Sergipe",
+          "source_name_en": "Sergipe",
+          "source_id": "BRA-629",
+          "source_iso_3166_2": "BR-SE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-629",
+          "source_components": [
+            {
+              "source_name": "Sergipe",
+              "source_id": "BRA-629",
+              "source_iso_3166_2": "BR-SE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:026",
+          "display_name": "São Paulo",
+          "source_name": "São Paulo",
+          "source_name_en": "São Paulo",
+          "source_id": "BRA-1311",
+          "source_iso_3166_2": "BR-SP",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 4,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-1311",
+          "source_components": [
+            {
+              "source_name": "São Paulo",
+              "source_id": "BRA-1311",
+              "source_iso_3166_2": "BR-SP",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "brazil:027",
+          "display_name": "Tocantins",
+          "source_name": "Tocantins",
+          "source_name_en": "Tocantins",
+          "source_id": "BRA-596",
+          "source_iso_3166_2": "BR-TO",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-brazil-bra-596",
+          "source_components": [
+            {
+              "source_name": "Tocantins",
+              "source_id": "BRA-596",
+              "source_iso_3166_2": "BR-TO",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [],
+      "blockers": [],
+      "repair": {
+        "source_id": "BRA-1294",
+        "algorithm": "GEOS MakeValid 3.14.1, exact-source attested",
+        "source_wkb_sha256": "443c7a659614b2527a55f1fc8d255c61951a895eff31727690f95612b82782eb",
+        "repaired_wkb_sha256": "b446c1231187a5c4bc944df91aafa02b447e0b74db151476fbe7b9b83050a7c6",
+        "removed_source_ring_coordinate_indices_0_based": [
+          264,
+          348
+        ],
+        "added_coordinates": 0,
+        "area_delta_square_degrees": 7.105427357601002e-15,
+        "independent_validation": {
+          "dataset": "IBGE GO_UF_2024",
+          "sha256": "32556057bbbbe00fbe8555a9241544de7e776239ef2c3a4caa47bb6f5286bca6",
+          "geometry_valid": true,
+          "intersection_over_union": 0.9740752215706935
+        }
+      },
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/brazil.svg",
+      "asset_sha256": "d9c2b7cf9d7973b1e487727588eb361739f74b03cc955ec1fbc782e14d771c6f",
+      "rendered_polygon_count": 69,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    },
+    "canada": {
+      "question_count": 13,
+      "selected_source_feature_count": 13,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "canada:001",
+          "display_name": "Alberta",
+          "source_name": "Alberta",
+          "source_name_en": "Alberta",
+          "source_id": "CAN-632",
+          "source_iso_3166_2": "CA-AB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-632",
+          "source_components": [
+            {
+              "source_name": "Alberta",
+              "source_id": "CAN-632",
+              "source_iso_3166_2": "CA-AB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:002",
+          "display_name": "British Columbia",
+          "source_name": "British Columbia",
+          "source_name_en": "British Columbia",
+          "source_id": "CAN-633",
+          "source_iso_3166_2": "CA-BC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 87,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-633",
+          "source_components": [
+            {
+              "source_name": "British Columbia",
+              "source_id": "CAN-633",
+              "source_iso_3166_2": "CA-BC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:003",
+          "display_name": "Manitoba",
+          "source_name": "Manitoba",
+          "source_name_en": "Manitoba",
+          "source_id": "CAN-630",
+          "source_iso_3166_2": "CA-MB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-630",
+          "source_components": [
+            {
+              "source_name": "Manitoba",
+              "source_id": "CAN-630",
+              "source_iso_3166_2": "CA-MB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:004",
+          "display_name": "New Brunswick",
+          "source_name": "New Brunswick",
+          "source_name_en": "New Brunswick",
+          "source_id": "CAN-684",
+          "source_iso_3166_2": "CA-NB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 6,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-684",
+          "source_components": [
+            {
+              "source_name": "New Brunswick",
+              "source_id": "CAN-684",
+              "source_iso_3166_2": "CA-NB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:005",
+          "display_name": "Newfoundland and Labrador",
+          "source_name": "Newfoundland and Labrador",
+          "source_name_en": "Newfoundland and Labrador",
+          "source_id": "CAN-686",
+          "source_iso_3166_2": "CA-NL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 43,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-686",
+          "source_components": [
+            {
+              "source_name": "Newfoundland and Labrador",
+              "source_id": "CAN-686",
+              "source_iso_3166_2": "CA-NL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:006",
+          "display_name": "Northwest Territories",
+          "source_name": "Northwest Territories",
+          "source_name_en": "Northwest Territories",
+          "source_id": "CAN-635",
+          "source_iso_3166_2": "CA-NT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 34,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-635",
+          "source_components": [
+            {
+              "source_name": "Northwest Territories",
+              "source_id": "CAN-635",
+              "source_iso_3166_2": "CA-NT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:007",
+          "display_name": "Nova Scotia",
+          "source_name": "Nova Scotia",
+          "source_name_en": "Nova Scotia",
+          "source_id": "CAN-685",
+          "source_iso_3166_2": "CA-NS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 8,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-685",
+          "source_components": [
+            {
+              "source_name": "Nova Scotia",
+              "source_id": "CAN-685",
+              "source_iso_3166_2": "CA-NS",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:008",
+          "display_name": "Nunavut",
+          "source_name": "Nunavut",
+          "source_name_en": "Nunavut",
+          "source_id": "CAN-634",
+          "source_iso_3166_2": "CA-NU",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 223,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-634",
+          "source_components": [
+            {
+              "source_name": "Nunavut",
+              "source_id": "CAN-634",
+              "source_iso_3166_2": "CA-NU",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:009",
+          "display_name": "Ontario",
+          "source_name": "Ontario",
+          "source_name_en": "Ontario",
+          "source_id": "CAN-682",
+          "source_iso_3166_2": "CA-ON",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-682",
+          "source_components": [
+            {
+              "source_name": "Ontario",
+              "source_id": "CAN-682",
+              "source_iso_3166_2": "CA-ON",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:010",
+          "display_name": "Prince Edward Island",
+          "source_name": "Prince Edward Island",
+          "source_name_en": "Prince Edward Island",
+          "source_id": "CAN-687",
+          "source_iso_3166_2": "CA-PE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-687",
+          "source_components": [
+            {
+              "source_name": "Prince Edward Island",
+              "source_id": "CAN-687",
+              "source_iso_3166_2": "CA-PE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:011",
+          "display_name": "Quebec",
+          "source_name": "Québec",
+          "source_name_en": "Quebec",
+          "source_id": "CAN-683",
+          "source_iso_3166_2": "CA-QC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 25,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-683",
+          "source_components": [
+            {
+              "source_name": "Québec",
+              "source_id": "CAN-683",
+              "source_iso_3166_2": "CA-QC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:012",
+          "display_name": "Saskatchewan",
+          "source_name": "Saskatchewan",
+          "source_name_en": "Saskatchewan",
+          "source_id": "CAN-631",
+          "source_iso_3166_2": "CA-SK",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-631",
+          "source_components": [
+            {
+              "source_name": "Saskatchewan",
+              "source_id": "CAN-631",
+              "source_iso_3166_2": "CA-SK",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "canada:013",
+          "display_name": "Yukon",
+          "source_name": "Yukon",
+          "source_name_en": "Yukon",
+          "source_id": "CAN-636",
+          "source_iso_3166_2": "CA-YT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-canada-can-636",
+          "source_components": [
+            {
+              "source_name": "Yukon",
+              "source_id": "CAN-636",
+              "source_iso_3166_2": "CA-YT",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [],
+      "blockers": [],
+      "repair": null,
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/canada.svg",
+      "asset_sha256": "d794221aea7db556661ffbf1c480a080506c2cdca4c747258223d961d22a6ab3",
+      "rendered_polygon_count": 434,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    },
+    "germany": {
+      "question_count": 16,
+      "selected_source_feature_count": 16,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "germany:001",
+          "display_name": "Baden-Wurttemberg",
+          "source_name": "Baden-Württemberg",
+          "source_name_en": "Baden-Württemberg",
+          "source_id": "DEU-1573",
+          "source_iso_3166_2": "DE-BW",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1573",
+          "source_components": [
+            {
+              "source_name": "Baden-Württemberg",
+              "source_id": "DEU-1573",
+              "source_iso_3166_2": "DE-BW",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:002",
+          "display_name": "Bavaria",
+          "source_name": "Bayern",
+          "source_name_en": "Bavaria",
+          "source_id": "DEU-1591",
+          "source_iso_3166_2": "DE-BY",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1591",
+          "source_components": [
+            {
+              "source_name": "Bayern",
+              "source_id": "DEU-1591",
+              "source_iso_3166_2": "DE-BY",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:003",
+          "display_name": "Berlin",
+          "source_name": "Berlin",
+          "source_name_en": "Berlin",
+          "source_id": "DEU-1599",
+          "source_iso_3166_2": "DE-BE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1599",
+          "source_components": [
+            {
+              "source_name": "Berlin",
+              "source_id": "DEU-1599",
+              "source_iso_3166_2": "DE-BE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:004",
+          "display_name": "Brandenburg",
+          "source_name": "Brandenburg",
+          "source_name_en": "Brandenburg",
+          "source_id": "DEU-3487",
+          "source_iso_3166_2": "DE-BB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-3487",
+          "source_components": [
+            {
+              "source_name": "Brandenburg",
+              "source_id": "DEU-3487",
+              "source_iso_3166_2": "DE-BB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:005",
+          "display_name": "Bremen",
+          "source_name": "Bremen",
+          "source_name_en": "Free Hanseatic Bremen",
+          "source_id": "DEU-1575",
+          "source_iso_3166_2": "DE-HB",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1575",
+          "source_components": [
+            {
+              "source_name": "Bremen",
+              "source_id": "DEU-1575",
+              "source_iso_3166_2": "DE-HB",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:006",
+          "display_name": "Hamburg",
+          "source_name": "Hamburg",
+          "source_name_en": "Hamburg",
+          "source_id": "DEU-1578",
+          "source_iso_3166_2": "DE-HH",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1578",
+          "source_components": [
+            {
+              "source_name": "Hamburg",
+              "source_id": "DEU-1578",
+              "source_iso_3166_2": "DE-HH",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:007",
+          "display_name": "Hesse",
+          "source_name": "Hessen",
+          "source_name_en": "Hesse",
+          "source_id": "DEU-1574",
+          "source_iso_3166_2": "DE-HE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1574",
+          "source_components": [
+            {
+              "source_name": "Hessen",
+              "source_id": "DEU-1574",
+              "source_iso_3166_2": "DE-HE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:008",
+          "display_name": "Lower Saxony",
+          "source_name": "Niedersachsen",
+          "source_name_en": "Lower Saxony",
+          "source_id": "DEU-1576",
+          "source_iso_3166_2": "DE-NI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 9,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1576",
+          "source_components": [
+            {
+              "source_name": "Niedersachsen",
+              "source_id": "DEU-1576",
+              "source_iso_3166_2": "DE-NI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:009",
+          "display_name": "Mecklenburg-Vorpommern",
+          "source_name": "Mecklenburg-Vorpommern",
+          "source_name_en": "Mecklenburg-Western Pomerania",
+          "source_id": "DEU-3488",
+          "source_iso_3166_2": "DE-MV",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 6,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-3488",
+          "source_components": [
+            {
+              "source_name": "Mecklenburg-Vorpommern",
+              "source_id": "DEU-3488",
+              "source_iso_3166_2": "DE-MV",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:010",
+          "display_name": "North Rhine-Westphalia",
+          "source_name": "Nordrhein-Westfalen",
+          "source_name_en": "North Rhine-Westphalia",
+          "source_id": "DEU-1572",
+          "source_iso_3166_2": "DE-NW",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1572",
+          "source_components": [
+            {
+              "source_name": "Nordrhein-Westfalen",
+              "source_id": "DEU-1572",
+              "source_iso_3166_2": "DE-NW",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:011",
+          "display_name": "Rhineland-Palatinate",
+          "source_name": "Rheinland-Pfalz",
+          "source_name_en": "Rhineland-Palatinate",
+          "source_id": "DEU-1580",
+          "source_iso_3166_2": "DE-RP",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1580",
+          "source_components": [
+            {
+              "source_name": "Rheinland-Pfalz",
+              "source_id": "DEU-1580",
+              "source_iso_3166_2": "DE-RP",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:012",
+          "display_name": "Saarland",
+          "source_name": "Saarland",
+          "source_name_en": "Saarland",
+          "source_id": "DEU-1581",
+          "source_iso_3166_2": "DE-SL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1581",
+          "source_components": [
+            {
+              "source_name": "Saarland",
+              "source_id": "DEU-1581",
+              "source_iso_3166_2": "DE-SL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:013",
+          "display_name": "Saxony",
+          "source_name": "Sachsen",
+          "source_name_en": "Saxony",
+          "source_id": "DEU-1601",
+          "source_iso_3166_2": "DE-SN",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1601",
+          "source_components": [
+            {
+              "source_name": "Sachsen",
+              "source_id": "DEU-1601",
+              "source_iso_3166_2": "DE-SN",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:014",
+          "display_name": "Saxony-Anhalt",
+          "source_name": "Sachsen-Anhalt",
+          "source_name_en": "Saxony-Anhalt",
+          "source_id": "DEU-1600",
+          "source_iso_3166_2": "DE-ST",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1600",
+          "source_components": [
+            {
+              "source_name": "Sachsen-Anhalt",
+              "source_id": "DEU-1600",
+              "source_iso_3166_2": "DE-ST",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:015",
+          "display_name": "Schleswig-Holstein",
+          "source_name": "Schleswig-Holstein",
+          "source_name_en": "Schleswig-Holstein",
+          "source_id": "DEU-1579",
+          "source_iso_3166_2": "DE-SH",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 9,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1579",
+          "source_components": [
+            {
+              "source_name": "Schleswig-Holstein",
+              "source_id": "DEU-1579",
+              "source_iso_3166_2": "DE-SH",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "germany:016",
+          "display_name": "Thuringia",
+          "source_name": "Thüringen",
+          "source_name_en": "Thuringia",
+          "source_id": "DEU-1577",
+          "source_iso_3166_2": "DE-TH",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-germany-deu-1577",
+          "source_components": [
+            {
+              "source_name": "Thüringen",
+              "source_id": "DEU-1577",
+              "source_iso_3166_2": "DE-TH",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [],
+      "blockers": [],
+      "repair": null,
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/germany.svg",
+      "asset_sha256": "8780f70fdc5b2d6851a08183efed98cf04fcdfed05f36d7b45e4e091b3116464",
+      "rendered_polygon_count": 38,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    },
+    "japan": {
+      "question_count": 47,
+      "selected_source_feature_count": 47,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "japan:001",
+          "display_name": "Aichi",
+          "source_name": "Aichi",
+          "source_name_en": "Aichi Prefecture",
+          "source_id": "JPN-1840",
+          "source_iso_3166_2": "JP-23",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1840",
+          "source_components": [
+            {
+              "source_name": "Aichi",
+              "source_id": "JPN-1840",
+              "source_iso_3166_2": "JP-23",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:002",
+          "display_name": "Akita",
+          "source_name": "Akita",
+          "source_name_en": "Akita Prefecture",
+          "source_id": "JPN-1862",
+          "source_iso_3166_2": "JP-05",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1862",
+          "source_components": [
+            {
+              "source_name": "Akita",
+              "source_id": "JPN-1862",
+              "source_iso_3166_2": "JP-05",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:003",
+          "display_name": "Aomori",
+          "source_name": "Aomori",
+          "source_name_en": "Aomori Prefecture",
+          "source_id": "JPN-1863",
+          "source_iso_3166_2": "JP-02",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1863",
+          "source_components": [
+            {
+              "source_name": "Aomori",
+              "source_id": "JPN-1863",
+              "source_iso_3166_2": "JP-02",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:004",
+          "display_name": "Chiba",
+          "source_name": "Chiba",
+          "source_name_en": "Chiba Prefecture",
+          "source_id": "JPN-1855",
+          "source_iso_3166_2": "JP-12",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1855",
+          "source_components": [
+            {
+              "source_name": "Chiba",
+              "source_id": "JPN-1855",
+              "source_iso_3166_2": "JP-12",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:005",
+          "display_name": "Ehime",
+          "source_name": "Ehime",
+          "source_name_en": "Ehime Prefecture",
+          "source_id": "JPN-1832",
+          "source_iso_3166_2": "JP-38",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 4,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1832",
+          "source_components": [
+            {
+              "source_name": "Ehime",
+              "source_id": "JPN-1832",
+              "source_iso_3166_2": "JP-38",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:006",
+          "display_name": "Fukui",
+          "source_name": "Fukui",
+          "source_name_en": "Fukui Prefecture",
+          "source_id": "JPN-1848",
+          "source_iso_3166_2": "JP-18",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1848",
+          "source_components": [
+            {
+              "source_name": "Fukui",
+              "source_id": "JPN-1848",
+              "source_iso_3166_2": "JP-18",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:007",
+          "display_name": "Fukuoka",
+          "source_name": "Fukuoka",
+          "source_name_en": "Fukuoka Prefecture",
+          "source_id": "JPN-1829",
+          "source_iso_3166_2": "JP-40",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1829",
+          "source_components": [
+            {
+              "source_name": "Fukuoka",
+              "source_id": "JPN-1829",
+              "source_iso_3166_2": "JP-40",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:008",
+          "display_name": "Fukushima",
+          "source_name": "Fukushima",
+          "source_name_en": "Fukushima Prefecture",
+          "source_id": "JPN-1864",
+          "source_iso_3166_2": "JP-07",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1864",
+          "source_components": [
+            {
+              "source_name": "Fukushima",
+              "source_id": "JPN-1864",
+              "source_iso_3166_2": "JP-07",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:009",
+          "display_name": "Gifu",
+          "source_name": "Gifu",
+          "source_name_en": "Gifu Prefecture",
+          "source_id": "JPN-1841",
+          "source_iso_3166_2": "JP-21",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1841",
+          "source_components": [
+            {
+              "source_name": "Gifu",
+              "source_id": "JPN-1841",
+              "source_iso_3166_2": "JP-21",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:010",
+          "display_name": "Gunma",
+          "source_name": "Gunma",
+          "source_name_en": "Gunma Prefecture",
+          "source_id": "JPN-3503",
+          "source_iso_3166_2": "JP-10",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-3503",
+          "source_components": [
+            {
+              "source_name": "Gunma",
+              "source_id": "JPN-3503",
+              "source_iso_3166_2": "JP-10",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:011",
+          "display_name": "Hiroshima",
+          "source_name": "Hiroshima",
+          "source_name_en": "Hiroshima Prefecture",
+          "source_id": "JPN-1821",
+          "source_iso_3166_2": "JP-34",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 5,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1821",
+          "source_components": [
+            {
+              "source_name": "Hiroshima",
+              "source_id": "JPN-1821",
+              "source_iso_3166_2": "JP-34",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:012",
+          "display_name": "Hokkaido",
+          "source_name": "Hokkaidō",
+          "source_name_en": "Hokkaidō",
+          "source_id": "JPN-1847",
+          "source_iso_3166_2": "JP-01",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 8,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1847",
+          "source_components": [
+            {
+              "source_name": "Hokkaidō",
+              "source_id": "JPN-1847",
+              "source_iso_3166_2": "JP-01",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:013",
+          "display_name": "Hyogo",
+          "source_name": "Hyōgo",
+          "source_name_en": "Hyōgo Prefecture",
+          "source_id": "JPN-1849",
+          "source_iso_3166_2": "JP-28",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1849",
+          "source_components": [
+            {
+              "source_name": "Hyōgo",
+              "source_id": "JPN-1849",
+              "source_iso_3166_2": "JP-28",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:014",
+          "display_name": "Ibaraki",
+          "source_name": "Ibaraki",
+          "source_name_en": "Ibaraki Prefecture",
+          "source_id": "JPN-1856",
+          "source_iso_3166_2": "JP-08",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1856",
+          "source_components": [
+            {
+              "source_name": "Ibaraki",
+              "source_id": "JPN-1856",
+              "source_iso_3166_2": "JP-08",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:015",
+          "display_name": "Ishikawa",
+          "source_name": "Ishikawa",
+          "source_name_en": "Ishikawa Prefecture",
+          "source_id": "JPN-1842",
+          "source_iso_3166_2": "JP-17",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1842",
+          "source_components": [
+            {
+              "source_name": "Ishikawa",
+              "source_id": "JPN-1842",
+              "source_iso_3166_2": "JP-17",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:016",
+          "display_name": "Iwate",
+          "source_name": "Iwate",
+          "source_name_en": "Iwate Prefecture",
+          "source_id": "JPN-1865",
+          "source_iso_3166_2": "JP-03",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1865",
+          "source_components": [
+            {
+              "source_name": "Iwate",
+              "source_id": "JPN-1865",
+              "source_iso_3166_2": "JP-03",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:017",
+          "display_name": "Kagawa",
+          "source_name": "Kagawa",
+          "source_name_en": "Kagawa Prefecture",
+          "source_id": "JPN-1833",
+          "source_iso_3166_2": "JP-37",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 4,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1833",
+          "source_components": [
+            {
+              "source_name": "Kagawa",
+              "source_id": "JPN-1833",
+              "source_iso_3166_2": "JP-37",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:018",
+          "display_name": "Kagoshima",
+          "source_name": "Kagoshima",
+          "source_name_en": "Kagoshima Prefecture",
+          "source_id": "JPN-3501",
+          "source_iso_3166_2": "JP-46",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 19,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-3501",
+          "source_components": [
+            {
+              "source_name": "Kagoshima",
+              "source_id": "JPN-3501",
+              "source_iso_3166_2": "JP-46",
+              "source_geometry_valid": true
+            },
+            {
+              "source_name": "Okinawa",
+              "source_id": "JPN-3502",
+              "source_iso_3166_2": "JP-47",
+              "source_geometry_valid": true,
+              "component_reallocation_from_question_key": "japan:032",
+              "component_wkb_sha256": [
+                "77cef780b3b31304a939f7b3e935d6600a6580569d767e5c3b0b59f009b40f7d",
+                "d1db188558eaf25c419ee93f6a797cb5724fc3c37861dd9f0a07cbee0ef9b58e",
+                "d1da7a5f8b1cbe6e450b84a7d1a23abe9344523fb50ccdf7ce269b4655d880a1",
+                "c98e1cc1e25991b9b2bdd73e447847a5cadf87045c34368bd08d7dc69f75a853",
+                "d1fa40e7eb9183a72062370055837cbd599c5a405c519261e751eb0289f7e811",
+                "57f756470b7b5a060bf80a7791062deae3fc87564ec479d25a8b3f2fb0260460"
+              ]
+            }
+          ]
+        },
+        {
+          "question_key": "japan:019",
+          "display_name": "Kanagawa",
+          "source_name": "Kanagawa",
+          "source_name_en": "Kanagawa Prefecture",
+          "source_id": "JPN-1857",
+          "source_iso_3166_2": "JP-14",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1857",
+          "source_components": [
+            {
+              "source_name": "Kanagawa",
+              "source_id": "JPN-1857",
+              "source_iso_3166_2": "JP-14",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:020",
+          "display_name": "Kochi",
+          "source_name": "Kōchi",
+          "source_name_en": "Kōchi Prefecture",
+          "source_id": "JPN-1834",
+          "source_iso_3166_2": "JP-39",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1834",
+          "source_components": [
+            {
+              "source_name": "Kōchi",
+              "source_id": "JPN-1834",
+              "source_iso_3166_2": "JP-39",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:021",
+          "display_name": "Kumamoto",
+          "source_name": "Kumamoto",
+          "source_name_en": "Kumamoto Prefecture",
+          "source_id": "JPN-1830",
+          "source_iso_3166_2": "JP-43",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 6,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1830",
+          "source_components": [
+            {
+              "source_name": "Kumamoto",
+              "source_id": "JPN-1830",
+              "source_iso_3166_2": "JP-43",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:022",
+          "display_name": "Kyoto",
+          "source_name": "Kyōto",
+          "source_name_en": "Kyōto Prefecture",
+          "source_id": "JPN-1850",
+          "source_iso_3166_2": "JP-26",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1850",
+          "source_components": [
+            {
+              "source_name": "Kyōto",
+              "source_id": "JPN-1850",
+              "source_iso_3166_2": "JP-26",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:023",
+          "display_name": "Mie",
+          "source_name": "Mie",
+          "source_name_en": "Mie Prefecture",
+          "source_id": "JPN-1843",
+          "source_iso_3166_2": "JP-24",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1843",
+          "source_components": [
+            {
+              "source_name": "Mie",
+              "source_id": "JPN-1843",
+              "source_iso_3166_2": "JP-24",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:024",
+          "display_name": "Miyagi",
+          "source_name": "Miyagi",
+          "source_name_en": "Miyagi Prefecture",
+          "source_id": "JPN-1866",
+          "source_iso_3166_2": "JP-04",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1866",
+          "source_components": [
+            {
+              "source_name": "Miyagi",
+              "source_id": "JPN-1866",
+              "source_iso_3166_2": "JP-04",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:025",
+          "display_name": "Miyazaki",
+          "source_name": "Miyazaki",
+          "source_name_en": "Miyazaki Prefecture",
+          "source_id": "JPN-1831",
+          "source_iso_3166_2": "JP-45",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1831",
+          "source_components": [
+            {
+              "source_name": "Miyazaki",
+              "source_id": "JPN-1831",
+              "source_iso_3166_2": "JP-45",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:026",
+          "display_name": "Nagano",
+          "source_name": "Nagano",
+          "source_name_en": "Nagano Prefecture",
+          "source_id": "JPN-1844",
+          "source_iso_3166_2": "JP-20",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1844",
+          "source_components": [
+            {
+              "source_name": "Nagano",
+              "source_id": "JPN-1844",
+              "source_iso_3166_2": "JP-20",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:027",
+          "display_name": "Nagasaki",
+          "source_name": "Nagasaki",
+          "source_name_en": "Nagasaki Prefecture",
+          "source_id": "JPN-3500",
+          "source_iso_3166_2": "JP-42",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 12,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-3500",
+          "source_components": [
+            {
+              "source_name": "Nagasaki",
+              "source_id": "JPN-3500",
+              "source_iso_3166_2": "JP-42",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:028",
+          "display_name": "Nara",
+          "source_name": "Nara",
+          "source_name_en": "Nara Prefecture",
+          "source_id": "JPN-1851",
+          "source_iso_3166_2": "JP-29",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1851",
+          "source_components": [
+            {
+              "source_name": "Nara",
+              "source_id": "JPN-1851",
+              "source_iso_3166_2": "JP-29",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:029",
+          "display_name": "Niigata",
+          "source_name": "Niigata",
+          "source_name_en": "Niigata Prefecture",
+          "source_id": "JPN-1867",
+          "source_iso_3166_2": "JP-15",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1867",
+          "source_components": [
+            {
+              "source_name": "Niigata",
+              "source_id": "JPN-1867",
+              "source_iso_3166_2": "JP-15",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:030",
+          "display_name": "Oita",
+          "source_name": "Ōita",
+          "source_name_en": "Ōita Prefecture",
+          "source_id": "JPN-1835",
+          "source_iso_3166_2": "JP-44",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1835",
+          "source_components": [
+            {
+              "source_name": "Ōita",
+              "source_id": "JPN-1835",
+              "source_iso_3166_2": "JP-44",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:031",
+          "display_name": "Okayama",
+          "source_name": "Okayama",
+          "source_name_en": "Okayama Prefecture",
+          "source_id": "JPN-1822",
+          "source_iso_3166_2": "JP-33",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1822",
+          "source_components": [
+            {
+              "source_name": "Okayama",
+              "source_id": "JPN-1822",
+              "source_iso_3166_2": "JP-33",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:032",
+          "display_name": "Okinawa",
+          "source_name": "Okinawa",
+          "source_name_en": "Okinawa Prefecture",
+          "source_id": "JPN-3502",
+          "source_iso_3166_2": "JP-47",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 23,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-3502",
+          "source_components": [
+            {
+              "source_name": "Okinawa",
+              "source_id": "JPN-3502",
+              "source_iso_3166_2": "JP-47",
+              "source_geometry_valid": true
+            }
+          ],
+          "removed_source_components": [
+            {
+              "reallocated_to_question_key": "japan:018",
+              "reallocated_to_source_id": "JPN-3501",
+              "component_wkb_sha256": [
+                "77cef780b3b31304a939f7b3e935d6600a6580569d767e5c3b0b59f009b40f7d",
+                "d1db188558eaf25c419ee93f6a797cb5724fc3c37861dd9f0a07cbee0ef9b58e",
+                "d1da7a5f8b1cbe6e450b84a7d1a23abe9344523fb50ccdf7ce269b4655d880a1",
+                "c98e1cc1e25991b9b2bdd73e447847a5cadf87045c34368bd08d7dc69f75a853",
+                "d1fa40e7eb9183a72062370055837cbd599c5a405c519261e751eb0289f7e811",
+                "57f756470b7b5a060bf80a7791062deae3fc87564ec479d25a8b3f2fb0260460"
+              ]
+            }
+          ]
+        },
+        {
+          "question_key": "japan:033",
+          "display_name": "Osaka",
+          "source_name": "Ōsaka",
+          "source_name_en": "Ōsaka Prefecture",
+          "source_id": "JPN-1852",
+          "source_iso_3166_2": "JP-27",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1852",
+          "source_components": [
+            {
+              "source_name": "Ōsaka",
+              "source_id": "JPN-1852",
+              "source_iso_3166_2": "JP-27",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:034",
+          "display_name": "Saga",
+          "source_name": "Saga",
+          "source_name_en": "Saga Prefecture",
+          "source_id": "JPN-1827",
+          "source_iso_3166_2": "JP-41",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1827",
+          "source_components": [
+            {
+              "source_name": "Saga",
+              "source_id": "JPN-1827",
+              "source_iso_3166_2": "JP-41",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:035",
+          "display_name": "Saitama",
+          "source_name": "Saitama",
+          "source_name_en": "Saitama Prefecture",
+          "source_id": "JPN-1858",
+          "source_iso_3166_2": "JP-11",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1858",
+          "source_components": [
+            {
+              "source_name": "Saitama",
+              "source_id": "JPN-1858",
+              "source_iso_3166_2": "JP-11",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:036",
+          "display_name": "Shiga",
+          "source_name": "Shiga",
+          "source_name_en": "Shiga Prefecture",
+          "source_id": "JPN-1853",
+          "source_iso_3166_2": "JP-25",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1853",
+          "source_components": [
+            {
+              "source_name": "Shiga",
+              "source_id": "JPN-1853",
+              "source_iso_3166_2": "JP-25",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:037",
+          "display_name": "Shimane",
+          "source_name": "Shimane",
+          "source_name_en": "Shimane Prefecture",
+          "source_id": "JPN-1824",
+          "source_iso_3166_2": "JP-32",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 6,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1824",
+          "source_components": [
+            {
+              "source_name": "Shimane",
+              "source_id": "JPN-1824",
+              "source_iso_3166_2": "JP-32",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:038",
+          "display_name": "Shizuoka",
+          "source_name": "Shizuoka",
+          "source_name_en": "Shizuoka Prefecture",
+          "source_id": "JPN-1845",
+          "source_iso_3166_2": "JP-22",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1845",
+          "source_components": [
+            {
+              "source_name": "Shizuoka",
+              "source_id": "JPN-1845",
+              "source_iso_3166_2": "JP-22",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:039",
+          "display_name": "Tochigi",
+          "source_name": "Tochigi",
+          "source_name_en": "Tochigi Prefecture",
+          "source_id": "JPN-1859",
+          "source_iso_3166_2": "JP-09",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1859",
+          "source_components": [
+            {
+              "source_name": "Tochigi",
+              "source_id": "JPN-1859",
+              "source_iso_3166_2": "JP-09",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:040",
+          "display_name": "Tokushima",
+          "source_name": "Tokushima",
+          "source_name_en": "Tokushima Prefecture",
+          "source_id": "JPN-1836",
+          "source_iso_3166_2": "JP-36",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1836",
+          "source_components": [
+            {
+              "source_name": "Tokushima",
+              "source_id": "JPN-1836",
+              "source_iso_3166_2": "JP-36",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:041",
+          "display_name": "Tokyo",
+          "source_name": "Tokyo",
+          "source_name_en": "Tokyo",
+          "source_id": "JPN-1860",
+          "source_iso_3166_2": "JP-13",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 23,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1860",
+          "source_components": [
+            {
+              "source_name": "Tokyo",
+              "source_id": "JPN-1860",
+              "source_iso_3166_2": "JP-13",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:042",
+          "display_name": "Tottori",
+          "source_name": "Tottori",
+          "source_name_en": "Tottori Prefecture",
+          "source_id": "JPN-1825",
+          "source_iso_3166_2": "JP-31",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1825",
+          "source_components": [
+            {
+              "source_name": "Tottori",
+              "source_id": "JPN-1825",
+              "source_iso_3166_2": "JP-31",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:043",
+          "display_name": "Toyama",
+          "source_name": "Toyama",
+          "source_name_en": "Toyama Prefecture",
+          "source_id": "JPN-1846",
+          "source_iso_3166_2": "JP-16",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1846",
+          "source_components": [
+            {
+              "source_name": "Toyama",
+              "source_id": "JPN-1846",
+              "source_iso_3166_2": "JP-16",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:044",
+          "display_name": "Wakayama",
+          "source_name": "Wakayama",
+          "source_name_en": "Wakayama Prefecture",
+          "source_id": "JPN-1854",
+          "source_iso_3166_2": "JP-30",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1854",
+          "source_components": [
+            {
+              "source_name": "Wakayama",
+              "source_id": "JPN-1854",
+              "source_iso_3166_2": "JP-30",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:045",
+          "display_name": "Yamagata",
+          "source_name": "Yamagata",
+          "source_name_en": "Yamagata Prefecture",
+          "source_id": "JPN-1868",
+          "source_iso_3166_2": "JP-06",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1868",
+          "source_components": [
+            {
+              "source_name": "Yamagata",
+              "source_id": "JPN-1868",
+              "source_iso_3166_2": "JP-06",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:046",
+          "display_name": "Yamaguchi",
+          "source_name": "Yamaguchi",
+          "source_name_en": "Yamaguchi Prefecture",
+          "source_id": "JPN-1826",
+          "source_iso_3166_2": "JP-35",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1826",
+          "source_components": [
+            {
+              "source_name": "Yamaguchi",
+              "source_id": "JPN-1826",
+              "source_iso_3166_2": "JP-35",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "japan:047",
+          "display_name": "Yamanashi",
+          "source_name": "Yamanashi",
+          "source_name_en": "Yamanashi Prefecture",
+          "source_id": "JPN-1861",
+          "source_iso_3166_2": "JP-19",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-japan-jpn-1861",
+          "source_components": [
+            {
+              "source_name": "Yamanashi",
+              "source_id": "JPN-1861",
+              "source_iso_3166_2": "JP-19",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [],
+      "blockers": [],
+      "repair": null,
+      "component_reallocation": {
+        "algorithm": "exact Natural Earth polygon WKB SHA-256 reassignment; no authority geometry is copied",
+        "authority": {
+          "dataset": "MLIT National Land Numerical Information N03 administrative areas",
+          "version": "2024",
+          "sha256": "a03111be0fe726ff270cbc1dd16f38bc926cf814e67c8cd2e52157629d138b98",
+          "owner_n03_001": "鹿児島県",
+          "owner_n03_007": "46000",
+          "excluded_n03_001": "沖縄県",
+          "excluded_n03_007": "47000"
+        },
+        "from": {
+          "question_key": "japan:032",
+          "source_id": "JPN-3502"
+        },
+        "to": {
+          "question_key": "japan:018",
+          "source_id": "JPN-3501"
+        },
+        "components": [
+          "77cef780b3b31304a939f7b3e935d6600a6580569d767e5c3b0b59f009b40f7d",
+          "d1db188558eaf25c419ee93f6a797cb5724fc3c37861dd9f0a07cbee0ef9b58e",
+          "d1da7a5f8b1cbe6e450b84a7d1a23abe9344523fb50ccdf7ce269b4655d880a1",
+          "c98e1cc1e25991b9b2bdd73e447847a5cadf87045c34368bd08d7dc69f75a853",
+          "d1fa40e7eb9183a72062370055837cbd599c5a405c519261e751eb0289f7e811",
+          "57f756470b7b5a060bf80a7791062deae3fc87564ec479d25a8b3f2fb0260460"
+        ]
+      },
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/japan.svg",
+      "asset_sha256": "c1aea4345be1f561d7f98d4858e57c9d8e5ac7844e89b1425482f9e69cf26b2b",
+      "rendered_polygon_count": 157,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    },
+    "usa": {
+      "question_count": 50,
+      "selected_source_feature_count": 50,
+      "live_approved": false,
+      "mappings": [
+        {
+          "question_key": "usa:001",
+          "display_name": "Alabama",
+          "source_name": "Alabama",
+          "source_name_en": "Alabama",
+          "source_id": "USA-3541",
+          "source_iso_3166_2": "US-AL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3541",
+          "source_components": [
+            {
+              "source_name": "Alabama",
+              "source_id": "USA-3541",
+              "source_iso_3166_2": "US-AL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:002",
+          "display_name": "Alaska",
+          "source_name": "Alaska",
+          "source_name_en": "Alaska",
+          "source_id": "USA-3563",
+          "source_iso_3166_2": "US-AK",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 181,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3563",
+          "source_components": [
+            {
+              "source_name": "Alaska",
+              "source_id": "USA-3563",
+              "source_iso_3166_2": "US-AK",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:003",
+          "display_name": "Arizona",
+          "source_name": "Arizona",
+          "source_name_en": "Arizona",
+          "source_id": "USA-3520",
+          "source_iso_3166_2": "US-AZ",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3520",
+          "source_components": [
+            {
+              "source_name": "Arizona",
+              "source_id": "USA-3520",
+              "source_iso_3166_2": "US-AZ",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:004",
+          "display_name": "Arkansas",
+          "source_name": "Arkansas",
+          "source_name_en": "Arkansas",
+          "source_id": "USA-3528",
+          "source_iso_3166_2": "US-AR",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3528",
+          "source_components": [
+            {
+              "source_name": "Arkansas",
+              "source_id": "USA-3528",
+              "source_iso_3166_2": "US-AR",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:005",
+          "display_name": "California",
+          "source_name": "California",
+          "source_name_en": "California",
+          "source_id": "USA-3521",
+          "source_iso_3166_2": "US-CA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 8,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3521",
+          "source_components": [
+            {
+              "source_name": "California",
+              "source_id": "USA-3521",
+              "source_iso_3166_2": "US-CA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:006",
+          "display_name": "Colorado",
+          "source_name": "Colorado",
+          "source_name_en": "Colorado",
+          "source_id": "USA-3522",
+          "source_iso_3166_2": "US-CO",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3522",
+          "source_components": [
+            {
+              "source_name": "Colorado",
+              "source_id": "USA-3522",
+              "source_iso_3166_2": "US-CO",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:007",
+          "display_name": "Connecticut",
+          "source_name": "Connecticut",
+          "source_name_en": "Connecticut",
+          "source_id": "USA-3537",
+          "source_iso_3166_2": "US-CT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3537",
+          "source_components": [
+            {
+              "source_name": "Connecticut",
+              "source_id": "USA-3537",
+              "source_iso_3166_2": "US-CT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:008",
+          "display_name": "Delaware",
+          "source_name": "Delaware",
+          "source_name_en": "Delaware",
+          "source_id": "USA-3555",
+          "source_iso_3166_2": "US-DE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3555",
+          "source_components": [
+            {
+              "source_name": "Delaware",
+              "source_id": "USA-3555",
+              "source_iso_3166_2": "US-DE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:009",
+          "display_name": "Florida",
+          "source_name": "Florida",
+          "source_name_en": "Florida",
+          "source_id": "USA-3542",
+          "source_iso_3166_2": "US-FL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 41,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3542",
+          "source_components": [
+            {
+              "source_name": "Florida",
+              "source_id": "USA-3542",
+              "source_iso_3166_2": "US-FL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:010",
+          "display_name": "Georgia",
+          "source_name": "Georgia",
+          "source_name_en": "Georgia",
+          "source_id": "USA-3543",
+          "source_iso_3166_2": "US-GA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 4,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3543",
+          "source_components": [
+            {
+              "source_name": "Georgia",
+              "source_id": "USA-3543",
+              "source_iso_3166_2": "US-GA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:011",
+          "display_name": "Hawaii",
+          "source_name": "Hawaii",
+          "source_name_en": "Hawaii",
+          "source_id": "USA-3517",
+          "source_iso_3166_2": "US-HI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 14,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3517",
+          "source_components": [
+            {
+              "source_name": "Hawaii",
+              "source_id": "USA-3517",
+              "source_iso_3166_2": "US-HI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:012",
+          "display_name": "Idaho",
+          "source_name": "Idaho",
+          "source_name_en": "Idaho",
+          "source_id": "USA-3518",
+          "source_iso_3166_2": "US-ID",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3518",
+          "source_components": [
+            {
+              "source_name": "Idaho",
+              "source_id": "USA-3518",
+              "source_iso_3166_2": "US-ID",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:013",
+          "display_name": "Illinois",
+          "source_name": "Illinois",
+          "source_name_en": "Illinois",
+          "source_id": "USA-3546",
+          "source_iso_3166_2": "US-IL",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3546",
+          "source_components": [
+            {
+              "source_name": "Illinois",
+              "source_id": "USA-3546",
+              "source_iso_3166_2": "US-IL",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:014",
+          "display_name": "Indiana",
+          "source_name": "Indiana",
+          "source_name_en": "Indiana",
+          "source_id": "USA-3547",
+          "source_iso_3166_2": "US-IN",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3547",
+          "source_components": [
+            {
+              "source_name": "Indiana",
+              "source_id": "USA-3547",
+              "source_iso_3166_2": "US-IN",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:015",
+          "display_name": "Iowa",
+          "source_name": "Iowa",
+          "source_name_en": "Iowa",
+          "source_id": "USA-3529",
+          "source_iso_3166_2": "US-IA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3529",
+          "source_components": [
+            {
+              "source_name": "Iowa",
+              "source_id": "USA-3529",
+              "source_iso_3166_2": "US-IA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:016",
+          "display_name": "Kansas",
+          "source_name": "Kansas",
+          "source_name_en": "Kansas",
+          "source_id": "USA-3530",
+          "source_iso_3166_2": "US-KS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3530",
+          "source_components": [
+            {
+              "source_name": "Kansas",
+              "source_id": "USA-3530",
+              "source_iso_3166_2": "US-KS",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:017",
+          "display_name": "Kentucky",
+          "source_name": "Kentucky",
+          "source_name_en": "Kentucky",
+          "source_id": "USA-3548",
+          "source_iso_3166_2": "US-KY",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3548",
+          "source_components": [
+            {
+              "source_name": "Kentucky",
+              "source_id": "USA-3548",
+              "source_iso_3166_2": "US-KY",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:018",
+          "display_name": "Louisiana",
+          "source_name": "Louisiana",
+          "source_name_en": "Louisiana",
+          "source_id": "USA-3535",
+          "source_iso_3166_2": "US-LA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 21,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3535",
+          "source_components": [
+            {
+              "source_name": "Louisiana",
+              "source_id": "USA-3535",
+              "source_iso_3166_2": "US-LA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:019",
+          "display_name": "Maine",
+          "source_name": "Maine",
+          "source_name_en": "Maine",
+          "source_id": "USA-3561",
+          "source_iso_3166_2": "US-ME",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 15,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3561",
+          "source_components": [
+            {
+              "source_name": "Maine",
+              "source_id": "USA-3561",
+              "source_iso_3166_2": "US-ME",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:020",
+          "display_name": "Maryland",
+          "source_name": "Maryland",
+          "source_name_en": "Maryland",
+          "source_id": "USA-3557",
+          "source_iso_3166_2": "US-MD",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 5,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3557",
+          "source_components": [
+            {
+              "source_name": "Maryland",
+              "source_id": "USA-3557",
+              "source_iso_3166_2": "US-MD",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:021",
+          "display_name": "Massachusetts",
+          "source_name": "Massachusetts",
+          "source_name_en": "Massachusetts",
+          "source_id": "USA-3513",
+          "source_iso_3166_2": "US-MA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 8,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3513",
+          "source_components": [
+            {
+              "source_name": "Massachusetts",
+              "source_id": "USA-3513",
+              "source_iso_3166_2": "US-MA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:022",
+          "display_name": "Michigan",
+          "source_name": "Michigan",
+          "source_name_en": "Michigan",
+          "source_id": "USA-3562",
+          "source_iso_3166_2": "US-MI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3562",
+          "source_components": [
+            {
+              "source_name": "Michigan",
+              "source_id": "USA-3562",
+              "source_iso_3166_2": "US-MI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:023",
+          "display_name": "Minnesota",
+          "source_name": "Minnesota",
+          "source_name_en": "Minnesota",
+          "source_id": "USA-3514",
+          "source_iso_3166_2": "US-MN",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3514",
+          "source_components": [
+            {
+              "source_name": "Minnesota",
+              "source_id": "USA-3514",
+              "source_iso_3166_2": "US-MN",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:024",
+          "display_name": "Mississippi",
+          "source_name": "Mississippi",
+          "source_name_en": "Mississippi",
+          "source_id": "USA-3544",
+          "source_iso_3166_2": "US-MS",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 5,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3544",
+          "source_components": [
+            {
+              "source_name": "Mississippi",
+              "source_id": "USA-3544",
+              "source_iso_3166_2": "US-MS",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:025",
+          "display_name": "Missouri",
+          "source_name": "Missouri",
+          "source_name_en": "Missouri",
+          "source_id": "USA-3531",
+          "source_iso_3166_2": "US-MO",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3531",
+          "source_components": [
+            {
+              "source_name": "Missouri",
+              "source_id": "USA-3531",
+              "source_iso_3166_2": "US-MO",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:026",
+          "display_name": "Montana",
+          "source_name": "Montana",
+          "source_name_en": "Montana",
+          "source_id": "USA-3515",
+          "source_iso_3166_2": "US-MT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3515",
+          "source_components": [
+            {
+              "source_name": "Montana",
+              "source_id": "USA-3515",
+              "source_iso_3166_2": "US-MT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:027",
+          "display_name": "Nebraska",
+          "source_name": "Nebraska",
+          "source_name_en": "Nebraska",
+          "source_id": "USA-3532",
+          "source_iso_3166_2": "US-NE",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3532",
+          "source_components": [
+            {
+              "source_name": "Nebraska",
+              "source_id": "USA-3532",
+              "source_iso_3166_2": "US-NE",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:028",
+          "display_name": "Nevada",
+          "source_name": "Nevada",
+          "source_name_en": "Nevada",
+          "source_id": "USA-3523",
+          "source_iso_3166_2": "US-NV",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3523",
+          "source_components": [
+            {
+              "source_name": "Nevada",
+              "source_id": "USA-3523",
+              "source_iso_3166_2": "US-NV",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:029",
+          "display_name": "New Hampshire",
+          "source_name": "New Hampshire",
+          "source_name_en": "New Hampshire",
+          "source_id": "USA-3538",
+          "source_iso_3166_2": "US-NH",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3538",
+          "source_components": [
+            {
+              "source_name": "New Hampshire",
+              "source_id": "USA-3538",
+              "source_iso_3166_2": "US-NH",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:030",
+          "display_name": "New Jersey",
+          "source_name": "New Jersey",
+          "source_name_en": "New Jersey",
+          "source_id": "USA-3558",
+          "source_iso_3166_2": "US-NJ",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 3,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3558",
+          "source_components": [
+            {
+              "source_name": "New Jersey",
+              "source_id": "USA-3558",
+              "source_iso_3166_2": "US-NJ",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:031",
+          "display_name": "New Mexico",
+          "source_name": "New Mexico",
+          "source_name_en": "New Mexico",
+          "source_id": "USA-3524",
+          "source_iso_3166_2": "US-NM",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3524",
+          "source_components": [
+            {
+              "source_name": "New Mexico",
+              "source_id": "USA-3524",
+              "source_iso_3166_2": "US-NM",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:032",
+          "display_name": "New York",
+          "source_name": "New York",
+          "source_name_en": "New York",
+          "source_id": "USA-3559",
+          "source_iso_3166_2": "US-NY",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 9,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3559",
+          "source_components": [
+            {
+              "source_name": "New York",
+              "source_id": "USA-3559",
+              "source_iso_3166_2": "US-NY",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:033",
+          "display_name": "North Carolina",
+          "source_name": "North Carolina",
+          "source_name_en": "North Carolina",
+          "source_id": "USA-3549",
+          "source_iso_3166_2": "US-NC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 13,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3549",
+          "source_components": [
+            {
+              "source_name": "North Carolina",
+              "source_id": "USA-3549",
+              "source_iso_3166_2": "US-NC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:034",
+          "display_name": "North Dakota",
+          "source_name": "North Dakota",
+          "source_name_en": "North Dakota",
+          "source_id": "USA-3516",
+          "source_iso_3166_2": "US-ND",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3516",
+          "source_components": [
+            {
+              "source_name": "North Dakota",
+              "source_id": "USA-3516",
+              "source_iso_3166_2": "US-ND",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:035",
+          "display_name": "Ohio",
+          "source_name": "Ohio",
+          "source_name_en": "Ohio",
+          "source_id": "USA-3550",
+          "source_iso_3166_2": "US-OH",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3550",
+          "source_components": [
+            {
+              "source_name": "Ohio",
+              "source_id": "USA-3550",
+              "source_iso_3166_2": "US-OH",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:036",
+          "display_name": "Oklahoma",
+          "source_name": "Oklahoma",
+          "source_name_en": "Oklahoma",
+          "source_id": "USA-3533",
+          "source_iso_3166_2": "US-OK",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3533",
+          "source_components": [
+            {
+              "source_name": "Oklahoma",
+              "source_id": "USA-3533",
+              "source_iso_3166_2": "US-OK",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:037",
+          "display_name": "Oregon",
+          "source_name": "Oregon",
+          "source_name_en": "Oregon",
+          "source_id": "USA-3525",
+          "source_iso_3166_2": "US-OR",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3525",
+          "source_components": [
+            {
+              "source_name": "Oregon",
+              "source_id": "USA-3525",
+              "source_iso_3166_2": "US-OR",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:038",
+          "display_name": "Pennsylvania",
+          "source_name": "Pennsylvania",
+          "source_name_en": "Pennsylvania",
+          "source_id": "USA-3560",
+          "source_iso_3166_2": "US-PA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3560",
+          "source_components": [
+            {
+              "source_name": "Pennsylvania",
+              "source_id": "USA-3560",
+              "source_iso_3166_2": "US-PA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:039",
+          "display_name": "Rhode Island",
+          "source_name": "Rhode Island",
+          "source_name_en": "Rhode Island",
+          "source_id": "USA-3539",
+          "source_iso_3166_2": "US-RI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 6,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3539",
+          "source_components": [
+            {
+              "source_name": "Rhode Island",
+              "source_id": "USA-3539",
+              "source_iso_3166_2": "US-RI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:040",
+          "display_name": "South Carolina",
+          "source_name": "South Carolina",
+          "source_name_en": "South Carolina",
+          "source_id": "USA-3545",
+          "source_iso_3166_2": "US-SC",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 2,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3545",
+          "source_components": [
+            {
+              "source_name": "South Carolina",
+              "source_id": "USA-3545",
+              "source_iso_3166_2": "US-SC",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:041",
+          "display_name": "South Dakota",
+          "source_name": "South Dakota",
+          "source_name_en": "South Dakota",
+          "source_id": "USA-3534",
+          "source_iso_3166_2": "US-SD",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3534",
+          "source_components": [
+            {
+              "source_name": "South Dakota",
+              "source_id": "USA-3534",
+              "source_iso_3166_2": "US-SD",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:042",
+          "display_name": "Tennessee",
+          "source_name": "Tennessee",
+          "source_name_en": "Tennessee",
+          "source_id": "USA-3551",
+          "source_iso_3166_2": "US-TN",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3551",
+          "source_components": [
+            {
+              "source_name": "Tennessee",
+              "source_id": "USA-3551",
+              "source_iso_3166_2": "US-TN",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:043",
+          "display_name": "Texas",
+          "source_name": "Texas",
+          "source_name_en": "Texas",
+          "source_id": "USA-3536",
+          "source_iso_3166_2": "US-TX",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 7,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3536",
+          "source_components": [
+            {
+              "source_name": "Texas",
+              "source_id": "USA-3536",
+              "source_iso_3166_2": "US-TX",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:044",
+          "display_name": "Utah",
+          "source_name": "Utah",
+          "source_name_en": "Utah",
+          "source_id": "USA-3526",
+          "source_iso_3166_2": "US-UT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3526",
+          "source_components": [
+            {
+              "source_name": "Utah",
+              "source_id": "USA-3526",
+              "source_iso_3166_2": "US-UT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:045",
+          "display_name": "Vermont",
+          "source_name": "Vermont",
+          "source_name_en": "Vermont",
+          "source_id": "USA-3540",
+          "source_iso_3166_2": "US-VT",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3540",
+          "source_components": [
+            {
+              "source_name": "Vermont",
+              "source_id": "USA-3540",
+              "source_iso_3166_2": "US-VT",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:046",
+          "display_name": "Virginia",
+          "source_name": "Virginia",
+          "source_name_en": "Virginia",
+          "source_id": "USA-3552",
+          "source_iso_3166_2": "US-VA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 10,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3552",
+          "source_components": [
+            {
+              "source_name": "Virginia",
+              "source_id": "USA-3552",
+              "source_iso_3166_2": "US-VA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:047",
+          "display_name": "Washington",
+          "source_name": "Washington",
+          "source_name_en": "Washington",
+          "source_id": "USA-3519",
+          "source_iso_3166_2": "US-WA",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "MultiPolygon",
+          "source_polygon_count": 15,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3519",
+          "source_components": [
+            {
+              "source_name": "Washington",
+              "source_id": "USA-3519",
+              "source_iso_3166_2": "US-WA",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:048",
+          "display_name": "West Virginia",
+          "source_name": "West Virginia",
+          "source_name_en": "West Virginia",
+          "source_id": "USA-3554",
+          "source_iso_3166_2": "US-WV",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3554",
+          "source_components": [
+            {
+              "source_name": "West Virginia",
+              "source_id": "USA-3554",
+              "source_iso_3166_2": "US-WV",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:049",
+          "display_name": "Wisconsin",
+          "source_name": "Wisconsin",
+          "source_name_en": "Wisconsin",
+          "source_id": "USA-3553",
+          "source_iso_3166_2": "US-WI",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3553",
+          "source_components": [
+            {
+              "source_name": "Wisconsin",
+              "source_id": "USA-3553",
+              "source_iso_3166_2": "US-WI",
+              "source_geometry_valid": true
+            }
+          ]
+        },
+        {
+          "question_key": "usa:050",
+          "display_name": "Wyoming",
+          "source_name": "Wyoming",
+          "source_name_en": "Wyoming",
+          "source_id": "USA-3527",
+          "source_iso_3166_2": "US-WY",
+          "source_geometry_valid": true,
+          "rendered_geometry_valid": true,
+          "source_geometry_type": "Polygon",
+          "source_polygon_count": 1,
+          "matching_method": "diacritic-insensitive exact comparison against Natural Earth name or name_en",
+          "dom_id": "cp05-usa-usa-3527",
+          "source_components": [
+            {
+              "source_name": "Wyoming",
+              "source_id": "USA-3527",
+              "source_iso_3166_2": "US-WY",
+              "source_geometry_valid": true
+            }
+          ]
+        }
+      ],
+      "excluded_source_features": [
+        {
+          "source_name": "District of Columbia",
+          "source_id": "USA-3556",
+          "reason": "not a configured MapMaster question"
+        }
+      ],
+      "blockers": [],
+      "repair": null,
+      "status": "candidate_ready_for_manual_geometry_and_interaction_review",
+      "asset": "candidate/admin1/usa.svg",
+      "asset_sha256": "19d8e7729a1b9ce1cd9c9eae83feee748ae9e9cb0fc1fb61e88ebb789b89c1c1",
+      "rendered_polygon_count": 403,
+      "rendering": {
+        "projection": "affine longitude-latitude fit",
+        "view_box": "0 0 1000 700",
+        "geometry_simplification": "none"
+      }
+    }
+  }
+}

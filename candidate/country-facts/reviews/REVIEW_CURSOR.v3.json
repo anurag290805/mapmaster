@@ -1,0 +1,17 @@
+{
+  "schema_version": 3,
+  "ledger_id": "mapmaster-country-facts-independent-review.v1",
+  "as_of": "2026-11-10",
+  "total_records": 194,
+  "independently_corroborated_revised_fact": 192,
+  "independent_field_names_frozen_feature": 145,
+  "independent_field_differs_or_uses_unmapped_name": 47,
+  "needs_alternate_authoritative_source": 2,
+  "ready_for_founder_review": 155,
+  "needs_review": 39,
+  "founder_approved": 0,
+  "gameplay_approved": 0,
+  "production_eligible": 0,
+  "next_batch": "Obtain direct national, scientific, or established-reference evidence for Gambia and Palestine; separately write and source player-facing facts for the 14 editorial holds. Do not infer equivalence for the 47 preserved frozen-feature comparisons; retain the 25 policy-sensitive records outside competitive use pending CP05 clearance.",
+  "source_snapshot_sha256": "sha256:217b6a9e3c4bb8e6b90657cf8a5ce9e18d9db20d5ef2930c1294252bc4f8ba7e"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "candidate_not_live",
+  "development_only": true,
+  "runtime_import_allowed": false,
+  "gameplay_approval": "not_approved",
+  "human_content_approval": "pending_review",
+  "sources": {
+    "wikidata": {
+      "license": "CC0-1.0",
+      "source_url": "https://query.wikidata.org/",
+      "attribution_required": false,
+      "attribution": "Wikidata structured data (CC0); retain source QIDs and retrieval evidence."
+    },
+    "geonames": {
+      "license": "CC-BY-4.0",
+      "source_url": "https://www.geonames.org/",
+      "attribution_required": true,
+      "attribution": "GeoNames, CC BY 4.0 — link to https://www.geonames.org/."
+    },
+    "opentdb": {
+      "license": "CC-BY-SA-4.0",
+      "source_url": "https://opentdb.com/",
+      "attribution_required": true,
+      "attribution": "Open Trivia DB, CC BY-SA 4.0 — retain source and license notice."
+    }
+  },
+  "selection_counts": {
+    "wikidata_countries": 20,
+    "geonames_records": 30,
+    "opentdb_questions": 50
+  },
+  "report": "reports/validation-report.json"
+}

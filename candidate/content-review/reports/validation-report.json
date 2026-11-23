@@ -1,0 +1,90 @@
+{
+  "blockers": [
+    "All records require human factual and geographic-policy review.",
+    "No candidate record is approved for gameplay, CP04 scoring, CP05 maps, CP10 daily challenges, Firebase, cloud save, production build or service-worker caching.",
+    "Source license/attribution evidence is recorded but is not legal clearance for production use."
+  ],
+  "gameplay_approval": {
+    "not_approved": 100
+  },
+  "human_content_approval": {
+    "pending_review": 100
+  },
+  "records_by_source": {
+    "geonames": {
+      "gameplay_approval": {
+        "not_approved": 30
+      },
+      "human_content_approval": {
+        "pending_review": 30
+      },
+      "records": 30,
+      "review_disposition": {
+        "accepted": 0,
+        "pending_review": 30,
+        "rejected": 0
+      },
+      "technical_validation": {
+        "accepted": 30,
+        "pending_validation": 0,
+        "rejected": 0
+      }
+    },
+    "opentdb": {
+      "gameplay_approval": {
+        "not_approved": 50
+      },
+      "human_content_approval": {
+        "pending_review": 50
+      },
+      "records": 50,
+      "review_disposition": {
+        "accepted": 0,
+        "pending_review": 50,
+        "rejected": 0
+      },
+      "technical_validation": {
+        "accepted": 50,
+        "pending_validation": 0,
+        "rejected": 0
+      }
+    },
+    "wikidata": {
+      "gameplay_approval": {
+        "not_approved": 20
+      },
+      "human_content_approval": {
+        "pending_review": 20
+      },
+      "records": 20,
+      "review_disposition": {
+        "accepted": 0,
+        "pending_review": 20,
+        "rejected": 0
+      },
+      "technical_validation": {
+        "accepted": 20,
+        "pending_validation": 0,
+        "rejected": 0
+      }
+    }
+  },
+  "review_disposition": {
+    "accepted": 0,
+    "pending_review": 100,
+    "rejected": 0
+  },
+  "schema_version": 1,
+  "source_integrity": {
+    "geonames": "valid",
+    "opentdb": "valid",
+    "wikidata": "valid"
+  },
+  "status": "candidate_not_live",
+  "technical_validation": {
+    "accepted": 100,
+    "pending_validation": 0,
+    "rejected": 0
+  },
+  "total_records": 100
+}

@@ -14,7 +14,7 @@
   80%  { transform: translateX(3px); }
   100% { transform: translateX(0); }
 }
-.map-shake { animation: regionShake 0.35s ease; }
+.map-shake { animation: regionShake 0.28s var(--mm-ease-exit, ease); }
 
 
 /* ============================================================
@@ -25,7 +25,7 @@
   40%  { filter: brightness(1.35) drop-shadow(0 0 6px rgba(45,158,107,0.6)); }
   100% { filter: brightness(1); }
 }
-.state-correct-flash { animation: stateCorrectPulse 0.4s ease forwards; }
+.state-correct-flash { animation: stateCorrectPulse var(--mm-motion-celebrate, .42s) var(--mm-ease-enter, ease) forwards; }
 
 
 /* ============================================================
@@ -36,7 +36,7 @@
   40%  { filter: brightness(1.4) drop-shadow(0 0 8px rgba(139,92,246,0.7)); }
   100% { filter: brightness(1); }
 }
-.ut-correct-flash { animation: utPulse 0.45s ease forwards; }
+.ut-correct-flash { animation: utPulse var(--mm-motion-celebrate, .42s) var(--mm-ease-enter, ease) forwards; }
 
 
 /* ============================================================
@@ -46,21 +46,22 @@
   position: fixed;
   bottom: 32px;
   right: 32px;
-  z-index: 10000;
+  z-index: var(--mm-z-toast, 50);
   display: flex;
   align-items: center;
   gap: 14px;
-  background: linear-gradient(135deg, #4c1d95, #7c3aed);
+  background: linear-gradient(135deg, #1a1a1a, #252525);
   color: #fff;
   padding: 16px 22px;
-  border-radius: var(--r-lg);
-  box-shadow: 0 8px 32px rgba(124,58,237,0.45);
-  transform: translateY(120px);
+  border: 1px solid #32cd32;
+  border-radius: var(--mm-radius-lg, var(--r-lg));
+  box-shadow: 0 14px 32px rgba(0,0,0,.34);
+  transform: translateY(1rem);
   opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+  transition: transform var(--mm-motion-popover, .18s) var(--mm-ease-exit, ease), opacity var(--mm-motion-popover, .18s) var(--mm-ease-exit, ease);
   max-width: 320px;
 }
-#utAchievement.ut-achievement-show { transform: translateY(0); opacity: 1; }
+#utAchievement.ut-achievement-show { transform: translateY(0); opacity: 1; transition-timing-function:var(--mm-ease-enter, ease); }
 .ut-achievement-icon  { font-size: 2rem; flex-shrink: 0; }
 .ut-achievement-text  { display: flex; flex-direction: column; gap: 2px; }
 .ut-achievement-text strong { font-size: 0.95rem; font-weight: 700; letter-spacing: -0.01em; }

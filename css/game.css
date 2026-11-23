@@ -67,7 +67,10 @@
   color: var(--text-muted);
   cursor: pointer;
   box-shadow: none;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
   min-width: unset;
   flex: unset;
 }
@@ -80,8 +83,9 @@
   box-shadow: none;
 }
 
-.icon-btn:active { transform: scale(0.9); }
-
+.icon-btn:active {
+  transform: scale(0.9);
+}
 
 /* ============================================================
    TOP BAR
@@ -121,8 +125,9 @@
   line-height: 1;
 }
 
-#streakWrapper span { color: #D4813A; }
-
+#streakWrapper span {
+  color: #d4813a;
+}
 
 /* ============================================================
    PROGRESS RING
@@ -157,7 +162,7 @@
   fill: var(--text-muted);
   font-size: 9px;
   font-weight: 700;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
 #progressLabel {
@@ -168,7 +173,6 @@
   letter-spacing: 0.04em;
   flex: 1;
 }
-
 
 /* ============================================================
    MAP TOOLTIP
@@ -181,32 +185,47 @@
   border-radius: var(--r-full);
   font-size: 0.7rem;
   font-weight: 600;
-  font-family: 'Poppins', system-ui, sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
   pointer-events: none;
   display: none;
   z-index: 9999;
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   letter-spacing: 0.01em;
 }
 
 body.dark-theme #mapTooltip {
-  background: rgba(240,240,240,0.92);
+  background: rgba(240, 240, 240, 0.92);
   color: #111;
 }
-
 
 /* ============================================================
    ACCENT COLOR — continent theming
    Uses --accent CSS var set by JS; falls back to --coral
    ============================================================ */
-#progressRingFill          { stroke:      var(--accent, var(--coral)); }
-#progressBarFill           { background:  linear-gradient(90deg, var(--accent, var(--coral-soft)), var(--accent, var(--coral))); }
-#mapContainer              { box-shadow:  0 24px 64px rgba(0,0,0,0.09), 0 4px 16px rgba(0,0,0,0.05), 0 0 0 1px var(--accent-glow, rgba(232,96,74,0.06)); }
-#headerLogo                { color:       var(--accent, var(--coral)); }
+#progressRingFill {
+  stroke: var(--accent, var(--coral));
+}
+#progressBarFill {
+  background: linear-gradient(
+    90deg,
+    var(--accent, var(--coral-soft)),
+    var(--accent, var(--coral))
+  );
+}
+#mapContainer {
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.09),
+    0 4px 16px rgba(0, 0, 0, 0.05),
+    0 0 0 1px var(--accent-glow, rgba(232, 96, 74, 0.06));
+}
+#headerLogo {
+  color: var(--accent, var(--coral));
+}
 .locate-underline,
-.hero-divider              { background:  var(--accent, var(--coral)); }
-
+.hero-divider {
+  background: var(--accent, var(--coral));
+}
 
 /* ============================================================
    REGION COUNT BADGE
@@ -224,7 +243,6 @@ body.dark-theme #mapTooltip {
   letter-spacing: 0.02em;
 }
 
-
 /* ============================================================
    MAP CONTAINER
    ============================================================ */
@@ -238,9 +256,9 @@ body.dark-theme #mapTooltip {
   border: 1px solid var(--border);
   border-radius: var(--r-xl);
   box-shadow:
-    0 24px 64px rgba(0,0,0,0.09),
-    0 4px 16px rgba(0,0,0,0.05),
-    0 0 0 1px rgba(232,96,74,0.06);
+    0 24px 64px rgba(0, 0, 0, 0.09),
+    0 4px 16px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(232, 96, 74, 0.06);
   padding: 16px 24px 20px;
   display: flex;
   flex-direction: column;
@@ -252,10 +270,14 @@ body.dark-theme #mapTooltip {
 }
 
 #mapContainer::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(232,96,74,0.04), transparent);
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 50%,
+    rgba(232, 96, 74, 0.04),
+    transparent
+  );
   pointer-events: none;
 }
 
@@ -287,7 +309,6 @@ body.dark-theme #mapTooltip {
   height: 100%;
 }
 
-
 /* ============================================================
    LOCATE PROMPT
    ============================================================ */
@@ -304,8 +325,14 @@ body.dark-theme #mapTooltip {
 }
 
 @keyframes locateFadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .locate-label {
@@ -332,7 +359,6 @@ body.dark-theme #mapTooltip {
   border-radius: var(--r-full);
   margin-top: 4px;
 }
-
 
 /* ============================================================
    FLAG CONTAINER
@@ -364,7 +390,7 @@ body.dark-theme #mapTooltip {
 .flag-emoji {
   font-size: 7rem;
   line-height: 1;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.15));
   animation: flagPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -373,14 +399,107 @@ body.dark-theme #mapTooltip {
   width: 112px;
   height: 112px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.15));
   animation: flagPop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
   image-rendering: auto;
   border-radius: 4px;
 }
 
-#flagImage { display: none; }
+#flagImage {
+  display: none;
+}
 
+/* ============================================================
+   CP06 CHOICE SPRINTS
+   ============================================================ */
+#choiceContainer {
+  width: min(100% - 32px, 680px);
+  margin: 0 auto 24px;
+  padding: clamp(20px, 4vw, 32px);
+  border: 2px solid #1558c9;
+  border-radius: var(--r-xl);
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+#choiceKicker {
+  margin: 0 0 8px;
+  color: #32cd32;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+#choicePrompt {
+  margin: 0;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+}
+#choiceVisual {
+  min-height: 2rem;
+  margin: 16px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+#choiceVisual .flag-img {
+  width: 96px;
+  height: 96px;
+}
+.flag-code-cue {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+#choiceOptions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.choice-option {
+  min-height: 52px;
+  padding: 10px;
+  border: 2px solid #1558c9;
+  border-radius: var(--r-md);
+  background: #fff;
+  color: #1a1a1a;
+  font: 700 0.95rem/1.25 inherit;
+  cursor: pointer;
+}
+.choice-option:hover,
+.choice-option:focus-visible {
+  background: #1558c9;
+  color: #fff;
+  outline: 3px solid #32cd32;
+  outline-offset: 2px;
+}
+.choice-option--wrong {
+  border-color: #fff;
+  background: #5b1d1d;
+  color: #fff;
+  text-decoration: line-through;
+}
+.choice-option--correct {
+  border-color: #32cd32;
+  background: #32cd32;
+  color: #1a1a1a;
+}
+#choiceFeedback {
+  min-height: 1.5em;
+  margin: 16px 0 0;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  #choiceOptions {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ============================================================
    CAPITAL PROMPT
@@ -412,7 +531,6 @@ body.dark-theme #mapTooltip {
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
-
 
 /* ============================================================
    INPUT SECTION
@@ -447,11 +565,15 @@ body.dark-theme #mapTooltip {
   color: var(--text-heading);
   outline: none;
   box-shadow: var(--shadow-sm);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   caret-color: var(--coral);
 }
 
-#stateInput::placeholder { color: var(--text-faint); }
+#stateInput::placeholder {
+  color: var(--text-faint);
+}
 
 #stateInput:focus {
   border-color: var(--coral);
@@ -469,12 +591,20 @@ body.dark-theme #mapTooltip {
   border-radius: var(--r-md);
   cursor: pointer;
   box-shadow: var(--shadow-coral);
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
 }
 
-#submitAnswerBtn:hover  { background: var(--coral-dark); transform: translateY(-2px); box-shadow: 0 10px 32px var(--coral-glow); }
-#submitAnswerBtn:active { transform: scale(0.97); }
-
+#submitAnswerBtn:hover {
+  background: var(--coral-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px var(--coral-glow);
+}
+#submitAnswerBtn:active {
+  transform: scale(0.97);
+}
 
 /* ============================================================
    FEEDBACK MESSAGE
@@ -489,15 +619,33 @@ body.dark-theme #mapTooltip {
 }
 
 @keyframes feedbackIn {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#feedbackMessage.correct  { color: var(--green); font-weight: 600; }
-#feedbackMessage.wrong    { color: var(--red);   font-weight: 600; }
-#feedbackMessage.hint     { color: #A07020;      font-weight: 600; }
-#feedbackMessage.ut-bonus { color: #7c3aed;      font-weight: 700; font-size: 0.95rem; }
-
+#feedbackMessage.correct {
+  color: var(--green);
+  font-weight: 600;
+}
+#feedbackMessage.wrong {
+  color: var(--red);
+  font-weight: 600;
+}
+#feedbackMessage.hint {
+  color: #a07020;
+  font-weight: 600;
+}
+#feedbackMessage.ut-bonus {
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
 
 /* ============================================================
    HINT BUTTON
@@ -513,19 +661,20 @@ body.dark-theme #mapTooltip {
   border-radius: var(--r-md);
   cursor: pointer;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   white-space: nowrap;
 }
 
 .hint-btn:hover {
-  border-color: #F0C040;
-  color: #A07020;
+  border-color: #f0c040;
+  color: #a07020;
   background: rgba(240, 192, 64, 0.1);
   transform: translateY(-2px);
 }
 
-.hint-btn:active { transform: scale(0.96); }
-
+.hint-btn:active {
+  transform: scale(0.96);
+}
 
 /* ============================================================
    REVIEW BANNER
@@ -571,11 +720,98 @@ body.dark-theme #mapTooltip {
   color: var(--coral);
   border-radius: var(--r-sm);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-#reviewExitBtn:hover { background: var(--coral); color: #fff; }
+#reviewExitBtn:hover {
+  background: var(--coral);
+  color: #fff;
+}
 
+/* ============================================================
+   CP07 LEARNING CUES
+   ============================================================ */
+.learning-card {
+  width: min(100%, 540px);
+  box-sizing: border-box;
+  margin: 12px auto;
+  padding: 16px 18px;
+  background: #1a1a1a;
+  border: 1px solid #1558c9;
+  border-radius: var(--r-lg);
+  color: #fff;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.learning-card.hidden {
+  display: none;
+}
+
+.learning-kicker {
+  margin: 0 0 6px;
+  color: #32cd32;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+#learningPrompt,
+#learningReviewPrompt {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #d7e5ff;
+}
+
+#learningAnswer,
+#learningReviewAnswer {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+#learningSource,
+#learningReviewSource,
+#learningReviewProgress {
+  margin: 8px 0 0;
+  color: #b7b7b7;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+#learningReviewTitle {
+  margin: 0;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.learning-review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.learning-review-actions button {
+  min-height: 40px;
+  padding: 8px 12px;
+  background: #1558c9;
+  border: 1px solid #1558c9;
+  border-radius: var(--r-sm);
+  color: #fff;
+  cursor: pointer;
+}
+
+.learning-review-actions button:focus-visible {
+  outline: 3px solid #32cd32;
+  outline-offset: 2px;
+}
+
+.learning-review-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
 /* ============================================================
    CONFETTI CANVAS
@@ -589,19 +825,49 @@ body.dark-theme #mapTooltip {
   z-index: 9999;
 }
 
-.confetti-canvas.hidden { display: none; }
-
+.confetti-canvas.hidden {
+  display: none;
+}
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 640px) {
-  #gameScreen { padding: 16px 12px 12px; }
+  #gameScreen {
+    padding: 16px 12px 12px;
+  }
 
-  #topBar           { flex-direction: column; gap: 8px; }
-  #topBar > div     { flex-direction: row; justify-content: space-between; }
+  #topBar {
+    flex-direction: column;
+    gap: 8px;
+  }
+  #topBar > div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-  #stateInput       { max-width: 100%; }
+  #stateInput {
+    max-width: 100%;
+  }
 
-  #mapContainer     { padding: 8px; }
+  #mapContainer {
+    padding: 8px;
+  }
+  .learning-card {
+    padding: 14px;
+  }
+  .learning-review-actions button {
+    flex: 1 1 120px;
+  }
+}
+#mapCoverageNotice {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 0.5rem;
+  max-width: 100%;
+  font-size: 0.85rem;
+}
+
+#mapCoverageNotice:empty {
+  display: none;
 }

@@ -10,11 +10,18 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
+    "build:public-beta": "vite build --mode public-beta",
     "preview": "vite preview --host 127.0.0.1",
     "test": "npm run test:legacy && npm run test:unit",
     "test:legacy": "node --test tests/*.test.cjs",
     "test:unit": "vitest run",
-    "test:e2e": "npm run build && playwright test",
+    "test:emulator": "node --test tests/emulator/*.test.mjs",
+    "test:e2e:emulator": "GCLOUD_PROJECT=mapmaster-local-acceptance VITE_FIREBASE_API_KEY=emulator-key VITE_FIREBASE_AUTH_DOMAIN=localhost VITE_FIREBASE_PROJECT_ID=mapmaster-local-acceptance VITE_FIREBASE_APP_ID=mapmaster-emulator-app VITE_USE_FIREBASE_EMULATORS=true VITE_FIREBASE_AUTH_EMULATOR_HOST=127.0.0.1:9099 VITE_FIRESTORE_EMULATOR_PORT=8080 firebase emulators:exec --project mapmaster-local-acceptance --only auth,firestore \"npm run test:emulator && playwright test tests/e2e/firebase-emulator-sync.spec.ts --project=development --workers=1\"",
+    "build:e2e:root": "vite build --outDir dist-e2e-root",
+    "build:e2e:subpath": "vite build --base /mapmaster/ --outDir dist-e2e-subpath",
+    "build:e2e": "npm run build:e2e:root && npm run build:e2e:subpath",
+    "test:e2e": "npm run build:e2e && playwright test",
+    "setup:cp05-python": "node tools/setup-cp05-python-venv.cjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src tests/unit tests/e2e vite.config.mts playwright.config.ts eslint.config.mjs",
     "format:check": "prettier --check src tests/unit tests/e2e vite.config.mts playwright.config.ts eslint.config.mjs",
@@ -22,13 +29,18 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@firebase/rules-unit-testing": "^5.0.2",
     "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.6",
     "eslint": "^10.14.0",
+    "firebase-tools": "^15.34.2",
     "prettier": "^3.9.10",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.1",
     "vite": "^8.3.5",
     "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "firebase": "^12.19.0"
   }
 }

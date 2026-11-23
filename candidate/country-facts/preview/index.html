@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>MapMaster — Country Facts Editorial Preview</title>
+    <link rel="stylesheet" href="./preview.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">MAPMASTER / DEVELOPMENT ONLY</p>
+        <h1>194-country fact review</h1>
+        <p class="lede">All records are source-qualified candidates. Nothing on this page changes founder approval, gameplay approval, or production eligibility.</p>
+      </header>
+      <section class="cue" aria-live="polite" aria-labelledby="cue-title">
+        <p class="eyebrow" id="cue-title">LEARNING CUE</p>
+        <p id="cuePrompt"></p>
+        <h2 id="cueCountry"></h2>
+        <p id="cueFact"></p>
+        <p class="note" id="cueSource"></p>
+      </section>
+      <section class="controls" aria-label="Editorial preview controls">
+        <label>Country <select id="countrySelect"></select></label>
+        <button type="button" id="lockedButton">Before answer</button>
+        <button type="button" id="resolvedButton">Preview after correct answer</button>
+      </section>
+      <section class="summary" id="summary"></section>
+      <section aria-labelledby="ledger-title">
+        <h2 id="ledger-title">Founder approval checklist</h2>
+        <p class="note">Checkboxes are deliberately disabled. They document the required per-claim founder decision without granting it.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Decision</th><th>Country</th><th>Proposed learning fact</th><th>Evidence</th><th>Review status</th></tr></thead>
+          <tbody id="ledger"></tbody>
+        </table></div>
+      </section>
+    </main>
+    <script type="module" src="./preview.mjs"></script>
+  </body>
+</html>

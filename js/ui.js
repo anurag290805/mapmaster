@@ -9,89 +9,107 @@
    DOM REFERENCES
    ============================================================ */
 const screens = {
-  start:           document.getElementById("startScreen"),
-  play:            document.getElementById("playScreen"),
-  scope:           document.getElementById("scopeScreen"),
-  progress:        document.getElementById("progressScreen"),
-  help:            document.getElementById("helpScreen"),
-  countrySelect:   document.getElementById("countrySelectScreen"),
+  start: document.getElementById("startScreen"),
+  play: document.getElementById("playScreen"),
+  scope: document.getElementById("scopeScreen"),
+  progress: document.getElementById("progressScreen"),
+  daily: document.getElementById("dailyScreen"),
+  help: document.getElementById("helpScreen"),
+  countrySelect: document.getElementById("countrySelectScreen"),
   continentSelect: document.getElementById("continentSelectScreen"),
-  setup:           document.getElementById("setupScreen"),
-  challenge:       document.getElementById("challengeSettings"),
-  game:            document.getElementById("gameScreen"),
-  win:             document.getElementById("winScreen"),
-  lose:            document.getElementById("loseScreen"),
+  setup: document.getElementById("setupScreen"),
+  challenge: document.getElementById("challengeSettings"),
+  game: document.getElementById("gameScreen"),
+  win: document.getElementById("winScreen"),
+  lose: document.getElementById("loseScreen"),
 };
 
 const buttons = {
-  typingMode:    document.getElementById("typingModeBtn"),
-  locateMode:    document.getElementById("locateModeBtn"),
-  flagMode:      document.getElementById("flagModeBtn"),
-  capitalMode:   document.getElementById("capitalModeBtn"),
-  practiceMode:  document.getElementById("practiceModeBtn"),
+  typingMode: document.getElementById("typingModeBtn"),
+  locateMode: document.getElementById("locateModeBtn"),
+  flagMode: document.getElementById("flagModeBtn"),
+  capitalMode: document.getElementById("capitalModeBtn"),
+  capitalChoiceMode: document.getElementById("capitalChoiceModeBtn"),
+  flagChoiceMode: document.getElementById("flagChoiceModeBtn"),
+  practiceMode: document.getElementById("practiceModeBtn"),
   challengeMode: document.getElementById("challengeModeBtn"),
-  startGame:     document.getElementById("startGameBtn"),
-  submitAnswer:  document.getElementById("submitAnswerBtn"),
-  restart:       document.getElementById("restartBtn"),
-  retry:         document.getElementById("retryBtn"),
+  startGame: document.getElementById("startGameBtn"),
+  submitAnswer: document.getElementById("submitAnswerBtn"),
+  restart: document.getElementById("restartBtn"),
+  retry: document.getElementById("retryBtn"),
 };
 
 const display = {
-  score:         document.getElementById("scoreDisplay"),
-  timer:         document.getElementById("timerDisplay"),
-  lives:         document.getElementById("livesDisplay"),
-  feedback:      document.getElementById("feedbackMessage"),
-  finalTime:     document.getElementById("finalTime"),
+  score: document.getElementById("scoreDisplay"),
+  timer: document.getElementById("timerDisplay"),
+  lives: document.getElementById("livesDisplay"),
+  feedback: document.getElementById("feedbackMessage"),
+  choiceFeedback: document.getElementById("choiceFeedback"),
+  finalTime: document.getElementById("finalTime"),
   finalAccuracy: document.getElementById("finalAccuracy"),
-  loseReason:    document.getElementById("loseReason"),
+  loseReason: document.getElementById("loseReason"),
 };
 
-const stateInput      = document.getElementById("stateInput");
-const inputSection    = document.getElementById("inputSection");
-const indiaMap        = document.getElementById("indiaMap");
-const locatePrompt    = document.getElementById("locatePrompt");
-const flagContainer   = document.getElementById("flagContainer");
-const flagImage       = document.getElementById("flagImage");
-const capitalPrompt   = document.getElementById("capitalPrompt");
+const stateInput = document.getElementById("stateInput");
+const inputSection = document.getElementById("inputSection");
+let indiaMap = document.getElementById("indiaMap");
+const locatePrompt = document.getElementById("locatePrompt");
+const flagContainer = document.getElementById("flagContainer");
+const flagImage = document.getElementById("flagImage");
+const capitalPrompt = document.getElementById("capitalPrompt");
+const choiceContainer = document.getElementById("choiceContainer");
+const choicePrompt = document.getElementById("choicePrompt");
+const choiceVisual = document.getElementById("choiceVisual");
+const choiceOptions = document.getElementById("choiceOptions");
+const learningCue = document.getElementById("learningCue");
+const learningPrompt = document.getElementById("learningPrompt");
+const learningAnswer = document.getElementById("learningAnswer");
+const learningSource = document.getElementById("learningSource");
+const learningReview = document.getElementById("learningReview");
 const progressBarFill = document.getElementById("progressBarFill");
-const progressLabel   = document.getElementById("progressLabel");
-const soundToggleBtn  = document.getElementById("soundToggleBtn");
-const themeToggleBtn  = document.getElementById("themeToggleBtn");
-const headerRestartBtn= document.getElementById("headerRestartBtn");
-const locateNameEl    = locatePrompt ? locatePrompt.querySelector(".locate-name") : null;
-const homeStartBtn    = document.getElementById("homeStartBtn");
-const livesSection    = document.getElementById("livesSection");
-const streakDisplay   = document.getElementById("streakDisplay");
-const finalStreak     = document.getElementById("finalStreak");
-const confettiCanvas  = document.getElementById("confettiCanvas");
-
+const progressLabel = document.getElementById("progressLabel");
+const soundToggleBtn = document.getElementById("soundToggleBtn");
+const themeToggleBtn = document.getElementById("themeToggleBtn");
+const headerRestartBtn = document.getElementById("headerRestartBtn");
+const locateNameEl = locatePrompt
+  ? locatePrompt.querySelector(".locate-name")
+  : null;
+const homeStartBtn = document.getElementById("homeStartBtn");
+const livesSection = document.getElementById("livesSection");
+const streakDisplay = document.getElementById("streakDisplay");
+const finalStreak = document.getElementById("finalStreak");
+const confettiCanvas = document.getElementById("confettiCanvas");
 
 /* ============================================================
    BREADCRUMB
    ============================================================ */
 const BREADCRUMB_MAP = {
-  countrySelect:   ["Home", "Country"],
+  countrySelect: ["Home", "Country"],
   continentSelect: ["Home", "Continent"],
-  setup:           ["Home", "Setup"],
-  challenge:       ["Home", "Setup", "Challenge"],
-  game:            ["Home", "Setup", "Game"],
+  setup: ["Home", "Setup"],
+  challenge: ["Home", "Setup", "Challenge"],
+  game: ["Home", "Setup", "Game"],
 };
 
 function updateBreadcrumb(screenName) {
   // Update all breadcrumb placeholders on the revealed screen
   const ids = ["breadcrumb", "breadcrumbContinent", "breadcrumbSetup"];
   const trail = BREADCRUMB_MAP[screenName];
-  ids.forEach(id => {
+  ids.forEach((id) => {
     const el = document.getElementById(id);
     if (!el) return;
-    if (!trail) { el.innerHTML = ""; return; }
+    if (!trail) {
+      el.innerHTML = "";
+      return;
+    }
     el.innerHTML = trail
-      .map((item, i, arr) =>
-        `<span class="${i === arr.length - 1 ? "bc-active" : "bc-item"}">${item}</span>`
-      ).join('<span class="bc-sep"> › </span>');
+      .map(
+        (item, i, arr) =>
+          `<span class="${i === arr.length - 1 ? "bc-active" : "bc-item"}">${item}</span>`,
+      )
+      .join('<span class="bc-sep"> › </span>');
   });
 }
-
 
 /* ============================================================
    SCREEN TRANSITIONS — directional
@@ -99,36 +117,65 @@ function updateBreadcrumb(screenName) {
 function showScreen(screenName, direction = "forward") {
   const next = screens[screenName];
   if (!next) return;
-  const current = Object.values(screens).find(s => s && !s.classList.contains("hidden"));
-  const currentKey = Object.keys(screens).find(k => screens[k] === current);
+  const current = Object.values(screens).find(
+    (s) => s && !s.classList.contains("hidden"),
+  );
+  const currentKey = Object.keys(screens).find((k) => screens[k] === current);
   if (currentKey && currentKey !== screenName) previousScreen = currentKey;
   if (currentKey === "game" && screenName !== "game") {
     clearTimer();
     if (typeof detachLocateListener === "function") detachLocateListener();
     else {
       const mapDocument = getSvgDoc();
-      if (mapDocument) mapDocument.removeEventListener("click", handleLocateClick);
+      if (mapDocument)
+        mapDocument.removeEventListener("click", handleLocateClick);
     }
     gameState.startTime = null;
-    if (gameState.phase === "active") gameState.phase = "abandoned";
+    if (gameState.phase === "active") {
+      gameState.phase = "abandoned";
+      // Preserve a daily identity through terminal processing, but detach it
+      // immediately when an active session is abandoned.
+      if (typeof clearDailyContext === "function") clearDailyContext();
+    }
     if (gameState.reviewMode) {
       gameState.reviewMode = false;
       document.getElementById("reviewBanner")?.remove();
+      hideLearningReview();
     }
   }
   // A synchronous transition prevents stale timeout callbacks revealing old screens.
-  Object.values(screens).filter(Boolean).forEach(s => {
-    s.classList.add("hidden");
-    s.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
-  });
+  Object.values(screens)
+    .filter(Boolean)
+    .forEach((s) => {
+      s.classList.add("hidden");
+      s.classList.remove(
+        "slide-out-left",
+        "slide-out-right",
+        "slide-in-left",
+        "slide-in-right",
+        "mm-screen-enter",
+      );
+    });
   next.classList.remove("hidden");
+  document.body.classList.toggle("mm-in-game", screenName === "game");
+  // Keep screen changes synchronous for state safety. The class is purely a
+  // compositor-only visual handoff, and never runs during the rapid game loop.
+  const reduceMotion =
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (screenName !== "game" && !reduceMotion) {
+    next.classList.add("mm-screen-enter");
+  }
   updateBreadcrumb(screenName);
   next.setAttribute("tabindex", "-1");
   next.focus({ preventScroll: true });
   window.scrollTo(0, 0);
-  document.dispatchEvent(new CustomEvent("mapmaster:screen", { detail: { screen: screenName, from: currentKey } }));
+  document.dispatchEvent(
+    new CustomEvent("mapmaster:screen", {
+      detail: { screen: screenName, from: currentKey },
+    }),
+  );
 }
-
 
 /* ============================================================
    HUD + PROGRESS
@@ -140,9 +187,8 @@ function updateHUD() {
     animateCounter(display.score, oldScore, newScore);
   }
 
-  display.timer.textContent = gameState.gameMode === "challenge"
-    ? formatTime(gameState.timeLeft)
-    : "∞";
+  display.timer.textContent =
+    gameState.gameMode === "challenge" ? formatTime(gameState.timeLeft) : "∞";
 
   if (gameState.gameMode === "challenge" && gameState.gameType === "locate") {
     display.lives.textContent = gameState.livesLeft;
@@ -158,10 +204,20 @@ function updateHUD() {
 function updateProgress() {
   const count = gameState.guessedStates.length;
   let total;
-  if (gameState.gameType === "flag") {
+  if (gameState.dailyChallenge) {
+    total = gameState.dailyQuestions.length;
+  } else if (
+    gameState.gameType === "flag" ||
+    gameState.gameType === "flagChoice"
+  ) {
     total = getFlagRegions().length;
-  } else if (gameState.gameType === "capital") {
+  } else if (
+    gameState.gameType === "capital" ||
+    gameState.gameType === "capitalChoice"
+  ) {
     total = getCapitalRegions().length;
+  } else if (gameState.gameType === "locate") {
+    total = getLocateRegions().length;
   } else {
     total = CURRENT_REGIONS.length;
   }
@@ -173,7 +229,7 @@ function updateProgress() {
   if (ring) {
     const r = 18;
     const circ = 2 * Math.PI * r;
-    ring.style.strokeDasharray  = circ;
+    ring.style.strokeDasharray = circ;
     ring.style.strokeDashoffset = circ * (1 - pct / 100);
   }
   if (pctEl) pctEl.textContent = Math.round(pct) + "%";
@@ -185,15 +241,22 @@ function updateProgress() {
     void progressBarFill.offsetWidth;
     progressBarFill.classList.add("progress-glow");
     const session = gameState.sessionId;
-    setTimeout(() => { if (session === gameState.sessionId) progressBarFill.classList.remove("progress-glow"); }, 350);
+    setTimeout(() => {
+      if (session === gameState.sessionId)
+        progressBarFill.classList.remove("progress-glow");
+    }, 350);
   }
 
-  const modeLabel = gameState.gameType === "flag" ? "Flags"
-    : gameState.gameType === "capital" ? "Capitals"
-    : regionLabel();
-  if (progressLabel) progressLabel.textContent = `${count} / ${total} ${modeLabel}`;
+  const modeLabel =
+    gameState.gameType === "flag" || gameState.gameType === "flagChoice"
+      ? "Flags"
+      : gameState.gameType === "capital" ||
+          gameState.gameType === "capitalChoice"
+        ? "Capitals"
+        : regionLabel();
+  if (progressLabel)
+    progressLabel.textContent = `${count} / ${total} ${modeLabel}`;
 }
-
 
 /* ============================================================
    ANIMATED SCORE COUNTER
@@ -201,6 +264,10 @@ function updateProgress() {
 let _scoreAnimRaf = null;
 
 function animateCounter(el, oldVal, newVal) {
+  if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+    el.textContent = newVal;
+    return;
+  }
   if (_scoreAnimRaf) cancelAnimationFrame(_scoreAnimRaf);
   const session = gameState.sessionId;
   const duration = 300;
@@ -211,11 +278,13 @@ function animateCounter(el, oldVal, newVal) {
     const eased = t * (2 - t); // ease-out quad
     el.textContent = Math.round(oldVal + (newVal - oldVal) * eased);
     if (t < 1) _scoreAnimRaf = requestAnimationFrame(step);
-    else { el.textContent = newVal; _scoreAnimRaf = null; }
+    else {
+      el.textContent = newVal;
+      _scoreAnimRaf = null;
+    }
   }
   _scoreAnimRaf = requestAnimationFrame(step);
 }
-
 
 /* ============================================================
    ANIMATED WIN STAT VALUE
@@ -236,7 +305,6 @@ function animateValue(el, start, end, duration, formatter) {
   requestAnimationFrame(step);
 }
 
-
 /* ============================================================
    MAP PINS — placed after correct guess
    ============================================================ */
@@ -250,40 +318,117 @@ function placePin(name) {
   try {
     const bbox = path.getBBox();
     if (!bbox || (bbox.width === 0 && bbox.height === 0)) return;
-    const x = bbox.x + bbox.width  / 2;
+    const x = bbox.x + bbox.width / 2;
     const y = bbox.y + bbox.height / 2;
-    const pin = svgDoc.createElementNS("http://www.w3.org/2000/svg", "text");
+    const svgRoot = getSvgRoot(svgDoc);
+    if (!svgRoot) return;
+    const pin = svgRoot.ownerDocument.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "text",
+    );
     pin.setAttribute("x", x);
     pin.setAttribute("y", y);
     pin.setAttribute("text-anchor", "middle");
     pin.setAttribute("dominant-baseline", "middle");
     pin.setAttribute("class", "map-pin");
     pin.textContent = "✓";
-    svgDoc.documentElement.appendChild(pin);
+    svgRoot.appendChild(pin);
     mapPins.push(pin);
-  } catch(e) {}
+  } catch (e) {}
 }
 
 function clearPins() {
-  mapPins.forEach(p => { try { p.remove(); } catch(e) {} });
+  mapPins.forEach((p) => {
+    try {
+      p.remove();
+    } catch (e) {}
+  });
   mapPins = [];
 }
-
 
 /* ============================================================
    FEEDBACK
    ============================================================ */
 function showFeedback(message, type = "") {
-  display.feedback.textContent = message;
-  display.feedback.className = type;
+  const choiceMode =
+    gameState.gameType === "flagChoice" ||
+    gameState.gameType === "capitalChoice";
+  display.feedback.textContent = choiceMode ? "" : message;
+  display.feedback.className = choiceMode ? "" : type;
+  if (display.choiceFeedback) {
+    display.choiceFeedback.textContent = choiceMode ? message : "";
+    display.choiceFeedback.className = choiceMode ? type : "";
+  }
 }
 
+function buildLearningRecord(prompt, answer) {
+  const fallback = {
+    prompt,
+    answer,
+    sourceStatus: "not-approved",
+    sourceNote: "",
+  };
+  return (
+    window.MapMasterGameplay?.buildLearningRecord?.(prompt, answer) || fallback
+  );
+}
+
+function showLearningCue(prompt, answer) {
+  if (!learningCue || !learningPrompt || !learningAnswer || !learningSource)
+    return;
+  const record = buildLearningRecord(prompt, answer);
+  learningPrompt.textContent = record.prompt;
+  learningAnswer.textContent = record.answer
+    ? `Correct answer: ${record.answer}`
+    : "Answer unavailable for this attempt.";
+  learningSource.textContent = record.sourceNote;
+  learningSource.classList.toggle("hidden", !record.sourceNote);
+  learningCue.classList.remove("hidden");
+}
+
+function showLearningCueLocked() {
+  if (!learningCue || !learningPrompt || !learningAnswer || !learningSource)
+    return;
+  learningPrompt.textContent =
+    "Identify the current prompt to unlock a country fact.";
+  learningAnswer.textContent = "";
+  learningSource.textContent = "";
+  learningSource.classList.add("hidden");
+  learningCue.classList.remove("hidden");
+}
+
+function hideLearningCue() {
+  learningCue?.classList.add("hidden");
+}
+
+function clearLearningCue() {
+  hideLearningCue();
+  if (learningPrompt) learningPrompt.textContent = "";
+  if (learningAnswer) learningAnswer.textContent = "";
+  if (learningSource) {
+    learningSource.textContent = "";
+    learningSource.classList.add("hidden");
+  }
+}
+
+function hideLearningReview() {
+  learningReview?.classList.add("hidden");
+}
 
 /* ============================================================
    SVG HELPERS
    ============================================================ */
 function getSvgDoc() {
-  return indiaMap.contentDocument;
+  return window.__mapmasterCandidateSvg || indiaMap.contentDocument;
+}
+
+function getSvgRoot(svgDoc = getSvgDoc()) {
+  if (!svgDoc) return null;
+  return svgDoc.documentElement?.localName === "svg"
+    ? svgDoc.documentElement
+    : svgDoc.localName === "svg"
+      ? svgDoc
+      : null;
 }
 
 /* ============================================================
@@ -293,99 +438,196 @@ function getSvgDoc() {
    ============================================================ */
 const SVG_ALIASES = {
   // India — legacy/alternate spellings in SVG
-  "Uttranchal":          "Uttarakhand",
-  "Uttaranchal":         "Uttarakhand",
-  "Orissa":              "Odisha",
-  "Pondicherry":         "Puducherry",
-  "Andaman & Nicobar":   "Andaman and Nicobar Islands",
+  Uttranchal: "Uttarakhand",
+  Uttaranchal: "Uttarakhand",
+  Orissa: "Odisha",
+  Pondicherry: "Puducherry",
+  "Andaman & Nicobar": "Andaman and Nicobar Islands",
   "Andaman and Nicobar": "Andaman and Nicobar Islands",
-  "Dadra & Nagar Haveli":"Dadra and Nagar Haveli and Daman and Diu",
-  "Daman & Diu":         "Dadra and Nagar Haveli and Daman and Diu",
+  "Dadra & Nagar Haveli": "Dadra and Nagar Haveli and Daman and Diu",
+  "Daman & Diu": "Dadra and Nagar Haveli and Daman and Diu",
   // Diacritic variant used in some India SVGs
-  "Dādra and Nagar Haveli and Damān and Diu": "Dadra and Nagar Haveli and Daman and Diu",
+  "Dādra and Nagar Haveli and Damān and Diu":
+    "Dadra and Nagar Haveli and Daman and Diu",
   // China
-  "Quinghai":            "Qinghai",
-  "Xizang (Tibet) ":     "Xizang (Tibet)",
+  Quinghai: "Qinghai",
+  "Xizang (Tibet) ": "Xizang (Tibet)",
   // Australia (multi-path fragments → canonical state name)
-  "Northern Territory Mainland":       "Northern Territory",
+  "Northern Territory Mainland": "Northern Territory",
   "Northern Territory Groote Eylandt": "Northern Territory",
-  "Northern Territory Melville Island":"Northern Territory",
-  "Queensland Mainland":               "Queensland",
-  "Queensland Fraser Island":          "Queensland",
-  "Queensland Mornington Island":      "Queensland",
-  "South Australia Mainland":          "South Australia",
-  "South Australia Kangaroo Island":   "South Australia",
-  "Tasmania Mainland":                 "Tasmania",
-  "Tasmania Flinders Island":          "Tasmania",
-  "Tasmania Cape Barren":              "Tasmania",
-  "Tasmania King Currie Island":       "Tasmania",
+  "Northern Territory Melville Island": "Northern Territory",
+  "Queensland Mainland": "Queensland",
+  "Queensland Fraser Island": "Queensland",
+  "Queensland Mornington Island": "Queensland",
+  "South Australia Mainland": "South Australia",
+  "South Australia Kangaroo Island": "South Australia",
+  "Tasmania Mainland": "Tasmania",
+  "Tasmania Flinders Island": "Tasmania",
+  "Tasmania Cape Barren": "Tasmania",
+  "Tasmania King Currie Island": "Tasmania",
   // Africa — ISO 2-letter IDs → country names
-  "AO":"Angola",        "BF":"Burkina Faso",     "BI":"Burundi",
-  "BJ":"Benin",         "BW":"Botswana",          "CD":"Democratic Republic of Congo",
-  "CF":"Central African Republic",                "CG":"Republic of Congo",
-  "CI":"Côte d'Ivoire", "CM":"Cameroon",          "CV":"Cape Verde",
-  "DJ":"Djibouti",      "DZ":"Algeria",           "EG":"Egypt",
-  "ER":"Eritrea",       "ET":"Ethiopia",           "GA":"Gabon",
-  "GH":"Ghana",         "GM":"Gambia",             "GN":"Guinea",
-  "GQ":"Equatorial Guinea",                        "GW":"Guinea-Bissau",
-  "KE":"Kenya",         "KM":"Comoros",            "LR":"Liberia",
-  "LS":"Lesotho",       "LY":"Libya",              "MA":"Morocco",
-  "MG":"Madagascar",    "ML":"Mali",               "MR":"Mauritania",
-  "MU":"Mauritius",     "MW":"Malawi",             "MZ":"Mozambique",
-  "NA":"Namibia",       "NE":"Niger",              "NG":"Nigeria",
-  "RW":"Rwanda",        "SC":"Seychelles",         "SD":"Sudan",
-  "SL":"Sierra Leone",  "SN":"Senegal",            "SO":"Somalia",
-  "SS":"South Sudan",   "ST":"Sao Tome and Principe", "SZ":"Swaziland",
-  "TD":"Chad",          "TG":"Togo",               "TN":"Tunisia",
-  "TZ":"Tanzania",      "UG":"Uganda",             "ZA":"South Africa",
-  "ZM":"Zambia",        "ZW":"Zimbabwe",
+  AO: "Angola",
+  BF: "Burkina Faso",
+  BI: "Burundi",
+  BJ: "Benin",
+  BW: "Botswana",
+  CD: "Democratic Republic of Congo",
+  CF: "Central African Republic",
+  CG: "Republic of Congo",
+  CI: "Côte d'Ivoire",
+  CM: "Cameroon",
+  CV: "Cape Verde",
+  DJ: "Djibouti",
+  DZ: "Algeria",
+  EG: "Egypt",
+  ER: "Eritrea",
+  ET: "Ethiopia",
+  GA: "Gabon",
+  GH: "Ghana",
+  GM: "Gambia",
+  GN: "Guinea",
+  GQ: "Equatorial Guinea",
+  GW: "Guinea-Bissau",
+  KE: "Kenya",
+  KM: "Comoros",
+  LR: "Liberia",
+  LS: "Lesotho",
+  LY: "Libya",
+  MA: "Morocco",
+  MG: "Madagascar",
+  ML: "Mali",
+  MR: "Mauritania",
+  MU: "Mauritius",
+  MW: "Malawi",
+  MZ: "Mozambique",
+  NA: "Namibia",
+  NE: "Niger",
+  NG: "Nigeria",
+  RW: "Rwanda",
+  SC: "Seychelles",
+  SD: "Sudan",
+  SL: "Sierra Leone",
+  SN: "Senegal",
+  SO: "Somalia",
+  SS: "South Sudan",
+  ST: "Sao Tome and Principe",
+  SZ: "Swaziland",
+  TD: "Chad",
+  TG: "Togo",
+  TN: "Tunisia",
+  TZ: "Tanzania",
+  UG: "Uganda",
+  ZA: "South Africa",
+  ZM: "Zambia",
+  ZW: "Zimbabwe",
   // Europe — ISO 2-letter IDs → country names
-  "AL":"Albania",       "AT":"Austria",            "AZ":"Azerbaijan",
-  "BA":"Bosnia and Herzegovina",                   "BE":"Belgium",
-  "BG":"Bulgaria",      "BY":"Belarus",            "CH":"Switzerland",
-  "CY":"Cyprus",        "CZ":"Czech Republic",     "DE":"Germany",
-  "DK":"Denmark",       "EE":"Estonia",            "ES":"Spain",
-  "FI":"Finland",       "FR":"France",             "GB":"United Kingdom",
-  "GE":"Georgia",       "GR":"Greece",             "HR":"Croatia",
-  "HU":"Hungary",       "IE":"Ireland",            "IS":"Iceland",
-  "IT":"Italy",         "KZ":"Kazakhstan",         "LT":"Lithuania",
-  "LU":"Luxembourg",    "LV":"Latvia",             "MD":"Moldova",
-  "ME":"Montenegro",    "MK":"North Macedonia",    "MT":"Malta",
-  "NL":"Netherlands",   "NO":"Norway",             "PL":"Poland",
-  "PT":"Portugal",      "RO":"Romania",            "RS":"Serbia",
-  "RU":"Russia",        "SE":"Sweden",             "SI":"Slovenia",
-  "SK":"Slovakia",      "TR":"Turkey",             "UA":"Ukraine",
-  "AM":"Armenia",
+  AL: "Albania",
+  AT: "Austria",
+  AZ: "Azerbaijan",
+  BA: "Bosnia and Herzegovina",
+  BE: "Belgium",
+  BG: "Bulgaria",
+  BY: "Belarus",
+  CH: "Switzerland",
+  CY: "Cyprus",
+  CZ: "Czech Republic",
+  DE: "Germany",
+  DK: "Denmark",
+  EE: "Estonia",
+  ES: "Spain",
+  FI: "Finland",
+  FR: "France",
+  GB: "United Kingdom",
+  GE: "Georgia",
+  GR: "Greece",
+  HR: "Croatia",
+  HU: "Hungary",
+  IE: "Ireland",
+  IS: "Iceland",
+  IT: "Italy",
+  KZ: "Kazakhstan",
+  LT: "Lithuania",
+  LU: "Luxembourg",
+  LV: "Latvia",
+  MD: "Moldova",
+  ME: "Montenegro",
+  MK: "North Macedonia",
+  MT: "Malta",
+  NL: "Netherlands",
+  NO: "Norway",
+  PL: "Poland",
+  PT: "Portugal",
+  RO: "Romania",
+  RS: "Serbia",
+  RU: "Russia",
+  SE: "Sweden",
+  SI: "Slovenia",
+  SK: "Slovakia",
+  TR: "Turkey",
+  UA: "Ukraine",
+  AM: "Armenia",
   // North America — ISO 2-letter IDs → country names
-  "AG":"Antigua and Barbuda",                      "BB":"Barbados",
-  "BZ":"Belize",        "CA":"Canada",             "CR":"Costa Rica",
-  "CU":"Cuba",          "DM":"Dominica",           "DO":"Dominican Republic",
-  "GD":"Grenada",       "GT":"Guatemala",          "HN":"Honduras",
-  "HT":"Haiti",         "JM":"Jamaica",            "KN":"Saint Kitts and Nevis",
-  "LC":"Saint Lucia",   "MX":"Mexico",             "NI":"Nicaragua",
-  "PA":"Panama",        "SV":"El Salvador",        "TT":"Trinidad and Tobago",
-  "US":"United States", "VC":"Saint Vincent and the Grenadines",
-  "BS":"Bahamas",
+  AG: "Antigua and Barbuda",
+  BB: "Barbados",
+  BZ: "Belize",
+  CA: "Canada",
+  CR: "Costa Rica",
+  CU: "Cuba",
+  DM: "Dominica",
+  DO: "Dominican Republic",
+  GD: "Grenada",
+  GT: "Guatemala",
+  HN: "Honduras",
+  HT: "Haiti",
+  JM: "Jamaica",
+  KN: "Saint Kitts and Nevis",
+  LC: "Saint Lucia",
+  MX: "Mexico",
+  NI: "Nicaragua",
+  PA: "Panama",
+  SV: "El Salvador",
+  TT: "Trinidad and Tobago",
+  US: "United States",
+  VC: "Saint Vincent and the Grenadines",
+  BS: "Bahamas",
   // Oceania — ISO 2-letter IDs → country names
-  "AU":"Australia",     "FJ":"Fiji",               "FM":"Federated States of Micronesia",
-  "KI":"Kiribati",      "MH":"Marshall Islands",   "NR":"Nauru",
-  "NZ":"New Zealand",   "PG":"Papua New Guinea",   "PW":"Palau",
-  "SB":"Solomon Islands","TO":"Tonga",             "TV":"Tuvalu",
-  "VU":"Vanuatu",       "WS":"Samoa",              "TL":"Timor-Leste",
+  AU: "Australia",
+  FJ: "Fiji",
+  FM: "Federated States of Micronesia",
+  KI: "Kiribati",
+  MH: "Marshall Islands",
+  NR: "Nauru",
+  NZ: "New Zealand",
+  PG: "Papua New Guinea",
+  PW: "Palau",
+  SB: "Solomon Islands",
+  TO: "Tonga",
+  TV: "Tuvalu",
+  VU: "Vanuatu",
+  WS: "Samoa",
+  TL: "Timor-Leste",
   // South America — ISO 2-letter IDs → country names
-  "AR":"Argentina",     "BO":"Bolivia",            "BR":"Brazil",
-  "CL":"Chile",         "CO":"Colombia",           "EC":"Ecuador",
-  "GY":"Guyana",        "PE":"Peru",               "PY":"Paraguay",
-  "SR":"Suriname",      "UY":"Uruguay",            "VE":"Venezuela",
+  AR: "Argentina",
+  BO: "Bolivia",
+  BR: "Brazil",
+  CL: "Chile",
+  CO: "Colombia",
+  EC: "Ecuador",
+  GY: "Guyana",
+  PE: "Peru",
+  PY: "Paraguay",
+  SR: "Suriname",
+  UY: "Uruguay",
+  VE: "Venezuela",
   // World SVG uses different names for some countries
-  "Brunei Darussalam":                 "Brunei",
-  "Cape Verde":                        "Cabo Verde",
-  "Republic of Congo":                 "Congo",
-  "Lao People's Democratic Republic":  "Laos",
-  "Federated States of Micronesia":    "Micronesia",
-  "Macedonia":                         "North Macedonia",
-  "Palestinian Territories":           "Palestine",
-  "Swaziland":                         "Eswatini",
+  "Brunei Darussalam": "Brunei",
+  "Cape Verde": "Cabo Verde",
+  "Republic of Congo": "Congo",
+  "Lao People's Democratic Republic": "Laos",
+  "Federated States of Micronesia": "Micronesia",
+  Macedonia: "North Macedonia",
+  "Palestinian Territories": "Palestine",
+  Swaziland: "Eswatini",
 };
 
 // Reverse map: canonical name → all SVG aliases for it
@@ -399,27 +641,37 @@ function getPathByName(name) {
   const svgDoc = getSvgDoc();
   if (!svgDoc) return null;
 
+  const candidateRoot = getSvgRoot(svgDoc);
+  if (candidateRoot?.dataset?.mapmasterCandidate === "true") {
+    const group = [
+      ...candidateRoot.querySelectorAll("g[data-display-name]"),
+    ].find((item) => item.dataset.displayName === name);
+    return group?.querySelector("path") || null;
+  }
+
   // Try canonical name first
-  const direct = svgDoc.querySelector(`[aria-label="${name}"]`)
-      || svgDoc.querySelector(`[name="${name}"]`)
-      || svgDoc.querySelector(`[id="${name}"]`)
-      || svgDoc.querySelector(`[data-name="${name}"]`)
-      || svgDoc.querySelector(`[title="${name}"]`)
-      || (() => {
-           const titles = svgDoc.querySelectorAll("path > title");
-           for (const t of titles) {
-             if (t.textContent.trim() === name) return t.parentElement;
-           }
-           return null;
-         })();
+  const direct =
+    svgDoc.querySelector(`[aria-label="${name}"]`) ||
+    svgDoc.querySelector(`[name="${name}"]`) ||
+    svgDoc.querySelector(`[id="${name}"]`) ||
+    svgDoc.querySelector(`[data-name="${name}"]`) ||
+    svgDoc.querySelector(`[title="${name}"]`) ||
+    (() => {
+      const titles = svgDoc.querySelectorAll("path > title");
+      for (const t of titles) {
+        if (t.textContent.trim() === name) return t.parentElement;
+      }
+      return null;
+    })();
   if (direct) return direct;
 
   // Try known SVG aliases for this canonical name
   const aliases = SVG_ALIASES_REVERSE[name] || [];
   for (const alias of aliases) {
-    const el = svgDoc.querySelector(`[aria-label="${alias}"]`)
-            || svgDoc.querySelector(`[name="${alias}"]`)
-            || svgDoc.querySelector(`[id="${alias}"]`);
+    const el =
+      svgDoc.querySelector(`[aria-label="${alias}"]`) ||
+      svgDoc.querySelector(`[name="${alias}"]`) ||
+      svgDoc.querySelector(`[id="${alias}"]`);
     if (el) return el;
   }
 
@@ -427,18 +679,21 @@ function getPathByName(name) {
   try {
     const byId = svgDoc.querySelector(`#${CSS.escape(name)}`);
     if (byId) return byId;
-  } catch(e) {}
+  } catch (e) {}
 
   return null;
 }
 
 function getRegionName(path) {
-  const raw = path.getAttribute("aria-label")
-      || path.getAttribute("name")
-      || path.getAttribute("data-name")
-      || path.getAttribute("title")
-      || path.getAttribute("id")
-      || (path.querySelector("title") ? path.querySelector("title").textContent.trim() : null);
+  const raw =
+    path.getAttribute("aria-label") ||
+    path.getAttribute("name") ||
+    path.getAttribute("data-name") ||
+    path.getAttribute("title") ||
+    path.getAttribute("id") ||
+    (path.querySelector("title")
+      ? path.querySelector("title").textContent.trim()
+      : null);
   if (!raw) return null;
   // Translate SVG label → canonical display name if an alias exists
   return SVG_ALIASES[raw.trim()] || raw;
@@ -447,17 +702,34 @@ function getRegionName(path) {
 function colorState(name, color, animate = false) {
   const path = getPathByName(name);
   if (!path) return;
-  path.style.fill = color;
+  const candidateRoot = getSvgRoot();
+  const candidateGroup =
+    candidateRoot?.dataset?.mapmasterCandidate === "true"
+      ? [...candidateRoot.querySelectorAll("g[data-display-name]")].find(
+          (item) => item.dataset.displayName === name,
+        )
+      : null;
+  const paths = candidateGroup
+    ? candidateGroup.querySelectorAll("path")
+    : [path];
+  paths.forEach((item) => {
+    item.style.fill = color;
+  });
   if (animate) {
     const svgDoc = getSvgDoc();
     if (svgDoc) {
-      const svgRoot = svgDoc.documentElement;
-      const flashClass = color === "#8b5cf6" ? "ut-correct-flash" : "state-correct-flash";
+      const svgRoot = getSvgRoot(svgDoc);
+      if (!svgRoot) return;
+      const flashClass =
+        color === "#8b5cf6" ? "ut-correct-flash" : "state-correct-flash";
       svgRoot.classList.remove("state-correct-flash", "ut-correct-flash");
       void svgRoot.offsetWidth;
       svgRoot.classList.add(flashClass);
       const session = gameState.sessionId;
-      setTimeout(() => { if (session === gameState.sessionId) svgRoot.classList.remove(flashClass); }, 450);
+      setTimeout(() => {
+        if (session === gameState.sessionId)
+          svgRoot.classList.remove(flashClass);
+      }, 450);
     }
   }
 }
@@ -473,71 +745,83 @@ function flashRed(name) {
     void wrapper.offsetWidth;
     wrapper.classList.add("map-shake");
     const session = gameState.sessionId;
-    setTimeout(() => { if (session === gameState.sessionId) wrapper.classList.remove("map-shake"); }, 400);
+    setTimeout(() => {
+      if (session === gameState.sessionId)
+        wrapper.classList.remove("map-shake");
+    }, 400);
   }
   const session = gameState.sessionId;
-  setTimeout(() => { if (session === gameState.sessionId && gameState.phase === "active") path.style.fill = original; }, 600);
+  setTimeout(() => {
+    if (session === gameState.sessionId && gameState.phase === "active")
+      path.style.fill = original;
+  }, 600);
 
   // Show floating wrong-region label
   if (name) {
     try {
-      const bbox     = path.getBBox();
-      const svgEl    = document.getElementById("indiaMap");
-      const rect     = svgEl.getBoundingClientRect();
-      const svgDoc   = getSvgDoc();
-      const svgRoot  = svgDoc?.documentElement;
-      const vb       = svgRoot?.viewBox?.baseVal;
+      const bbox = path.getBBox();
+      const svgEl = document.getElementById("indiaMap");
+      const rect = svgEl.getBoundingClientRect();
+      const svgDoc = getSvgDoc();
+      const svgRoot = getSvgRoot(svgDoc);
+      const vb = svgRoot?.viewBox?.baseVal;
       if (vb && vb.width > 0) {
-        const scaleX = rect.width  / vb.width;
+        const scaleX = rect.width / vb.width;
         const scaleY = rect.height / vb.height;
-        const cx = rect.left + (bbox.x + bbox.width  / 2 - vb.x) * scaleX;
-        const cy = rect.top  + (bbox.y + bbox.height / 2 - vb.y) * scaleY;
+        const cx = rect.left + (bbox.x + bbox.width / 2 - vb.x) * scaleX;
+        const cy = rect.top + (bbox.y + bbox.height / 2 - vb.y) * scaleY;
         const label = document.createElement("div");
         label.className = "wrong-region-label";
         label.textContent = name;
         label.style.left = cx + "px";
-        label.style.top  = cy + "px";
+        label.style.top = cy + "px";
         document.body.appendChild(label);
         setTimeout(() => label.remove(), 1500);
       }
-    } catch(e) {}
+    } catch (e) {}
   }
 }
 
 function resetMapStyles() {
   const svgDoc = getSvgDoc();
   if (!svgDoc) return;
-  const fill   = darkMode ? "#2d4a6e" : "#e2d9d0";
+  const fill = darkMode ? "#2d4a6e" : "#e2d9d0";
   const stroke = darkMode ? "#5b8ab0" : "#b8a89e";
-  svgDoc.querySelectorAll("path").forEach(path => {
-    path.style.fill   = fill;
+  svgDoc.querySelectorAll("path").forEach((path) => {
+    path.style.fill = fill;
     path.style.stroke = stroke;
   });
   clearPins();
 }
 
-
 /* ============================================================
    UTILITY
    ============================================================ */
 function formatTime(seconds) {
-  const m = Math.floor(seconds / 60).toString().padStart(2, "0");
+  const m = Math.floor(seconds / 60)
+    .toString()
+    .padStart(2, "0");
   const s = (seconds % 60).toString().padStart(2, "0");
   return `${m}:${s}`;
 }
 
 function getElapsedTime() {
-  return Math.max(0, Math.floor((performance.now() - gameState.startedAt) / 1000));
+  return Math.max(
+    0,
+    Math.floor((performance.now() - gameState.startedAt) / 1000),
+  );
 }
 
 function pickRandomState() {
-  const remaining = CURRENT_REGIONS.filter(s => !gameState.guessedStates.includes(s));
+  const pool =
+    gameState.gameType === "locate" ? getLocateRegions() : CURRENT_REGIONS;
+  const remaining = pool.filter((s) => !gameState.guessedStates.includes(s));
   if (remaining.length === 0) return null;
   return remaining[Math.floor(Math.random() * remaining.length)];
 }
 
 function setSelectedBtn(group, selectedBtn) {
-  group.forEach(btn => btn.classList.remove("selected"));
+  group.forEach((btn) => btn.classList.remove("selected"));
   selectedBtn.classList.add("selected");
   selectedBtn.classList.remove("btn-pop");
   void selectedBtn.offsetWidth;
@@ -552,37 +836,48 @@ function clearTimer() {
   }
 }
 
-
 /* ============================================================
    CONFETTI
    ============================================================ */
 function launchConfetti() {
-  if (!confettiCanvas) return;
+  if (
+    !confettiCanvas ||
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+  )
+    return;
   confettiCanvas.classList.remove("hidden");
-  confettiCanvas.width  = window.innerWidth;
+  confettiCanvas.width = window.innerWidth;
   confettiCanvas.height = window.innerHeight;
 
-  const ctx      = confettiCanvas.getContext("2d");
-  const COLORS   = ["#E8604A","#2D9E6B","#F0C040","#FFFFFF","#F0826D","#60A8E8","#C94A34"];
-  const COUNT    = 160;
-  const DURATION = 5000;
-  const startTs  = performance.now();
-  let   rafId    = null;
+  const ctx = confettiCanvas.getContext("2d");
+  const COLORS = [
+    "#1558C9",
+    "#32CD32",
+    "#1A1A1A",
+    "#FFFFFF",
+    "#7ba8ee",
+    "#b9f2b9",
+    "#5a5a5a",
+  ];
+  const COUNT = 96;
+  const DURATION = 3000;
+  const startTs = performance.now();
+  let rafId = null;
 
   const particles = Array.from({ length: COUNT }, () => ({
-    x:     Math.random() * confettiCanvas.width,
-    y:     Math.random() * confettiCanvas.height * -1,
-    w:     6  + Math.random() * 9,
-    h:     10 + Math.random() * 6,
+    x: Math.random() * confettiCanvas.width,
+    y: Math.random() * confettiCanvas.height * -1,
+    w: 6 + Math.random() * 9,
+    h: 10 + Math.random() * 6,
     color: COLORS[Math.floor(Math.random() * COLORS.length)],
-    vx:    (Math.random() - 0.5) * 3,
-    vy:    2  + Math.random() * 4,
+    vx: (Math.random() - 0.5) * 3,
+    vy: 2 + Math.random() * 4,
     angle: Math.random() * Math.PI * 2,
-    spin:  (Math.random() - 0.5) * 0.2,
+    spin: (Math.random() - 0.5) * 0.2,
   }));
 
   function onResize() {
-    confettiCanvas.width  = window.innerWidth;
+    confettiCanvas.width = window.innerWidth;
     confettiCanvas.height = window.innerHeight;
   }
   window.addEventListener("resize", onResize);
@@ -590,10 +885,13 @@ function launchConfetti() {
   function draw(ts) {
     const elapsed = ts - startTs;
     ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-    const alpha = elapsed > DURATION - 1000 ? Math.max(0, (DURATION - elapsed) / 1000) : 1;
+    const alpha =
+      elapsed > DURATION - 1000 ? Math.max(0, (DURATION - elapsed) / 1000) : 1;
 
-    particles.forEach(p => {
-      p.x += p.vx; p.y += p.vy; p.angle += p.spin;
+    particles.forEach((p) => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.angle += p.spin;
       if (p.y > confettiCanvas.height + 20) {
         p.y = -20;
         p.x = Math.random() * confettiCanvas.width;
@@ -620,13 +918,16 @@ function launchConfetti() {
   rafId = requestAnimationFrame(draw);
 }
 
-
 /* ============================================================
    THEME TOGGLE — initialise on load
    ============================================================ */
 let darkMode = false;
 let savedTheme = null;
-try { savedTheme = localStorage.getItem("mapmaster-theme"); } catch (_) { /* Storage may be unavailable; keep the default. */ }
+try {
+  savedTheme = localStorage.getItem("mapmaster-theme");
+} catch (_) {
+  /* Storage may be unavailable; keep the default. */
+}
 if (savedTheme === "dark") {
   darkMode = true;
   document.body.classList.add("dark-theme");

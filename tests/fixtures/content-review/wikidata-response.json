@@ -1,0 +1,33 @@
+{
+  "head": {"vars": ["country", "countryLabel", "property", "statement", "value", "valueLabel", "qualifierProperty", "qualifierValue"]},
+  "results": {
+    "bindings": [
+      {
+        "country": {"type": "uri", "value": "http://www.wikidata.org/entity/Q668"},
+        "countryLabel": {"type": "literal", "xml:lang": "en", "value": "India"},
+        "property": {"type": "uri", "value": "http://www.wikidata.org/entity/P36"},
+        "statement": {"type": "uri", "value": "http://www.wikidata.org/entity/statement/Q668-1"},
+        "value": {"type": "uri", "value": "http://www.wikidata.org/entity/Q987"},
+        "valueLabel": {"type": "literal", "xml:lang": "en", "value": "New Delhi"},
+        "qualifierProperty": {"type": "uri", "value": "http://www.wikidata.org/prop/qualifier/P580"},
+        "qualifierValue": {"type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#dateTime", "value": "+1911-12-12T00:00:00Z"}
+      },
+      {
+        "country": {"type": "uri", "value": "http://www.wikidata.org/entity/Q668"},
+        "countryLabel": {"type": "literal", "xml:lang": "en", "value": "India"},
+        "property": {"type": "uri", "value": "http://www.wikidata.org/entity/P37"},
+        "statement": {"type": "uri", "value": "http://www.wikidata.org/entity/statement/Q668-2"},
+        "value": {"type": "uri", "value": "http://www.wikidata.org/entity/Q1103"},
+        "valueLabel": {"type": "literal", "xml:lang": "en", "value": "Hindi"}
+      },
+      {
+        "country": {"type": "uri", "value": "http://www.wikidata.org/entity/Q668"},
+        "countryLabel": {"type": "literal", "xml:lang": "en", "value": "India"},
+        "property": {"type": "uri", "value": "http://www.wikidata.org/entity/P37"},
+        "statement": {"type": "uri", "value": "http://www.wikidata.org/entity/statement/Q668-3"},
+        "value": {"type": "uri", "value": "http://www.wikidata.org/entity/Q1860"},
+        "valueLabel": {"type": "literal", "xml:lang": "en", "value": "English"}
+      }
+    ]
+  }
+}

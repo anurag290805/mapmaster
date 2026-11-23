@@ -1,5 +1,7 @@
 import {
   accuracy,
+  buildChoiceOptions,
+  buildLearningRecord,
   normalizeAnswer,
   remainingSeconds,
   resolveAnswer,
@@ -8,6 +10,8 @@ import {
 Object.assign(window, {
   MapMasterGameplay: {
     accuracy,
+    buildChoiceOptions,
+    buildLearningRecord,
     normalizeAnswer,
     remainingSeconds,
     resolveAnswer,

@@ -5,56 +5,107 @@
    Depends on: all other JS files.
    ============================================================ */
 
-
 /* ============================================================
    CHALLENGE SETTINGS — timer + lives selection
    ============================================================ */
-const timerButtons = document.querySelectorAll("#timerSection button[data-time]");
-const livesButtons = document.querySelectorAll("#livesSection button[data-lives]");
+const timerButtons = document.querySelectorAll(
+  "#timerSection button[data-time]",
+);
+const livesButtons = document.querySelectorAll(
+  "#livesSection button[data-lives]",
+);
 
-timerButtons.forEach(btn => {
+timerButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     gameState.selectedTime = parseInt(btn.dataset.time);
     setSelectedBtn([...timerButtons], btn);
   });
 });
 
-livesButtons.forEach(btn => {
+livesButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     gameState.selectedLives = parseInt(btn.dataset.lives);
     setSelectedBtn([...livesButtons], btn);
   });
 });
 
-
 /* ============================================================
    SETUP SCREEN — game type + mode
    ============================================================ */
-const gameTypeButtons = [buttons.typingMode, buttons.locateMode, buttons.flagMode, buttons.capitalMode];
+const gameTypeButtons = [
+  buttons.typingMode,
+  buttons.locateMode,
+  buttons.flagMode,
+  buttons.capitalMode,
+  buttons.capitalChoiceMode,
+  buttons.flagChoiceMode,
+];
 const gameModeButtons = [buttons.practiceMode, buttons.challengeMode];
 
-function validateHomeStart() {
-  if (homeStartBtn) homeStartBtn.disabled = !(gameState.gameType && gameState.gameMode);
+function isGameplayReady() {
+  return typeof window.MapMasterGameplay?.remainingSeconds === "function";
 }
 
-function updateGameTypeAvailability() {
-  const support = MAP_SUPPORT[currentMapKey] || { name: true, locate: true, flag: false, capital: false };
-  if (buttons.typingMode)  buttons.typingMode.disabled  = !support.name;
-  if (buttons.locateMode)  buttons.locateMode.disabled  = !support.locate;
-  if (buttons.flagMode)    buttons.flagMode.disabled    = !support.flag;
-  if (buttons.capitalMode) buttons.capitalMode.disabled = !support.capital;
+function validateHomeStart() {
+  if (!homeStartBtn) return;
+  const configured = gameState.gameType && gameState.gameMode;
+  homeStartBtn.disabled = !(configured && isGameplayReady());
+  const notice = document.getElementById("setupNotice");
+  if (notice)
+    notice.textContent =
+      configured && !isGameplayReady() ? "Loading game engine…" : "";
+}
 
-  if (gameState.gameType === "flag"    && !support.flag)    { gameState.gameType = null; buttons.flagMode?.classList.remove("selected"); }
-  if (gameState.gameType === "capital" && !support.capital) { gameState.gameType = null; buttons.capitalMode?.classList.remove("selected"); }
+document.addEventListener("mapmaster:gameplay-ready", validateHomeStart);
+
+function updateGameTypeAvailability() {
+  const support = MAP_SUPPORT[currentMapKey] || {
+    name: true,
+    locate: true,
+    flag: false,
+    capital: false,
+  };
+  if (buttons.typingMode) buttons.typingMode.disabled = !support.name;
+  if (buttons.locateMode) buttons.locateMode.disabled = !support.locate;
+  if (buttons.flagMode) buttons.flagMode.disabled = !support.flag;
+  if (buttons.capitalMode) buttons.capitalMode.disabled = !support.capital;
+  if (buttons.flagChoiceMode) buttons.flagChoiceMode.disabled = !support.flag;
+  if (buttons.capitalChoiceMode)
+    buttons.capitalChoiceMode.disabled = !support.capital;
+
+  if (gameState.gameType === "flag" && !support.flag) {
+    gameState.gameType = null;
+    buttons.flagMode?.classList.remove("selected");
+  }
+  if (gameState.gameType === "capital" && !support.capital) {
+    gameState.gameType = null;
+    buttons.capitalMode?.classList.remove("selected");
+  }
+  if (gameState.gameType === "flagChoice" && !support.flag) {
+    gameState.gameType = null;
+    buttons.flagChoiceMode?.classList.remove("selected");
+  }
+  if (gameState.gameType === "capitalChoice" && !support.capital) {
+    gameState.gameType = null;
+    buttons.capitalChoiceMode?.classList.remove("selected");
+  }
   validateHomeStart();
 }
 
 function updateLivesSectionVisibility() {
   if (!livesSection) return;
-  if (gameState.gameType === "typing" || gameState.gameType === "flag" || gameState.gameType === "capital") {
+  if (
+    gameState.gameType === "typing" ||
+    gameState.gameType === "flag" ||
+    gameState.gameType === "capital" ||
+    gameState.gameType === "flagChoice" ||
+    gameState.gameType === "capitalChoice"
+  ) {
     livesSection.classList.add("lives-hidden");
     gameState.selectedLives = null;
-    document.querySelectorAll("#livesSection button").forEach(b => b.classList.remove("selected"));
+    document
+      .querySelectorAll("#livesSection button")
+      .forEach((b) => b.classList.remove("selected"));
   } else {
     livesSection.classList.remove("lives-hidden");
   }
@@ -62,14 +113,20 @@ function updateLivesSectionVisibility() {
 
 buttons.typingMode.addEventListener("click", () => {
   gameState.gameType = "typing";
-  setSelectedBtn(gameTypeButtons.filter(b => b), buttons.typingMode);
+  setSelectedBtn(
+    gameTypeButtons.filter((b) => b),
+    buttons.typingMode,
+  );
   updateLivesSectionVisibility();
   validateHomeStart();
 });
 
 buttons.locateMode.addEventListener("click", () => {
   gameState.gameType = "locate";
-  setSelectedBtn(gameTypeButtons.filter(b => b), buttons.locateMode);
+  setSelectedBtn(
+    gameTypeButtons.filter((b) => b),
+    buttons.locateMode,
+  );
   updateLivesSectionVisibility();
   validateHomeStart();
 });
@@ -77,7 +134,10 @@ buttons.locateMode.addEventListener("click", () => {
 if (buttons.flagMode) {
   buttons.flagMode.addEventListener("click", () => {
     gameState.gameType = "flag";
-    setSelectedBtn(gameTypeButtons.filter(b => b), buttons.flagMode);
+    setSelectedBtn(
+      gameTypeButtons.filter((b) => b),
+      buttons.flagMode,
+    );
     updateLivesSectionVisibility();
     validateHomeStart();
   });
@@ -86,7 +146,34 @@ if (buttons.flagMode) {
 if (buttons.capitalMode) {
   buttons.capitalMode.addEventListener("click", () => {
     gameState.gameType = "capital";
-    setSelectedBtn(gameTypeButtons.filter(b => b), buttons.capitalMode);
+    setSelectedBtn(
+      gameTypeButtons.filter((b) => b),
+      buttons.capitalMode,
+    );
+    updateLivesSectionVisibility();
+    validateHomeStart();
+  });
+}
+
+if (buttons.capitalChoiceMode) {
+  buttons.capitalChoiceMode.addEventListener("click", () => {
+    gameState.gameType = "capitalChoice";
+    setSelectedBtn(
+      gameTypeButtons.filter((b) => b),
+      buttons.capitalChoiceMode,
+    );
+    updateLivesSectionVisibility();
+    validateHomeStart();
+  });
+}
+
+if (buttons.flagChoiceMode) {
+  buttons.flagChoiceMode.addEventListener("click", () => {
+    gameState.gameType = "flagChoice";
+    setSelectedBtn(
+      gameTypeButtons.filter((b) => b),
+      buttons.flagChoiceMode,
+    );
     updateLivesSectionVisibility();
     validateHomeStart();
   });
@@ -110,13 +197,12 @@ if (homeStartBtn) {
     if (gameState.gameMode === "challenge") {
       showScreen("challenge");
     } else {
-      gameState.selectedTime  = null;
+      gameState.selectedTime = null;
       gameState.selectedLives = null;
       startGame();
     }
   });
 }
-
 
 /* ============================================================
    CHALLENGE SETTINGS — start game
@@ -130,21 +216,26 @@ buttons.startGame.addEventListener("click", () => {
     alert("Please select number of lives.");
     return;
   }
-  gameState.timeLeft  = gameState.selectedTime;
+  gameState.timeLeft = gameState.selectedTime;
   gameState.livesLeft = gameState.selectedLives || 0;
   startGame();
 });
 
-
 /* ============================================================
    SCOPE / NAVIGATION — start screen
    ============================================================ */
-const countryScopeBtn   = document.getElementById("countryScopeBtn");
+const countryScopeBtn = document.getElementById("countryScopeBtn");
 const continentScopeBtn = document.getElementById("continentScopeBtn");
-const worldScopeBtn     = document.getElementById("worldScopeBtn");
+const worldScopeBtn = document.getElementById("worldScopeBtn");
 
-if (countryScopeBtn)   countryScopeBtn.addEventListener("click",   () => showScreen("countrySelect", "forward"));
-if (continentScopeBtn) continentScopeBtn.addEventListener("click", () => showScreen("continentSelect", "forward"));
+if (countryScopeBtn)
+  countryScopeBtn.addEventListener("click", () =>
+    showScreen("countrySelect", "forward"),
+  );
+if (continentScopeBtn)
+  continentScopeBtn.addEventListener("click", () =>
+    showScreen("continentSelect", "forward"),
+  );
 if (worldScopeBtn) {
   worldScopeBtn.addEventListener("click", () => {
     applyMap("world");
@@ -153,16 +244,15 @@ if (worldScopeBtn) {
   });
 }
 
-
 /* ============================================================
    COUNTRY SELECT SCREEN
    ============================================================ */
-const countryButtons     = document.querySelectorAll(".country-btn");
+const countryButtons = document.querySelectorAll(".country-btn");
 const countryContinueBtn = document.getElementById("countryContinueBtn");
 
-countryButtons.forEach(btn => {
+countryButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    countryButtons.forEach(b => b.classList.remove("selected"));
+    countryButtons.forEach((b) => b.classList.remove("selected"));
     btn.classList.add("selected");
     applyMap(btn.dataset.country);
     if (countryContinueBtn) countryContinueBtn.disabled = false;
@@ -177,15 +267,14 @@ if (countryContinueBtn) {
   });
 }
 
-
 /* ============================================================
    CONTINENT SELECT SCREEN
    ============================================================ */
 const continentButtons = document.querySelectorAll(".continent-btn");
 
-continentButtons.forEach(btn => {
+continentButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    continentButtons.forEach(b => b.classList.remove("selected"));
+    continentButtons.forEach((b) => b.classList.remove("selected"));
     btn.classList.add("selected");
     applyMap(btn.dataset.continent);
     resetSetupSelections();
@@ -196,26 +285,31 @@ continentButtons.forEach(btn => {
 const continentBackBtn = document.getElementById("continentBackBtn");
 if (continentBackBtn) {
   continentBackBtn.addEventListener("click", () => {
-    continentButtons.forEach(b => b.classList.remove("selected"));
+    continentButtons.forEach((b) => b.classList.remove("selected"));
     showScreen("scope", "back");
   });
 }
-
 
 /* ============================================================
    BACK BUTTONS
    ============================================================ */
 let setupOrigin = "scope";
-document.addEventListener("mapmaster:screen", e => {
-  if (e.detail.screen === "setup" && ["scope", "countrySelect", "continentSelect"].includes(e.detail.from)) setupOrigin = e.detail.from;
+document.addEventListener("mapmaster:screen", (e) => {
+  if (
+    e.detail.screen === "setup" &&
+    ["scope", "countrySelect", "continentSelect"].includes(e.detail.from)
+  )
+    setupOrigin = e.detail.from;
 });
-const countryBackBtn   = document.getElementById("countryBackBtn");
-const setupBackBtn     = document.getElementById("setupBackBtn");
+const countryBackBtn = document.getElementById("countryBackBtn");
+const setupBackBtn = document.getElementById("setupBackBtn");
 const challengeBackBtn = document.getElementById("challengeBackBtn");
 
 if (countryBackBtn) {
   countryBackBtn.addEventListener("click", () => {
-    document.querySelectorAll(".country-btn").forEach(b => b.classList.remove("selected"));
+    document
+      .querySelectorAll(".country-btn")
+      .forEach((b) => b.classList.remove("selected"));
     const btn = document.getElementById("countryContinueBtn");
     if (btn) btn.disabled = true;
     showScreen("scope", "back");
@@ -233,42 +327,66 @@ if (challengeBackBtn) {
   challengeBackBtn.addEventListener("click", () => showScreen("setup", "back"));
 }
 
-
 /* ============================================================
    GAME SCREEN — input
    ============================================================ */
 buttons.submitAnswer.addEventListener("click", handleTypingSubmit);
-stateInput.addEventListener("keydown", e => { if (e.key === "Enter") handleTypingSubmit(); });
+stateInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") handleTypingSubmit();
+});
 
 const hintBtn = document.getElementById("hintBtn");
 if (hintBtn) hintBtn.addEventListener("click", () => useHint());
 
-
 /* ============================================================
    WIN / LOSE SCREENS
    ============================================================ */
-buttons.restart.addEventListener("click", () => showScreen("start"));
-buttons.retry.addEventListener("click",   () => showScreen("start"));
+buttons.restart.addEventListener("click", () => {
+  clearDailyContext();
+  showScreen("start");
+});
+buttons.retry.addEventListener("click", () => {
+  clearDailyContext();
+  showScreen("start");
+});
 
 const reviewBtn = document.getElementById("reviewBtn");
 if (reviewBtn) reviewBtn.addEventListener("click", () => enterReviewMode());
-
+const winReviewBtn = document.getElementById("winReviewBtn");
+if (winReviewBtn)
+  winReviewBtn.addEventListener("click", () => enterReviewMode());
 
 /* ============================================================
    HEADER ACTIONS
    ============================================================ */
 if (soundToggleBtn) {
-  soundToggleBtn.addEventListener("click", () => {
-    soundEnabled = !soundEnabled;
+  const syncSoundToggle = () => {
     soundToggleBtn.textContent = soundEnabled ? "🔊" : "🔇";
+    soundToggleBtn.setAttribute("aria-pressed", String(soundEnabled));
+    soundToggleBtn.setAttribute(
+      "aria-label",
+      soundEnabled ? "Mute sound" : "Unmute sound",
+    );
+    soundToggleBtn.title = soundEnabled ? "Mute sound" : "Unmute sound";
+  };
+  soundToggleBtn.addEventListener("click", () => {
+    soundEnabled = window.MapMasterAudio
+      ? window.MapMasterAudio.setEnabled(!soundEnabled)
+      : !soundEnabled;
+    syncSoundToggle();
   });
+  syncSoundToggle();
 }
 
 if (themeToggleBtn) {
   themeToggleBtn.addEventListener("click", () => {
     darkMode = !darkMode;
     document.body.classList.toggle("dark-theme", darkMode);
-    try { localStorage.setItem("mapmaster-theme", darkMode ? "dark" : "light"); } catch (_) { /* Theme remains usable for this session. */ }
+    try {
+      localStorage.setItem("mapmaster-theme", darkMode ? "dark" : "light");
+    } catch (_) {
+      /* Theme remains usable for this session. */
+    }
     themeToggleBtn.textContent = darkMode ? "☀️" : "🌙";
     applyMapThemeColors(); // live-update SVG colors
   });
@@ -277,110 +395,250 @@ if (themeToggleBtn) {
 if (headerRestartBtn) {
   headerRestartBtn.addEventListener("click", () => {
     clearTimer();
+    clearDailyContext();
     showScreen("start");
   });
 }
 
-
 /* ============================================================
    SVG LOAD HANDLER
    ============================================================ */
-indiaMap.addEventListener("load", () => {
-  svgLoaded = true;
-  const svgDoc = getSvgDoc();
-  if (!svgDoc) return;
+let mapGeneration = 0;
 
-  const svgRoot = svgDoc.documentElement;
+function bindMapDocument(object, generation, asset) {
+  object.addEventListener("error", () => {
+    if (object !== indiaMap || generation !== mapGeneration) return;
+    svgLoaded = false;
+    showFeedback(
+      "The map could not be loaded. Choose this edition again to retry.",
+      "wrong",
+    );
+  });
+  object.addEventListener("load", () => {
+    if (object !== indiaMap || generation !== mapGeneration) return;
+    const svgDoc = object.contentDocument;
+    const expected = new URL(asset, document.baseURI).href;
+    if (
+      !svgDoc ||
+      svgDoc.URL !== expected ||
+      svgDoc.documentElement?.localName !== "svg"
+    )
+      return;
+    svgLoaded = true;
 
-  // Auto-fit viewBox to actual path bounding box
-  try {
-    const allPaths = Array.from(svgDoc.querySelectorAll("path"));
-    if (allPaths.length > 0) {
-      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-      allPaths.forEach(p => {
-        try {
-          const bb = p.getBBox();
-          if (bb.width > 0 || bb.height > 0) {
-            minX = Math.min(minX, bb.x);
-            minY = Math.min(minY, bb.y);
-            maxX = Math.max(maxX, bb.x + bb.width);
-            maxY = Math.max(maxY, bb.y + bb.height);
-          }
-        } catch(e) {}
-      });
-      if (isFinite(minX)) {
-        const pad = (maxX - minX) * 0.02;
-        svgRoot.setAttribute("viewBox",
-          `${minX - pad} ${minY - pad} ${(maxX - minX) + pad * 2} ${(maxY - minY) + pad * 2}`
-        );
+    const svgRoot = svgDoc.documentElement;
+
+    // Auto-fit viewBox to actual path bounding box
+    try {
+      const allPaths = Array.from(svgDoc.querySelectorAll("path"));
+      if (allPaths.length > 0) {
+        let minX = Infinity,
+          minY = Infinity,
+          maxX = -Infinity,
+          maxY = -Infinity;
+        allPaths.forEach((p) => {
+          try {
+            const bb = p.getBBox();
+            if (bb.width > 0 || bb.height > 0) {
+              minX = Math.min(minX, bb.x);
+              minY = Math.min(minY, bb.y);
+              maxX = Math.max(maxX, bb.x + bb.width);
+              maxY = Math.max(maxY, bb.y + bb.height);
+            }
+          } catch (e) {}
+        });
+        if (isFinite(minX)) {
+          const pad = (maxX - minX) * 0.02;
+          svgRoot.setAttribute(
+            "viewBox",
+            `${minX - pad} ${minY - pad} ${maxX - minX + pad * 2} ${maxY - minY + pad * 2}`,
+          );
+        }
       }
+    } catch (e) {}
+
+    svgRoot.setAttribute("width", "100%");
+    svgRoot.setAttribute("height", "100%");
+    svgRoot.style.width = "100%";
+    svgRoot.style.height = "100%";
+    svgRoot.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+    applyMapThemeColors();
+
+    // Tooltip element
+    const tooltip = document.getElementById("mapTooltip");
+
+    // Delegated mouseover — hover + tooltip
+    svgDoc.addEventListener("mouseover", (e) => {
+      const label = getRegionName(e.target);
+      if (!label) return;
+      const fill = darkMode ? "#4a7fa8" : "#f0a898";
+      if (
+        !gameState.guessedStates.includes(label) &&
+        !gameState.guessedUTs.includes(label)
+      )
+        e.target.style.fill = fill;
+      // Tooltip: show in all modes except locate (don't give away the answer)
+      if (tooltip && gameState.gameType !== "locate") {
+        tooltip.textContent = label;
+        tooltip.style.display = "block";
+      }
+    });
+
+    svgDoc.addEventListener("mousemove", (e) => {
+      if (!tooltip) return;
+      // e.clientX/Y is relative to the <object> frame, not the page.
+      // Add the object element's bounding rect to get true page coordinates.
+      const objRect = indiaMap.getBoundingClientRect();
+      const pageX = objRect.left + e.clientX;
+      const pageY = objRect.top + e.clientY;
+      tooltip.style.left = pageX + 14 + "px";
+      tooltip.style.top = pageY - 36 + "px";
+    });
+
+    svgDoc.addEventListener("mouseout", (e) => {
+      const label = getRegionName(e.target);
+      if (
+        label &&
+        !gameState.guessedStates.includes(label) &&
+        !gameState.guessedUTs.includes(label)
+      ) {
+        e.target.style.fill = darkMode ? "#2d4a6e" : "#e2d9d0";
+      }
+      if (tooltip) tooltip.style.display = "none";
+    });
+
+    if (gameState.gameType === "locate" && gameState.startTime) {
+      setupLocateMode();
     }
-  } catch(e) {}
 
-  svgRoot.setAttribute("width",  "100%");
-  svgRoot.setAttribute("height", "100%");
-  svgRoot.style.width  = "100%";
-  svgRoot.style.height = "100%";
-  svgRoot.setAttribute("preserveAspectRatio", "xMidYMid meet");
-
-  applyMapThemeColors();
-
-  // Tooltip element
-  const tooltip = document.getElementById("mapTooltip");
-
-  // Delegated mouseover — hover + tooltip
-  svgDoc.addEventListener("mouseover", (e) => {
-    const label = getRegionName(e.target);
-    if (!label) return;
-    const fill = darkMode ? "#4a7fa8" : "#f0a898";
-    if (!gameState.guessedStates.includes(label) && !gameState.guessedUTs.includes(label)) e.target.style.fill = fill;
-    // Tooltip: show in all modes except locate (don't give away the answer)
-    if (tooltip && gameState.gameType !== "locate") {
-      tooltip.textContent = label;
-      tooltip.style.display = "block";
+    if (gameState.reviewMode) {
+      gameState.guessedStates.forEach((r) => colorState(r, "#2D9E6B"));
+      gameState.missedRegions.forEach((r) => colorState(r, "#ef4444"));
     }
   });
+}
 
-  svgDoc.addEventListener("mousemove", (e) => {
-    if (!tooltip) return;
-    // e.clientX/Y is relative to the <object> frame, not the page.
-    // Add the object element's bounding rect to get true page coordinates.
-    const objRect = indiaMap.getBoundingClientRect();
-    const pageX = objRect.left + e.clientX;
-    const pageY = objRect.top  + e.clientY;
-    tooltip.style.left = (pageX + 14) + "px";
-    tooltip.style.top  = (pageY - 36) + "px";
-  });
+function replaceMapDocument(asset) {
+  detachLocateListener();
+  const old = indiaMap;
+  const object = old.cloneNode(false);
+  const generation = ++mapGeneration;
+  object.data = asset;
+  bindMapDocument(object, generation, asset);
+  indiaMap = object;
+  old.replaceWith(object);
+}
 
-  svgDoc.addEventListener("mouseout", (e) => {
-    const label = getRegionName(e.target);
-    if (label && !gameState.guessedStates.includes(label) && !gameState.guessedUTs.includes(label)) {
-      e.target.style.fill = darkMode ? "#2d4a6e" : "#e2d9d0";
-    }
-    if (tooltip) tooltip.style.display = "none";
-  });
+bindMapDocument(indiaMap, mapGeneration, indiaMap.getAttribute("data"));
 
-  if (gameState.gameType === "locate" && gameState.startTime) {
-    setupLocateMode();
-  }
+// CP05 controlled candidate integration is intentionally unavailable outside
+// the local Vite development server. The import remains runtime-only so the
+// experimental module and its candidate assets are absent from production.
+const cp05CandidateParam = new URLSearchParams(location.search).get(
+  "cp05Candidate",
+);
+const cp05Admin1Scope =
+  /^admin1:(australia|brazil|canada|germany|japan|usa)$/.exec(
+    cp05CandidateParam || "",
+  )?.[1] || null;
+const cp05CandidateConfig =
+  cp05CandidateParam === "1"
+    ? { kind: "world", scope: "world" }
+    : cp05Admin1Scope
+      ? { kind: "admin1", scope: cp05Admin1Scope }
+      : null;
+if (
+  cp05CandidateConfig &&
+  location.hostname === "127.0.0.1" &&
+  location.port === "4174"
+) {
+  window.__mapmasterCandidateBridge = {
+    currentSession: () => gameState.sessionId,
+    candidateConfig: () => cp05CandidateConfig,
+    isCandidateMapSession: () =>
+      currentMapKey === cp05CandidateConfig.scope &&
+      gameState.gameType === "locate" &&
+      (gameState.phase === "active" || gameState.reviewMode),
+    isCandidateLocateSession: () =>
+      currentMapKey === cp05CandidateConfig.scope &&
+      gameState.gameType === "locate" &&
+      gameState.phase === "active" &&
+      !gameState.reviewMode,
+    questionNames: () => [...CURRENT_REGIONS],
+    submitLocate: (name) => applyLocateSelection(name),
+    rebindLocate: () => {
+      detachLocateListener();
+      setupLocateMode();
+    },
+    feedback: (message) => showFeedback(message),
+    mapContainer: () => document.getElementById("mapContainer"),
+    mapWrapper: () => document.getElementById("mapZoomWrapper"),
+    hideClassicMap: () => {
+      indiaMap.style.display = "none";
+    },
+    showClassicMap: () => {
+      if (indiaMap) indiaMap.style.display = "";
+    },
+  };
+  const experimental = document.createElement("script");
+  experimental.type = "module";
+  experimental.src = new URL(
+    "js/cp05-candidate-integration.mjs",
+    document.baseURI,
+  ).href;
+  experimental.addEventListener("error", () =>
+    showFeedback("CP05 candidate integration failed to start.", "wrong"),
+  );
+  document.head.append(experimental);
+}
 
-  if (gameState.reviewMode) {
-    gameState.guessedStates.forEach(r => colorState(r, "#2D9E6B"));
-    gameState.missedRegions.forEach(r => colorState(r, "#ef4444"));
-  }
-});
-
+// The external-content corpus has a separate localhost-only preview. It never
+// joins the classic runtime, CP04 state, progression, Daily, Firebase, or the
+// production build; the module and its source snapshots are deliberately not
+// copied by Vite. This is a review surface, not a hidden game mode.
+const externalGeoPreviewRequested = new URLSearchParams(location.search).get(
+  "externalGeoPreview",
+) === "1";
+if (
+  externalGeoPreviewRequested &&
+  location.hostname === "127.0.0.1" &&
+  (location.port === "4174" || location.port === "5173")
+) {
+  window.__mapmasterExternalContentPreview = {
+    isEligible: () => true,
+    fail: () => {
+      showFeedback("External geography preview could not load.", "wrong");
+    },
+  };
+  const externalPreview = document.createElement("script");
+  externalPreview.type = "module";
+  externalPreview.src = new URL(
+    "pilot/external-content-preview.mjs",
+    document.baseURI,
+  ).href;
+  externalPreview.addEventListener("error", () =>
+    showFeedback("External geography preview could not load.", "wrong"),
+  );
+  document.head.append(externalPreview);
+}
 
 /* ============================================================
    MAP ZOOM + PAN
    ============================================================ */
 (function setupZoomPan() {
   const container = document.getElementById("mapContainer");
-  const wrapper   = document.getElementById("mapZoomWrapper");
+  const wrapper = document.getElementById("mapZoomWrapper");
   if (!container || !wrapper) return;
 
-  let scale = 1, tx = 0, ty = 0;
-  let dragging = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+  let scale = 1,
+    tx = 0,
+    ty = 0;
+  let dragging = false,
+    startX = 0,
+    startY = 0,
+    startTx = 0,
+    startTy = 0;
 
   function clampTranslate() {
     const maxT = (scale - 1) * 50;
@@ -391,34 +649,44 @@ indiaMap.addEventListener("load", () => {
   function applyTransform() {
     clampTranslate();
     wrapper.style.transform = `scale(${scale}) translate(${tx}px, ${ty}px)`;
-    wrapper.style.cursor = scale > 1 ? (dragging ? "grabbing" : "grab") : "default";
+    wrapper.style.cursor =
+      scale > 1 ? (dragging ? "grabbing" : "grab") : "default";
   }
 
-  container.addEventListener("wheel", e => {
-    e.preventDefault();
-    const prev   = scale;
-    const factor = e.deltaY < 0 ? 1.12 : 0.9;
-    scale = Math.min(Math.max(1, scale * factor), 6);
-    if (scale > 1) {
-      const rect = wrapper.getBoundingClientRect();
-      const cx = (e.clientX - rect.left  - rect.width  / 2) / prev;
-      const cy = (e.clientY - rect.top   - rect.height / 2) / prev;
-      tx -= cx * (scale - prev);
-      ty -= cy * (scale - prev);
-    } else { tx = 0; ty = 0; }
-    applyTransform();
-  }, { passive: false });
+  container.addEventListener(
+    "wheel",
+    (e) => {
+      e.preventDefault();
+      const prev = scale;
+      const factor = e.deltaY < 0 ? 1.12 : 0.9;
+      scale = Math.min(Math.max(1, scale * factor), 6);
+      if (scale > 1) {
+        const rect = wrapper.getBoundingClientRect();
+        const cx = (e.clientX - rect.left - rect.width / 2) / prev;
+        const cy = (e.clientY - rect.top - rect.height / 2) / prev;
+        tx -= cx * (scale - prev);
+        ty -= cy * (scale - prev);
+      } else {
+        tx = 0;
+        ty = 0;
+      }
+      applyTransform();
+    },
+    { passive: false },
+  );
 
-  container.addEventListener("mousedown", e => {
+  container.addEventListener("mousedown", (e) => {
     if (scale <= 1) return;
     dragging = true;
-    startX = e.clientX; startY = e.clientY;
-    startTx = tx; startTy = ty;
+    startX = e.clientX;
+    startY = e.clientY;
+    startTx = tx;
+    startTy = ty;
     applyTransform();
     e.preventDefault();
   });
 
-  window.addEventListener("mousemove", e => {
+  window.addEventListener("mousemove", (e) => {
     if (!dragging) return;
     tx = startTx + (e.clientX - startX) / scale;
     ty = startTy + (e.clientY - startY) / scale;
@@ -432,36 +700,50 @@ indiaMap.addEventListener("load", () => {
   });
 
   let lastPinchDist = null;
-  container.addEventListener("touchstart", e => {
-    if (e.touches.length === 2) {
-      lastPinchDist = Math.hypot(
-        e.touches[0].clientX - e.touches[1].clientX,
-        e.touches[0].clientY - e.touches[1].clientY
-      );
-    }
-  }, { passive: true });
+  container.addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches.length === 2) {
+        lastPinchDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY,
+        );
+      }
+    },
+    { passive: true },
+  );
 
-  container.addEventListener("touchmove", e => {
-    if (e.touches.length === 2 && lastPinchDist) {
-      const dist = Math.hypot(
-        e.touches[0].clientX - e.touches[1].clientX,
-        e.touches[0].clientY - e.touches[1].clientY
-      );
-      scale = Math.min(Math.max(1, scale * (dist / lastPinchDist)), 6);
-      lastPinchDist = dist;
-      if (scale === 1) { tx = 0; ty = 0; }
-      applyTransform();
-    }
-  }, { passive: true });
+  container.addEventListener(
+    "touchmove",
+    (e) => {
+      if (e.touches.length === 2 && lastPinchDist) {
+        const dist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY,
+        );
+        scale = Math.min(Math.max(1, scale * (dist / lastPinchDist)), 6);
+        lastPinchDist = dist;
+        if (scale === 1) {
+          tx = 0;
+          ty = 0;
+        }
+        applyTransform();
+      }
+    },
+    { passive: true },
+  );
 
-  container.addEventListener("touchend", () => { lastPinchDist = null; });
+  container.addEventListener("touchend", () => {
+    lastPinchDist = null;
+  });
 
   container.addEventListener("dblclick", () => {
-    scale = 1; tx = 0; ty = 0;
+    scale = 1;
+    tx = 0;
+    ty = 0;
     applyTransform();
   });
 })();
-
 
 /* ============================================================
    MAP THEME COLORS — dark/light + accent
@@ -469,28 +751,27 @@ indiaMap.addEventListener("load", () => {
 function applyMapThemeColors() {
   const svgDoc = getSvgDoc();
   if (!svgDoc) return;
-  const fill   = darkMode ? "#2d4a6e" : "#e2d9d0";
+  const fill = darkMode ? "#2d4a6e" : "#e2d9d0";
   const stroke = darkMode ? "#5b8ab0" : "#b8a89e";
-  svgDoc.querySelectorAll("path").forEach(path => {
+  svgDoc.querySelectorAll("path").forEach((path) => {
     // Don't override correctly-guessed or missed regions
     const name = getRegionName(path);
     if (name && gameState.guessedStates.includes(name)) return;
-    if (name && gameState.missedRegions.includes(name))  return;
-    path.style.fill        = fill;
-    path.style.stroke      = stroke;
+    if (name && gameState.missedRegions.includes(name)) return;
+    path.style.fill = fill;
+    path.style.stroke = stroke;
     path.style.strokeWidth = "0.5";
-    path.style.transition  = "fill 0.2s ease";
+    path.style.transition = "fill 0.2s ease";
   });
 }
-
 
 /* ============================================================
    ACCENT COLOR — per continent
    ============================================================ */
 function applyAccentColor(mapKey) {
-  const c = (typeof MAP_COLORS !== "undefined") ? MAP_COLORS[mapKey] : null;
+  const c = typeof MAP_COLORS !== "undefined" ? MAP_COLORS[mapKey] : null;
   if (c) {
-    document.documentElement.style.setProperty("--accent",      c.accent);
+    document.documentElement.style.setProperty("--accent", c.accent);
     document.documentElement.style.setProperty("--accent-glow", c.glow);
   } else {
     // Country maps fall back to default coral
@@ -499,30 +780,28 @@ function applyAccentColor(mapKey) {
   }
 }
 
-
 /* ============================================================
    REGION COUNT BADGES
    ============================================================ */
-document.querySelectorAll(".country-btn").forEach(btn => {
+document.querySelectorAll(".country-btn").forEach((btn) => {
   const key = btn.dataset.country;
   if (!key || typeof MAPS === "undefined" || !MAPS[key]) return;
   const count = MAPS[key].regions.length;
-  const span  = document.createElement("span");
-  span.className   = "c-count";
+  const span = document.createElement("span");
+  span.className = "c-count";
   span.textContent = count + " regions";
   btn.appendChild(span);
 });
 
-document.querySelectorAll(".continent-btn").forEach(btn => {
+document.querySelectorAll(".continent-btn").forEach((btn) => {
   const key = btn.dataset.continent;
   if (!key || typeof MAPS === "undefined" || !MAPS[key]) return;
   const count = MAPS[key].regions.length;
-  const span  = document.createElement("span");
-  span.className   = "c-count";
+  const span = document.createElement("span");
+  span.className = "c-count";
   span.textContent = count + " countries";
   btn.appendChild(span);
 });
-
 
 /* ============================================================
    HERO MAP BACKGROUND — animated SVG on start screen
@@ -571,10 +850,10 @@ document.querySelectorAll(".continent-btn").forEach(btn => {
   // Randomly pulse 2–3 paths every 3s
   const paths = bg.querySelectorAll("path");
   setInterval(() => {
-    paths.forEach(p => p.classList.remove("region-glow"));
+    paths.forEach((p) => p.classList.remove("region-glow"));
     const picks = Array.from(paths)
       .sort(() => Math.random() - 0.5)
       .slice(0, 2);
-    picks.forEach(p => p.classList.add("region-glow"));
+    picks.forEach((p) => p.classList.add("region-glow"));
   }, 3000);
 })();

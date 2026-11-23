@@ -7,6 +7,54 @@
 /* ============================================================
    START SCREEN
    ============================================================ */
+
+/* ============================================================
+   PROGRESS DASHBOARD
+   ============================================================ */
+#progressScreen { gap: 0; }
+
+.progress-dashboard {
+  width: 100%;
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.progress-overview,
+.progress-panel {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--mm-line, var(--border-med));
+  border-radius: var(--mm-radius, var(--r-lg));
+  background: var(--mm-surface, var(--surface));
+}
+
+.progress-overview { grid-column: 1 / -1; }
+.progress-level { margin: 0; color: var(--mm-brand, var(--coral)); font: 700 .76rem var(--mm-mono, inherit); letter-spacing: .12em; text-transform: uppercase; }
+.progress-xp { margin: 8px 0; color: var(--mm-text, var(--text-heading)); font-size: clamp(2rem, 7vw, 3.4rem); font-weight: 750; letter-spacing: -.06em; }
+.progress-summary { margin: 10px 0 0; color: var(--mm-secondary, var(--text-muted)); line-height: 1.5; }
+.progress-meter { height: 10px; overflow: hidden; border-radius: 999px; background: var(--mm-raised, var(--bg-alt)); }
+.progress-meter span { display: block; width: 100%; height: 100%; border-radius: inherit; background: #32CD32; transform:scaleX(var(--mm-progress, 0)); transform-origin:left center; transition:transform var(--mm-motion-layout, .24s) var(--mm-ease-move, ease); }
+.progress-panel h2 { margin: 0 0 14px; color: var(--mm-text, var(--text-heading)); font-size: 1.05rem; }
+.progress-list { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.achievement-item,
+.record-item,
+.progress-empty { min-width: 0; padding: 11px; border-radius: 8px; background: var(--mm-raised, var(--bg-alt)); color: var(--mm-secondary, var(--text-muted)); font-size: .84rem; line-height: 1.45; overflow-wrap: anywhere; }
+.achievement-item,
+.record-item { display: grid; gap: 2px; }
+.achievement-item strong,
+.record-item strong { color: var(--mm-text, var(--text-heading)); }
+.progress-actions { grid-column: 1 / -1; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.progress-storage-note { grid-column: 1 / -1; margin: 0; color: var(--mm-secondary, var(--text-muted)); font-size: .8rem; line-height: 1.45; }
+
+@media (max-width: 560px) {
+  .progress-dashboard { grid-template-columns: 1fr; }
+  .progress-overview { grid-column: auto; }
+  .progress-actions, .progress-storage-note { grid-column: auto; }
+  .progress-overview, .progress-panel { padding: 18px; }
+}
 #startScreen {
   gap: 0;
   justify-content: center;
@@ -84,7 +132,7 @@
   border-radius: var(--r-lg);
   cursor: pointer;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   width: 100%;
   min-width: 0;
   letter-spacing: -0.01em;
@@ -209,7 +257,7 @@
   border-radius: var(--r-lg);
   cursor: pointer;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   width: 100%;
   min-width: 0;
   letter-spacing: -0.01em;
@@ -306,7 +354,7 @@
   font-weight: 700;
   background: var(--surface);
   border: 1.5px solid var(--border-med);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   box-shadow: var(--shadow-sm);
 }
 
@@ -363,7 +411,7 @@
   font-weight: 600;
   color: var(--text-muted);
   box-shadow: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -627,11 +675,25 @@
   margin-bottom: 10px;
 }
 
-#missedList {
+#missedList,
+.missed-list {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: center;
+}
+
+.session-learning-summary {
+  margin: 16px 0;
+  max-width: 480px;
+  text-align: center;
+}
+
+#loseLearningSummary,
+#winLearningCopy {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
 }
 
 .missed-tag {
@@ -657,7 +719,8 @@
   flex-wrap: wrap;
 }
 
-#reviewBtn {
+#reviewBtn,
+#winReviewBtn {
   padding: 14px 28px;
   font-family: inherit;
   font-size: 0.95rem;
@@ -668,11 +731,12 @@
   border-radius: var(--r-md);
   cursor: pointer;
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   animation: fadeSlideIn 0.4s 0.2s ease both;
 }
 
-#reviewBtn:hover {
+#reviewBtn:hover,
+#winReviewBtn:hover {
   border-color: var(--coral);
   color: var(--coral);
   background: var(--coral-muted);

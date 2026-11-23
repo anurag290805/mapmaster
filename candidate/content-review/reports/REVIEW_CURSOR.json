@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "ledger": "FACTUAL_REVIEW_LEDGER.md",
+  "completed_batch": 5,
+  "completed_records": 100,
+  "remaining_records": 0,
+  "ordering": {
+    "wikidata": "lexical source_id",
+    "geonames": "immutable normalized v1 source selection order",
+    "opentdb": "lexical full source_fingerprint"
+  },
+  "selection_policy": "Completion pass selected only stable NOT_REVIEWED identities, rejected a candidate when its full stable identity was already in reviewed_identity_set, and wrote analyst factual classifications without changing source snapshots or approval fields.",
+  "reviewed_identity_set": {
+    "wikidata": ["Q1028", "Q1033", "Q114", "Q155", "Q16", "Q17", "Q183", "Q20", "Q233", "Q252", "Q258", "Q30", "Q408", "Q414", "Q45", "Q664", "Q668", "Q79", "Q869", "Q96"],
+    "geonames": [148996, 3407729, 360630, 184745, 2332459, 6094817, 3530597, 3435910, 3469058, 1261481, 1850147, 1609350, 1642911, 2950159, 2267057, 2172517, 2179537, 1283416, 157452, 1864094, 3181986, 3866949, 2212709, 2031269, 791630, 2164628, 7645281, 879432, 5296392, 351036],
+    "opentdb": ["0538db6a74c241cc295d87b8ec9913f3130949becb8bbe0f411e962062685c86", "074ee5bac631319dff4740be8fcfbf67540bc579087af54baacda1e613dbc3c1", "38408244df0ede11824472dfc8623edda348038c7f5a463173db573833a9bd9b", "3daeeea6ba853f29031b2498bb32de79e47abf7dadeb86a98fab5261ef618738", "3fe4eda2429783687e854fbcfe6e7dd8aac76822c2b2386e852d70823ebf9097", "600c0c8e58daf1f5d9b76623dedfa648e60a7d33f0f4c7c051bda69e9958fa17", "6e577637cc49f7b4b4f5dbd875ef4b86824aa8e561325c0165ab0353f659a926", "7f49e91250983d61b448028b008116b986b0af8e8f8974545f2e7ee160a9531a", "8157b5b67274ab445826bf6bd8b4a5f49724465c6cf0225ad9bb7f1e6d183ba9", "496f7ce8aa31624103573d78c5c6ad248aee51198c19c77625f9715129283e9c", "5fdf126d668c2be7b3db5df29a4ca1c86c91884a7766ab6073743e5836a2237e", "86742f0baee7489acf2b0d631e3112b48f4f8264cb4332eb07375f5e6c1e6dd5", "86d8fcf8d222cfc4f36401ca723099dcbd334b06ff88e89279e817759f70d4fe", "0366e69584bb88b600bc843e0bca3e40ded595fdd4fe622e13d72fbace5f1f91", "04264ee2611b7a643afea4c8dc95fdc0539d1f81d4e3762a3a5aa2e813395cc7", "07f6e991aa56436456a0d69c8201e6002c839f7b151d38b4ea43e70069c279bc", "177950f3894303e6d30e8d8c10aa33a25195bb7f755e6202b74b1283e3ec4a41", "8e6eaebba9eb175938da3351d6fe1bf4af298209648bc022ae4f526690cd1a31", "32aa847343d13072a8c79a633ba0f1bf868c94851aa61f8cde6ac72678bc9f2e", "bb190a40318383c7f1acc301489a945777f8a50ab10f3d6eaf7e8cb33d7e53c6", "a5f244002224a1456b05bdc2aa22f3def7ffce70ad1118dadcc8e1da43089183", "1f0042cb2ae272a704cd278785fcfafad4bbc9e601d04d19f8fda1569b2f184f", "9fb8d710acf8023b798d72076d9f27af7f8caf01bab754c8eafbad293b558616", "233a529a2731043a91abae85c7ad7b586eb70f91783427a1772877d40b40141b", "9390d2dd0e383660ae570218db938711ee75807bf42f0a2844dd06654b2c36ea", "d4e8a3eed4ca911b3472a53823e98b70e343ad895507568c9b69ed7df62afb19", "4a01f9659384922d0a4e42b8766acf3da4e2504fca43891c9e373459bab4b3c6", "488873f50286f3eb107b43e31accd12f1fe56477a7f9a5e34af11f866362b27c", "74c392b508944bb8b3d5157e880dcd3323bd7c559e443ca6052113bc2f08e9bd", "a5ca2537a09e0eb5e2e56274c37407aef833ef87fa738b8cb3c52974026942e5", "bde7d3405837a7dcbfe0ae888ab238cd7f82d3796aa9e244ba588fd2f22569a8", "e4089cfd05ea3ebefdbb57d4b60c851684415690a1443b966dbb25fa7974aeba", "c27ced3e649260a5dcc91779c91776fecf53514de9a34907640f62ff94e4fdde", "2949f414ac2659be8d12e09f68c543e25c91e974639d0a598eaec7f223cc748f", "d287819947279b7c6f0408c5bf964c67a73b6f43a83f3f2f043bc911e527aecf", "6e0ea11fc4ced305ce1808888769b0cc6f8a4de3bfcf0c5324d4c342711f1d16", "e0defdd0293e01dc63bdee70b60ae15bdd510ebb6c16c1e00bf0d21c0745f386", "b2f925b0e6ac2039c8ed744254fde1401f8d89b3005532b0e0ce4e6b61d89032", "a7d9be7783e0a5b9fd8090a5a25355f35f5e7a31c2bfeba2d76a94745eda4150", "c50865d2d0356f65d5e5d6311da8e7b0b1c2d64148bdd9e334c06b6fe682896c", "b5d384bd8e8d1f5d6b9636b8b815ba3dea2e90494761aee44f5fcd2ea86ba087", "87db3549364e3fbcd72b5f5eeaac2061259e7055494ae560fdde0d0e4c1ee2c8", "45b4fa09cdaa0ccc9513f7c81e9d491a1edfcd785a13a0f3e4b0adb7f1ecce0c", "47aa685c4097b77f815d59f83fa414cdfd66ca4a2df30cf7dff80253f8e2af7c", "b1ea9b0ffdc1c24985915b8dfb69a02b8d151dd971a2cfdb3a62643872bb097e", "5cdb95791498d809c31c1837a6b2af7e2bd578881d4a7b11626e22a3663665ba", "805357186fe07951e8e9d0c2f52fc2b4c70ca6ad84ed5eb62005bb7909b42ea7", "fd394fc531f6efb0200fe32e8f10a89915e54bf2b7dc0f323e9b62daabc1c0bb", "9ed983a38415987c8e6dbed0ac362cd351a90939b711ec0177d53f5841b053f1", "ea554c1de64ab2e54d6800bcc4645c892fdb13149dfed17eac1a88522e08bac2"]
+  },
+  "cursor_repair": {
+    "replaced_duplicate_opentdb": "3fe4eda2429783687e854fbcfe6e7dd8aac76822c2b2386e852d70823ebf9097",
+    "reason": "This full fingerprint was already reviewed in Batch 1; future cursor selection checks reviewed_identity_set first."
+  },
+  "next_flagged": { "wikidata": null, "geonames": null, "opentdb": null },
+  "next_unreviewed": { "wikidata": null, "geonames": null, "opentdb": null },
+  "invariant": "All records remain candidate_not_live, technically accepted only, human_content_approval pending_review, and gameplay_approval not_approved."
+}

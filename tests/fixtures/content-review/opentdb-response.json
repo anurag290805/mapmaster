@@ -1,0 +1,13 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which%20country%20contains%20the%20city%20of%20Mumbai%3F",
+      "correct_answer": "India",
+      "incorrect_answers": ["Nepal", "Sri%20Lanka", "Bhutan"]
+    }
+  ]
+}

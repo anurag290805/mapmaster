@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "country": "Germany",
+  "authority": "BKG VG250",
+  "license": "dl-de/by-2-0",
+  "status": "BLOCKED",
+  "compared_regions": 0,
+  "source_version": "VG250 01.01.2026",
+  "published_md5": "19abb1eda644eea121ac037ca3c12e46",
+  "validation_use": "official BKG geometry requested solely for independent, non-redistributed candidate validation",
+  "attempts": [
+    { "route": "WFS GetCapabilities", "result": "HTTP 403" },
+    {
+      "route": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/aktuell/vg250_01-01.utm32s.shape.ebenen.zip",
+      "result": "initial download stalled at 9.8 MiB; downloaded archive fails ZIP integrity"
+    },
+    {
+      "route": "same official URL; one bounded HTTP range resume (120 s maximum)",
+      "result": "partial grew to 38,312,449 bytes but has MD5 d715678a253f88da77015ab592714176 (not published MD5) and no ZIP end-of-central-directory"
+    }
+  ],
+  "archive_integrity": {
+    "partial_file": "/private/tmp/mapmaster-cp05-authorities/germany-bkg-vg250-2026-utm32s-complete.zip",
+    "partial_size_bytes": 38312449,
+    "calculated_md5": "d715678a253f88da77015ab592714176",
+    "zip_test": "failed: end-of-central-directory not found"
+  },
+  "technical_blocker": "The official server did not complete the range-resumed archive inside the bounded request. The retained partial cannot be checksum-verified or extracted, so all 16-state coordinate comparison remains unavailable.",
+  "note": "No partial or third-party geometry was admitted for comparison; do not retry without a changed BKG delivery condition."
+}

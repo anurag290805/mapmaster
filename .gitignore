@@ -1,11 +1,14 @@
 node_modules/
 dist/
+dist-e2e-root/
+dist-e2e-subpath/
 .DS_Store
 coverage/
 playwright-report/
 test-results/
 .vitest/
 .vite/
+.cp05-python/
 .env
 .env.*
 !.env.example

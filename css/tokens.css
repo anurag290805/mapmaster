@@ -1,22 +1,27 @@
 /* MapMaster: semantic atlas tokens. Light is the legacy default. */
 :root, [data-theme="light"] {
   color-scheme: light;
-  --mm-canvas:#f2f1e9; --mm-surface:#fffef8; --mm-raised:#e9ece4; --mm-overlay:rgba(10,27,30,.65);
-  --mm-text:#142c2e; --mm-secondary:#405b5b; --mm-muted:#526b69; --mm-inverse:#fff;
-  --mm-brand:#12665d; --mm-brand-hover:#0b514a; --mm-brand-active:#083e39; --mm-accent:#bf663e; --mm-accent-subtle:#f8e8dc;
-  --mm-line:#b9cbc4; --mm-focus:#a3411b; --mm-success:#126448; --mm-error:#a52d35; --mm-warning:#805500; --mm-info:#245d85;
+  --mm-charcoal:#1A1A1A; --mm-cobalt:#1558C9; --mm-lime:#32CD32;
+  --mm-canvas:#f6f7f8; --mm-surface:#fff; --mm-raised:#edf0f4; --mm-overlay:rgba(26,26,26,.7);
+  --mm-text:var(--mm-charcoal); --mm-secondary:#48515d; --mm-muted:#66707e; --mm-inverse:#fff;
+  --mm-brand:var(--mm-cobalt); --mm-brand-hover:#10469f; --mm-brand-active:#0d367d; --mm-accent:var(--mm-lime); --mm-accent-subtle:#e4f8e4;
+  --mm-line:#c9d0d9; --mm-focus:var(--mm-cobalt); --mm-success:#1f8e32; --mm-error:#b3261e; --mm-warning:#815c00; --mm-info:var(--mm-cobalt);
   --mm-space-1:.25rem; --mm-space-2:.5rem; --mm-space-3:.75rem; --mm-space-4:1rem; --mm-space-6:1.5rem; --mm-space-8:2rem; --mm-space-12:3rem;
   --mm-content:72rem; --mm-reading:44rem; --mm-control:2.75rem; --mm-radius-sm:.5rem; --mm-radius:1rem; --mm-radius-lg:1.5rem;
-  --mm-shadow:0 12px 32px rgba(20,44,46,.08); --mm-fast:140ms; --mm-standard:240ms; --mm-ease:cubic-bezier(.2,.7,.2,1);
+  --mm-shadow:0 12px 32px rgba(20,44,46,.08); --mm-shadow-raised:0 18px 42px rgba(0,0,0,.24);
+  --mm-fast:140ms; --mm-standard:240ms; --mm-ease:cubic-bezier(.2,.7,.2,1);
+  --mm-motion-press:120ms; --mm-motion-hover:150ms; --mm-motion-popover:180ms; --mm-motion-dialog:240ms; --mm-motion-screen:280ms; --mm-motion-layout:240ms; --mm-motion-celebrate:420ms;
+  --mm-ease-enter:cubic-bezier(.32,.72,0,1); --mm-ease-exit:cubic-bezier(.55,0,1,.45); --mm-ease-move:cubic-bezier(.77,0,.175,1);
+  --mm-press-scale:.97; --mm-nudge:.18rem; --mm-stagger:45ms;
   --mm-z-sticky:10; --mm-z-dropdown:20; --mm-z-overlay:30; --mm-z-dialog:40; --mm-z-toast:50; --mm-z-tooltip:60;
   --mm-font:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --mm-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
 }
 body.dark-theme, [data-theme="dark"] {
   color-scheme:dark;
-  --mm-canvas:#101e20; --mm-surface:#192c2e; --mm-raised:#213a3b; --mm-overlay:rgba(0,0,0,.72);
-  --mm-text:#edf4ed; --mm-secondary:#c4d6cc; --mm-muted:#afc5ba; --mm-inverse:#102824;
-  --mm-brand:#8ed9bb; --mm-brand-hover:#b4ead1; --mm-brand-active:#d3f6e5; --mm-accent:#f0ad86; --mm-accent-subtle:#50362a;
-  --mm-line:#49635b; --mm-focus:#f9c79f; --mm-success:#9be1bb; --mm-error:#ffb2af; --mm-warning:#f5d68b; --mm-info:#a7d8f7;
+  --mm-canvas:#121212; --mm-surface:#1c1c1c; --mm-raised:#262626; --mm-overlay:rgba(0,0,0,.78);
+  --mm-text:#f7f7f7; --mm-secondary:#d2d7de; --mm-muted:#aeb7c3; --mm-inverse:#fff;
+  --mm-brand:#72a2f1; --mm-brand-hover:#9fc0fa; --mm-brand-active:#c7dcff; --mm-accent:var(--mm-lime); --mm-accent-subtle:#18381a;
+  --mm-line:#444a52; --mm-focus:var(--mm-lime); --mm-success:#78e57c; --mm-error:#ffb4ab; --mm-warning:#ffd66d; --mm-info:#9fc0fa;
   --mm-shadow:0 14px 34px rgba(0,0,0,.24);
 }

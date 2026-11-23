@@ -1,0 +1,1132 @@
+{
+  "schema_version": 1,
+  "source": {
+    "name": "Natural Earth 1:10m Admin-0 countries",
+    "version": "5.1.1",
+    "sha256": "ce1ac7036499a0edd641fbc093cd209a98f96a49d2eca8480aaacad35138a7f6",
+    "url": "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_0_countries.zip",
+    "license": "Public domain",
+    "terms": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "boundary_policy": "Natural Earth default de facto; pilot only, not product policy"
+  },
+  "simplification_degrees": 0.005,
+  "rounding_decimal_places": 4,
+  "entities": [
+    {
+      "id": "iso3166-1:CA",
+      "name": "Canada",
+      "iso3": "CAN",
+      "ne_id": "1159320467",
+      "source_name": "Canada",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": -75.69812,
+        "lat": 45.41117,
+        "source": "https://www.geonames.org/6094817/ottawa.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 412,
+      "rendered_parts": 412,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159320467",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:BR",
+      "name": "Brazil",
+      "iso3": "BRA",
+      "ne_id": "1159320441",
+      "source_name": "Brazil",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": -47.92972,
+        "lat": -15.77972,
+        "source": "https://www.geonames.org/3469058/brasilia.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 43,
+      "rendered_parts": 43,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159320441",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:JP",
+      "name": "Japan",
+      "iso3": "JPN",
+      "ne_id": "1159320937",
+      "source_name": "Japan",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": 139.69171,
+        "lat": 35.6895,
+        "source": "https://www.geonames.org/1850147/tokyo.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 109,
+      "rendered_parts": 109,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159320937",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:NZ",
+      "name": "New Zealand",
+      "iso3": "NZL",
+      "ne_id": "1159321135",
+      "source_name": "New Zealand",
+      "source_type": "Country",
+      "landmark": {
+        "lon": 174.77557,
+        "lat": -41.28664,
+        "source": "https://www.geonames.org/2179537/wellington.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 26,
+      "rendered_parts": 26,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159321135",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:PT",
+      "name": "Portugal",
+      "iso3": "PRT",
+      "ne_id": "1159321187",
+      "source_name": "Portugal",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": -9.15,
+        "lat": 38.725,
+        "source": "https://www.geonames.org/PT/largest-cities-in-portugal.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 17,
+      "rendered_parts": 17,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159321187",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:MT",
+      "name": "Malta",
+      "iso3": "MLT",
+      "ne_id": "1159321065",
+      "source_name": "Malta",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": 14.5125,
+        "lat": 35.89833,
+        "source": "https://www.geonames.org/8334638/valletta.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 2,
+      "rendered_parts": 2,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159321065",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:ZA",
+      "name": "South Africa",
+      "iso3": "ZAF",
+      "ne_id": "1159321431",
+      "source_name": "South Africa",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": 28.18783,
+        "lat": -25.74486,
+        "source": "https://www.geonames.org/964137/pretoria.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 3,
+      "rendered_parts": 3,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159321431",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    },
+    {
+      "id": "iso3166-1:CV",
+      "name": "Cabo Verde",
+      "iso3": "CPV",
+      "ne_id": "1159320523",
+      "source_name": "Cabo Verde",
+      "source_type": "Sovereign country",
+      "landmark": {
+        "lon": -23.51254,
+        "lat": 14.93152,
+        "source": "https://www.geonames.org/3374333/praia.html",
+        "attribution": "GeoNames",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "source_geometry_valid": true,
+      "simplified_geometry_valid": true,
+      "rounded_geometry_valid": true,
+      "source_parts": 11,
+      "rendered_parts": 11,
+      "geometry_reference": "ne_10m_admin_0_countries.zip#NE_ID=1159320523",
+      "identity_evidence": "https://unstats.un.org/unsd/methodology/m49/"
+    }
+  ],
+  "excluded_world": [
+    {
+      "name": "Germany",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "France",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Italy",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Spain",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Netherlands",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Belgium",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Luxembourg",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Switzerland",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Austria",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Poland",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Czech Republic",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Slovakia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Hungary",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Romania",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Bulgaria",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Greece",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Croatia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Slovenia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Serbia",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Montenegro",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Albania",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "North Macedonia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Sweden",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Norway",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Finland",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Denmark",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Estonia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Latvia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Lithuania",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Ireland",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "United Kingdom",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Ukraine",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Belarus",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Moldova",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Russia",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Kazakhstan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Turkey",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Cyprus",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Iceland",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "United States",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Mexico",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Guatemala",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Belize",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "El Salvador",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Honduras",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Nicaragua",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Costa Rica",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Panama",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Cuba",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Jamaica",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Haiti",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Dominican Republic",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Bahamas",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Barbados",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Saint Lucia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Grenada",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Dominica",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Saint Vincent and the Grenadines",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Argentina",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Bolivia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Chile",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Colombia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Ecuador",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Guyana",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Paraguay",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Peru",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Suriname",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Uruguay",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Venezuela",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Algeria",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Angola",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Benin",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Botswana",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Burkina Faso",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Burundi",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Cameroon",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Central African Republic",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Chad",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Comoros",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Congo",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Djibouti",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Egypt",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Equatorial Guinea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Eritrea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Eswatini",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Ethiopia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Gabon",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Gambia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Ghana",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Guinea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Guinea-Bissau",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Kenya",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Lesotho",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Liberia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Libya",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Madagascar",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Malawi",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Mali",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Mauritania",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Mauritius",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Morocco",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Mozambique",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Namibia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Niger",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Nigeria",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Rwanda",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Sao Tome and Principe",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Senegal",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Seychelles",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "Sierra Leone",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Somalia",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "South Sudan",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Sudan",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Tanzania",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Togo",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Tunisia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Uganda",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Zambia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Zimbabwe",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Afghanistan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Armenia",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Azerbaijan",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Bahrain",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Bangladesh",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Bhutan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Brunei",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Cambodia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "China",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Georgia",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "India",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Indonesia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Iran",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Iraq",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Israel",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Jordan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Kuwait",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Kyrgyzstan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Laos",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Lebanon",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Malaysia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Maldives",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "Mongolia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Myanmar",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Nepal",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "North Korea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Oman",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Pakistan",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Palestine",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Philippines",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Qatar",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Saudi Arabia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Singapore",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "South Korea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Sri Lanka",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Syria",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Taiwan",
+      "status": "policy-dependent",
+      "reason": "unresolved policy-dependent"
+    },
+    {
+      "name": "Tajikistan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Thailand",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Timor-Leste",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Turkmenistan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "United Arab Emirates",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Uzbekistan",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Vietnam",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Yemen",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Australia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Papua New Guinea",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Fiji",
+      "status": "reconciled",
+      "reason": "Suva independent landmark falls outside the source polygon"
+    },
+    {
+      "name": "Solomon Islands",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Vanuatu",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Samoa",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Tonga",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Kiribati",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "Micronesia",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Palau",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Marshall Islands",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "Nauru",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Tuvalu",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "Andorra",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Liechtenstein",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Monaco",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    },
+    {
+      "name": "San Marino",
+      "status": "reconciled",
+      "reason": "outside reviewed subset"
+    },
+    {
+      "name": "Vatican City",
+      "status": "ambiguous",
+      "reason": "unresolved ambiguous"
+    }
+  ]
+}

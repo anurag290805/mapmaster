@@ -6,5 +6,8 @@ button{min-height:44px} button:focus-visible,input:focus-visible{outline:3px sol
 .mm-brand-mark{width:2rem;height:2rem;vertical-align:middle;margin-right:.5rem} #headerLogo .mm-brand-mark{width:1.5rem;height:1.5rem}
 #scoreWrapper,#timerWrapper,#livesWrapper,#streakWrapper,.settings-card{border:1px solid var(--mm-line);box-shadow:var(--mm-shadow)}
 @media(max-width:640px){#gameScreen{min-height:100dvh} .mm-brand-mark{width:1.65rem;height:1.65rem}}
-/* Legacy primary buttons use white text; the dark theme's pale brand needs dark ink. */
-body.dark-theme :is(#homeStartBtn,#startGameBtn,#submitAnswerBtn,#restartBtn,#retryBtn):not(:disabled){color:var(--mm-inverse)}
+/* The dark theme's pale primary surface needs charcoal ink for AA contrast. */
+body.dark-theme :is(button.selected,#countryContinueBtn,#homeStartBtn,#startGameBtn,#submitAnswerBtn,#restartBtn,#retryBtn):not(:disabled){color:var(--mm-charcoal)!important}
+/* Legacy feedback colors are too dark against the dark canvas. */
+body.dark-theme :is(#feedbackMessage,#choiceFeedback).correct{color:var(--mm-success)!important}
+body.dark-theme :is(#feedbackMessage,#choiceFeedback).wrong{color:var(--mm-error)!important}

@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
   accuracy,
+  buildChoiceOptions,
+  buildLearningRecord,
   normalizeAnswer,
   remainingSeconds,
   resolveAnswer,
@@ -29,5 +31,35 @@ describe("gameplay rules", () => {
     expect(remainingSeconds(10000, 12000)).toBe(0);
     expect(accuracy(2, 3)).toBe(67);
     expect(accuracy(0, 0)).toBe(100);
+  });
+
+  it("builds distinct, deterministic multiple-choice options around the answer", () => {
+    const next = [0.9, 0.1, 0.5, 0.9, 0.9];
+    expect(
+      buildChoiceOptions(
+        "Tokyo",
+        ["Tokyo", "Delhi", "Paris", "Paris", "Lima"],
+        4,
+        () => next.shift() ?? 0,
+      ),
+    ).toEqual(["Tokyo", "Paris", "Lima", "Delhi"]);
+    expect(
+      buildChoiceOptions(
+        "Tokyo",
+        ["Tokyo", "Delhi", "Paris", "Lima", "Rome"],
+        4,
+        () => 0,
+      ),
+    ).toHaveLength(4);
+    expect(buildChoiceOptions("Tokyo", ["Tokyo"], 4)).toEqual([]);
+  });
+
+  it("keeps unapproved country facts out of polished learning feedback", () => {
+    expect(buildLearningRecord("Capital of Japan", "Tokyo")).toEqual({
+      prompt: "Capital of Japan",
+      answer: "Tokyo",
+      sourceStatus: "not-approved",
+      sourceNote: "",
+    });
   });
 });

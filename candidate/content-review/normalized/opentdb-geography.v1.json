@@ -1,0 +1,1972 @@
+{
+  "attribution": "Open Trivia DB, CC BY-SA 4.0 — https://opentdb.com/api_config.php",
+  "raw_sha256": "9462c356415ac5bc9cb5bfed4be161cd1cfe7f71b307211dce277593050f6d96",
+  "records": [
+    {
+      "category": "Geography",
+      "choices": [
+        "Austin",
+        "Dallas",
+        "Houston",
+        "San Antonio"
+      ],
+      "correct_answer": "Austin",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the capital city of the U.S. state of Texas?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Austin",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Dallas",
+            "Houston",
+            "San%20Antonio"
+          ],
+          "question": "What%20is%20the%20capital%20city%20of%20the%20U.S.%20state%20of%20Texas%3F",
+          "type": "multiple"
+        },
+        "position": 1
+      },
+      "source_fingerprint": "8e6eaebba9eb175938da3351d6fe1bf4af298209648bc022ae4f526690cd1a31",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "11",
+        "6",
+        "24",
+        "16"
+      ],
+      "correct_answer": "11",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many timezones does Russia have?",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "11",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "6",
+            "24",
+            "16"
+          ],
+          "question": "How%20many%20timezones%20does%20Russia%20have%3F",
+          "type": "multiple"
+        },
+        "position": 2
+      },
+      "source_fingerprint": "32aa847343d13072a8c79a633ba0f1bf868c94851aa61f8cde6ac72678bc9f2e",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Malaysia",
+        "Indonesia",
+        "Singapore",
+        "Thailand"
+      ],
+      "correct_answer": "Malaysia",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Kuala Lumpur is the capital of which country?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Malaysia",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Indonesia",
+            "Singapore",
+            "Thailand"
+          ],
+          "question": "Kuala%20Lumpur%20is%20the%20capital%20of%20which%20country%3F",
+          "type": "multiple"
+        },
+        "position": 3
+      },
+      "source_fingerprint": "0538db6a74c241cc295d87b8ec9913f3130949becb8bbe0f411e962062685c86",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Indonesia",
+        "Chile",
+        "New Zealand",
+        "Fiji"
+      ],
+      "correct_answer": "Indonesia",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Maluku islands (informally known as the Spice Islands) belong to which country?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Indonesia",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Chile",
+            "New%20Zealand",
+            "Fiji"
+          ],
+          "question": "The%20Maluku%20islands%20%28informally%20known%20as%20the%20Spice%20Islands%29%20belong%20to%20which%20country%3F",
+          "type": "multiple"
+        },
+        "position": 4
+      },
+      "source_fingerprint": "496f7ce8aa31624103573d78c5c6ad248aee51198c19c77625f9715129283e9c",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Estonia",
+        "Finland",
+        "Sweden",
+        "Poland"
+      ],
+      "correct_answer": "Estonia",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "In which country is Tallinn located?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Estonia",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Finland",
+            "Sweden",
+            "Poland"
+          ],
+          "question": "In%20which%20country%20is%20Tallinn%20located%3F",
+          "type": "multiple"
+        },
+        "position": 5
+      },
+      "source_fingerprint": "bb190a40318383c7f1acc301489a945777f8a50ab10f3d6eaf7e8cb33d7e53c6",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "correct_answer": "6",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many states are in Australia?",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "6",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "7",
+            "8",
+            "5"
+          ],
+          "question": "How%20many%20states%20are%20in%20Australia%3F",
+          "type": "multiple"
+        },
+        "position": 6
+      },
+      "source_fingerprint": "a5f244002224a1456b05bdc2aa22f3def7ffce70ad1118dadcc8e1da43089183",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "There is 47 prefectures in Japan.",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "There%20is%2047%20prefectures%20in%20Japan.",
+          "type": "boolean"
+        },
+        "position": 7
+      },
+      "source_fingerprint": "1f0042cb2ae272a704cd278785fcfafad4bbc9e601d04d19f8fda1569b2f184f",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Mt. Everest",
+        "Mount Godwin Austen",
+        "Kangchenjunga",
+        "Annapurna"
+      ],
+      "correct_answer": "Mt. Everest",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the highest mountain in the world?",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Mt.%20Everest",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Mount%20Godwin%20Austen",
+            "Kangchenjunga",
+            "Annapurna"
+          ],
+          "question": "What%20is%20the%20highest%20mountain%20in%20the%20world%3F",
+          "type": "multiple"
+        },
+        "position": 8
+      },
+      "source_fingerprint": "9fb8d710acf8023b798d72076d9f27af7f8caf01bab754c8eafbad293b558616",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "There is an island in Japan called Ōkunoshima, A.K.A. \"Rabbit Island\", so named because of it's huge population of rabbits.",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "There%20is%20an%20island%20in%20Japan%20called%20%C5%8Ckunoshima%2C%20A.K.A.%20%22Rabbit%20Island%22%2C%20so%20named%20because%20of%20it%27s%20huge%20population%20of%20rabbits.",
+          "type": "boolean"
+        },
+        "position": 9
+      },
+      "source_fingerprint": "233a529a2731043a91abae85c7ad7b586eb70f91783427a1772877d40b40141b",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Two",
+        "One",
+        "None",
+        "Three"
+      ],
+      "correct_answer": "Two",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many US states start with the letter K?",
+      "review_flags": [],
+      "source": {
+        "batch": 1,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Two",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "One",
+            "None",
+            "Three"
+          ],
+          "question": "How%20many%20US%20states%20start%20with%20the%20letter%20K%3F",
+          "type": "multiple"
+        },
+        "position": 10
+      },
+      "source_fingerprint": "07f6e991aa56436456a0d69c8201e6002c839f7b151d38b4ea43e70069c279bc",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Crown",
+        "Bird",
+        "Sickle",
+        "Tree"
+      ],
+      "correct_answer": "Crown",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The emblem on the flag of the Republic of Tajikistan features a sunrise over mountains below what symbol?",
+      "review_flags": [],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Crown",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Bird",
+            "Sickle",
+            "Tree"
+          ],
+          "question": "The%20emblem%20on%20the%20flag%20of%20the%20Republic%20of%20Tajikistan%20features%20a%20sunrise%20over%20mountains%20below%20what%20symbol%3F",
+          "type": "multiple"
+        },
+        "position": 1
+      },
+      "source_fingerprint": "177950f3894303e6d30e8d8c10aa33a25195bb7f755e6202b74b1283e3ec4a41",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Pyrenees",
+        "Alps",
+        "Carpathians",
+        "Urals"
+      ],
+      "correct_answer": "Pyrenees",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What mountain range lines the border between Spain and France?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Pyrenees",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Alps",
+            "Carpathians",
+            "Urals"
+          ],
+          "question": "What%20mountain%20range%20lines%20the%20border%20between%20Spain%20and%20France%3F",
+          "type": "multiple"
+        },
+        "position": 2
+      },
+      "source_fingerprint": "3daeeea6ba853f29031b2498bb32de79e47abf7dadeb86a98fab5261ef618738",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Portugal's modern territory was once a part of the Roman Empire.",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "Portugal%27s%20modern%20territory%20was%20once%20a%20part%20of%20the%20Roman%20Empire.",
+          "type": "boolean"
+        },
+        "position": 3
+      },
+      "source_fingerprint": "86742f0baee7489acf2b0d631e3112b48f4f8264cb4332eb07375f5e6c1e6dd5",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Longyearbyen",
+        "Sveagruva",
+        "Ny-Ålesund",
+        "Barentsburg"
+      ],
+      "correct_answer": "Longyearbyen",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the administrative centre and largest settlement on the Norwegian archipelago of Svalbard?",
+      "review_flags": [],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Longyearbyen",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Sveagruva",
+            "Ny-%C3%85lesund",
+            "Barentsburg"
+          ],
+          "question": "What%20is%20the%20administrative%20centre%20and%20largest%20settlement%20on%20the%20Norwegian%20archipelago%20of%20Svalbard%3F",
+          "type": "multiple"
+        },
+        "position": 4
+      },
+      "source_fingerprint": "9390d2dd0e383660ae570218db938711ee75807bf42f0a2844dd06654b2c36ea",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "False",
+        "True"
+      ],
+      "correct_answer": "False",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Republic of Malta is the smallest microstate worldwide.",
+      "review_flags": [],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "False",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "True"
+          ],
+          "question": "The%20Republic%20of%20Malta%20is%20the%20smallest%20microstate%20worldwide.",
+          "type": "boolean"
+        },
+        "position": 5
+      },
+      "source_fingerprint": "d4e8a3eed4ca911b3472a53823e98b70e343ad895507568c9b69ed7df62afb19",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correct_answer": "3",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many countries share a land border with Luxembourg?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "3",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "4",
+            "2",
+            "5"
+          ],
+          "question": "How%20many%20countries%20share%20a%20land%20border%20with%20Luxembourg%3F",
+          "type": "multiple"
+        },
+        "position": 6
+      },
+      "source_fingerprint": "38408244df0ede11824472dfc8623edda348038c7f5a463173db573833a9bd9b",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "12",
+        "8",
+        "9",
+        "10"
+      ],
+      "correct_answer": "12",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many independent countries are there within the continent of South America?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "12",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "8",
+            "9",
+            "10"
+          ],
+          "question": "How%20many%20independent%20countries%20are%20there%20within%20the%20continent%20of%20South%20America%3F",
+          "type": "multiple"
+        },
+        "position": 7
+      },
+      "source_fingerprint": "86d8fcf8d222cfc4f36401ca723099dcbd334b06ff88e89279e817759f70d4fe",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Mozambique",
+        "Uganda",
+        "Ethiopia",
+        "Nigeria"
+      ],
+      "correct_answer": "Mozambique",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of these African countries displays a gun on their flag?",
+      "review_flags": [],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Mozambique",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Uganda",
+            "Ethiopia",
+            "Nigeria"
+          ],
+          "question": "Which%20of%20these%20African%20countries%20displays%20a%20gun%20on%20their%20flag%3F",
+          "type": "multiple"
+        },
+        "position": 8
+      },
+      "source_fingerprint": "4a01f9659384922d0a4e42b8766acf3da4e2504fca43891c9e373459bab4b3c6",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Altaic",
+        "Sino-Tibetan",
+        "Dravidian",
+        "Indo-European"
+      ],
+      "correct_answer": "Altaic",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of the following language families is the most controversial amongst modern linguists?",
+      "review_flags": [],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Altaic",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Sino-Tibetan",
+            "Dravidian",
+            "Indo-European"
+          ],
+          "question": "Which%20of%20the%20following%20language%20families%20is%20the%20most%20controversial%20amongst%20modern%20linguists%3F",
+          "type": "multiple"
+        },
+        "position": 9
+      },
+      "source_fingerprint": "488873f50286f3eb107b43e31accd12f1fe56477a7f9a5e34af11f866362b27c",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Vatican City",
+        "Lesotho",
+        "Monaco City",
+        "Titania"
+      ],
+      "correct_answer": "Vatican City",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which is the smallest country in the world?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 2,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Vatican%20City",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Lesotho",
+            "Monaco%20City",
+            "Titania"
+          ],
+          "question": "Which%20is%20the%20smallest%20country%20in%20the%20world%3F",
+          "type": "multiple"
+        },
+        "position": 10
+      },
+      "source_fingerprint": "3fe4eda2429783687e854fbcfe6e7dd8aac76822c2b2386e852d70823ebf9097",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Cyprus",
+        "Azerbaijan",
+        "El Salvador",
+        "Djibouti"
+      ],
+      "correct_answer": "Cyprus",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of the following countries is an island?",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Cyprus",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Azerbaijan",
+            "El%20Salvador",
+            "Djibouti"
+          ],
+          "question": "Which%20of%20the%20following%20countries%20is%20an%20island%3F",
+          "type": "multiple"
+        },
+        "position": 1
+      },
+      "source_fingerprint": "74c392b508944bb8b3d5157e880dcd3323bd7c559e443ca6052113bc2f08e9bd",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Nuuk",
+        "Sisimiut",
+        "Narsaq",
+        "Maniitsoq"
+      ],
+      "correct_answer": "Nuuk",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the capital of Greenland?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Nuuk",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Sisimiut",
+            "Narsaq",
+            "Maniitsoq"
+          ],
+          "question": "What%20is%20the%20capital%20of%20Greenland%3F",
+          "type": "multiple"
+        },
+        "position": 2
+      },
+      "source_fingerprint": "a5ca2537a09e0eb5e2e56274c37407aef833ef87fa738b8cb3c52974026942e5",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "India",
+        "Vietnam",
+        "Thailand",
+        "Indonesia"
+      ],
+      "correct_answer": "India",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Andaman and Nicobar Islands in South East Asia are controlled by which country?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "India",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Vietnam",
+            "Thailand",
+            "Indonesia"
+          ],
+          "question": "The%20Andaman%20and%20Nicobar%20Islands%20in%20South%20East%20Asia%20are%20controlled%20by%20which%20country%3F",
+          "type": "multiple"
+        },
+        "position": 3
+      },
+      "source_fingerprint": "600c0c8e58daf1f5d9b76623dedfa648e60a7d33f0f4c7c051bda69e9958fa17",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Lansing",
+        "Kalamazoo",
+        "Ann Arbor",
+        "Detroit"
+      ],
+      "correct_answer": "Lansing",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which city is the capital of Michigan?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Lansing",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Kalamazoo",
+            "Ann%20Arbor",
+            "Detroit"
+          ],
+          "question": "Which%20city%20is%20the%20capital%20of%20Michigan%3F",
+          "type": "multiple"
+        },
+        "position": 4
+      },
+      "source_fingerprint": "bde7d3405837a7dcbfe0ae888ab238cd7f82d3796aa9e244ba588fd2f22569a8",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Jordan",
+        "Egypt",
+        "Israel",
+        "Italy"
+      ],
+      "correct_answer": "Jordan",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Where is the ancient city of Petra located?",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Jordan",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Egypt",
+            "Israel",
+            "Italy"
+          ],
+          "question": "Where%20is%20the%20ancient%20city%20of%20Petra%20located%3F",
+          "type": "multiple"
+        },
+        "position": 5
+      },
+      "source_fingerprint": "e4089cfd05ea3ebefdbb57d4b60c851684415690a1443b966dbb25fa7974aeba",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Shikoku",
+        "Iki",
+        "Odaiba",
+        "Okinawa"
+      ],
+      "correct_answer": "Shikoku",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of these Japanese islands is the largest by area?",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Shikoku",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Iki",
+            "Odaiba",
+            "Okinawa"
+          ],
+          "question": "Which%20of%20these%20Japanese%20islands%20is%20the%20largest%20by%20area%3F",
+          "type": "multiple"
+        },
+        "position": 6
+      },
+      "source_fingerprint": "c27ced3e649260a5dcc91779c91776fecf53514de9a34907640f62ff94e4fdde",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "There are no deserts in Europe.",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "There%20are%20no%20deserts%20in%20Europe.",
+          "type": "boolean"
+        },
+        "position": 7
+      },
+      "source_fingerprint": "2949f414ac2659be8d12e09f68c543e25c91e974639d0a598eaec7f223cc748f",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Seattle",
+        "Los Angles",
+        "Toronto",
+        "Vancouver"
+      ],
+      "correct_answer": "Seattle",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Space Needle is located in which city?",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Seattle",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "Los%20Angles",
+            "Toronto",
+            "Vancouver"
+          ],
+          "question": "The%20Space%20Needle%20is%20located%20in%20which%20city%3F",
+          "type": "multiple"
+        },
+        "position": 8
+      },
+      "source_fingerprint": "d287819947279b7c6f0408c5bf964c67a73b6f43a83f3f2f043bc911e527aecf",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Sri Lanka",
+        "Albania",
+        "Zambia",
+        "Moldova"
+      ],
+      "correct_answer": "Sri Lanka",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "A lion brandishing a sword is depicted on the national flag of which country?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Sri%20Lanka",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Albania",
+            "Zambia",
+            "Moldova"
+          ],
+          "question": "A%20lion%20brandishing%20a%20sword%20is%20depicted%20on%20the%20national%20flag%20of%20which%20country%3F",
+          "type": "multiple"
+        },
+        "position": 9
+      },
+      "source_fingerprint": "7f49e91250983d61b448028b008116b986b0af8e8f8974545f2e7ee160a9531a",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Dubai",
+        "Riyadh",
+        "Mecca",
+        "Medina"
+      ],
+      "correct_answer": "Dubai",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of these is NOT a city in Saudi Arabia?",
+      "review_flags": [],
+      "source": {
+        "batch": 3,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Dubai",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Riyadh",
+            "Mecca",
+            "Medina"
+          ],
+          "question": "Which%20of%20these%20is%20NOT%20a%20city%20in%20Saudi%20Arabia%3F",
+          "type": "multiple"
+        },
+        "position": 10
+      },
+      "source_fingerprint": "0366e69584bb88b600bc843e0bca3e40ded595fdd4fe622e13d72fbace5f1f91",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "South Africa has more than one capital city",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "South%20Africa%20has%20more%20than%20one%20capital%20city",
+          "type": "boolean"
+        },
+        "position": 1
+      },
+      "source_fingerprint": "8157b5b67274ab445826bf6bd8b4a5f49724465c6cf0225ad9bb7f1e6d183ba9",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Electric Town",
+        "Moon Walk River",
+        "Otaku Central ",
+        "Big Eyes"
+      ],
+      "correct_answer": "Electric Town",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Japanese district Akihabara is also known by what nickname?",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Electric%20Town",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Moon%20Walk%20River",
+            "Otaku%20Central%20",
+            "Big%20Eyes"
+          ],
+          "question": "The%20Japanese%20district%20Akihabara%20is%20also%20known%20by%20what%20nickname%3F",
+          "type": "multiple"
+        },
+        "position": 2
+      },
+      "source_fingerprint": "6e0ea11fc4ced305ce1808888769b0cc6f8a4de3bfcf0c5324d4c342711f1d16",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Elizabeth Castle",
+        "Frank Castle",
+        "Richard Castle",
+        "Olivia Castle"
+      ],
+      "correct_answer": "Elizabeth Castle",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of the following is a castle?",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Elizabeth%20Castle",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Frank%20Castle",
+            "Richard%20Castle",
+            "Olivia%20Castle"
+          ],
+          "question": "Which%20of%20the%20following%20is%20a%20castle%3F",
+          "type": "multiple"
+        },
+        "position": 3
+      },
+      "source_fingerprint": "e0defdd0293e01dc63bdee70b60ae15bdd510ebb6c16c1e00bf0d21c0745f386",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Tokyo is the capital of Japan.",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "Tokyo%20is%20the%20capital%20of%20Japan.",
+          "type": "boolean"
+        },
+        "position": 4
+      },
+      "source_fingerprint": "6e577637cc49f7b4b4f5dbd875ef4b86824aa8e561325c0165ab0353f659a926",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Alaska",
+        "California",
+        "Texas",
+        "Washington"
+      ],
+      "correct_answer": "Alaska",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What state is the largest state of the United States of America?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Alaska",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "California",
+            "Texas",
+            "Washington"
+          ],
+          "question": "What%20state%20is%20the%20largest%20state%20of%20the%20United%20States%20of%20America%3F",
+          "type": "multiple"
+        },
+        "position": 5
+      },
+      "source_fingerprint": "b2f925b0e6ac2039c8ed744254fde1401f8d89b3005532b0e0ce4e6b61d89032",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Samoyedic",
+        "Hungarian",
+        "Finnish",
+        "Estonian"
+      ],
+      "correct_answer": "Samoyedic",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "All of the following are classified as Finno-Ugric languages EXCEPT:",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Samoyedic",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "Hungarian",
+            "Finnish",
+            "Estonian"
+          ],
+          "question": "All%20of%20the%20following%20are%20classified%20as%20Finno-Ugric%20languages%20EXCEPT%3A",
+          "type": "multiple"
+        },
+        "position": 6
+      },
+      "source_fingerprint": "04264ee2611b7a643afea4c8dc95fdc0539d1f81d4e3762a3a5aa2e813395cc7",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Canada and the United States",
+        "Chile and Argentina",
+        "Russia and China",
+        "India and Pakistan"
+      ],
+      "correct_answer": "Canada and the United States",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The longest shared border in the world can be found between which two nations?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Canada%20and%20the%20United%20States",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "Chile%20and%20Argentina",
+            "Russia%20and%20China",
+            "India%20and%20Pakistan"
+          ],
+          "question": "The%20longest%20shared%20border%20in%20the%20world%20can%20be%20found%20between%20which%20two%20nations%3F",
+          "type": "multiple"
+        },
+        "position": 7
+      },
+      "source_fingerprint": "a7d9be7783e0a5b9fd8090a5a25355f35f5e7a31c2bfeba2d76a94745eda4150",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "16",
+        "13",
+        "32",
+        "25"
+      ],
+      "correct_answer": "16",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many federal states does Germany have?",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "16",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "13",
+            "32",
+            "25"
+          ],
+          "question": "How%20many%20federal%20states%20does%20Germany%20have%3F",
+          "type": "multiple"
+        },
+        "position": 8
+      },
+      "source_fingerprint": "c50865d2d0356f65d5e5d6311da8e7b0b1c2d64148bdd9e334c06b6fe682896c",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "4",
+        "5",
+        "2",
+        "0"
+      ],
+      "correct_answer": "4",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many stars are featured on New Zealand's flag?",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "4",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "5",
+            "2",
+            "0"
+          ],
+          "question": "How%20many%20stars%20are%20featured%20on%20New%20Zealand%27s%20flag%3F",
+          "type": "multiple"
+        },
+        "position": 9
+      },
+      "source_fingerprint": "b5d384bd8e8d1f5d6b9636b8b815ba3dea2e90494761aee44f5fcd2ea86ba087",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Tenerife",
+        "Fuerteventura",
+        "Gran Canaria",
+        "Maui"
+      ],
+      "correct_answer": "Tenerife",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What island in the Canary Islands was the scene of one of the worst air disasters in history with the collision of two jumbo jets?",
+      "review_flags": [],
+      "source": {
+        "batch": 4,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Tenerife",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Fuerteventura",
+            "Gran%20Canaria",
+            "Maui"
+          ],
+          "question": "What%20island%20in%20the%20Canary%20Islands%20was%20the%20scene%20of%20one%20of%20the%20worst%20air%20disasters%20in%20history%20with%20the%20collision%20of%20two%20jumbo%20jets%3F",
+          "type": "multiple"
+        },
+        "position": 10
+      },
+      "source_fingerprint": "87db3549364e3fbcd72b5f5eeaac2061259e7055494ae560fdde0d0e4c1ee2c8",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Honshu",
+        "Hokkaido",
+        "Shikoku",
+        "Kyushu"
+      ],
+      "correct_answer": "Honshu",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of the following Japanese islands is the biggest?",
+      "review_flags": [],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Honshu",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "Hokkaido",
+            "Shikoku",
+            "Kyushu"
+          ],
+          "question": "Which%20of%20the%20following%20Japanese%20islands%20is%20the%20biggest%3F",
+          "type": "multiple"
+        },
+        "position": 1
+      },
+      "source_fingerprint": "45b4fa09cdaa0ccc9513f7c81e9d491a1edfcd785a13a0f3e4b0adb7f1ecce0c",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Spanish",
+        "English",
+        "Portuguese",
+        "Creole"
+      ],
+      "correct_answer": "Spanish",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the official language of Costa Rica?",
+      "review_flags": [],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Spanish",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "English",
+            "Portuguese",
+            "Creole"
+          ],
+          "question": "What%20is%20the%20official%20language%20of%20Costa%20Rica%3F",
+          "type": "multiple"
+        },
+        "position": 2
+      },
+      "source_fingerprint": "47aa685c4097b77f815d59f83fa414cdfd66ca4a2df30cf7dff80253f8e2af7c",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Kashmir",
+        "Andorra",
+        "Gibraltar",
+        "Quin"
+      ],
+      "correct_answer": "Kashmir",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the region conjoining Pakistan, India, and China with unknown leadership called?",
+      "review_flags": [],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Kashmir",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Andorra",
+            "Gibraltar",
+            "Quin"
+          ],
+          "question": "What%20is%20the%20region%20conjoining%20Pakistan%2C%20India%2C%20and%20China%20with%20unknown%20leadership%20called%3F",
+          "type": "multiple"
+        },
+        "position": 3
+      },
+      "source_fingerprint": "b1ea9b0ffdc1c24985915b8dfb69a02b8d151dd971a2cfdb3a62643872bb097e",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "11",
+        "8",
+        "5",
+        "2"
+      ],
+      "correct_answer": "11",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "How many time zones are in Russia?",
+      "review_flags": [],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "11",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "8",
+            "5",
+            "2"
+          ],
+          "question": "How%20many%20time%20zones%20are%20in%20Russia%3F",
+          "type": "multiple"
+        },
+        "position": 4
+      },
+      "source_fingerprint": "5cdb95791498d809c31c1837a6b2af7e2bd578881d4a7b11626e22a3663665ba",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Mozambique",
+        "Botswana",
+        "Gabon",
+        "Togo"
+      ],
+      "correct_answer": "Mozambique",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What African country has Portuguese as its official language?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Mozambique",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Botswana",
+            "Gabon",
+            "Togo"
+          ],
+          "question": "What%20African%20country%20has%20Portuguese%20as%20its%20official%20language%3F",
+          "type": "multiple"
+        },
+        "position": 5
+      },
+      "source_fingerprint": "074ee5bac631319dff4740be8fcfbf67540bc579087af54baacda1e613dbc3c1",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Norway",
+        "Slovakia",
+        "Finland",
+        "Hong Kong"
+      ],
+      "correct_answer": "Norway",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which of these countries is the smallest by population?",
+      "review_flags": [],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Norway",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Slovakia",
+            "Finland",
+            "Hong%20Kong"
+          ],
+          "question": "Which%20of%20these%20countries%20is%20the%20smallest%20by%20population%3F",
+          "type": "multiple"
+        },
+        "position": 6
+      },
+      "source_fingerprint": "805357186fe07951e8e9d0c2f52fc2b4c70ca6ad84ed5eb62005bb7909b42ea7",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Egypt",
+        "Libya",
+        "Ghana",
+        "Nigeria"
+      ],
+      "correct_answer": "Egypt",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "The Suez Canal is located in which African country?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Egypt",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Libya",
+            "Ghana",
+            "Nigeria"
+          ],
+          "question": "The%20Suez%20Canal%20is%20located%20in%20which%20African%20country%3F",
+          "type": "multiple"
+        },
+        "position": 7
+      },
+      "source_fingerprint": "fd394fc531f6efb0200fe32e8f10a89915e54bf2b7dc0f323e9b62daabc1c0bb",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Lesotho",
+        "Swaziland",
+        "Botswana",
+        "Zimbabwe"
+      ],
+      "correct_answer": "Lesotho",
+      "difficulty": "hard",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Which country is completely landlocked by South Africa?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Lesotho",
+          "difficulty": "hard",
+          "incorrect_answers": [
+            "Swaziland",
+            "Botswana",
+            "Zimbabwe"
+          ],
+          "question": "Which%20country%20is%20completely%20landlocked%20by%20South%20Africa%3F",
+          "type": "multiple"
+        },
+        "position": 8
+      },
+      "source_fingerprint": "9ed983a38415987c8e6dbed0ac362cd351a90939b711ec0177d53f5841b053f1",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True",
+      "difficulty": "easy",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "Ottawa is the capital of Canada.",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "True",
+          "difficulty": "easy",
+          "incorrect_answers": [
+            "False"
+          ],
+          "question": "Ottawa%20is%20the%20capital%20of%20Canada.",
+          "type": "boolean"
+        },
+        "position": 9
+      },
+      "source_fingerprint": "ea554c1de64ab2e54d6800bcc4645c892fdb13149dfed17eac1a88522e08bac2",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "boolean",
+      "validation_errors": []
+    },
+    {
+      "category": "Geography",
+      "choices": [
+        "Victoria",
+        "Vancouver",
+        "Hope",
+        "Kelowna"
+      ],
+      "correct_answer": "Victoria",
+      "difficulty": "medium",
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "question": "What is the capital of British Columbia, Canada?",
+      "review_flags": [
+        "requires_geographic_policy_review"
+      ],
+      "source": {
+        "batch": 5,
+        "original_encoded": {
+          "category": "Geography",
+          "correct_answer": "Victoria",
+          "difficulty": "medium",
+          "incorrect_answers": [
+            "Vancouver",
+            "Hope",
+            "Kelowna"
+          ],
+          "question": "What%20is%20the%20capital%20of%20British%20Columbia%2C%20Canada%3F",
+          "type": "multiple"
+        },
+        "position": 10
+      },
+      "source_fingerprint": "5fdf126d668c2be7b3db5df29a4ca1c86c91884a7766ab6073743e5836a2237e",
+      "source_id": null,
+      "source_id_type": "not_provided_by_source",
+      "source_name": "Open Trivia DB",
+      "source_url": "https://opentdb.com/api.php?amount=10&category=22&encode=url3986",
+      "technical_validation": "accepted",
+      "type": "multiple",
+      "validation_errors": []
+    }
+  ],
+  "retrieved_at": "2026-11-09T10:29:00.715Z",
+  "schema_version": 1,
+  "source": "opentdb",
+  "source_license": "CC-BY-SA-4.0"
+}

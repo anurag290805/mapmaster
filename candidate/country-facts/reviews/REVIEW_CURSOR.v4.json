@@ -1,0 +1,21 @@
+{
+  "schema_version": 4,
+  "ledger_id": "mapmaster-country-facts-final-resolution.v2",
+  "as_of": "2026-11-10",
+  "total_records": 194,
+  "ready_for_founder_review": 166,
+  "needs_review": 28,
+  "rejected": 0,
+  "founder_approved": 0,
+  "gameplay_approved": 0,
+  "production_eligible": 0,
+  "gambia_mapping": {
+    "canonical_label": "Gambia",
+    "factbook_index_label": "The Gambia",
+    "gec_fips": "ga",
+    "source_path": "africa/ga.json",
+    "status": "corrected_in_additive_v2_overlay"
+  },
+  "next_batch": "Founder review of the 166 exact country/fact/source pairs in FOUNDER_APPROVAL_CHECKLIST.v4.md and v5.md. Do not promote any record. Keep the 25 CP05/entity-scope holds and three editorial holds outside release consideration until their independent blockers are resolved.",
+  "frozen_v1_snapshot_preserved": true
+}

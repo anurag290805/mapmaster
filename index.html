@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,26 +20,599 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/integration.css" />
     <link rel="stylesheet" href="css/cp03.css" />
+    <link rel="stylesheet" href="css/cp09.css" />
+    <link rel="stylesheet" href="css/cp10.css" />
+    <link rel="stylesheet" href="css/cp11.css" />
+    <link rel="stylesheet" href="css/hallmark-redesign.css" />
+    <link rel="stylesheet" href="css/external-content-preview.css" />
+    <link rel="stylesheet" href="css/experience.css" />
   </head>
   <body>
-
-    <header class="site-header"><div class="site-header-inner"><button class="site-brand" type="button" data-go="start" aria-label="MapMaster home"><img src="assets/brand/icon.svg" alt="" /><span>MapMaster</span></button><button class="menu-toggle" id="menuToggle" aria-controls="primaryNav" aria-expanded="false">Menu</button><nav id="primaryNav" aria-label="Primary navigation"><button data-go="start" aria-current="page">Home</button><button data-go="play">Play</button><button data-go="scope">Explore</button><button data-go="progress">Progress</button><button data-go="help">Help</button></nav><button class="settings-trigger" id="openSettings" type="button">Settings <span aria-hidden="true">↗</span></button></div></header>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <button
+          class="site-brand"
+          type="button"
+          data-go="start"
+          aria-label="MapMaster home"
+        >
+          <img src="assets/brand/icon.svg" alt="" /><span
+            >MapMaster</span
+          ></button
+        ><button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-controls="primaryNav"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <nav id="primaryNav" aria-label="Primary navigation">
+          <button data-go="start" aria-current="page">Home</button
+          ><button data-go="play">Play</button
+          ><button data-go="scope">Explore</button
+          ><button data-go="progress">Progress</button
+          ><button data-go="daily">Daily</button
+          ><button data-go="help">Help</button>
+        </nav>
+        <button class="settings-trigger" id="openAccount" type="button">
+          Account <span aria-hidden="true">◉</span>
+        </button>
+        <button class="settings-trigger" id="openSettings" type="button">
+          Settings <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </header>
     <main id="startScreen" class="cp-screen" tabindex="-1">
-      <section class="home-hero"><div class="hero-copy"><p class="cp-kicker">A little further, every day <span> / </span> THE WORLD IS WAITING</p><h1>Find your place<br><em>in the world.</em></h1><p class="hero-lede">A geography game for curious minds. Pick a challenge, explore the map, and discover how much you know.</p><div class="hero-actions"><button class="cp-primary" data-go="play">Find a game <span aria-hidden="true">↗</span></button><button class="cp-text-button" data-go="scope">Explore places <span aria-hidden="true">→</span></button></div><div class="hero-foot"><span>✳ &nbsp; PLAY AT YOUR OWN PACE</span><span>✳ &nbsp; NO ACCOUNT NEEDED</span></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="atlas-globe"><span class="globe-cross">✳</span><span class="globe-label">A WORLD<br>OF PLACES</span></div><span class="atlas-coord">23° 26′ N &nbsp; / &nbsp; 0° 00′</span><span class="atlas-index">FIELD NOTES<br><b>01 / 04</b></span></div></section>
-      <section class="home-discover"><div class="section-heading"><div><p class="cp-kicker">YOUR NEXT ADVENTURE</p><h2>How will you explore?</h2></div><button class="cp-text-button" data-go="play">All games <span aria-hidden="true">↗</span></button></div><div class="home-cards"><button class="home-card featured" data-mode="typing"><span class="card-index">01 / RECALL</span><span class="card-symbol" aria-hidden="true">Aa</span><strong>Name the places</strong><span>How many places can you remember?</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="locate"><span class="card-index">02 / DISCOVER</span><span class="card-symbol" aria-hidden="true">⌖</span><strong>Find it on the map</strong><span>Put your sense of direction to the test.</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="flag"><span class="card-index">03 / RECOGNISE</span><span class="card-symbol" aria-hidden="true">⚑</span><strong>Know your flags</strong><span>Match a flag to its country.</span><span class="card-action">Choose a region ↗</span></button><button class="home-card" data-mode="capital"><span class="card-index">04 / RECALL</span><span class="card-symbol" aria-hidden="true">◎</span><strong>Capital cities</strong><span>Find the city behind the place.</span><span class="card-action">Choose a region ↗</span></button></div></section>
-      <section class="home-regions"><div class="section-heading"><div><p class="cp-kicker">EXPLORE BY REGION</p><h2>Choose a corner of the world.</h2></div><button class="cp-text-button" data-go="scope">All places ↗</button></div><div id="continentQuick" class="region-links" aria-label="Continents"></div><p class="region-note">North and South America maps currently fail to load. Some other map targets and question pools are incomplete.</p></section>
-      <section class="home-bottom"><div><p class="cp-kicker">A WORLD OF POSSIBILITIES</p><h2>Start anywhere.</h2><p>Choose the whole world, a continent, or a country’s regions.</p><button class="cp-text-button" data-go="scope">Explore the atlas →</button></div><div class="guest-note"><span class="cp-kicker">YOUR JOURNEY</span><h3>Every explorer starts somewhere.</h3><p>Play as a guest. Your theme preference stays on this device; game progress is not saved yet.</p><button class="cp-text-button" data-go="progress">About progress →</button></div></section><footer class="site-footer"><span>MAPMASTER / MADE FOR CURIOUS MINDS</span><button data-go="help">How to play ↗</button></footer>
+      <section class="home-hero">
+        <div class="hero-copy">
+          <p class="cp-kicker">
+            A little further, every day <span> / </span> THE WORLD IS WAITING
+          </p>
+          <h1>Find your place<br /><em>in the world.</em></h1>
+          <p class="hero-lede">
+            A geography game for curious minds. Pick a challenge, explore the
+            map, and discover how much you know.
+          </p>
+          <div class="hero-actions">
+            <button class="cp-primary" data-go="play">
+              Find a game <span aria-hidden="true">↗</span></button
+            ><button
+              class="cp-secondary"
+              data-go="daily"
+              aria-label="Daily challenge"
+            >
+              Daily challenge <span aria-hidden="true">→</span></button
+            ><button class="cp-text-button" data-go="scope">
+              Explore places <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div class="hero-foot">
+            <span>✳ &nbsp; PLAY AT YOUR OWN PACE</span
+            ><span>✳ &nbsp; NO ACCOUNT NEEDED</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="atlas-globe">
+            <span class="globe-cross">✳</span
+            ><span class="globe-label">A WORLD<br />OF PLACES</span>
+          </div>
+          <span class="atlas-coord">23° 26′ N &nbsp; / &nbsp; 0° 00′</span
+          ><span class="atlas-index">FIELD NOTES<br /><b>01 / 04</b></span>
+        </div>
+      </section>
+      <section class="home-discover">
+        <div class="section-heading">
+          <div>
+            <p class="cp-kicker">YOUR NEXT ADVENTURE</p>
+            <h2>How will you explore?</h2>
+          </div>
+          <button class="cp-text-button" data-go="play">
+            All games <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="home-cards">
+          <button class="home-card featured" data-mode="typing">
+            <span class="card-index">01 / RECALL</span
+            ><span class="card-symbol" aria-hidden="true">Aa</span
+            ><strong>Name the places</strong
+            ><span>How many places can you remember?</span
+            ><span class="card-action">Choose a region ↗</span></button
+          ><button class="home-card" data-mode="locate">
+            <span class="card-index">02 / DISCOVER</span
+            ><span class="card-symbol" aria-hidden="true">⌖</span
+            ><strong>Find it on the map</strong
+            ><span>Put your sense of direction to the test.</span
+            ><span class="card-action">Choose a region ↗</span></button
+          ><button class="home-card" data-mode="flag">
+            <span class="card-index">03 / RECOGNISE</span
+            ><span class="card-symbol" aria-hidden="true">⚑</span
+            ><strong>Know your flags</strong
+            ><span>Match a flag to its country.</span
+            ><span class="card-action">Choose a region ↗</span></button
+          ><button class="home-card" data-mode="capital">
+            <span class="card-index">04 / RECALL</span
+            ><span class="card-symbol" aria-hidden="true">◎</span
+            ><strong>Capital cities</strong
+            ><span>Find the city behind the place.</span
+            ><span class="card-action">Choose a region ↗</span>
+          </button>
+        </div>
+      </section>
+      <section class="home-regions">
+        <div class="section-heading">
+          <div>
+            <p class="cp-kicker">EXPLORE BY REGION</p>
+            <h2>Choose a corner of the world.</h2>
+          </div>
+          <button class="cp-text-button" data-go="scope">All places ↗</button>
+        </div>
+        <div
+          id="continentQuick"
+          class="region-links"
+          aria-label="Continents"
+        ></div>
+        <p class="region-note">
+          North and South America maps currently fail to load. Some other map
+          targets and question pools are incomplete.
+        </p>
+      </section>
+      <section class="home-bottom">
+        <div>
+          <p class="cp-kicker">A WORLD OF POSSIBILITIES</p>
+          <h2>Start anywhere.</h2>
+          <p>Choose the whole world, a continent, or a country’s regions.</p>
+          <button class="cp-text-button" data-go="scope">
+            Explore the atlas →
+          </button>
+        </div>
+        <div class="guest-note">
+          <span class="cp-kicker">YOUR JOURNEY</span>
+          <h3>Every explorer starts somewhere.</h3>
+          <p>
+            Play as a guest. Your theme preference and progress stay on this
+            device.
+          </p>
+          <button class="cp-text-button" data-go="progress">
+            About progress →
+          </button>
+        </div>
+      </section>
+      <footer class="site-footer">
+        <span>MAPMASTER / MADE FOR CURIOUS MINDS</span
+        ><a
+          href="https://www.amcharts.com/svg-maps/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Map data © amCharts</a
+        ><a
+          href="https://github.com/jdecked/twemoji/blob/v14.0.2/LICENSE-GRAPHICS"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Flags: Twemoji (CC BY 4.0)</a
+        ><button data-go="help">How to play ↗</button>
+      </footer>
     </main>
-    <section id="playScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">THE PLAY COLLECTION / 01—04</p><h1>Choose your challenge.</h1><p class="cp-intro">Four ways to see the world. Choose a game, then pick where to play.</p><div class="play-list"><button class="play-card" data-mode="typing"><span>01</span><div><strong>Name the places</strong><p>Recall names from memory. Type as many as you can.</p><small>RECALL · PRACTICE OR CHALLENGE</small></div><b>↗</b></button><button class="play-card" data-mode="locate"><span>02</span><div><strong>Find it on the map</strong><p>Find the named place on the map.</p><small>MAP · PRACTICE OR CHALLENGE</small></div><b>↗</b></button><button class="play-card" data-mode="flag"><span>03</span><div><strong>Know your flags</strong><p>Identify countries from their flags.</p><small>RECOGNITION · WORLD / CONTINENTS</small></div><b>↗</b></button><button class="play-card" data-mode="capital"><span>04</span><div><strong>Capital cities</strong><p>Name the capital of the place shown.</p><small>RECALL · PRACTICE OR CHALLENGE</small></div><b>↗</b></button></div><p class="cp-notice">Some maps and question pools are incomplete. See <button data-go="help" class="inline-link">Help</button> for known limitations.</p></section>
-    <section id="scopeScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">EXPLORE / CHOOSE YOUR SCOPE</p><h1>Where to next?</h1><p class="cp-intro">Start with the world, explore a continent, or choose a country’s regions.</p><div id="scopeSection" class="scope-cards"><button id="worldScopeBtn"><span>01 / GLOBAL</span><strong>The world</strong><small>Countries around the globe</small><b>↗</b></button><button id="continentScopeBtn"><span>02 / REGIONAL</span><strong>Continents</strong><small>Choose from six regions</small><b>↗</b></button><button id="countryScopeBtn"><span>03 / LOCAL</span><strong>Countries</strong><small>Explore states and regions</small><b>↗</b></button></div><p class="cp-notice">North and South America map files currently do not load. Some other map targets are unavailable; typing and question coverage also have known limitations.</p><button class="cp-text-button" data-go="play">← Back to games</button></section>
-    <section id="progressScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">YOUR JOURNEY</p><h1>A place to begin.</h1><p class="cp-intro">Progress and achievements are not saved yet. Your current game results are shown at the end of a session.</p><div class="guest-note"><h2>More to discover</h2><p>Lasting records and achievements are planned for a later update. For now, choose a game and enjoy exploring.</p><button class="cp-primary" data-go="play">Choose a game ↗</button></div></section>
-    <section id="helpScreen" class="cp-screen cp-inner hidden" tabindex="-1"><p class="cp-kicker">FIELD GUIDE / HOW TO PLAY</p><h1>A little help<br><em>goes a long way.</em></h1><p class="cp-intro">Choose a game and a region, then pick practice or a timed challenge.</p><div class="help-list"><details open><summary>Choose your game</summary><p>Type names from memory, locate a named place on the map, identify a flag, or name a capital. Flags are available for world and continent scopes where flag data exists.</p></details><details><summary>Practice &amp; challenge</summary><p>Practice has no countdown. Challenge uses a timer; locate also asks for lives. Flag and capital challenges have unlimited lives.</p></details><details><summary>Scoring, hints &amp; results</summary><p>Correct answers add to the score and streak. Hints reveal a clue; in timed play they can subtract time. Results appear at the end. Enter complete names; reviewed aliases are accepted.</p></details><details><summary>Maps, keyboard &amp; touch</summary><p>Use the map to locate places; wheel or pinch to zoom. Map selection currently requires pointing and some targets or map files do not work. North and South America maps fail to load; a keyboard map alternative is planned.</p></details><details><summary>Guest preferences</summary><p>Theme preference is stored on this device when storage is available. Sound is kept for this visit. Game history and achievements are not yet saved.</p></details></div><button class="cp-secondary" id="replayGuide">Replay introduction</button></section>
-    <dialog id="settingsDialog" class="cp-dialog" aria-labelledby="settingsTitle"><div class="dialog-head"><div><p class="cp-kicker">PERSONALISE</p><h2 id="settingsTitle">Settings</h2></div><button class="dialog-close" data-close="settingsDialog" aria-label="Close settings">×</button></div><div class="settings-row"><div><strong>Appearance</strong><p>Light or dark on this device.</p></div><button class="cp-secondary" id="settingsTheme">Switch theme</button></div><div class="settings-row"><div><strong>Sound</strong><p>Sound preference lasts for this visit.</p></div><button class="cp-secondary" id="settingsSound">Toggle sound</button></div><p class="settings-foot">Guest preferences stay on this device. Game history is not saved.</p><div class="dialog-actions"><button class="cp-text-button" id="settingsGuide">Replay introduction</button><button class="cp-text-button" id="settingsHelp">How to play →</button></div></dialog>
-    <dialog id="onboardingDialog" class="cp-dialog onboarding" aria-labelledby="onboardTitle"><div class="dialog-head"><p class="cp-kicker">WELCOME TO MAPMASTER</p><button class="dialog-close" id="skipGuide" aria-label="Skip introduction">×</button></div><p class="guide-count" id="guideCount"></p><h2 id="onboardTitle"></h2><p id="guideText"></p><div class="dialog-actions"><button class="cp-text-button" id="guideBack">← Back</button><button class="cp-text-button" id="guideSkip">Skip for now</button><button class="cp-primary" id="guideNext">Continue →</button></div></dialog>
+    <section id="playScreen" class="cp-screen cp-inner hidden" tabindex="-1">
+      <p class="cp-kicker">THE PLAY COLLECTION / 01—06</p>
+      <h1>Choose your challenge.</h1>
+      <p class="cp-intro">
+        Six ways to see the world. Choose a game, then pick where to play.
+      </p>
+      <div class="play-list">
+        <button class="play-card" data-mode="typing">
+          <span>01</span>
+          <div>
+            <strong>Name the places</strong>
+            <p>Recall names from memory. Type as many as you can.</p>
+            <small>RECALL · PRACTICE OR CHALLENGE</small>
+          </div>
+          <b>↗</b></button
+        ><button class="play-card" data-mode="locate">
+          <span>02</span>
+          <div>
+            <strong>Find it on the map</strong>
+            <p>Find the named place on the map.</p>
+            <small>MAP · PRACTICE OR CHALLENGE</small>
+          </div>
+          <b>↗</b></button
+        ><button class="play-card" data-mode="flag">
+          <span>03</span>
+          <div>
+            <strong>Know your flags</strong>
+            <p>Identify countries from their flags.</p>
+            <small>RECOGNITION · WORLD / CONTINENTS</small>
+          </div>
+          <b>↗</b></button
+        ><button class="play-card" data-mode="capital">
+          <span>04</span>
+          <div>
+            <strong>Capital cities</strong>
+            <p>Name the capital of the place shown.</p>
+            <small>RECALL · PRACTICE OR CHALLENGE</small>
+          </div>
+          <b>↗</b></button
+        ><button class="play-card" data-mode="capitalChoice">
+          <span>05</span>
+          <div>
+            <strong>Capital Sprint</strong>
+            <p>Choose the capital from four answers.</p>
+            <small>CHOICES · PRACTICE OR CHALLENGE</small>
+          </div>
+          <b>↗</b></button
+        ><button class="play-card" data-mode="flagChoice">
+          <span>06</span>
+          <div>
+            <strong>Flag Sprint</strong>
+            <p>Choose the country behind each flag.</p>
+            <small>CHOICES · WORLD / CONTINENTS</small>
+          </div>
+          <b>↗</b>
+        </button>
+      </div>
+      <p class="cp-notice">
+        Some maps and question pools are incomplete. See
+        <button data-go="help" class="inline-link">Help</button> for known
+        limitations.
+      </p>
+    </section>
+    <section id="scopeScreen" class="cp-screen cp-inner hidden" tabindex="-1">
+      <p class="cp-kicker">EXPLORE / CHOOSE YOUR SCOPE</p>
+      <h1>Where to next?</h1>
+      <p class="cp-intro">
+        Start with the world, explore a continent, or choose a country’s
+        regions.
+      </p>
+      <div id="scopeSection" class="scope-cards">
+        <button id="worldScopeBtn">
+          <span>01 / GLOBAL</span><strong>The world</strong
+          ><small>Countries around the globe</small><b>↗</b></button
+        ><button id="continentScopeBtn">
+          <span>02 / REGIONAL</span><strong>Continents</strong
+          ><small>Choose from six regions</small><b>↗</b></button
+        ><button id="countryScopeBtn">
+          <span>03 / LOCAL</span><strong>Countries</strong
+          ><small>Explore states and regions</small><b>↗</b>
+        </button>
+      </div>
+      <p class="cp-notice">
+        North and South America map files currently do not load. Some other map
+        targets are unavailable; typing and question coverage also have known
+        limitations.
+      </p>
+      <button class="cp-text-button" data-go="play">← Back to games</button>
+    </section>
+    <section
+      id="progressScreen"
+      class="cp-screen cp-inner hidden"
+      tabindex="-1"
+    >
+      <p class="cp-kicker">YOUR JOURNEY</p>
+      <h1>Your progress,<br /><em>on this device.</em></h1>
+      <p class="cp-intro">
+        Finish a game to earn XP, unlock achievements, and keep compatible
+        personal bests. Progress stays in this browser.
+      </p>
+      <div id="progressDashboard" class="progress-dashboard" aria-live="polite">
+        <section class="progress-overview" aria-labelledby="progressLevel">
+          <p id="progressLevel" class="progress-level">Level 1</p>
+          <p id="progressXp" class="progress-xp">0 XP</p>
+          <div
+            id="progressXpMeter"
+            class="progress-meter"
+            role="progressbar"
+            aria-label="XP toward next level"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <span id="progressXpBar"></span>
+          </div>
+          <p id="progressSummary" class="progress-summary">
+            Complete a game to begin your journey.
+          </p>
+          <p class="progress-first-route">
+            New here? Start with a five-question Daily Easy round to earn your
+            first finish without changing the normal XP rules.
+          </p>
+        </section>
+        <section class="progress-panel" aria-labelledby="achievementsHeading">
+          <h2 id="achievementsHeading">Achievements</h2>
+          <ul id="achievementList" class="progress-list"></ul>
+        </section>
+        <section class="progress-panel" aria-labelledby="recordsHeading">
+          <h2 id="recordsHeading">Personal bests</h2>
+          <ul id="personalBestList" class="progress-list"></ul>
+        </section>
+        <div class="progress-actions">
+          <button class="cp-primary" data-go="daily-easy" type="button">
+            Try Daily Easy
+          </button>
+          <button id="resetProgressBtn" class="cp-secondary" type="button">
+            Reset local progress
+          </button>
+          <button class="cp-text-button" data-go="play" type="button">
+            Choose a game ↗
+          </button>
+        </div>
+        <p class="progress-storage-note">
+          Saved locally in this browser. Reset clears XP, achievements, and
+          personal bests on this device.
+        </p>
+      </div>
+    </section>
+    <section
+      id="dailyScreen"
+      class="cp-screen cp-inner hidden"
+      tabindex="-1"
+      aria-labelledby="dailyTitle"
+    >
+      <p class="cp-kicker">DAILY FIELD NOTES</p>
+      <h1 id="dailyTitle">Daily geography<br /><em>challenge.</em></h1>
+      <p class="cp-intro">
+        A deterministic capital sprint generated on this device. Complete today
+        once for XP; replay as often as you like.
+      </p>
+      <p id="dailyIdentity" class="daily-identity" aria-live="polite"></p>
+      <section class="daily-summary" aria-label="Daily progress">
+        <div>
+          <strong id="dailyCurrentStreak">0</strong><span>current streak</span>
+        </div>
+        <div>
+          <strong id="dailyLongestStreak">0</strong><span>longest streak</span>
+        </div>
+        <div>
+          <strong id="dailyCompletedDays">0</strong><span>completed days</span>
+        </div>
+      </section>
+      <section class="daily-panel" aria-labelledby="dailyDifficultyTitle">
+        <h2 id="dailyDifficultyTitle">Choose your route</h2>
+        <div
+          class="daily-difficulties"
+          role="group"
+          aria-label="Daily challenge difficulty"
+        >
+          <button type="button" data-daily-difficulty="easy">
+            <strong>Easy</strong><span>5 capitals · 3:00</span>
+          </button>
+          <button type="button" data-daily-difficulty="medium">
+            <strong>Medium</strong><span>8 capitals · 2:30</span>
+          </button>
+          <button type="button" data-daily-difficulty="hard">
+            <strong>Hard</strong><span>12 capitals · 2:00</span>
+          </button>
+        </div>
+        <p id="dailyAvailability" role="status" aria-live="polite"></p>
+      </section>
+      <section class="daily-panel" aria-labelledby="dailyCalendarTitle">
+        <div class="daily-panel-head">
+          <h2 id="dailyCalendarTitle">Challenge calendar</h2>
+          <p>Completed, missed, and locked days</p>
+        </div>
+        <div
+          id="dailyCalendar"
+          class="daily-calendar"
+          role="grid"
+          aria-labelledby="dailyCalendarTitle"
+        ></div>
+        <p id="dailyCalendarOrientation" class="daily-calendar-orientation"></p>
+        <p class="daily-calendar-key">
+          <span class="daily-key daily-key--complete"></span> Completed
+          <span class="daily-key daily-key--missed"></span> Missed
+          <span class="daily-key daily-key--future"></span> Future locked
+        </p>
+      </section>
+      <aside class="daily-policy" aria-label="Daily challenge storage policy">
+        <strong>On this device</strong>
+        <p>
+          Days follow your device’s local calendar. A recent backwards clock
+          change pauses new daily XP claims until the date catches up. No
+          account means this cannot prevent changes across devices.
+        </p>
+      </aside>
+    </section>
+    <section id="helpScreen" class="cp-screen cp-inner hidden" tabindex="-1">
+      <p class="cp-kicker">FIELD GUIDE / HOW TO PLAY</p>
+      <h1>A little help<br /><em>goes a long way.</em></h1>
+      <p class="cp-intro">
+        Choose a game and a region, then pick practice or a timed challenge.
+      </p>
+      <div class="help-list">
+        <details open>
+          <summary>Choose your game</summary>
+          <p>
+            Type names from memory, locate a named place on the map, identify a
+            flag, or name a capital. Flags are available for world and continent
+            scopes where flag data exists.
+          </p>
+        </details>
+        <details>
+          <summary>Practice &amp; challenge</summary>
+          <p>
+            Practice has no countdown. Challenge uses a timer; locate also asks
+            for lives. Flag and capital challenges have unlimited lives.
+          </p>
+        </details>
+        <details>
+          <summary>Scoring, hints &amp; results</summary>
+          <p>
+            Correct answers add to the score and streak. Hints reveal a clue; in
+            timed play they can subtract time. Results appear at the end. Enter
+            complete names; reviewed aliases are accepted.
+          </p>
+        </details>
+        <details>
+          <summary>Maps, keyboard &amp; touch</summary>
+          <p>
+            Use the map to locate places; wheel or pinch to zoom. Map selection
+            currently requires pointing and some targets or map files do not
+            work. Some map targets remain unverified; a keyboard map alternative
+            is planned.
+          </p>
+        </details>
+        <details>
+          <summary>Guest preferences</summary>
+          <p>
+            Theme preference is stored on this device when storage is available.
+            Sound is kept for this visit. Game history and achievements are not
+            yet saved.
+          </p>
+        </details>
+      </div>
+      <button class="cp-secondary" id="replayGuide">Replay introduction</button>
+    </section>
+    <dialog
+      id="settingsDialog"
+      class="cp-dialog"
+      aria-labelledby="settingsTitle"
+    >
+      <div class="dialog-head">
+        <div>
+          <p class="cp-kicker">PERSONALISE</p>
+          <h2 id="settingsTitle">Settings</h2>
+        </div>
+        <button
+          class="dialog-close"
+          data-close="settingsDialog"
+          aria-label="Close settings"
+        >
+          ×
+        </button>
+      </div>
+      <div class="settings-row">
+        <div>
+          <strong>Appearance</strong>
+          <p>Light or dark on this device.</p>
+        </div>
+        <button class="cp-secondary" id="settingsTheme">Switch theme</button>
+      </div>
+      <div class="settings-row">
+        <div>
+          <strong>Sound</strong>
+          <p>Optional sounds are saved on this device.</p>
+        </div>
+        <button class="cp-secondary" id="settingsSound">Toggle sound</button>
+      </div>
+      <p class="settings-foot">
+        Guest preferences stay on this device. Game history is not saved.
+      </p>
+      <div class="dialog-actions">
+        <button class="cp-text-button" id="settingsGuide">
+          Replay introduction</button
+        ><button class="cp-text-button" id="settingsHelp">How to play →</button>
+      </div>
+    </dialog>
+    <dialog
+      id="accountDialog"
+      class="cp-dialog mm-account-dialog"
+      aria-labelledby="accountTitle"
+    >
+      <div class="dialog-head">
+        <div>
+          <p class="cp-kicker">YOUR JOURNEY</p>
+          <h2 id="accountTitle">Your MapMaster account</h2>
+        </div>
+        <button
+          class="dialog-close"
+          data-close="accountDialog"
+          aria-label="Close account"
+        >
+          ×
+        </button>
+      </div>
+      <p id="accountIdentity">Playing as guest</p>
+      <p id="accountGuestNote">
+        Guest progress stays on this device until you choose to sign in.
+      </p>
+      <p id="accountUnavailable" class="mm-account-unavailable" role="status">
+        Accounts are unavailable in this build. Your game remains fully playable
+        as a local guest; no sign-in details will be sent anywhere.
+      </p>
+      <p
+        class="mm-sync-status"
+        data-testid="cloud-sync-status"
+        id="cloudSyncStatus"
+        role="status"
+        aria-live="polite"
+      >
+        Local only
+      </p>
+      <form id="accountEmailForm" class="mm-account-form">
+        <label class="mm-field"
+          >Email
+          <input id="accountEmail" type="email" autocomplete="email" required
+        /></label>
+        <label class="mm-field"
+          >Password
+          <input
+            id="accountPassword"
+            type="password"
+            autocomplete="current-password"
+            minlength="8"
+            required
+        /></label>
+        <p id="accountError" class="mm-field-error" role="alert"></p>
+        <p
+          id="accountNotice"
+          class="mm-field-notice"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div class="dialog-actions">
+          <button class="cp-secondary" type="submit">Sign in</button
+          ><button class="cp-primary" id="accountRegister" type="button">
+            Create account
+          </button>
+        </div>
+      </form>
+      <div class="dialog-actions mm-account-actions">
+        <button class="cp-text-button" id="accountGoogle" type="button">
+          Continue with Google
+        </button>
+        <button class="cp-text-button" id="accountReset" type="button">
+          Reset password
+        </button>
+        <button class="cp-text-button hidden" id="accountSignOut" type="button">
+          Sign out
+        </button>
+        <button class="cp-text-button hidden" id="accountDelete" type="button">
+          Delete account data
+        </button>
+      </div>
+      <p class="settings-foot">
+        Signing in merges this device’s valid progress with your private
+        account. It never awards new XP.
+      </p>
+    </dialog>
+    <dialog
+      id="onboardingDialog"
+      class="cp-dialog onboarding"
+      aria-labelledby="onboardTitle"
+    >
+      <div class="dialog-head">
+        <p class="cp-kicker">WELCOME TO MAPMASTER</p>
+        <button
+          class="dialog-close"
+          id="skipGuide"
+          aria-label="Skip introduction"
+        >
+          ×
+        </button>
+      </div>
+      <p class="guide-count" id="guideCount"></p>
+      <h2 id="onboardTitle"></h2>
+      <p id="guideText"></p>
+      <div class="dialog-actions">
+        <button class="cp-text-button" id="guideBack">← Back</button
+        ><button class="cp-text-button" id="guideSkip">Skip for now</button
+        ><button class="cp-primary" id="guideNext">Continue →</button>
+      </div>
+    </dialog>
 
     <!-- COUNTRY SELECT SCREEN -->
     <div id="countrySelectScreen" class="hidden">
-
       <div class="hero-block">
         <h1>Select<span> Country</span></h1>
         <div id="breadcrumb"></div>
@@ -47,33 +620,118 @@
       </div>
 
       <section id="countrySection">
-        <h3>Choose a country</h3><label class="country-search">Search countries<input type="search" id="countrySearch" placeholder="Search by name" autocomplete="off" /></label><p id="countryEmpty" class="hidden" role="status">No countries match that search.</p>
+        <h3>Choose a country</h3>
+        <label class="country-search"
+          >Search countries<input
+            type="search"
+            id="countrySearch"
+            placeholder="Search by name"
+            autocomplete="off"
+        /></label>
+        <p id="countryEmpty" class="hidden" role="status">
+          No countries match that search.
+        </p>
         <div class="country-grid">
-          <button data-country="argentina"     class="country-btn"><span class="c-flag">&#127462;&#127479;</span><span class="c-name">Argentina</span></button>
-          <button data-country="australia"     class="country-btn"><span class="c-flag">&#127462;&#127482;</span><span class="c-name">Australia</span></button>
-          <button data-country="brazil"        class="country-btn"><span class="c-flag">&#127463;&#127479;</span><span class="c-name">Brazil</span></button>
-          <button data-country="canada"        class="country-btn"><span class="c-flag">&#127464;&#127462;</span><span class="c-name">Canada</span></button>
-          <button data-country="china"         class="country-btn"><span class="c-flag">&#127464;&#127475;</span><span class="c-name">China</span></button>
-          <button data-country="egypt"         class="country-btn"><span class="c-flag">&#127466;&#127468;</span><span class="c-name">Egypt</span></button>
-          <button data-country="france"        class="country-btn"><span class="c-flag">&#127467;&#127479;</span><span class="c-name">France</span></button>
-          <button data-country="germany"       class="country-btn"><span class="c-flag">&#127465;&#127466;</span><span class="c-name">Germany</span></button>
-          <button data-country="greece"        class="country-btn"><span class="c-flag">&#127468;&#127479;</span><span class="c-name">Greece</span></button>
-          <button data-country="india"         class="country-btn"><span class="c-flag">&#127470;&#127475;</span><span class="c-name">India</span></button>
-          <button data-country="indonesia"     class="country-btn"><span class="c-flag">&#127470;&#127465;</span><span class="c-name">Indonesia</span></button>
-          <button data-country="italy"         class="country-btn"><span class="c-flag">&#127470;&#127481;</span><span class="c-name">Italy</span></button>
-          <button data-country="japan"         class="country-btn"><span class="c-flag">&#127471;&#127477;</span><span class="c-name">Japan</span></button>
-          <button data-country="mexico"        class="country-btn"><span class="c-flag">&#127474;&#127485;</span><span class="c-name">Mexico</span></button>
-          <button data-country="nigeria"       class="country-btn"><span class="c-flag">&#127475;&#127468;</span><span class="c-name">Nigeria</span></button>
-          <button data-country="pakistan"      class="country-btn"><span class="c-flag">&#127477;&#127472;</span><span class="c-name">Pakistan</span></button>
-          <button data-country="russia"        class="country-btn"><span class="c-flag">&#127479;&#127482;</span><span class="c-name">Russia</span></button>
-          <button data-country="southAfrica"   class="country-btn"><span class="c-flag">&#127487;&#127462;</span><span class="c-name">South Africa</span></button>
-          <button data-country="southKorea"    class="country-btn"><span class="c-flag">&#127472;&#127479;</span><span class="c-name">South Korea</span></button>
-          <button data-country="spain"         class="country-btn"><span class="c-flag">&#127466;&#127480;</span><span class="c-name">Spain</span></button>
-          <button data-country="thailand"      class="country-btn"><span class="c-flag">&#127481;&#127469;</span><span class="c-name">Thailand</span></button>
-          <button data-country="turkey"        class="country-btn"><span class="c-flag">&#127481;&#127479;</span><span class="c-name">Turkey</span></button>
-          <button data-country="uae"           class="country-btn"><span class="c-flag">&#127462;&#127466;</span><span class="c-name">UAE</span></button>
-          <button data-country="usa"           class="country-btn"><span class="c-flag">&#127482;&#127480;</span><span class="c-name">USA</span></button>
-          <button data-country="vietnam"       class="country-btn"><span class="c-flag">&#127483;&#127475;</span><span class="c-name">Vietnam</span></button>
+          <button data-country="argentina" class="country-btn">
+            <span class="c-flag">&#127462;&#127479;</span
+            ><span class="c-name">Argentina</span>
+          </button>
+          <button data-country="australia" class="country-btn">
+            <span class="c-flag">&#127462;&#127482;</span
+            ><span class="c-name">Australia</span>
+          </button>
+          <button data-country="brazil" class="country-btn">
+            <span class="c-flag">&#127463;&#127479;</span
+            ><span class="c-name">Brazil</span>
+          </button>
+          <button data-country="canada" class="country-btn">
+            <span class="c-flag">&#127464;&#127462;</span
+            ><span class="c-name">Canada</span>
+          </button>
+          <button data-country="china" class="country-btn">
+            <span class="c-flag">&#127464;&#127475;</span
+            ><span class="c-name">China</span>
+          </button>
+          <button data-country="egypt" class="country-btn">
+            <span class="c-flag">&#127466;&#127468;</span
+            ><span class="c-name">Egypt</span>
+          </button>
+          <button data-country="france" class="country-btn">
+            <span class="c-flag">&#127467;&#127479;</span
+            ><span class="c-name">France</span>
+          </button>
+          <button data-country="germany" class="country-btn">
+            <span class="c-flag">&#127465;&#127466;</span
+            ><span class="c-name">Germany</span>
+          </button>
+          <button data-country="greece" class="country-btn">
+            <span class="c-flag">&#127468;&#127479;</span
+            ><span class="c-name">Greece</span>
+          </button>
+          <button data-country="india" class="country-btn">
+            <span class="c-flag">&#127470;&#127475;</span
+            ><span class="c-name">India</span>
+          </button>
+          <button data-country="indonesia" class="country-btn">
+            <span class="c-flag">&#127470;&#127465;</span
+            ><span class="c-name">Indonesia</span>
+          </button>
+          <button data-country="italy" class="country-btn">
+            <span class="c-flag">&#127470;&#127481;</span
+            ><span class="c-name">Italy</span>
+          </button>
+          <button data-country="japan" class="country-btn">
+            <span class="c-flag">&#127471;&#127477;</span
+            ><span class="c-name">Japan</span>
+          </button>
+          <button data-country="mexico" class="country-btn">
+            <span class="c-flag">&#127474;&#127485;</span
+            ><span class="c-name">Mexico</span>
+          </button>
+          <button data-country="nigeria" class="country-btn">
+            <span class="c-flag">&#127475;&#127468;</span
+            ><span class="c-name">Nigeria</span>
+          </button>
+          <button data-country="pakistan" class="country-btn">
+            <span class="c-flag">&#127477;&#127472;</span
+            ><span class="c-name">Pakistan</span>
+          </button>
+          <button data-country="russia" class="country-btn">
+            <span class="c-flag">&#127479;&#127482;</span
+            ><span class="c-name">Russia</span>
+          </button>
+          <button data-country="southAfrica" class="country-btn">
+            <span class="c-flag">&#127487;&#127462;</span
+            ><span class="c-name">South Africa</span>
+          </button>
+          <button data-country="southKorea" class="country-btn">
+            <span class="c-flag">&#127472;&#127479;</span
+            ><span class="c-name">South Korea</span>
+          </button>
+          <button data-country="spain" class="country-btn">
+            <span class="c-flag">&#127466;&#127480;</span
+            ><span class="c-name">Spain</span>
+          </button>
+          <button data-country="thailand" class="country-btn">
+            <span class="c-flag">&#127481;&#127469;</span
+            ><span class="c-name">Thailand</span>
+          </button>
+          <button data-country="turkey" class="country-btn">
+            <span class="c-flag">&#127481;&#127479;</span
+            ><span class="c-name">Turkey</span>
+          </button>
+          <button data-country="uae" class="country-btn">
+            <span class="c-flag">&#127462;&#127466;</span
+            ><span class="c-name">UAE</span>
+          </button>
+          <button data-country="usa" class="country-btn">
+            <span class="c-flag">&#127482;&#127480;</span
+            ><span class="c-name">USA</span>
+          </button>
+          <button data-country="vietnam" class="country-btn">
+            <span class="c-flag">&#127483;&#127475;</span
+            ><span class="c-name">Vietnam</span>
+          </button>
         </div>
       </section>
 
@@ -81,12 +739,10 @@
         <button id="countryBackBtn" class="back-btn">&#8592; Back</button>
         <button id="countryContinueBtn" disabled>Continue &#8594;</button>
       </div>
-
     </div>
 
     <!-- CONTINENT SELECT SCREEN -->
     <div id="continentSelectScreen" class="hidden">
-
       <div class="hero-block">
         <h1>Select<span> Continent</span></h1>
         <div id="breadcrumbContinent"></div>
@@ -96,27 +752,44 @@
       <section id="continentSection">
         <h3>Choose a continent</h3>
         <div class="continent-grid">
-          <button data-continent="africa"       class="continent-btn"><span class="c-flag">&#127758;</span><span class="c-name">Africa</span></button>
-          <button data-continent="asia"         class="continent-btn"><span class="c-flag">&#127759;</span><span class="c-name">Asia</span></button>
-          <button data-continent="europe"       class="continent-btn"><span class="c-flag">&#127757;</span><span class="c-name">Europe</span></button>
-          <button data-continent="northAmerica" class="continent-btn"><span class="c-flag">&#127758;</span><span class="c-name">North America</span></button>
-          <button data-continent="oceania"      class="continent-btn"><span class="c-flag">&#127758;</span><span class="c-name">Oceania</span></button>
-          <button data-continent="southAmerica" class="continent-btn"><span class="c-flag">&#127758;</span><span class="c-name">South America</span></button>
+          <button data-continent="africa" class="continent-btn">
+            <span class="c-flag">&#127758;</span
+            ><span class="c-name">Africa</span>
+          </button>
+          <button data-continent="asia" class="continent-btn">
+            <span class="c-flag">&#127759;</span
+            ><span class="c-name">Asia</span>
+          </button>
+          <button data-continent="europe" class="continent-btn">
+            <span class="c-flag">&#127757;</span
+            ><span class="c-name">Europe</span>
+          </button>
+          <button data-continent="northAmerica" class="continent-btn">
+            <span class="c-flag">&#127758;</span
+            ><span class="c-name">North America</span>
+          </button>
+          <button data-continent="oceania" class="continent-btn">
+            <span class="c-flag">&#127758;</span
+            ><span class="c-name">Oceania</span>
+          </button>
+          <button data-continent="southAmerica" class="continent-btn">
+            <span class="c-flag">&#127758;</span
+            ><span class="c-name">South America</span>
+          </button>
         </div>
       </section>
 
       <div id="continentBackWrapper">
         <button id="continentBackBtn" class="back-btn">&#8592; Back</button>
       </div>
-
     </div>
 
     <!-- SETUP SCREEN - game type + mode -->
     <div id="setupScreen" class="hidden">
-
       <div class="hero-block">
         <h1>Game<span> Setup</span></h1>
-        <p class="hero-subtitle" id="setupSubtitle"></p><p id="setupNotice" role="status"></p>
+        <p class="hero-subtitle" id="setupSubtitle"></p>
+        <p id="setupNotice" role="status"></p>
         <div id="breadcrumbSetup"></div>
         <div class="hero-divider"></div>
       </div>
@@ -144,6 +817,18 @@
             <span class="btn-title">Capitals</span>
             <span class="btn-desc">Name the capital of each region</span>
           </button>
+          <button id="capitalChoiceModeBtn">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-title">Capital Sprint</span>
+            <span class="btn-desc"
+              >Choose the right capital from four answers</span
+            >
+          </button>
+          <button id="flagChoiceModeBtn">
+            <span class="btn-icon">🏁</span>
+            <span class="btn-title">Flag Sprint</span>
+            <span class="btn-desc">Choose the country behind each flag</span>
+          </button>
         </div>
       </div>
 
@@ -159,13 +844,11 @@
         <button id="setupBackBtn" class="back-btn">&#8592; Back</button>
         <button id="homeStartBtn" disabled>Start Game &#8594;</button>
       </div>
-
     </div>
 
     <!-- CHALLENGE SETTINGS SCREEN -->
     <div id="challengeSettings" class="hidden">
       <div class="settings-card">
-
         <h2>Challenge Settings</h2>
 
         <section id="timerSection">
@@ -186,39 +869,75 @@
           <button id="challengeBackBtn" class="back-btn">&#8592; Back</button>
           <button id="startGameBtn">Start Game</button>
         </div>
-
       </div>
     </div>
 
     <!-- GAME SCREEN -->
     <div id="gameScreen" class="hidden">
-
       <header id="appHeader">
         <div id="headerBrand">
-          <span id="headerLogo"><img class="mm-brand-mark" src="assets/brand/icon.svg" alt="" />MapMaster</span>
+          <span id="headerLogo"
+            ><img
+              class="mm-brand-mark"
+              src="assets/brand/icon.svg"
+              alt=""
+            />MapMaster</span
+          >
           <span id="headerSub">India Edition</span>
         </div>
         <div id="headerActions">
-          <button class="icon-btn" id="soundToggleBtn"  title="Toggle Sound">&#128266;</button>
-          <button class="icon-btn" id="themeToggleBtn"  title="Toggle Theme">&#127769;</button>
-          <button class="icon-btn" id="headerRestartBtn" title="Restart">&#8634;</button>
+          <button
+            class="icon-btn"
+            id="soundToggleBtn"
+            title="Mute sound"
+            aria-label="Mute sound"
+            aria-pressed="true"
+          >
+            &#128266;
+          </button>
+          <button class="icon-btn" id="themeToggleBtn" title="Toggle Theme">
+            &#127769;
+          </button>
+          <button class="icon-btn" id="headerRestartBtn" title="Restart">
+            &#8634;
+          </button>
         </div>
       </header>
 
       <div id="topBar">
-        <div id="scoreWrapper">  Score  <span id="scoreDisplay">0</span></div>
-        <div id="timerWrapper">  Time   <span id="timerDisplay">--</span></div>
-        <div id="livesWrapper">  Lives  <span id="livesDisplay">--</span></div>
-        <div id="streakWrapper"> Streak <span id="streakDisplay">0</span></div>
+        <div id="scoreWrapper">Score <span id="scoreDisplay">0</span></div>
+        <div id="timerWrapper">Time <span id="timerDisplay">--</span></div>
+        <div id="livesWrapper">Lives <span id="livesDisplay">--</span></div>
+        <div id="streakWrapper">Streak <span id="streakDisplay">0</span></div>
       </div>
 
       <div id="progressBarWrapper">
-        <svg id="progressRing" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-          <circle id="progressRingTrack" cx="22" cy="22" r="18" fill="none" stroke-width="4"/>
-          <circle id="progressRingFill"  cx="22" cy="22" r="18" fill="none" stroke-width="4"
+        <svg
+          id="progressRing"
+          viewBox="0 0 44 44"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            id="progressRingTrack"
+            cx="22"
+            cy="22"
+            r="18"
+            fill="none"
+            stroke-width="4"
+          />
+          <circle
+            id="progressRingFill"
+            cx="22"
+            cy="22"
+            r="18"
+            fill="none"
+            stroke-width="4"
             stroke-linecap="round"
-            transform="rotate(-90 22 22)"/>
-          <text id="progressRingPct" x="22" y="26" text-anchor="middle">0%</text>
+            transform="rotate(-90 22 22)"
+          />
+          <text id="progressRingPct" x="22" y="26" text-anchor="middle">
+            0%
+          </text>
         </svg>
         <div id="progressBarTrack" class="hidden">
           <div id="progressBarFill"></div>
@@ -238,38 +957,146 @@
         <span class="locate-underline"></span>
       </div>
 
+      <section
+        id="choiceContainer"
+        class="hidden"
+        aria-labelledby="choicePrompt"
+      >
+        <p id="choiceKicker">SPRINT ROUND</p>
+        <h2 id="choicePrompt"></h2>
+        <div id="choiceVisual"></div>
+        <div id="choiceOptions" role="group" aria-label="Answer choices"></div>
+        <p id="choiceFeedback" role="status" aria-live="polite"></p>
+      </section>
+
+      <section
+        id="learningReview"
+        class="learning-card hidden"
+        aria-labelledby="learningReviewTitle"
+      >
+        <p class="learning-kicker">REVIEW</p>
+        <h2 id="learningReviewTitle">Missed answer</h2>
+        <p id="learningReviewProgress" role="status" aria-live="polite"></p>
+        <p id="learningReviewPrompt"></p>
+        <p id="learningReviewAnswer"></p>
+        <p id="learningReviewSource"></p>
+        <div
+          class="learning-review-actions"
+          role="group"
+          aria-label="Review controls"
+        >
+          <button id="learningReviewPrevious" type="button">Previous</button>
+          <button id="learningReviewNext" type="button">Next</button>
+          <button id="learningReviewExit" type="button">Back to menu</button>
+        </div>
+      </section>
+
       <div id="mapContainer">
         <div id="locatePrompt" class="hidden">
           <span class="locate-label">Target</span>
           <span class="locate-name"></span>
           <span class="locate-underline"></span>
         </div>
+        <p id="mapCoverageNotice" role="status"></p>
         <div id="mapZoomWrapper">
-          <object type="image/svg+xml" data="svg/india.svg" id="indiaMap"></object>
+          <object
+            type="image/svg+xml"
+            data="svg/india.svg"
+            id="indiaMap"
+            aria-hidden="true"
+            tabindex="-1"
+          ></object>
         </div>
       </div>
 
+      <form
+        id="locateKeyboardAnswer"
+        class="locate-keyboard-answer hidden"
+        aria-labelledby="locateKeyboardAnswerLabel"
+      >
+        <label id="locateKeyboardAnswerLabel" for="locateAnswerSelect">
+          Select a map answer
+        </label>
+        <p id="locateKeyboardHint">
+          Keyboard alternative: choose a place, then check your selection.
+        </p>
+        <div class="locate-keyboard-controls">
+          <select id="locateAnswerSelect" aria-describedby="locateKeyboardHint">
+            <option value="">Choose a place</option>
+          </select>
+          <button id="locateAnswerSubmit" type="submit">
+            Check map answer
+          </button>
+        </div>
+      </form>
+
+      <aside
+        id="learningCue"
+        class="learning-card hidden"
+        aria-live="polite"
+        aria-labelledby="learningCueTitle"
+      >
+        <p id="learningCueTitle" class="learning-kicker">LEARNING CUE</p>
+        <p id="learningPrompt"></p>
+        <p id="learningAnswer"></p>
+        <p id="learningSource"></p>
+      </aside>
+
       <div id="inputSection">
-        <input type="text" id="stateInput" aria-label="Your answer" placeholder="Type a state name..." autocomplete="off" />
+        <input
+          type="text"
+          id="stateInput"
+          aria-label="Your answer"
+          placeholder="Type a state name..."
+          autocomplete="off"
+        />
         <div id="inputActions">
           <button id="submitAnswerBtn">Submit</button>
-          <button id="hintBtn" class="hint-btn" title="Use a hint">💡 Hint</button>
+          <button id="hintBtn" class="hint-btn" title="Use a hint">
+            💡 Hint
+          </button>
         </div>
         <div id="feedbackMessage" role="status" aria-live="polite"></div>
       </div>
-
     </div>
 
     <!-- WIN SCREEN -->
     <div id="winScreen" class="hidden">
       <h2>&#127881; You did it!</h2>
       <div id="statsSection">
-        <p>Time Taken   <span id="finalTime">--</span></p>
-        <p>Accuracy     <span id="finalAccuracy">--</span>%</p>
-        <p>Best Streak  <span id="finalStreak">--</span></p>
-        <p id="utBonusStat" class="hidden">UT Bonus <span id="finalUTBonus">--</span></p>
+        <p>Time Taken <span id="finalTime">--</span></p>
+        <p>Accuracy <span id="finalAccuracy">--</span>%</p>
+        <p>Best Streak <span id="finalStreak">--</span></p>
+        <p id="utBonusStat" class="hidden">
+          UT Bonus <span id="finalUTBonus">--</span>
+        </p>
       </div>
+      <section
+        id="winLearningSummary"
+        class="session-learning-summary"
+        aria-live="polite"
+      >
+        <p class="missed-heading">Learning summary</p>
+        <p id="winLearningCopy"></p>
+        <div id="winMissedList" class="missed-list"></div>
+      </section>
+      <p
+        id="winProgressionAward"
+        class="progression-award"
+        aria-live="polite"
+      ></p>
+      <section
+        id="dailyResultSummary"
+        class="daily-result hidden"
+        aria-live="polite"
+      ></section>
+      <button id="shareDailyResultBtn" class="hidden" type="button">
+        Share daily result
+      </button>
       <button id="restartBtn">Play Again</button>
+      <button id="winReviewBtn" class="hidden" type="button">
+        📖 Review Missed
+      </button>
     </div>
 
     <!-- LOSE SCREEN -->
@@ -277,9 +1104,20 @@
       <h2>Game Over</h2>
       <p id="loseReason"></p>
       <div id="missedSection">
-        <p class="missed-heading">You missed:</p>
+        <p class="missed-heading">Questions to revisit</p>
+        <p id="loseLearningSummary" aria-live="polite"></p>
         <div id="missedList"></div>
       </div>
+      <p
+        id="loseProgressionAward"
+        class="progression-award"
+        aria-live="polite"
+      ></p>
+      <section
+        id="dailyLoseSummary"
+        class="daily-result hidden"
+        aria-live="polite"
+      ></section>
       <div id="loseActions">
         <button id="retryBtn">Try Again</button>
         <button id="reviewBtn" class="hidden">📖 Review Missed</button>
@@ -298,8 +1136,13 @@
     <script src="js/events.js"></script>
     <script src="js/navigation-core.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/progress.js"></script>
     <script type="module" src="/src/ui/gameplay-bridge.ts"></script>
+    <script type="module" src="/src/ui/progression-bridge.ts"></script>
+    <script type="module" src="/src/ui/daily-bridge.ts"></script>
+    <script type="module" src="/src/ui/account-bridge.ts"></script>
+    <script type="module" src="/src/ui/cloud-sync-bridge.ts"></script>
+    <script type="module" src="/src/ui/offline-registration.ts"></script>
     <script type="module" src="/src/ui/country-search.ts"></script>
-
   </body>
 </html>

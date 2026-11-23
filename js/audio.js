@@ -1,98 +1,121 @@
-/* ============================================================
-   MapMaster | audio.js
-   Sound effects via Web Audio API and data-URI Audio elements.
-   ============================================================ */
-
-let soundEnabled = true;
-
-// Short data-URI beeps
-const sfxCorrect = new Audio("data:audio/wav;base64,UklGRl4AAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YTgAAAA" +
-  "AgICAgICAgH+AfYB7gHmAeIB3gHeAeIB6gH2AgICEgIiAjICRgJaAnACi");
-const sfxWrong   = new Audio("data:audio/wav;base64,UklGRl4AAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YTgAAAA" +
-  "AgICAgICAgICAgICAgICAgICAgH+AfYB7gHmAeIB4gHmAe4B/gIOAiICP");
-sfxCorrect.volume = 0.18;
-sfxWrong.volume   = 0.12;
-
-// Synthesized sounds via AudioContext
-function createSfx(type) {
-  return {
-    play() {
-      if (!soundEnabled) return;
-      try {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const gain = ctx.createGain();
-        gain.connect(ctx.destination);
-
-        if (type === "streak") {
-          [523, 659, 784, 1047].forEach((freq, i) => {
-            const osc = ctx.createOscillator();
-            osc.type = "sine";
-            osc.frequency.value = freq;
-            const g = ctx.createGain();
-            g.gain.setValueAtTime(0, ctx.currentTime + i * 0.08);
-            g.gain.linearRampToValueAtTime(0.15, ctx.currentTime + i * 0.08 + 0.04);
-            g.gain.linearRampToValueAtTime(0, ctx.currentTime + i * 0.08 + 0.12);
-            osc.connect(g); g.connect(ctx.destination);
-            osc.start(ctx.currentTime + i * 0.08);
-            osc.stop(ctx.currentTime + i * 0.08 + 0.15);
-          });
-        } else if (type === "tick") {
-          const osc = ctx.createOscillator();
-          osc.type = "square";
-          osc.frequency.value = 880;
-          gain.gain.setValueAtTime(0.08, ctx.currentTime);
-          gain.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.06);
-          osc.connect(gain);
-          osc.start(ctx.currentTime);
-          osc.stop(ctx.currentTime + 0.07);
-        } else if (type === "win") {
-          [523, 659, 784, 1047, 1319].forEach((freq, i) => {
-            const osc = ctx.createOscillator();
-            osc.type = "triangle";
-            osc.frequency.value = freq;
-            const g = ctx.createGain();
-            g.gain.setValueAtTime(0, ctx.currentTime + i * 0.1);
-            g.gain.linearRampToValueAtTime(0.18, ctx.currentTime + i * 0.1 + 0.05);
-            g.gain.linearRampToValueAtTime(0, ctx.currentTime + i * 0.1 + 0.25);
-            osc.connect(g); g.connect(ctx.destination);
-            osc.start(ctx.currentTime + i * 0.1);
-            osc.stop(ctx.currentTime + i * 0.1 + 0.3);
-          });
-        } else if (type === "lose") {
-          [392, 349, 294, 220].forEach((freq, i) => {
-            const osc = ctx.createOscillator();
-            osc.type = "sine";
-            osc.frequency.value = freq;
-            const g = ctx.createGain();
-            g.gain.setValueAtTime(0.12, ctx.currentTime + i * 0.15);
-            g.gain.linearRampToValueAtTime(0, ctx.currentTime + i * 0.15 + 0.2);
-            osc.connect(g); g.connect(ctx.destination);
-            osc.start(ctx.currentTime + i * 0.15);
-            osc.stop(ctx.currentTime + i * 0.15 + 0.25);
-          });
-        }
-        setTimeout(() => ctx.close(), 2000);
-      } catch(_) {}
-    }
+/*
+ * MapMaster sound effects.
+ *
+ * All effects are authored here with the browser Web Audio API; no audio files,
+ * remote requests, or audio library are used. Audio is purely supplementary.
+ */
+(function () {
+  const STORAGE_KEY = "mapmaster-sound-v1";
+  const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+  const cooldowns = { correct: 80, incorrect: 120, tick: 850, streak: 700, complete: 900, achievement: 1100, level: 1100 };
+  const patterns = {
+    correct: { wave: "sine", notes: [659, 880], duration: 0.1, volume: 0.045 },
+    incorrect: { wave: "triangle", notes: [220, 185], duration: 0.13, volume: 0.035 },
+    tick: { wave: "square", notes: [740], duration: 0.035, volume: 0.018 },
+    streak: { wave: "sine", notes: [523, 659, 784], duration: 0.1, volume: 0.035 },
+    complete: { wave: "triangle", notes: [523, 659, 784, 1047], duration: 0.14, volume: 0.04 },
+    achievement: { wave: "sine", notes: [784, 988, 1175], duration: 0.12, volume: 0.035 },
+    level: { wave: "triangle", notes: [392, 523, 784], duration: 0.13, volume: 0.035 },
   };
-}
+  let context = null;
+  let enabled = true;
+  let lastPlayed = new Map();
+  let lastSoundAt = -Infinity;
 
-const sfxStreak = createSfx("streak");
-const sfxTick   = createSfx("tick");
-const sfxWin    = createSfx("win");
-const sfxLose   = createSfx("lose");
+  try {
+    enabled = window.localStorage.getItem(STORAGE_KEY) !== "off";
+  } catch (_) {
+    // Storage can be denied; sound remains controllable for the current visit.
+  }
 
+  function savePreference() {
+    try {
+      window.localStorage.setItem(STORAGE_KEY, enabled ? "on" : "off");
+    } catch (_) {
+      // Persistence is optional; never make settings unusable when it is absent.
+    }
+  }
+
+  function getContext() {
+    if (!AudioContextCtor) return null;
+    if (!context || context.state === "closed") {
+      try {
+        context = new AudioContextCtor();
+      } catch (_) {
+        context = null;
+      }
+    }
+    return context;
+  }
+
+  function play(event) {
+    const pattern = patterns[event];
+    if (!enabled || !pattern || !AudioContextCtor) return;
+    const nowMs = performance.now();
+    if (nowMs - lastSoundAt < 180) return;
+    if (nowMs - (lastPlayed.get(event) || -Infinity) < cooldowns[event]) return;
+    lastPlayed.set(event, nowMs);
+    lastSoundAt = nowMs;
+
+    const audio = getContext();
+    if (!audio) return;
+    // A rejected resume is expected before a user gesture. It is intentionally silent.
+    if (audio.state === "suspended") audio.resume().catch(() => {});
+    try {
+      const start = audio.currentTime + 0.005;
+      pattern.notes.forEach((frequency, index) => {
+        const oscillator = audio.createOscillator();
+        const gain = audio.createGain();
+        const noteStart = start + index * 0.075;
+        const noteEnd = noteStart + pattern.duration;
+        oscillator.type = pattern.wave;
+        oscillator.frequency.setValueAtTime(frequency, noteStart);
+        gain.gain.setValueAtTime(0.0001, noteStart);
+        gain.gain.exponentialRampToValueAtTime(pattern.volume, noteStart + 0.015);
+        gain.gain.exponentialRampToValueAtTime(0.0001, noteEnd);
+        oscillator.connect(gain);
+        gain.connect(audio.destination);
+        oscillator.start(noteStart);
+        oscillator.stop(noteEnd + 0.01);
+      });
+    } catch (_) {
+      // Unsupported or interrupted audio must never affect game input or timing.
+    }
+  }
+
+  function setEnabled(next) {
+    enabled = Boolean(next);
+    soundEnabled = enabled;
+    savePreference();
+    return enabled;
+  }
+
+  window.MapMasterAudio = {
+    isSupported: () => Boolean(AudioContextCtor),
+    isEnabled: () => enabled,
+    setEnabled,
+    play,
+  };
+
+  // Compatibility names used by CP04–CP08. Events stay semantic, not asset-based.
+  window.soundEnabled = enabled;
+  window.sfxCorrect = "correct";
+  window.sfxWrong = "incorrect";
+  window.sfxStreak = "streak";
+  window.sfxTick = "tick";
+  window.sfxWin = "complete";
+  window.sfxLose = "incorrect";
+})();
+
+let soundEnabled = window.MapMasterAudio.isEnabled();
+const sfxCorrect = window.sfxCorrect;
+const sfxWrong = window.sfxWrong;
+const sfxStreak = window.sfxStreak;
+const sfxTick = window.sfxTick;
+const sfxWin = window.sfxWin;
+const sfxLose = window.sfxLose;
 let lastTickPlayed = -1;
 
-/** Play a sound effect if sound is enabled */
-function playSound(sfx) {
-  if (!soundEnabled) return;
-  if (typeof sfx.play === "function" && !(sfx instanceof Audio)) {
-    sfx.play();
-    return;
-  }
-  try {
-    sfx.currentTime = 0;
-    sfx.play().catch(() => {});
-  } catch (_) {}
+function playSound(event) {
+  window.MapMasterAudio?.play(event);
 }

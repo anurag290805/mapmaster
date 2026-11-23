@@ -1,0 +1,4465 @@
+{
+  "raw_sha256": "e15081545d29dec3a15051047d087d7804ba711cc5b6bc0e0d709c3927344e9f",
+  "records": [
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-3a2c3c75-40c5-3839-89d3-21165d95d23e",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1010407.87"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q36755",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-38b9cb16-4432-f1d7-2c12-7f2d5d757d64",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-bb475323-405c-4eb8-af2d-82da0902461b",
+            "value": {
+              "id": "Q15",
+              "label": "Africa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q15"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-77efdc4d-4dc6-73f2-222a-948fdc1d3ad1",
+            "value": {
+              "id": "Q85",
+              "label": "Cairo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q85"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "-3031-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "-2706-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-c2ef81bb-4006-910a-6e77-970b0abefa8f",
+            "value": {
+              "id": "Q1153959",
+              "label": "Thinis",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1153959"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "-2706-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "-2215-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q79-e832bd4a-40c3-635b-2b33-4b0bf9096939",
+            "value": {
+              "id": "Q5715",
+              "label": "Memphis",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5715"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q79-3AB1B6CD-1F96-45BE-9AFD-2F933FF083BF",
+            "value": {
+              "id": "Q13955",
+              "label": "Arabic",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13955"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q79-7AAEF53F-7F00-4ED3-A80D-B26369DA2391",
+            "value": {
+              "id": "Q199462",
+              "label": "Egyptian pound",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q199462"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/131ebfed16f4f1b217c50ba48607ed7f",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2629",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q79-4ff45d0b-4082-4ecc-d901-f0eb3de7d5b3",
+            "value": {
+              "id": "Q1140642",
+              "label": "Mount Catherine",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1140642"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Egypt",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P30"
+      ],
+      "selection": {
+        "name": "Egypt",
+        "region": "Africa"
+      },
+      "source_id": "Q79",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q114-a0386875-4ed1-5da0-05ca-38542dfb6262",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "581309"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q114-B6F7FA84-E5DC-4041-94C5-D70400576D13",
+            "value": {
+              "id": "Q15",
+              "label": "Africa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q15"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q114-A6BC1157-8300-4525-88DA-D02F79AD8B16",
+            "value": {
+              "id": "Q3870",
+              "label": "Nairobi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3870"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q114-401F6190-813A-41E9-B9CE-BB9E26A54892",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q114-6174C535-071D-4AB5-AF96-5A95F2F120C2",
+            "value": {
+              "id": "Q7838",
+              "label": "Swahili",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q7838"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q114-CB80A0AA-DA97-4AB6-874A-E046C06692FD",
+            "value": {
+              "id": "Q202882",
+              "label": "Kenyan shilling",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q202882"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q114-2d6c49f9-4230-2dc3-75a6-aaa86275f0ea",
+            "value": {
+              "id": "Q172070",
+              "label": "Mount Kenya",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q172070"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Kenya",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37"
+      ],
+      "selection": {
+        "name": "Kenya",
+        "region": "Africa"
+      },
+      "source_id": "Q114",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [
+              {
+                "property": "P1011",
+                "value": "http://www.wikidata.org/entity/Q6250",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1028-4FF6511C-13D2-44A1-984C-5D2CA4844FC8",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "446550"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1012",
+                "value": "http://www.wikidata.org/entity/Q6250",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1028-6a90b953-45a4-a778-3b35-c1c99be225be",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "710850"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1028-1f5a6494-4157-444d-0e84-870e8bd90e79",
+            "value": {
+              "id": "Q15",
+              "label": "Africa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q15"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1028-EF2DF7B3-8610-45B5-9021-C42B8E5CF783",
+            "value": {
+              "id": "Q3551",
+              "label": "Rabat",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3551"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1028-1a49810f-46a4-b48f-720f-a3df5638852f",
+            "value": {
+              "id": "Q7598268",
+              "label": "Standard Moroccan Tamazight",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q7598268"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1028-48F5CC07-2727-4CCF-815D-3AE85EA87973",
+            "value": {
+              "id": "Q13955",
+              "label": "Arabic",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13955"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1028-8C478CBB-70DE-41E8-84D3-AFCED6F93D0B",
+            "value": {
+              "id": "Q200192",
+              "label": "Moroccan dirham",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q200192"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/6fefb9090905bf5e7ec4d38b21c1afc5",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "4167",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1028-ce988807-4b54-da8e-6457-62e7a681f974",
+            "value": {
+              "id": "Q503433",
+              "label": "Jbel Toubkal",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q503433"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Morocco",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37",
+        "multiple_claims:P2046"
+      ],
+      "selection": {
+        "name": "Morocco",
+        "region": "Africa"
+      },
+      "source_id": "Q1028",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1033-3BA43F10-970D-4360-A08E-86CF4440285F",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "923768"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1033-E2316A33-7264-4782-9140-4DF313EAEEC2",
+            "value": {
+              "id": "Q15",
+              "label": "Africa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q15"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1914-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1991-12-12T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1033-2216dea9-4510-c0f0-2b64-e5c5fec170ae",
+            "value": {
+              "id": "Q8673",
+              "label": "Lagos",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q8673"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1991-12-12T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1033-C13480D3-E125-4C8C-A9EC-56BC8078ABAA",
+            "value": {
+              "id": "Q3787",
+              "label": "Abuja",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3787"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1033-0DF5EE7D-DCD7-4924-A433-C54373E54578",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q1033-64F6D2E9-EEDE-472A-B6D6-8F4DD001C7B4",
+            "value": {
+              "id": "Q203567",
+              "label": "naira",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q203567"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q1033-29186391-4fc6-0868-4dc8-f32014cf8f39",
+            "value": {
+              "id": "Q976055",
+              "label": "Chappal Waddi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q976055"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Nigeria",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36"
+      ],
+      "selection": {
+        "name": "Nigeria",
+        "region": "Africa"
+      },
+      "source_id": "Q1033",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q258-a59d3274-4936-d491-24db-f2950429425b",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1221037"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-5209D1ED-DCAC-44A0-958A-38518E31029C",
+            "value": {
+              "id": "Q15",
+              "label": "Africa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q15"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q11204",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q258-27941c24-4459-00e6-3aba-0c42f18dfcdd",
+            "value": {
+              "id": "Q5465",
+              "label": "Cape Town",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5465"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q105985",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q258-6cfdfa49-4730-bbcc-5c63-5f34469f270a",
+            "value": {
+              "id": "Q37701",
+              "label": "Bloemfontein",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q37701"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q35798",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-45FA18AF-AD77-46AF-8C4F-80E0B0B66797",
+            "value": {
+              "id": "Q3926",
+              "label": "Pretoria",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3926"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q258-f877755d-42b9-0889-99ec-401cd4e58154",
+            "value": {
+              "id": "Q3322093",
+              "label": "South African Sign Language",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3322093"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-058EA70C-6E77-44F8-B8C9-7250A1B7203A",
+            "value": {
+              "id": "Q32704",
+              "label": "Venda",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q32704"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-2259F857-AC05-494D-B81F-8AD91B255C3E",
+            "value": {
+              "id": "Q13218",
+              "label": "Xhosa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13218"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-23CE58F4-1C3F-4D06-B33F-8D94F47054EA",
+            "value": {
+              "id": "Q34137",
+              "label": "Tswana",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q34137"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-44225C42-CB9E-46BE-B0C5-9192A6449651",
+            "value": {
+              "id": "Q34340",
+              "label": "Sesotho",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q34340"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-474993FD-2F14-4E07-926B-FAFF7A15C011",
+            "value": {
+              "id": "Q36785",
+              "label": "Southern Ndebele",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q36785"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-88879018-C7E6-45E4-A3FC-31B691504316",
+            "value": {
+              "id": "Q34327",
+              "label": "Tsonga",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q34327"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-92AE26DF-577A-48CB-86C1-803E0B41A3CF",
+            "value": {
+              "id": "Q10179",
+              "label": "Zulu",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q10179"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-A1A0957E-AC47-472B-BE8C-F54F6B7F77E7",
+            "value": {
+              "id": "Q14196",
+              "label": "Afrikaans",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q14196"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-B014B090-D225-44BB-A82C-258E368963CE",
+            "value": {
+              "id": "Q33890",
+              "label": "Northern Sotho",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q33890"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-D7265529-E3E1-4060-942A-93FF770C67CF",
+            "value": {
+              "id": "Q34014",
+              "label": "Swazi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q34014"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q1454806",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-F9F756C8-ED7E-4426-AA30-7B40D3E4473A",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q258-D9E774CD-B331-401F-A768-FDDB2BB0C5B1",
+            "value": {
+              "id": "Q181907",
+              "label": "rand",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q181907"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/cd9a11ebbc9959d7a69a273bcf046f68",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "3450",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q258-bf100b6a-4ee7-6b9e-db59-e9ba62a28e8d",
+            "value": {
+              "id": "Q1883683",
+              "label": "Mafadi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1883683"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "South Africa",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37"
+      ],
+      "selection": {
+        "name": "South Africa",
+        "region": "Africa"
+      },
+      "source_id": "Q258",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-668dceec-48d9-46d1-bac4-ebb36c4b4b12",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "2780400"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q414-91618057-70B5-476E-894C-179120E771F2",
+            "value": {
+              "id": "Q18",
+              "label": "South America",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q18"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q414-2CE9BB47-00C8-42FB-B226-ED8BF814C226",
+            "value": {
+              "id": "Q1486",
+              "label": "Buenos Aires",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1486"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P5102",
+                "value": "http://www.wikidata.org/entity/Q712144",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q414-b60fd5c6-4ec0-d23c-e610-eab7b9cd657f",
+            "value": {
+              "id": "Q1321",
+              "label": "Spanish",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1321"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "property": "P1365",
+                "value": "http://www.wikidata.org/entity/Q1640286",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q199578",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1985-06-14T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1992-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-0f05ed2e-4223-4f62-ac5e-73c420e4c839",
+            "value": {
+              "id": "Q781218",
+              "label": "Argentine austral",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q781218"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1365",
+                "value": "http://www.wikidata.org/entity/Q961408",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q1640286",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1970-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1983-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-3e7b758b-4f92-9cd5-6568-0470468b955c",
+            "value": {
+              "id": "Q3900745",
+              "label": "Argentine peso ley",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3900745"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1992-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-b1dfc6a6-4c36-dbca-798e-ad93d0fc7983",
+            "value": {
+              "id": "Q199578",
+              "label": "Argentine convertible peso",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q199578"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q3900745",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1881-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1969-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-d9e2e65e-4476-3010-4614-c40bb70def0e",
+            "value": {
+              "id": "Q961408",
+              "label": "peso moneda nacional",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q961408"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1365",
+                "value": "http://www.wikidata.org/entity/Q3900745",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q781218",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1983-06-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1985-06-14T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q414-21AD4DF2-1C9C-4CDD-93EE-6621DAF29E75",
+            "value": {
+              "id": "Q1640286",
+              "label": "mandanga",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1640286"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/d8dcf19a28afae34e8f7b7ddd9812e81",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "6961",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q414-0a32c2fe-4571-0853-44bb-ea2d4936f8c1",
+            "value": {
+              "id": "Q39739",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q39739"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Argentina",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P38"
+      ],
+      "selection": {
+        "name": "Argentina",
+        "region": "Americas"
+      },
+      "source_id": "Q414",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-3f3c90a3-4936-8f3f-ad2d-eef8c278cc03",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "8515767"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q155-016A03CE-7721-4822-AAD0-B8D1ED814389",
+            "value": {
+              "id": "Q18",
+              "label": "South America",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q18"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1960-04-22T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-21140730-4833-9970-92a7-e2db71649b10",
+            "value": {
+              "id": "Q8678",
+              "label": "Rio de Janeiro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q8678"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1960-04-22T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q155-14A8A9D4-F7D1-4B46-BB83-C015F95E7DF3",
+            "value": {
+              "id": "Q2844",
+              "label": "Brasília",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q2844"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P4626",
+                "value": "http://www.wikidata.org/entity/Q750553",
+                "value_type": "uri"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q2666455",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-9d6dd154-4bc2-bfe0-3bab-6dd9f6eee729",
+            "value": {
+              "id": "Q5146",
+              "label": "Portuguese",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5146"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q2666455",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-bfe726e6-4460-33e9-b504-27f9e00f1c4d",
+            "value": {
+              "id": "Q3436689",
+              "label": "Brazilian Sign Language",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3436689"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1989-01-16T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1990-03-15T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-06446e0e-41fb-6f7d-1e71-193abb4c4998",
+            "value": {
+              "id": "Q1764812",
+              "label": "Brazilian cruzado novo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1764812"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1500-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1942-10-31T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-3b865d0b-40d1-d6c5-2a40-e2966c13e080",
+            "value": {
+              "id": "Q10366257",
+              "label": "Brazilian réis",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q10366257"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1970-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1986-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-6b9a31cd-4d33-39a5-e6c1-16a871b8933d",
+            "value": {
+              "id": "Q10261894",
+              "label": "cruzeiro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q10261894"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1993-08-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1994-06-30T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-76baa57b-4f1b-f6b8-c71c-7a66e22a7a0a",
+            "value": {
+              "id": "Q831578",
+              "label": "Brazilian cruzeiro real",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q831578"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1942-11-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1967-02-12T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-a7a3dcd0-4ef7-98e3-056d-4ce6f052c463",
+            "value": {
+              "id": "Q8351983",
+              "label": "cruzeiro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q8351983"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1967-02-13T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1970-05-14T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-acb907a4-44ff-8ed0-5361-80f85180287b",
+            "value": {
+              "id": "Q44904",
+              "label": "cruzeiro novo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q44904"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1986-02-28T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1989-01-15T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-be884dfd-4e52-8fa2-42a5-e86aebe1209e",
+            "value": {
+              "id": "Q926028",
+              "label": "Brazilian cruzado",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q926028"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1990-03-16T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1993-08-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-bf1f99c5-4253-053a-252a-757c6d8173c0",
+            "value": {
+              "id": "Q10261896",
+              "label": "cruzeiro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q10261896"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1994-07-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q155-11037DE2-4842-4845-8A43-0136FD57FD5C",
+            "value": {
+              "id": "Q173117",
+              "label": "Brazilian real",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q173117"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/178d225f3d9246b499525e90b546696f",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2994",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q155-17ab2f82-4de5-ab10-6648-caab49210a63",
+            "value": {
+              "id": "Q739484",
+              "label": "Pico da Neblina",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q739484"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Brazil",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37",
+        "multiple_claims:P38"
+      ],
+      "selection": {
+        "name": "Brazil",
+        "region": "Americas"
+      },
+      "source_id": "Q155",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q16-6ebdcc70-45f0-ebfc-d3e2-5032eac5be49",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "9984670"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q16-4C33130E-3F1B-4249-899B-6698D77B8BF9",
+            "value": {
+              "id": "Q49",
+              "label": "North America",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q49"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1867-05-15T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q16-B77FAC7C-4711-4C6E-8500-37A0F6EB5590",
+            "value": {
+              "id": "Q1930",
+              "label": "Ottawa",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1930"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1972-09-11T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q16-452537D9-434E-456C-8BB5-7327BB02B9B1",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1972-09-11T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q16-ABC0020B-225C-4B1E-8292-FCCB54FACC4C",
+            "value": {
+              "id": "Q150",
+              "label": "French",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q150"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q16-DD99F835-19C0-4A6D-A692-B34096B0F91B",
+            "value": {
+              "id": "Q1104069",
+              "label": "Canadian dollar",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1104069"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/9d27fb8cfccbc5c1ea7d63a98498bf2b",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "5959",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q16-2ab56e4b-4a35-0633-abdd-6b77e902f5b8",
+            "value": {
+              "id": "Q120306",
+              "label": "Mount Logan",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q120306"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Canada",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37"
+      ],
+      "selection": {
+        "name": "Canada",
+        "region": "Americas"
+      },
+      "source_id": "Q16",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q96-5c7cf0fb-45d4-0575-0850-9ef98b4c417e",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1964375"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q96-85553D90-E8F5-41A7-8B74-773A1C2F7DFE",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1972550"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q96-EBF67839-A5C3-4733-851B-B3AC63A27B3F",
+            "value": {
+              "id": "Q49",
+              "label": "North America",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q49"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q96-4F416360-22E5-4453-9698-B8239BC31DA9",
+            "value": {
+              "id": "Q1489",
+              "label": "Mexico City",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1489"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q96-42c8b367-44eb-66e7-0dd2-f7335d2e99db",
+            "value": {
+              "id": "Q13354",
+              "label": "Yucatec Maya",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13354"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q96-a41aadf5-48a4-54a3-1b07-72f518aa52dd",
+            "value": {
+              "id": "Q13300",
+              "label": "Nahuatl",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13300"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q96-e3f59827-4fd0-1010-f180-a691eec1be29",
+            "value": {
+              "id": "Q1321",
+              "label": "Spanish",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1321"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q96-F1691274-F03C-4BA3-83A8-46984A520F3F",
+            "value": {
+              "id": "Q4730",
+              "label": "peso",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q4730"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/c0025f0427ded0ad0ecbad0908fc107b",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "5636",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q96-38e59af9-4639-28e1-a281-a2967c19d9a8",
+            "value": {
+              "id": "Q238147",
+              "label": "Citlaltepetl",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q238147"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Mexico",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37",
+        "multiple_claims:P2046"
+      ],
+      "selection": {
+        "name": "Mexico",
+        "region": "Americas"
+      },
+      "source_id": "Q96",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-5FA0FEE8-9A0A-49ED-931C-133D5B8102D7",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "9826675"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q146328",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1946-07-05T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-5453b74c-4a1f-9f63-33f7-3db842a09f6c",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16635",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16641",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16644",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q782",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1898-07-07T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q30-DAA13428-8FBC-4FCD-B1FD-A40CA26DFD91",
+            "value": {
+              "id": "Q538",
+              "label": "Insular Oceania",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q538"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q578170",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q11703",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q1183",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q797",
+                "value_type": "uri"
+              },
+              {
+                "property": "P7452",
+                "value": "http://www.wikidata.org/entity/Q71538638",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q30-F21480EF-73A9-44B7-922A-CEE9DE3FA3AC",
+            "value": {
+              "id": "Q49",
+              "label": "North America",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q49"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1785-01-11T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1790-12-05T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-6f15b1c2-48be-91e1-5b2c-5d0acf61bb46",
+            "value": {
+              "id": "Q60",
+              "label": "New York City",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q60"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1790-12-06T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1800-05-14T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-e3cba869-48c1-dcd7-0f4d-47b7ee8b82d1",
+            "value": {
+              "id": "Q1345",
+              "label": "Philadelphia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1345"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1800-11-17T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P7452",
+                "value": "http://www.wikidata.org/entity/Q71536244",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q30-E0257E2F-A11D-40D9-8C58-6B5A8D3AF952",
+            "value": {
+              "id": "Q61",
+              "label": "Washington, D.C.",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q61"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q782",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-0bb0b945-46b6-059c-b55e-48a30dc011d8",
+            "value": {
+              "id": "Q33569",
+              "label": "Hawaiian",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q33569"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16641",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-34e04bb7-457d-7055-2744-483e4c703d8f",
+            "value": {
+              "id": "Q34011",
+              "label": "Samoan",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q34011"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q1183",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-409e6b92-49df-768a-8f27-03c650d0e0a3",
+            "value": {
+              "id": "Q1321",
+              "label": "Spanish",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1321"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16644",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-77ec48c4-4bd3-2bde-78fb-2960cfe1c7f0",
+            "value": {
+              "id": "Q28427",
+              "label": "Carolinian",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q28427"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16644",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-933ea7ff-4317-27d0-8b5a-0d70812b1f00",
+            "value": {
+              "id": "Q33262",
+              "label": "Chamorro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q33262"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1310",
+                "value": "http://www.wikidata.org/entity/Q11698",
+                "value_type": "uri"
+              },
+              {
+                "property": "P2241",
+                "value": "http://www.wikidata.org/entity/Q110646418",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "2025-03-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q133147725",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q30-ed99591c-493c-3896-5c50-bcdc30b39cab",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q30-62800D38-8C8E-4EEE-BE8F-DD3DCFB9025F",
+            "value": {
+              "id": "Q4917",
+              "label": "United States dollar",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q4917"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/301b23e36e5eef18765afa2bd8c44558",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "6190",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1867-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P7452",
+                "value": "http://www.wikidata.org/entity/Q71536244",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-b0b69a76-471f-f82c-5c73-31c5986cc2cc",
+            "value": {
+              "id": "Q130018",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q130018"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1867-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q30-fdfa8ac0-48c3-58db-3075-8a65f52819a0",
+            "value": {
+              "id": "Q235539",
+              "label": "Mount Whitney",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q235539"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "United States",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37",
+        "multiple_claims:P30",
+        "multiple_claims:P610"
+      ],
+      "selection": {
+        "name": "United States",
+        "region": "Americas"
+      },
+      "source_id": "Q30",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q668-a9fed68d-4ffe-0fa8-8635-8317013c62a9",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "3287263"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q668-EFFE083D-8F92-4223-8E36-28CB7E71DA16",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q668-F5A99C88-77A2-4BC0-B17C-5557D19B2751",
+            "value": {
+              "id": "Q987",
+              "label": "New Delhi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q987"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q668-f0294be1-4e2b-4ae7-371a-832805bbbe3f",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P282",
+                "value": "http://www.wikidata.org/entity/Q38592",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q668-9F003B22-15A3-40E4-A4E9-6EE3E6FE0BF9",
+            "value": {
+              "id": "Q1568",
+              "label": "Hindi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1568"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q668-F80305E3-3ACE-40BA-8BF3-A186BFEEC218",
+            "value": {
+              "id": "Q80524",
+              "label": "Indian rupee",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q80524"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "P1310",
+                "value": "http://www.wikidata.org/entity/Q2767140",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q668-19e572c7-4b59-0a3f-8d83-f67e7f3254ac",
+            "value": {
+              "id": "Q82019",
+              "label": "Kanchenjunga",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q82019"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1310",
+                "value": "http://www.wikidata.org/entity/Q3250182",
+                "value_type": "uri"
+              },
+              {
+                "property": "P3680",
+                "value": "http://www.wikidata.org/entity/Q2767140",
+                "value_type": "uri"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q1413732",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q668-bd8f2e93-415a-1f27-d512-cdda8e4cb6e4",
+            "value": {
+              "id": "Q43512",
+              "label": "K2",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q43512"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "India",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37",
+        "multiple_claims:P610"
+      ],
+      "selection": {
+        "name": "India",
+        "region": "Asia"
+      },
+      "source_id": "Q668",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-8C640216-279D-4B86-BC21-B375D867585B",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1904570"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-d5e923d6-49ed-b4ff-409b-321148539ddd",
+            "value": {
+              "id": "Q538",
+              "label": "Insular Oceania",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q538"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q252-FB05260F-34F8-4BF7-BD04-0E1249A01354",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "property": "P2241",
+                "value": "http://www.wikidata.org/entity/Q60311385",
+                "value_type": "uri"
+              },
+              {
+                "property": "P580",
+                "value": "http://www.wikidata.org/.well-known/genid/ad025ca7c8f286486053f034db4eb959",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-2ba9e7da-4bb6-e9b8-a57b-945f7d06d9ba",
+            "value": {
+              "id": "Q110601629",
+              "label": "Nusantara",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q110601629"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1950-08-17T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-60ac5a52-4f6b-c85f-3509-540ed6386705",
+            "value": {
+              "id": "Q3630",
+              "label": "Jakarta",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3630"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1948-12-22T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1950-08-17T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-c059d6a1-4ab5-816f-e33e-a4ea816e40d8",
+            "value": {
+              "id": "Q7248",
+              "label": "Bukittinggi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q7248"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1946-01-04T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1948-12-22T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-ce62ddc5-4a74-41fc-3289-2ba2a8297f04",
+            "value": {
+              "id": "Q7568",
+              "label": "Yogyakarta",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q7568"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1945-08-17T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1946-01-04T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q252-BFE92DF0-1E8F-4342-AE90-010805C2A95F",
+            "value": {
+              "id": "Q3630",
+              "label": "Jakarta",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3630"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q252-92B24D30-5164-440C-ADC1-310EA68828F8",
+            "value": {
+              "id": "Q9240",
+              "label": "Indonesian",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q9240"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q252-47149586-EDFA-4BA6-8660-C3E14007816C",
+            "value": {
+              "id": "Q41588",
+              "label": "rupiah",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q41588"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/8d47a48d5f3e02bafa023631787fc92c",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "4884",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q252-65b91007-4200-41fc-ed69-262e7ba04245",
+            "value": {
+              "id": "Q1045888",
+              "label": "Puncak Jaya",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1045888"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Indonesia",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P30"
+      ],
+      "selection": {
+        "name": "Indonesia",
+        "region": "Asia"
+      },
+      "source_id": "Q252",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-76904273-4168-4ED4-9465-22C15C9A0E1D",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "377972.28"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2026-07-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P7452",
+                "value": "http://www.wikidata.org/entity/Q71533355",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-d1a6c449-4fb2-e1a7-354e-227dd3441e88",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "377973.68"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q17-6EB4AB9C-4D26-4970-A8FC-C5CF5B47B4D2",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "0744-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "0745-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-072E4058-0580-4911-B70C-7016A58D5DD8",
+            "value": {
+              "id": "Q262438",
+              "label": "Shigaraki Palace",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q262438"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1868-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1943-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-6F806F9D-6CD6-45BE-AED4-A07623873C43",
+            "value": {
+              "id": "Q1189121",
+              "label": "Tokyo Prefecture",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1189121"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "0710-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "0784-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-73BFD455-1EA2-4FA2-98BD-E10C8E0F0A02",
+            "value": {
+              "id": "Q862509",
+              "label": "Heijō-kyō",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q862509"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1889-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1943-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-76d5c148-4c53-1f7c-5281-09d9065f6a28",
+            "value": {
+              "id": "Q1207735",
+              "label": "Tokyo City",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1207735"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P5102",
+                "value": "http://www.wikidata.org/entity/Q712144",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1943-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q1025961",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-7b5e8528-4dcd-04ee-eb80-b231abec34e5",
+            "value": {
+              "id": "Q1490",
+              "label": "Tokyo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1490"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1180-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "1180-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-8A67131F-11D3-4B9F-9EFA-C4CD74118D81",
+            "value": {
+              "id": "Q6031707",
+              "label": "Fukuhara-kyō",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q6031707"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1603-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1868-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-8BEAD27C-EA39-4200-AD23-1DD5DD8C9573",
+            "value": {
+              "id": "Q215646",
+              "label": "Edo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q215646"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "0794-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1869-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-B3EE8E07-A0A4-49A9-BE19-73D47A3AC2E2",
+            "value": {
+              "id": "Q751907",
+              "label": "Heian-kyō",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q751907"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "0784-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "0794-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q17-B7CA7B09-7B8D-44FD-A8D9-FA6CB8A53250",
+            "value": {
+              "id": "Q1052803",
+              "label": "Nagaoka-kyō",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1052803"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P5102",
+                "value": "http://www.wikidata.org/entity/Q712144",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q17-AEB1E3B0-42C2-48E6-B013-FC9853BFB505",
+            "value": {
+              "id": "Q5287",
+              "label": "Japanese",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5287"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q17-37158A50-995D-4FD3-9097-C39D048D5590",
+            "value": {
+              "id": "Q8146",
+              "label": "yen",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q8146"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/bd0a3e32b3a4e02a0d7d26b295f03432",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "3776",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q17-518eec4f-4c11-05ec-ee29-d5529060fe65",
+            "value": {
+              "id": "Q39231",
+              "label": "Mount Fuji",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q39231"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Japan",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P2046"
+      ],
+      "selection": {
+        "name": "Japan",
+        "region": "Asia"
+      },
+      "source_id": "Q17",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q869-3bc72645-49ed-640d-94ad-355dc235521d",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "513119.5"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q869-409e96f5-4b7a-0a1a-70c4-d7e18ffa2c09",
+            "value": {
+              "id": "Q48",
+              "label": "Asia",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q48"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1767-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q869-AABBF66D-C714-43E0-8C37-C36F24CFA208",
+            "value": {
+              "id": "Q1861",
+              "label": "Bangkok",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1861"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q869-5C0F75C8-623A-4451-9F66-1BC2C950D90A",
+            "value": {
+              "id": "Q9217",
+              "label": "Thai",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q9217"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q869-67F4A017-9135-4FE0-AD1B-A0D76D07E583",
+            "value": {
+              "id": "Q177882",
+              "label": "baht",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q177882"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/9ccdd62daaf3412e564e26b1d830b4fe",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2565",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q869-1d42a8f9-41d8-23fe-1d78-7c81fc184fce",
+            "value": {
+              "id": "Q1140075",
+              "label": "Doi Inthanon",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1140075"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Thailand",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [],
+      "selection": {
+        "name": "Thailand",
+        "region": "Asia"
+      },
+      "source_id": "Q869",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-248801f0-4066-92c7-5a50-c5f7c4c7d5b7",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "357170"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q205895",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-595e1726-4ffa-d997-a38f-d6055767ad72",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "349390"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-e7ed88a3-487d-9467-13a1-9e02764207d4",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "357587.77"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-76123936-F15F-4D73-BB22-1E86BC0614FE",
+            "value": {
+              "id": "Q46",
+              "label": "Europe",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q46"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q1901835",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1999-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-0cf8133c-44be-a094-4c18-56434f7f4b9f",
+            "value": {
+              "id": "Q64",
+              "label": "Berlin",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q64"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q129319315",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1973-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1990-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-cf822bf6-4ee8-c141-725c-aef66e18cdae",
+            "value": {
+              "id": "Q586",
+              "label": "Bonn",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q586"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q129319315",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1867-07-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P8554",
+                "value": "1957-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-f28369da-4f68-b2bb-29c9-ae986f663dc0",
+            "value": {
+              "id": "Q64",
+              "label": "Berlin",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q64"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q129319315",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1990-10-03T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-7068B86F-8E11-4456-8297-2CE3B50C38EA",
+            "value": {
+              "id": "Q64",
+              "label": "Berlin",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q64"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q1901835",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1949-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1999-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-dca01d99-4ddf-3773-f17e-1e150e2cedf0",
+            "value": {
+              "id": "Q586",
+              "label": "Bonn",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q586"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-07847919-71E3-4E52-9EA0-9AAD3A382CBD",
+            "value": {
+              "id": "Q188",
+              "label": "German",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q188"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1948-06-21T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "2001-12-31T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q183-4f91e566-4ea5-2554-824b-10cfa967c02c",
+            "value": {
+              "id": "Q16068",
+              "label": "Deutsche Mark",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q16068"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "2002-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P7452",
+                "value": "http://www.wikidata.org/entity/Q71536244",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-ED473691-C1BA-4C44-A377-9878C48E65B6",
+            "value": {
+              "id": "Q4916",
+              "label": "euro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q4916"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/d00539e93ac780bc9a3a91c6f1b92cc3",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2962",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+                "property": "P625",
+                "value": "Point(10.986297 47.421215)",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q183-1b10871c-4b8d-c6df-9534-e7dc47f513cc",
+            "value": {
+              "id": "Q3375",
+              "label": "Zugspitze",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3375"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Germany",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P38",
+        "multiple_claims:P2046"
+      ],
+      "selection": {
+        "name": "Germany",
+        "region": "Europe"
+      },
+      "source_id": "Q183",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q233-FCD28894-2A31-4B25-A8CB-3EFCCA573D10",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "316"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q233-F5EB73F2-DBB9-4F5E-A314-984806C0F864",
+            "value": {
+              "id": "Q46",
+              "label": "Europe",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q46"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q233-3CF8378E-96ED-41B7-83C8-DD8AD4DDFA70",
+            "value": {
+              "id": "Q23800",
+              "label": "Valletta",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q23800"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q233-020C2FF3-9ACA-4F27-AA99-2B595088DF93",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q233-5C87001E-04C6-4E74-AF80-4A6AE07D5716",
+            "value": {
+              "id": "Q9166",
+              "label": "Maltese",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q9166"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1972-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "2008-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q233-b82eba98-4fed-3d3b-7263-99de6849a3b8",
+            "value": {
+              "id": "Q174467",
+              "label": "Maltese lira",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q174467"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "2008-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q233-FD7BEDAF-8D9F-4698-99BC-320AC8F6B1BB",
+            "value": {
+              "id": "Q4916",
+              "label": "euro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q4916"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q233-8cba28e6-4706-15ea-5300-791cbec0a884",
+            "value": {
+              "id": "Q1850604",
+              "label": "Ta' Dmejrek",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1850604"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Malta",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37",
+        "multiple_claims:P38"
+      ],
+      "selection": {
+        "name": "Malta",
+        "region": "Europe"
+      },
+      "source_id": "Q233",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q1681353",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-3588C38E-060C-4129-BCB3-E08FA5707FE9",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "18905"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q72591134",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-3E920589-5E7F-4FAC-B109-426546AE7791",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "144848"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q55107540",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-5008BA0A-31A9-4316-B9AF-217DB2A8A615",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "365.4"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1011",
+                "value": "http://www.wikidata.org/entity/Q14056",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1011",
+                "value": "http://www.wikidata.org/entity/Q25231",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q205895",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q23442",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-5A47EB35-C7C1-42C1-A798-EC348407D08F",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "323808"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1011",
+                "value": "http://www.wikidata.org/entity/Q213204",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1012",
+                "value": "http://www.wikidata.org/entity/Q14056",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1012",
+                "value": "http://www.wikidata.org/entity/Q25231",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q16868672",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2019-12-20T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-6743DE0D-8CBA-4009-BAA7-1023CC99BB14",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "385207"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q373315",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q4022",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-80E007FC-CC48-4B5F-B6B3-4E25AB63C100",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "1210"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q843920",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-C41A2D3F-AE72-447D-981E-86D4F055CCED",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "9648"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q23397",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-CD6075CF-7FA4-4996-A0F3-E14C290D57B0",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "18488"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q4421",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-CDEC369E-AB40-4EDE-81A1-854627E96216",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "126384"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q23392",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q35666",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q7561",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2018-02-27T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-E6643D68-A0CF-4649-8D10-079E1B318CBA",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "2674.8"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q213204",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2019-11-09T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-FDAE3446-E012-40F5-856C-25649306A2A1",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "240014"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1011",
+                "value": "http://www.wikidata.org/entity/Q213204",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1012",
+                "value": "http://www.wikidata.org/entity/Q14056",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1012",
+                "value": "http://www.wikidata.org/entity/Q25231",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-cb951152-4802-8ac6-ec9e-c399a5e53ba4",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "385207"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q189999",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q202780",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q23408",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-f322a4b1-45a5-6419-15fc-749b3d8aa4a0",
+            "value": {
+              "id": "Q51",
+              "label": "Antarctica",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q51"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q98059339",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q14056",
+                "value_type": "uri"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q25231",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-66DB3427-EFEB-4AFC-A683-8284A244D7B9",
+            "value": {
+              "id": "Q46",
+              "label": "Europe",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q46"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-CB7CF181-7CB4-495D-883B-2AD6CFBD6872",
+            "value": {
+              "id": "Q585",
+              "label": "Oslo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q585"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-430832c0-4940-d19a-f338-c83eed1e2841",
+            "value": {
+              "id": "Q25164",
+              "label": "Nynorsk",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q25164"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q20-6583657c-4b03-e676-631a-c35521aab6b9",
+            "value": {
+              "id": "Q9043",
+              "label": "Norwegian",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q9043"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-58723308-777B-488A-83AE-5952FBFBEA7A",
+            "value": {
+              "id": "Q56463",
+              "label": "Sámi",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q56463"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-B0E166D5-93B3-4494-8896-1C102D01CC6A",
+            "value": {
+              "id": "Q25167",
+              "label": "Bokmål",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q25167"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "property": "P92",
+                "value": "http://www.wikidata.org/entity/Q49373537",
+                "value_type": "uri"
+              },
+              {
+                "property": "P92",
+                "value": "http://www.wikidata.org/entity/Q642673",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1875-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-38F18783-75D5-4C6B-B620-5E13878C78F3",
+            "value": {
+              "id": "Q132643",
+              "label": "Norwegian krone",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q132643"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q20-54df9804-46e3-2ce5-0761-c5115259ceeb",
+            "value": {
+              "id": "Q203942",
+              "label": "Galdhøpiggen",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q203942"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Norway",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P37",
+        "multiple_claims:P30",
+        "multiple_claims:P2046"
+      ],
+      "selection": {
+        "name": "Norway",
+        "region": "Europe"
+      },
+      "source_id": "Q20",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P585",
+                "value": "2021-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q45-924a7193-4776-8c54-081c-4d6576a82bc7",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "92225"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q45-07C2A38E-1E81-4E2A-A0E0-A5C4CE78DFF4",
+            "value": {
+              "id": "Q46",
+              "label": "Europe",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q46"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1129-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1255-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q45-56e238d7-4534-c7b9-9b12-828220f71d42",
+            "value": {
+              "id": "Q45412",
+              "label": "Coimbra",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q45412"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1013",
+                "value": "http://www.wikidata.org/entity/Q712144",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1385-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q45-615BCF2B-6C0D-4A9C-A692-2CF29F230D6D",
+            "value": {
+              "id": "Q597",
+              "label": "Lisbon",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q597"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P2241",
+                "value": "http://www.wikidata.org/entity/Q770220",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1999-01-29T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q45-2ace63ec-45c5-5757-52b7-30b1a1214214",
+            "value": {
+              "id": "Q13330",
+              "label": "Mirandese",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q13330"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q45-8996BD0E-3EF8-4340-9806-7CFB7E5FA364",
+            "value": {
+              "id": "Q5146",
+              "label": "Portuguese",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5146"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "2002-02-28T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q45-a3a24e9f-44d8-eaf0-cd00-10415872e776",
+            "value": {
+              "id": "Q468474",
+              "label": "Portuguese escudo",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q468474"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1999-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q45-525A5B2D-11B7-41DA-BF69-7DF5E822A33B",
+            "value": {
+              "id": "Q4916",
+              "label": "euro",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q4916"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q45-79ef7cd3-438e-c9c2-6189-f7bf79183249",
+            "value": {
+              "id": "Q928681",
+              "label": "Mount Pico",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q928681"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Portugal",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37",
+        "multiple_claims:P38"
+      ],
+      "selection": {
+        "name": "Portugal",
+        "region": "Europe"
+      },
+      "source_id": "Q45",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-1cf22eb2-4c79-deb8-0ecb-6bab07f29a30",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "7692024"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q26133551",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-53c54c4d-4ebb-e8c3-83b4-8d27031b39cd",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "410977"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q2872203",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-adb01f5b-4901-078c-5529-189eb2d1a772",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "7659861"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q26133547",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-d2d108b6-489e-8f94-f921-bc7a74c4c8d7",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "8148250"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-51e2d0f8-446f-2dda-48ed-3b56e5b1ff4f",
+            "value": {
+              "id": "Q3960",
+              "label": "Australian continent",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3960"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q408-2537064E-C71F-49F4-B0BE-97A6D1E4387C",
+            "value": {
+              "id": "Q55643",
+              "label": "Oceania",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q55643"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1901-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1927-05-09T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-55c20d53-4fbc-4a10-2b2d-e7b7b9e16811",
+            "value": {
+              "id": "Q3141",
+              "label": "Melbourne",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3141"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1927-05-09T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q408-0A27874B-64AE-4798-A26A-1CC6011516BF",
+            "value": {
+              "id": "Q3114",
+              "label": "Canberra",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3114"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-ae6ba1cd-4db1-5e1e-b135-58ba247a6f52",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-dffa3f57-4a9f-37b1-d36d-8a5a1793597a",
+            "value": {
+              "id": "Q29525",
+              "label": "Auslan",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q29525"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1013",
+                "value": "http://www.wikidata.org/entity/Q23892516",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q408-15FD75F4-A946-42DB-8099-BEAD6FDF34C0",
+            "value": {
+              "id": "Q44679",
+              "label": "Australian English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q44679"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "property": "P1365",
+                "value": "http://www.wikidata.org/entity/Q25224",
+                "value_type": "uri"
+              },
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q259502",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1910-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1966-02-14T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-3bba4a4f-4e94-7026-6a5d-9fd66844f7c8",
+            "value": {
+              "id": "Q783373",
+              "label": "Australian pound",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q783373"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1366",
+                "value": "http://www.wikidata.org/entity/Q783373",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1901-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1910-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-b3ed9852-4800-e66b-5914-1c043388b442",
+            "value": {
+              "id": "Q25224",
+              "label": "pound sterling",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q25224"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "P1365",
+                "value": "http://www.wikidata.org/entity/Q783373",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1966-02-14T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q408-C6DD2D83-6B08-44E4-A2EE-C8B59D184958",
+            "value": {
+              "id": "Q259502",
+              "label": "Australian dollar",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q259502"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/26dfba72047a589cb1903d7637b5a20e",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2228",
+                "value_type": "literal"
+              },
+              {
+                "property": "P518",
+                "value": "http://www.wikidata.org/entity/Q2872203",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+                "property": "P625",
+                "value": "Point(148.263333333 -36.455833333)",
+                "value_type": "literal"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q3925801",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q408-d119121b-414a-774e-4801-69637884c58b",
+            "value": {
+              "id": "Q178167",
+              "label": "Mount Kosciuszko",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q178167"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/47ab105ee53b02b0c9685b414887b6c7",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "2745",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+                "property": "P625",
+                "value": "Point(73.516944444 -53.104166666)",
+                "value_type": "literal"
+              },
+              {
+                "property": "P805",
+                "value": "http://www.wikidata.org/entity/Q3925801",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q408-8d864112-46bf-c647-77a1-efb73bb3e954",
+            "value": {
+              "id": "Q2114101",
+              "label": "Mawson Peak",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q2114101"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "Australia",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37",
+        "multiple_claims:P38",
+        "multiple_claims:P30",
+        "multiple_claims:P2046",
+        "multiple_claims:P610"
+      ],
+      "selection": {
+        "name": "Australia",
+        "region": "Oceania"
+      },
+      "source_id": "Q408",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    },
+    {
+      "claims": {
+        "P2046": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-EF155BED-DF24-434E-BB56-66D2900B8FBE",
+            "value": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+              "type": "literal",
+              "value": "268021"
+            }
+          }
+        ],
+        "P30": [
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-AF506449-9836-4D78-834E-99C5B2CAD78A",
+            "value": {
+              "id": "Q55643",
+              "label": "Oceania",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q55643"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-bb9274fd-4fa3-18b7-3061-aaf57a9ad683",
+            "value": {
+              "id": "Q3960",
+              "label": "Australian continent",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q3960"
+            }
+          },
+          {
+            "qualifiers": [],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-A27034DD-1049-44E4-A112-936FD20C25F8",
+            "value": {
+              "id": "Q538",
+              "label": "Insular Oceania",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q538"
+            }
+          }
+        ],
+        "P36": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1840-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1841-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-28a141af-44f8-f164-6df2-58fb52e4d411",
+            "value": {
+              "id": "Q7081990",
+              "label": "Okiato",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q7081990"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1841-01-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1865-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-86a1c22d-45f3-0a50-900f-af405b84a247",
+            "value": {
+              "id": "Q37100",
+              "label": "Auckland",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q37100"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1865-01-01T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-113F2588-9597-488E-833D-5EB70E604B1F",
+            "value": {
+              "id": "Q23661",
+              "label": "Wellington",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q23661"
+            }
+          }
+        ],
+        "P37": [
+          {
+            "qualifiers": [
+              {
+                "property": "P1013",
+                "value": "http://www.wikidata.org/entity/Q712144",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-05F44C0C-FAB5-4744-A5C2-A3D782A12F02",
+            "value": {
+              "id": "Q1860",
+              "label": "English",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1860"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1987-08-01T00:00:00Z",
+                "value_type": "literal"
+              },
+              {
+                "property": "P828",
+                "value": "http://www.wikidata.org/entity/Q110244287",
+                "value_type": "uri"
+              },
+              {
+                "property": "P828",
+                "value": "http://www.wikidata.org/entity/Q1164759",
+                "value_type": "uri"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-245D006A-B5AC-4C5B-B221-2059CCBE1CC5",
+            "value": {
+              "id": "Q36451",
+              "label": "Māori",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q36451"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "2006-04-11T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-5DF59D66-FDB1-4DA8-9DFC-E9207953C2C9",
+            "value": {
+              "id": "Q36239",
+              "label": "New Zealand Sign Language",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q36239"
+            }
+          }
+        ],
+        "P38": [
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P582",
+                "value": "1967-07-09T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-f90ba6f7-4354-cc4d-b39b-036a5a12565e",
+            "value": {
+              "id": "Q1887019",
+              "label": "New Zealand pound",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1887019"
+            }
+          },
+          {
+            "qualifiers": [
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                "property": "P580",
+                "value": "1967-07-10T00:00:00Z",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/q664-5EB7F18B-0A08-46EB-A309-308D5C0EC6C5",
+            "value": {
+              "id": "Q1472704",
+              "label": "New Zealand dollar",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q1472704"
+            }
+          }
+        ],
+        "P610": [
+          {
+            "qualifiers": [
+              {
+                "property": "value-normalized/P2044",
+                "value": "http://www.wikidata.org/value/a44992f50f7eafc0877aaed726ec46d9",
+                "value_type": "uri"
+              },
+              {
+                "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                "property": "P2044",
+                "value": "3724",
+                "value_type": "literal"
+              }
+            ],
+            "statement_id": "http://www.wikidata.org/entity/statement/Q664-59f52b6e-40fc-19ff-9704-5bc303fe0ed4",
+            "value": {
+              "id": "Q5059",
+              "label": "Aoraki / Mount Cook",
+              "type": "uri",
+              "value": "http://www.wikidata.org/entity/Q5059"
+            }
+          }
+        ]
+      },
+      "gameplay_approval": "not_approved",
+      "human_content_approval": "pending_review",
+      "label": "New Zealand",
+      "retrieved_at": "2026-11-09T10:28:50.220Z",
+      "review_flags": [
+        "multiple_claims:P36",
+        "multiple_claims:P37",
+        "multiple_claims:P38",
+        "multiple_claims:P30"
+      ],
+      "selection": {
+        "name": "New Zealand",
+        "region": "Oceania"
+      },
+      "source_id": "Q664",
+      "source_name": "Wikidata",
+      "source_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+      "technical_validation": "accepted"
+    }
+  ],
+  "request_url": "https://query.wikidata.org/sparql?format=json&query=PREFIX%20wd%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%3Fcountry%20%3FcountryLabel%20%3Fproperty%20%3Fstatement%20%3Fvalue%20%3FvalueLabel%20%3FqualifierProperty%20%3FqualifierValue%20WHERE%20%7B%0A%20%20VALUES%20%3Fcountry%20%7B%20wd%3AQ1028%20wd%3AQ1033%20wd%3AQ114%20wd%3AQ155%20wd%3AQ16%20wd%3AQ17%20wd%3AQ183%20wd%3AQ20%20wd%3AQ233%20wd%3AQ252%20wd%3AQ258%20wd%3AQ30%20wd%3AQ408%20wd%3AQ414%20wd%3AQ45%20wd%3AQ664%20wd%3AQ668%20wd%3AQ79%20wd%3AQ869%20wd%3AQ96%20%7D%0A%20%20VALUES%20%3Fproperty%20%7B%20wd%3AP2046%20wd%3AP30%20wd%3AP36%20wd%3AP37%20wd%3AP38%20wd%3AP610%20%7D%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2F%22))%20AS%20%3FclaimProperty)%0A%20%20BIND(IRI(REPLACE(STR(%3Fproperty)%2C%20%22entity%2F%22%2C%20%22prop%2Fstatement%2F%22))%20AS%20%3FstatementProperty)%0A%20%20%3Fcountry%20%3FclaimProperty%20%3Fstatement%20.%0A%20%20%3Fstatement%20%3FstatementProperty%20%3Fvalue%20.%0A%20%20OPTIONAL%20%7B%20%3Fcountry%20rdfs%3Alabel%20%3FcountryLabel%20.%20FILTER(LANG(%3FcountryLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fvalue%20rdfs%3Alabel%20%3FvalueLabel%20.%20FILTER(LANG(%3FvalueLabel)%20%3D%20%22en%22)%20%7D%0A%20%20OPTIONAL%20%7B%0A%20%20%20%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue%20.%0A%20%20%20%20FILTER(STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2F%22))%0A%20%20%20%20FILTER(!STRSTARTS(STR(%3FqualifierProperty)%2C%20%22http%3A%2F%2Fwww.wikidata.org%2Fprop%2Fqualifier%2Fvalue%2F%22))%0A%20%20%7D%0A%7D%0AORDER%20BY%20%3Fcountry%20%3Fproperty%20%3Fstatement%20%3FqualifierProperty%20%3FqualifierValue",
+  "retrieved_at": "2026-11-09T10:28:50.220Z",
+  "schema_version": 1,
+  "source": "wikidata",
+  "source_license": "CC0-1.0"
+}
